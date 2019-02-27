@@ -107,7 +107,6 @@ Any known conflicts with [standard js](https://standardjs.com/) will be tracked 
 </p>
 - -->
 
-
 ## WordPress Prettier
 
 This is a fork of Prettier that adds a new command line option `--paren-spacing` which inserts many extra spaces inside parentheses, the way how projects in the WordPress ecosystem (Calypso, Gutenberg, etc.) like to format their code.
