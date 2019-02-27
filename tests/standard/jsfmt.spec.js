@@ -1,5 +1,4 @@
-run_spec(__dirname, ["babel", "flow", "typescript"], {
-  endOfLine: "lf",
+const commonOptions = {
   yieldStarSpacing: true,
   generatorStarSpacing: true,
   spaceBeforeFunctionParen: true,
@@ -7,4 +6,9 @@ run_spec(__dirname, ["babel", "flow", "typescript"], {
   jsxSingleQuote: true,
   semi: false,
   alignTernaryLines: false
+};
+
+run_spec(__dirname, ["babel", "flow", "typescript"], {
+  endOfLine: "lf",
+  ...commonOptions
 });
