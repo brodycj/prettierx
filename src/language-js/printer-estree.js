@@ -4696,7 +4696,13 @@ function printTypeParameters(path, options, print, paramsKey) {
         n[paramsKey][0].type === "NullableTypeAnnotation"));
 
   if (shouldInline) {
-    return concat(["<", parenSpace, join(", ", path.map(print, paramsKey)), parenSpace, ">"]);
+    return concat([
+      "<",
+      parenSpace,
+      join(", ", path.map(print, paramsKey)),
+      parenSpace,
+      ">"
+    ]);
   }
 
   return group(
