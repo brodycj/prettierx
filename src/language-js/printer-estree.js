@@ -4169,7 +4169,9 @@ function printArgumentsList(path, options, print) {
                   ifBreak(maybeTrailingComma),
                   lastArgAddedLine ? "" : parenLine
                 ])
-              : lastArgAddedLine ? "" : parenSpace,
+              : lastArgAddedLine
+              ? ""
+              : parenSpace,
             ")"
           ]),
           shouldGroupFirst
