@@ -15,8 +15,8 @@
   },
   "dependencies": {
     "@angular/compiler": "6.1.10",
-    "@babel/code-frame": "7.0.0-beta.46",
-    "@babel/parser": "7.2.0",
+    "@babel/code-frame": "7.0.0",
+    "@babel/parser": "7.3.4",
     "@glimmer/syntax": "0.30.3",
     "@iarna/toml": "2.0.0",
     "@typescript-eslint/typescript-estree": "1.4.1",
@@ -75,10 +75,10 @@
     "yaml-unist-parser": "1.0.0"
   },
   "devDependencies": {
-    "@babel/cli": "7.2.0",
-    "@babel/core": "7.2.0",
-    "@babel/preset-env": "7.2.0",
-    "babel-loader": "8.0.4",
+    "@babel/cli": "7.2.3",
+    "@babel/core": "7.3.4",
+    "@babel/preset-env": "7.3.4",
+    "babel-loader": "8.0.5",
     "benchmark": "2.1.4",
     "builtin-modules": "2.0.0",
     "codecov": "codecov/codecov-node#e427d900309adb50746a39a50aa7d80071a5ddd0",
@@ -101,7 +101,7 @@
     "rimraf": "2.6.2",
     "rollup": "0.47.6",
     "rollup-plugin-alias": "1.4.0",
-    "rollup-plugin-babel": "4.0.0-beta.4",
+    "rollup-plugin-babel": "4.3.2",
     "rollup-plugin-commonjs": "8.2.6",
     "rollup-plugin-json": "2.1.1",
     "rollup-plugin-node-builtins": "2.0.0",
@@ -115,9 +115,7 @@
     "tempy": "0.2.1",
     "webpack": "3.12.0"
   },
-  "resolutions": {
-    "@babel/code-frame": "7.0.0-beta.46"
-  },
+  "resolutions": {},
   "scripts": {
     "prepublishOnly": "echo \"Error: must publish from dist/\" && exit 1",
     "prepare-release": "yarn && yarn build && yarn test:dist",
