@@ -31,3 +31,7 @@ rules:
   - error
   - never
   - exceptRange: true
+  # XXX TBD ???:
+  no-control-regex: off
+  react/display-name: off
+  react/jsx-no-target-blank: off
