@@ -42,6 +42,8 @@ Examples:
 
 -->
 
+- CLI: Honor stdin-filepath when outputting error messages.
+
 - Markdown: Do not align table contents if it exceeds the print width and `--prose-wrap never` is set ([#5701] by [@chenshuai2144])
 
   The aligned table is less readable than the compact one
@@ -83,4 +85,23 @@ Examples:
 
   // Output (Prettier master)
   <my-element data-for={value}></my-element>
+  ```
+
+- JavaScript: Fix parens logic for optional chaining expressions and closure type casts ([#5843] by [@yangsu])
+
+  Logic introduced in #4542 will print parens in the wrong places and produce invalid code for optional chaining expressions (with more than 2 nodes) or closure type casts that end in function calls.
+
+  <!-- prettier-ignore -->
+  ```js
+  // Input
+  (a?.b[c]).c();
+  let value = /** @type {string} */ (this.members[0]).functionCall();
+
+  // Output (Prettier stable)
+  a(?.b[c]).c();
+  let value = /** @type {string} */ this(.members[0]).functionCall();
+
+  // Output (Prettier master)
+  (a?.b[c]).c();
+  let value = /** @type {string} */ (this.members[0]).functionCall();
   ```
