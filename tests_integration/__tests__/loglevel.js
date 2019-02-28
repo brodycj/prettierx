@@ -40,6 +40,8 @@ function runPrettierWithLogLevel(logLevel, patterns) {
 
   expect(result).not.toEqual(0);
 
+  patterns;
+
   /* ** TBD ???:
   if (patterns) {
     patterns.forEach(pattern => {
