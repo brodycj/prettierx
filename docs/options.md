@@ -196,6 +196,7 @@ Valid options:
 
 - `"babel"` (via [@babel/parser](https://github.com/babel/babel/tree/master/packages/babel-parser)) _Named `"babylon"` until v1.16.0_
 - `"babel-flow"` (Same as `"babel"` but enables Flow parsing explicitly to avoid ambiguity) _First available in v1.16.0_
+- `"babel-ts"` (Like as `"babel"` but enables TypeScript parsing which diffs from Flow) _First available in v1.19.0_
 - `"flow"` (via [flow-parser](https://github.com/facebook/flow/tree/master/src/parser))
 - `"typescript"` (via [@typescript-eslint/typescript-estree](https://github.com/typescript-eslint/typescript-eslint)) _First available in v1.4.0_
 - `"css"` (via [postcss-scss](https://github.com/postcss/postcss-scss) and [postcss-less](https://github.com/shellscape/postcss-less), autodetects which to use) _First available in v1.7.1_
@@ -340,9 +341,9 @@ Doing so produces a large `git diff`, and if it goes unnoticed during code revie
 If you want to make sure that your git repository only contains Linux-style line endings in files covered by Prettier:
 
 1. Set `endOfLine` option to `lf`
-1. Configure [a pre-commit hook](precommit.md) that will run Prettier
-1. Configure Prettier to run in your CI pipeline using [`--check` flag](cli.md#check)
-1. Ask Windows users to run `git config core.autocrlf false` before working on your repo so that git did not convert `LF` to `CRLF` on checkout.
+2. Configure [a pre-commit hook](precommit.md) that will run Prettier
+3. Configure Prettier to run in your CI pipeline using [`--check` flag](cli.md#check)
+4. Ask Windows users to run `git config core.autocrlf false` before working on your repo so that git did not convert `LF` to `CRLF` on checkout.
    Alternatively, you can add `* text=auto eol=lf` to the repo's `.gitattributes` file to achieve this.
 
 All modern text editors in all operating systems are able to correctly display line endings when `\n` (`LF`) is used.
