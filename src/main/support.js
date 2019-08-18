@@ -91,7 +91,7 @@ function getSupportInfo(version, opts) {
       }
       if (language.name === "TypeScript") {
         return Object.assign({}, language, {
-          parsers: ["typescript"]
+          parsers: ["typescript", "babel-ts"]
         });
       }
 

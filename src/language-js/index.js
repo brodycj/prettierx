@@ -35,14 +35,14 @@ const languages = [
   createLanguage(require("linguist-languages/data/TypeScript"), data =>
     Object.assign(data, {
       since: "1.4.0",
-      parsers: ["typescript"],
+      parsers: ["typescript", "babel-ts"],
       vscodeLanguageIds: ["typescript"]
     })
   ),
   createLanguage(require("linguist-languages/data/TSX"), data =>
     Object.assign(data, {
       since: "1.4.0",
-      parsers: ["typescript"],
+      parsers: ["typescript", "babel-ts"],
       vscodeLanguageIds: ["typescriptreact"]
     })
   ),

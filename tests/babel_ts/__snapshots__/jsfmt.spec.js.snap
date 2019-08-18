@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test.ts 1`] = `
+====================================options=====================================
+parsers: ["babel-ts", "typescript"]
+printWidth: 80
+                                                                                | printWidth
+=====================================input======================================
+function add(a: number, b: number): number;
+function add(a: string, b: string): string;
+function add(a: any, b: any) {
+  return a + b;
+}
+
+=====================================output=====================================
+function add(a: number, b: number): number;
+function add(a: string, b: string): string;
+function add(a: any, b: any) {
+  return a + b;
+}
+
+================================================================================
+`;
