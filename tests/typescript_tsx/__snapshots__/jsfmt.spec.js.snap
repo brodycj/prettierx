@@ -2,7 +2,7 @@
 
 exports[`generic-component.tsx 1`] = `
 ====================================options=====================================
-parsers: ["typescript"]
+parsers: ["typescript", "babel-ts"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
@@ -24,7 +24,7 @@ const c3 = <MyComponent<number> attr="value" />;
 
 exports[`keyword.tsx 1`] = `
 ====================================options=====================================
-parsers: ["typescript"]
+parsers: ["typescript", "babel-ts"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
@@ -100,7 +100,7 @@ printWidth: 80
 
 exports[`not-react.ts 1`] = `
 ====================================options=====================================
-parsers: ["typescript"]
+parsers: ["typescript", "babel-ts"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
@@ -128,7 +128,7 @@ const footer = "<footer></footer>";
 
 exports[`react.tsx 1`] = `
 ====================================options=====================================
-parsers: ["typescript"]
+parsers: ["typescript", "babel-ts"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
@@ -149,7 +149,7 @@ const MyCoolThing = ({ thingo }) => <li>{thingo}</li>;
 
 exports[`this.tsx 1`] = `
 ====================================options=====================================
-parsers: ["typescript"]
+parsers: ["typescript", "babel-ts"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
@@ -165,7 +165,7 @@ printWidth: 80
 
 exports[`type-parameters.tsx 1`] = `
 ====================================options=====================================
-parsers: ["typescript"]
+parsers: ["typescript", "babel-ts"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
@@ -219,7 +219,7 @@ type Type2 = Two<T>;
 
 exports[`url.tsx 1`] = `
 ====================================options=====================================
-parsers: ["typescript"]
+parsers: ["typescript", "babel-ts"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
