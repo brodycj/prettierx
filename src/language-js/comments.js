@@ -837,10 +837,35 @@ function handleTSMappedTypeComments(
 
   if (
     followingNode &&
-    followingNode.type === "TSTypeParameter" &&
-    followingNode.name
+    ((followingNode.type === "TSTypeParameter" && followingNode.name) ||
+      // Babel AST
+      (followingNode.type === "TSTypeReference" && followingNode.typeName))
   ) {
-    addLeadingComment(followingNode.name, comment);
+    // Babel AST
+    if (typeof followingNode.name === "string") {
+      const {
+        name,
+        start,
+        loc: { column, line }
+      } = followingNode;
+      followingNode.name = {
+        loc: {
+          start: {
+            column,
+            line
+          },
+          end: {
+            column: column + name.length,
+            line
+          }
+        },
+        name,
+        range: [start, start + name.length],
+        type: "Identifier"
+      };
+    }
+
+    addLeadingComment(followingNode.name || followingNode.typeName, comment);
     return true;
   }
 
