@@ -2,7 +2,7 @@
 
 exports[`as.js 1`] = `
 ====================================options=====================================
-parsers: ["typescript", "babel-ts"]
+parsers: ["typescript"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
@@ -78,7 +78,7 @@ const state = JSON.stringify({
 
 exports[`export_default_as.ts 1`] = `
 ====================================options=====================================
-parsers: ["typescript", "babel-ts"]
+parsers: ["typescript"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================

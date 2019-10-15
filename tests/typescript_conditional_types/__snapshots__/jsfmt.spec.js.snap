@@ -2,7 +2,7 @@
 
 exports[`conditonal-types.ts 1`] = `
 ====================================options=====================================
-parsers: ["typescript", "babel-ts"]
+parsers: ["typescript"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
@@ -96,7 +96,7 @@ type U2 = (new () => X) extends T ? U : V;
 
 exports[`infer-type.ts 1`] = `
 ====================================options=====================================
-parsers: ["typescript", "babel-ts"]
+parsers: ["typescript"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================

@@ -90,7 +90,21 @@ global.run_spec = (dirname, parsers, options) => {
       ).toMatchSnapshot();
     });
 
-    for (const parser of parsers.slice(1)) {
+    const parsersToVerify = parsers.slice(1);
+    if (
+      parsers.indexOf("typescript") !== -1 &&
+      parsers.indexOf("babel-ts") === -1 &&
+      !(
+        options &&
+        (options.disableBabelTS === true ||
+          (Array.isArray(options.disableBabelTS) &&
+            options.disableBabelTS.indexOf(basename) !== -1))
+      )
+    ) {
+      parsersToVerify.push("babel-ts");
+    }
+
+    for (const parser of parsersToVerify) {
       const verifyOptions = Object.assign({}, baseOptions, { parser });
       test(`${basename} - ${parser}-verify`, () => {
         const verifyOutput = format(input, filename, verifyOptions);
@@ -172,7 +186,11 @@ function createSnapshot(input, output, options) {
       printOptions(
         omit(
           options,
-          k => k === "rangeStart" || k === "rangeEnd" || k === "cursorOffset"
+          k =>
+            k === "rangeStart" ||
+            k === "rangeEnd" ||
+            k === "cursorOffset" ||
+            k === "disableBabelTS"
         )
       ),
       printWidthIndicator,
