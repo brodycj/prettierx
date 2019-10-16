@@ -157,7 +157,8 @@ function genericPrint(path, options, printPath, args) {
     node.type === "TSAbstractClassProperty" ||
     node.type === "ClassPrivateProperty" ||
     node.type === "MethodDefinition" ||
-    node.type === "TSAbstractMethodDefinition"
+    node.type === "TSAbstractMethodDefinition" ||
+    node.type === "TSDeclareMethod"
   ) {
     // their decorators are handled themselves
   } else if (
