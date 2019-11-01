@@ -141,7 +141,7 @@ exports[`API getSupportInfo() with version 1.0.0 -> 1.4.0 1`] = `
         \\"flow\\",
       ],
       \\"JSX\\": Array [
-@@ -10,24 +13,55 @@
+@@ -10,24 +13,56 @@
       ],
       \\"JavaScript\\": Array [
         \\"babylon\\",
@@ -158,6 +158,7 @@ exports[`API getSupportInfo() with version 1.0.0 -> 1.4.0 1`] = `
 +     ],
 +     \\"TSX\\": Array [
 +       \\"typescript\\",
++       \\"babel-ts\\",
 +     ],
 +     \\"TypeScript\\": Array [
 +       \\"typescript\\",
@@ -197,7 +198,7 @@ exports[`API getSupportInfo() with version 1.0.0 -> 1.4.0 1`] = `
         \\"type\\": \\"choice\\",
       },
       \\"printWidth\\": Object {
-@@ -37,10 +71,28 @@
+@@ -37,10 +72,28 @@
           \\"start\\": 0,
           \\"step\\": 1,
         },
@@ -253,7 +254,7 @@ exports[`API getSupportInfo() with version 1.4.0 -> 1.5.0 1`] = `
         \\"flow\\",
       ],
       \\"JavaScript\\": Array [
-@@ -58,10 +67,12 @@
+@@ -59,10 +68,12 @@
         \\"choices\\": Array [
           \\"flow\\",
           \\"babylon\\",
@@ -303,9 +304,9 @@ exports[`API getSupportInfo() with version 1.5.0 -> 1.7.1 1`] = `
       ],
       \\"TSX\\": Array [
         \\"typescript\\",
+        \\"babel-ts\\",
       ],
-      \\"TypeScript\\": Array [
-@@ -66,11 +66,13 @@
+@@ -67,11 +67,13 @@
       \\"parser\\": Object {
         \\"choices\\": Array [
           \\"flow\\",
@@ -320,7 +321,7 @@ exports[`API getSupportInfo() with version 1.5.0 -> 1.7.1 1`] = `
         ],
         \\"default\\": \\"babylon\\",
         \\"type\\": \\"choice\\",
-@@ -100,10 +102,14 @@
+@@ -101,10 +103,14 @@
           \\"start\\": 0,
           \\"step\\": 1,
         },
@@ -356,7 +357,7 @@ exports[`API getSupportInfo() with version 1.7.1 -> 1.8.0 1`] = `
       ],
       \\"SCSS\\": Array [
         \\"scss\\",
-@@ -57,10 +60,14 @@
+@@ -58,10 +61,14 @@
       },
       \\"filepath\\": Object {
         \\"default\\": undefined,
@@ -371,7 +372,7 @@ exports[`API getSupportInfo() with version 1.7.1 -> 1.8.0 1`] = `
         \\"type\\": \\"boolean\\",
       },
       \\"parser\\": Object {
-@@ -71,10 +78,11 @@
+@@ -72,10 +79,11 @@
           \\"css\\",
           \\"less\\",
           \\"scss\\",
@@ -390,7 +391,7 @@ exports[`API getSupportInfo() with version 1.8.0 -> 1.8.2 1`] = `
 - First value
 + Second value
 
-@@ -92,10 +92,18 @@
+@@ -93,10 +93,18 @@
           \\"start\\": 0,
           \\"step\\": 1,
         },
@@ -469,7 +470,7 @@ exports[`API getSupportInfo() with version 1.8.2 -> 1.16.0 1`] = `
       ],
       \\"PostCSS\\": Array [
         \\"css\\",
-@@ -41,12 +56,26 @@
+@@ -42,12 +57,26 @@
       ],
       \\"TypeScript\\": Array [
         \\"typescript\\",
@@ -496,7 +497,7 @@ exports[`API getSupportInfo() with version 1.8.2 -> 1.16.0 1`] = `
         \\"type\\": \\"boolean\\",
       },
       \\"cursorOffset\\": Object {
-@@ -56,37 +85,76 @@
+@@ -57,37 +86,76 @@
           \\"start\\": -1,
           \\"step\\": 1,
         },
@@ -575,7 +576,7 @@ exports[`API getSupportInfo() with version 1.8.2 -> 1.16.0 1`] = `
         \\"range\\": Object {
           \\"end\\": Infinity,
           \\"start\\": 0,
-@@ -94,14 +162,15 @@
+@@ -95,14 +163,15 @@
         },
         \\"type\\": \\"int\\",
       },
@@ -615,7 +616,7 @@ exports[`API getSupportInfo() with version 1.16.0 -> undefined 1`] = `
       ],
       \\"Markdown\\": Array [
         \\"markdown\\",
-@@ -139,10 +142,11 @@
+@@ -140,10 +143,11 @@
           \\"mdx\\",
           \\"vue\\",
           \\"yaml\\",
@@ -627,7 +628,7 @@ exports[`API getSupportInfo() with version 1.16.0 -> undefined 1`] = `
         \\"type\\": \\"choice\\",
       },
       \\"pluginSearchDirs\\": Object {
-@@ -169,10 +173,19 @@
+@@ -170,10 +174,19 @@
           \\"preserve\\",
         ],
         \\"default\\": \\"preserve\\",
@@ -758,7 +759,7 @@ exports[`CLI --support-info (stdout) 1`] = `
       \\"since\\": \\"1.4.0\\",
       \\"tmScope\\": \\"source.ts\\",
       \\"type\\": \\"programming\\",
-      \\"vscodeLanguageIds\\": [\\"typescript\\", \\"typescriptreact\\"]
+      \\"vscodeLanguageIds\\": [\\"typescript\\"]
     },
     {
       \\"aceMode\\": \\"javascript\\",
@@ -768,7 +769,7 @@ exports[`CLI --support-info (stdout) 1`] = `
       \\"group\\": \\"TypeScript\\",
       \\"linguistLanguageId\\": 94901924,
       \\"name\\": \\"TSX\\",
-      \\"parsers\\": [\\"typescript\\"],
+      \\"parsers\\": [\\"typescript\\", \\"babel-ts\\"],
       \\"since\\": \\"1.4.0\\",
       \\"tmScope\\": \\"source.tsx\\",
       \\"type\\": \\"programming\\",
