@@ -15,7 +15,18 @@ function postprocess(ast, options) {
       }
       // remove redundant TypeScript nodes
       case "TSParenthesizedType": {
-        return node.typeAnnotation;
+        return Object.assign({}, node.typeAnnotation, {
+          leadingComments: Array.isArray(node.leadingComments)
+            ? node.leadingComments.concat(
+                node.typeAnnotation.leadingComments || []
+              )
+            : node.typeAnnotation.leadingComments,
+          trailingComments: Array.isArray(node.trailingComments)
+            ? (node.typeAnnotation.trailingComments || []).concat(
+                node.trailingComments
+              )
+            : node.typeAnnotation.trailingComments
+        });
       }
       case "TSUnionType":
       case "TSIntersectionType":

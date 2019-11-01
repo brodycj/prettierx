@@ -303,7 +303,29 @@ function breakTies(tiesToBreak, text, options) {
   }
   const { precedingNode, followingNode } = tiesToBreak[0];
 
-  let gapEndPos = options.locStart(followingNode);
+  // Already added to the nodes, not included in tiesToBreak.
+  const otherCommentsInBetween = [];
+  const lastTieEnd = options.locEnd(tiesToBreak[tieCount - 1]);
+  if (Array.isArray(precedingNode.comments)) {
+    otherCommentsInBetween.push(
+      ...precedingNode.comments.filter(
+        c => c.trailing && options.locStart(c) > lastTieEnd
+      )
+    );
+  }
+  // // TODO: probably not needed
+  if (Array.isArray(followingNode.comments)) {
+    otherCommentsInBetween.push(
+      ...followingNode.comments.filter(
+        c => c.leading && options.locStart(c) > lastTieEnd
+      )
+    );
+  }
+
+  let gapEndPos = Math.min(
+    options.locStart(followingNode),
+    ...otherCommentsInBetween.map(c => options.locStart(c))
+  );
 
   // Iterate backwards through tiesToBreak, examining the gaps
   // between the tied comments. In order to qualify as leading, a

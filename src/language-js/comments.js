@@ -177,7 +177,49 @@ function handleRemainingComment(comment, text, options, ast, isLastComment) {
   ) {
     return true;
   }
+
+  // Try using `leadingComments` and `trailingComments` added by Babel.
+
+  // Babel incorrectly attaches comments in `const { a /* comment */ = 1 } = b;`
+  const isKnownBabelIssue =
+    enclosingNode && enclosingNode.type === "AssignmentPattern";
+
+  if (!isKnownBabelIssue) {
+    const parserAttachedToPrecedingNode = hasParserComment(
+      precedingNode,
+      "trailingComments",
+      comment,
+      options
+    );
+    const parserAttachedToFollowingNode = hasParserComment(
+      followingNode,
+      "leadingComments",
+      comment,
+      options
+    );
+    // Sometimes Babel attaches the same comment to both nodes. We ignore such cases.
+    if (parserAttachedToFollowingNode && !parserAttachedToPrecedingNode) {
+      addLeadingComment(followingNode, comment);
+      return true;
+    }
+    if (!parserAttachedToFollowingNode && parserAttachedToPrecedingNode) {
+      addTrailingComment(precedingNode, comment);
+      return true;
+    }
+  }
+
   return false;
+}
+
+function hasParserComment(node, key, comment, options) {
+  return (
+    Array.isArray(node && node[key]) &&
+    node[key].some(
+      c =>
+        options.locStart(c) === options.locStart(comment) &&
+        options.locEnd(c) === options.locEnd(comment)
+    )
+  );
 }
 
 function addBlockStatementFirstComment(node, comment) {

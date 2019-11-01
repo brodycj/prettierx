@@ -444,20 +444,20 @@ function a() {
 }
 
 function a() {
-  const a = 5; /* comment */ /* comment */
+  const a = 5; /* comment */
 
-  return a;
+  /* comment */ return a;
 }
 
 function a() {
-  const a = 5; /* comment */ /* comment */ // comment
-  return a;
+  const a = 5; // comment
+  /* comment */ /* comment */ return a;
 }
 
 function a() {
-  const a = 5; /* comment */ /* comment */ // comment
+  const a = 5; // comment
 
-  return a;
+  /* comment */ /* comment */ return a;
 }
 
 ================================================================================
