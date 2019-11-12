@@ -54,6 +54,12 @@ function postprocess(ast, options) {
           node.body.end = node.end - 1;
         }
         break;
+      case "SequenceExpression":
+        // Babel (unlike other parsers) includes spaces and comments in the range. Let's unify this.
+        if (node.end > getLast(node.expressions).end) {
+          node.end = getLast(node.expressions).end;
+        }
+        break;
     }
   });
 
