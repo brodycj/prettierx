@@ -616,7 +616,19 @@ exports[`API getSupportInfo() with version 1.16.0 -> undefined 1`] = `
       ],
       \\"Markdown\\": Array [
         \\"markdown\\",
-@@ -140,10 +143,11 @@
+@@ -126,10 +129,11 @@
+      \\"parser\\": Object {
+        \\"choices\\": Array [
+          \\"flow\\",
+          \\"babel\\",
+          \\"babel-flow\\",
++         \\"babel-ts\\",
+          \\"typescript\\",
+          \\"css\\",
+          \\"less\\",
+          \\"scss\\",
+          \\"json\\",
+@@ -140,10 +144,11 @@
           \\"mdx\\",
           \\"vue\\",
           \\"yaml\\",
@@ -628,7 +640,7 @@ exports[`API getSupportInfo() with version 1.16.0 -> undefined 1`] = `
         \\"type\\": \\"choice\\",
       },
       \\"pluginSearchDirs\\": Object {
-@@ -170,10 +174,19 @@
+@@ -170,10 +175,19 @@
           \\"preserve\\",
         ],
         \\"default\\": \\"preserve\\",
@@ -648,7 +660,7 @@ exports[`API getSupportInfo() with version 1.16.0 -> undefined 1`] = `
         \\"range\\": Object {
           \\"end\\": Infinity,
           \\"start\\": 0,
-@@ -220,7 +233,11 @@
+@@ -222,7 +236,11 @@
       },
       \\"useTabs\\": Object {
         \\"default\\": false,
@@ -1216,6 +1228,7 @@ exports[`CLI --support-info (stdout) 1`] = `
         { \\"description\\": \\"Flow\\", \\"value\\": \\"flow\\" },
         { \\"description\\": \\"JavaScript\\", \\"since\\": \\"1.16.0\\", \\"value\\": \\"babel\\" },
         { \\"description\\": \\"Flow\\", \\"since\\": \\"1.16.0\\", \\"value\\": \\"babel-flow\\" },
+        { \\"description\\": \\"TypeScript\\", \\"since\\": \\"1.19.0\\", \\"value\\": \\"babel-ts\\" },
         {
           \\"description\\": \\"TypeScript\\",
           \\"since\\": \\"1.4.0\\",

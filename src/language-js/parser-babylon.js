@@ -8,55 +8,54 @@ const hasPragma = require("./pragma").hasPragma;
 const locFns = require("./loc");
 const postprocess = require("./postprocess");
 
-function babelOptions(extraOptions, extraPlugins = []) {
-  return Object.assign(
-    {
-      sourceType: "module",
-      allowAwaitOutsideFunction: true,
-      allowImportExportEverywhere: true,
-      allowReturnOutsideFunction: true,
-      allowSuperOutsideMethod: true,
-      allowUndeclaredExports: true,
-      errorRecovery: true,
-      plugins: [
-        "jsx",
-        "doExpressions",
-        "objectRestSpread",
-        "classProperties",
-        "exportDefaultFrom",
-        "exportNamespaceFrom",
-        "asyncGenerators",
-        "functionBind",
-        "functionSent",
-        "dynamicImport",
-        "numericSeparator",
-        "importMeta",
-        "optionalCatchBinding",
-        "optionalChaining",
-        "classPrivateProperties",
-        ["pipelineOperator", { proposal: "minimal" }],
-        "nullishCoalescingOperator",
-        "bigInt",
-        "throwExpressions",
-        "logicalAssignment",
-        "classPrivateMethods",
-        "v8intrinsic",
-        "partialApplication",
-        ["decorators", { decoratorsBeforeExport: false }]
-      ].concat(extraPlugins)
-    },
-    extraOptions
-  );
+function babelOptions(extraPlugins) {
+  return {
+    sourceType: "module",
+    allowAwaitOutsideFunction: true,
+    allowImportExportEverywhere: true,
+    allowReturnOutsideFunction: true,
+    allowSuperOutsideMethod: true,
+    allowUndeclaredExports: true,
+    errorRecovery: true,
+    plugins: [
+      "doExpressions",
+      "objectRestSpread",
+      "classProperties",
+      "exportDefaultFrom",
+      "exportNamespaceFrom",
+      "asyncGenerators",
+      "functionBind",
+      "functionSent",
+      "dynamicImport",
+      "numericSeparator",
+      "importMeta",
+      "optionalCatchBinding",
+      "optionalChaining",
+      "classPrivateProperties",
+      ["pipelineOperator", { proposal: "minimal" }],
+      "nullishCoalescingOperator",
+      "bigInt",
+      "throwExpressions",
+      "logicalAssignment",
+      "classPrivateMethods",
+      "v8intrinsic",
+      "partialApplication",
+      ["decorators", { decoratorsBeforeExport: false }]
+    ].concat(extraPlugins)
+  };
 }
 
-function createParse(parseMethod, extraPlugins) {
+function createParse(parseMethod, ...pluginCombinations) {
   return (text, parsers, opts) => {
     // Inline the require to avoid loading all the JS if we don't use it
     const babel = require("@babel/parser");
 
     let ast;
     try {
-      ast = babel[parseMethod](text, babelOptions({}, extraPlugins));
+      ast = tryCombinations(
+        options => babel[parseMethod](text, options),
+        pluginCombinations.map(babelOptions)
+      );
     } catch (error) {
       throw createError(
         // babel error prints (l:c) with cols that are zero indexed
@@ -75,10 +74,31 @@ function createParse(parseMethod, extraPlugins) {
   };
 }
 
-const parse = createParse("parse", ["flow"]);
-const parseFlow = createParse("parse", [["flow", { all: true, enums: true }]]);
-const parseTypeScript = createParse("parse", ["typescript"]);
-const parseExpression = createParse("parseExpression");
+const parse = createParse("parse", ["jsx", "flow"]);
+const parseFlow = createParse("parse", [
+  "jsx",
+  ["flow", { all: true, enums: true }]
+]);
+const parseTypeScript = createParse(
+  "parse",
+  ["jsx", "typescript"],
+  ["typescript"]
+);
+const parseExpression = createParse("parseExpression", ["jsx"]);
+
+function tryCombinations(fn, combinations) {
+  let error;
+  for (let i = 0; i < combinations.length; i++) {
+    try {
+      return fn(combinations[i]);
+    } catch (_error) {
+      if (!error) {
+        error = _error;
+      }
+    }
+  }
+  throw error;
+}
 
 function parseJson(text, parsers, opts) {
   const ast = parseExpression(text, parsers, opts);
