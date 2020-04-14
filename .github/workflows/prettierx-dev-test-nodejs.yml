@@ -12,11 +12,14 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    # ref:
+    # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idstrategymatrix
+    runs-on: ${{ matrix.os }}
 
     strategy:
       matrix:
         node-version: [10.x, 12.x, 8.x]
+        os: [ubuntu-latest, windows-latest]
 
     steps:
     - uses: actions/checkout@v2
