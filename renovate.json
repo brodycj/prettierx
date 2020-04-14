@@ -1,3 +1,9 @@
 {
-  "extends": ["config:base"]
+  "extends": ["config:base"],
+  "ignorePaths": [
+    "scripts/**/package.json",
+    "tests_integration/**/package.json",
+    "website/**/index.html",
+    "website/**/package.json"
+  ]
 }
