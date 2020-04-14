@@ -28,3 +28,5 @@ jobs:
     - run: npm test
       env:
         CI: true
+    # from package scripts - should work across prettier@1.x & prettier@2.x:
+    - run: npx cross-env EFF_NO_LINK_RULES=true eslint . --format friendly
