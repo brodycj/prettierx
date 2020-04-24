@@ -43,6 +43,10 @@ function postprocess(ast, options) {
           node.body.end = node.end - 1;
         }
         break;
+      case "IfStatement":
+        if (node.consequent.innerComments) {
+          delete node.consequent.innerComments;
+        }
     }
   });
 
