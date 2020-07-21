@@ -1142,7 +1142,7 @@ function printPathNoParens(path, options, print, args) {
         }
 
         if (
-          options.neverIndentImports ||
+          options.importFormatting === "oneline" ||
           (grouped.length === 1 &&
             standalones.length === 0 &&
             n.specifiers &&

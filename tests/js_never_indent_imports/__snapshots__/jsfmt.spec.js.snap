@@ -2,7 +2,7 @@
 
 exports[`long_import.js 1`] = `
 ====================================options=====================================
-neverIndentImports: true
+importFormatting: "oneline"
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
                                                                                 | printWidth
@@ -19,7 +19,7 @@ import { Lorem, ipsum, dolor, sit, amet, consectetur, adipiscing, elit, sed, eiu
 
 exports[`long_import.js 2`] = `
 ====================================options=====================================
-neverIndentImports: false
+importFormatting: "auto"
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
                                                                                 | printWidth

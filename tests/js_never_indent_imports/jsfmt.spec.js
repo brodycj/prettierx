@@ -1,6 +1,6 @@
 run_spec(__dirname, ["babel", "babel-flow", "flow", "typescript"], {
-  neverIndentImports: true
+  importFormatting: "oneline"
 });
 run_spec(__dirname, ["babel", "babel-flow", "flow", "typescript"], {
-  neverIndentImports: false
+  importFormatting: "auto"
 });
