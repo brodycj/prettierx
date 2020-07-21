@@ -76,12 +76,13 @@ Format options:
   --html-whitespace-sensitivity <css|strict|ignore>
                            How to handle whitespaces in HTML.
                            Defaults to css.
+  --import-formatting <auto|oneline>
+                           Formatting of import statements, may be \`oneline\` to avoid confict with VSCode \\"Organize Imports\\" feature.
+                           Defaults to auto.
   --no-indent-chains       Do not print indents at the start of chained calls.
   --jsx-bracket-same-line  Put > on the last line instead of at a new line.
                            Defaults to false.
   --jsx-single-quote       Use single quotes in JSX.
-                           Defaults to false.
-  --never-indent-imports   Never indent import statements, so the built-in VSCode \\"Organize Imports\\" feature may do its job.
                            Defaults to false.
   --paren-spacing          Print spaces between parens, WordPress style.
                            Defaults to false.
@@ -250,12 +251,13 @@ Format options:
   --html-whitespace-sensitivity <css|strict|ignore>
                            How to handle whitespaces in HTML.
                            Defaults to css.
+  --import-formatting <auto|oneline>
+                           Formatting of import statements, may be \`oneline\` to avoid confict with VSCode \\"Organize Imports\\" feature.
+                           Defaults to auto.
   --no-indent-chains       Do not print indents at the start of chained calls.
   --jsx-bracket-same-line  Put > on the last line instead of at a new line.
                            Defaults to false.
   --jsx-single-quote       Use single quotes in JSX.
-                           Defaults to false.
-  --never-indent-imports   Never indent import statements, so the built-in VSCode \\"Organize Imports\\" feature may do its job.
                            Defaults to false.
   --paren-spacing          Print spaces between parens, WordPress style.
                            Defaults to false.
