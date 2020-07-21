@@ -1142,6 +1142,7 @@ function printPathNoParens(path, options, print, args) {
         }
 
         if (
+          // prettierx: importFormatting
           options.importFormatting === "oneline" ||
           (grouped.length === 1 &&
             standalones.length === 0 &&
@@ -1152,6 +1153,7 @@ function printPathNoParens(path, options, print, args) {
             concat([
               "{",
               options.bracketSpacing ? " " : "",
+              // prettierx: importFormatting
               join(", ", grouped),
               options.bracketSpacing ? " " : "",
               "}"
