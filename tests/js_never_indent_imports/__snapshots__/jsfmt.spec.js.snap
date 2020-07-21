@@ -11,8 +11,8 @@ import abc, { Lorem, ipsum, dolor, sit, amet, consectetur, adipiscing, elit, sed
 import { Lorem, ipsum, dolor, sit, amet, consectetur, adipiscing, elit, sed, eiusmod, tempor, incididunt, ut, labore, et, magna } from "some-module";
 
 =====================================output=====================================
-import abc, { Loremipsumdolorsitametconsecteturadipiscingelitsedeiusmodtemporincididuntutlaboreetmagna } from "some-module";
-import { Loremipsumdolorsitametconsecteturadipiscingelitsedeiusmodtemporincididuntutlaboreetmagna } from "some-module";
+import abc, { Lorem, ipsum, dolor, sit, amet, consectetur, adipiscing, elit, sed, eiusmod, tempor, incididunt, ut, labore, et, magna } from "some-module";
+import { Lorem, ipsum, dolor, sit, amet, consectetur, adipiscing, elit, sed, eiusmod, tempor, incididunt, ut, labore, et, magna } from "some-module";
 
 ================================================================================
 `;
