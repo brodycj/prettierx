@@ -3,7 +3,7 @@
 exports[`long_import.js 1`] = `
 ====================================options=====================================
 neverIndentImports: true
-parsers: ["flow", "typescript"]
+parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
@@ -20,7 +20,7 @@ import { Lorem, ipsum, dolor, sit, amet, consectetur, adipiscing, elit, sed, eiu
 exports[`long_import.js 2`] = `
 ====================================options=====================================
 neverIndentImports: false
-parsers: ["flow", "typescript"]
+parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
