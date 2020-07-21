@@ -935,7 +935,6 @@ exports[`CLI --support-info (stdout) 1`] = `
       \\"description\\": \\"Never indent import statements, so the built-in VSCode \\\\\\"Organize Imports\\\\\\" feature may do its job.\\",
       \\"name\\": \\"neverIndentImports\\",
       \\"pluginDefaults\\": {},
-      \\"since\\": \\"1.16.5\\",
       \\"type\\": \\"boolean\\"
     },
     {

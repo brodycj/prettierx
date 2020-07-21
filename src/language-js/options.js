@@ -33,7 +33,6 @@ module.exports = {
   },
   parenSpacing: commonOptions.parenSpacing,
   neverIndentImports: {
-    since: "1.16.5",
     category: CATEGORY_JAVASCRIPT,
     type: "boolean",
     default: false,
