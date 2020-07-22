@@ -29,9 +29,6 @@
     "  test failure with recent yaml@1.10.0 update",
     "<!-- -->"
   ],
-  "resolutions": {
-    "*/yaml": "1.8.3"
-  },
   "dependencies": {
     "@angular/compiler": "8.2.14",
     "@babel/code-frame": "7.10.4",
