@@ -83,9 +83,9 @@ function group(contents, opts) {
   return {
     type: "group",
     id: opts.id,
-    // [prettierx merge ...]
     contents,
     break: !!opts.shouldBreak,
+    // prettierx: parenSpace option support (...)
     addedLine: !!opts.addedLine,
     expandedStates: opts.expandedStates
   };

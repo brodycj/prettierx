@@ -104,6 +104,7 @@ function printDoc(doc) {
 
     return (
       (doc.break ? "wrappedGroup" : "group") +
+      // prettierx: parenSpace option support (...)
       (doc.addedLine ? "WithTrailingLine" : "") +
       "(" +
       printDoc(doc.contents) +
