@@ -70,6 +70,26 @@ Default: false
 
 exports[`show detailed usage with --help break-before-else (write) 1`] = `Array []`;
 
+exports[`show detailed usage with --help break-before-statement (stderr) 1`] = `""`;
+
+exports[`show detailed usage with --help break-before-statement (stdout) 1`] = `
+"--break-before-statement <never|conditionals|loops|always>
+
+  Always add line breaks before statement following if, else, with, for, for each, while and do.
+
+Valid options:
+
+  never          never add hard break
+  conditionals   only after if, else and with
+  loops          only after for, for each, while and do
+  always         add hard break
+
+Default: never
+"
+`;
+
+exports[`show detailed usage with --help break-before-statement (write) 1`] = `Array []`;
+
 exports[`show detailed usage with --help check (stderr) 1`] = `""`;
 
 exports[`show detailed usage with --help check (stdout) 1`] = `

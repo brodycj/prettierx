@@ -77,6 +77,9 @@ Format options:
   --no-bracket-spacing     Do not print spaces between brackets.
   --break-before-else      Always add a line break before else.
                            Defaults to false.
+  --break-before-statement <never|conditionals|loops|always>
+                           Always add line breaks before statement following if, else, with, for, for each, while and do.
+                           Defaults to never.
   --end-of-line <lf|crlf|cr|auto>
                            Which end of line characters to apply.
                            Defaults to lf.
@@ -252,6 +255,9 @@ Format options:
   --no-bracket-spacing     Do not print spaces between brackets.
   --break-before-else      Always add a line break before else.
                            Defaults to false.
+  --break-before-statement <never|conditionals|loops|always>
+                           Always add line breaks before statement following if, else, with, for, for each, while and do.
+                           Defaults to never.
   --end-of-line <lf|crlf|cr|auto>
                            Which end of line characters to apply.
                            Defaults to lf.

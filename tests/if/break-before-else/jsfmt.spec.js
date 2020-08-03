@@ -10,3 +10,11 @@ run_spec(dirpath, ["babel", "babel-flow", "flow", "typescript"], {
   // recommended:
   trailingComma: "none", // ("Standard JS")
 });
+
+run_spec(dirpath, ["babel", "babel-flow", "flow", "typescript"], {
+  // [prettierx] test with --break-before-else
+  breakBeforeElse: true,
+  // recommended:
+  trailingComma: "none", // ("Standard JS")
+  newlineBefore: true
+});

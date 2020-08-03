@@ -2030,11 +2030,23 @@ function printPathNoParens(path, options, print, args) {
           path.call(print, "object"),
           parenSpace,
           ")",
-          adjustClause(n.body, path.call(print, "body")),
+          // [prettierx] breakBeforeStatement option support
+          adjustClause(
+            n.body,
+            path.call(print, "body"),
+            options.breakBeforeStatement === "always" ||
+              options.breakBeforeStatement === "conditionals"
+          )
         ])
       );
     case "IfStatement": {
-      const con = adjustClause(n.consequent, path.call(print, "consequent"));
+      const con = adjustClause(
+        n.consequent,
+        path.call(print, "consequent"),
+        // [prettierx] breakBeforeStatement option support
+        options.breakBeforeStatement === "always" ||
+          options.breakBeforeStatement === "conditionals"
+      );
       const opening = group(
         concat([
           // [prettierx] parenSpace option support (...)
@@ -2080,6 +2092,9 @@ function printPathNoParens(path, options, print, args) {
             adjustClause(
               n.alternate,
               path.call(print, "alternate"),
+              // [prettierx] breakBeforeStatement option support
+              options.breakBeforeStatement === "always" ||
+                options.breakBeforeStatement === "conditionals",
               n.alternate.type === "IfStatement"
             )
           )
@@ -2089,7 +2104,13 @@ function printPathNoParens(path, options, print, args) {
       return concat(parts);
     }
     case "ForStatement": {
-      const body = adjustClause(n.body, path.call(print, "body"));
+      const body = adjustClause(
+        n.body,
+        path.call(print, "body"),
+        // [prettierx] breakBeforeStatement option support
+        options.breakBeforeStatement === "always" ||
+          options.breakBeforeStatement === "loops"
+      );
 
       // We want to keep dangling comments above the loop to stay consistent.
       // Any comment positioned between the for statement and the parentheses
@@ -2148,7 +2169,13 @@ function printPathNoParens(path, options, print, args) {
             ])
           ),
           ")",
-          adjustClause(n.body, path.call(print, "body")),
+          adjustClause(
+            n.body,
+            path.call(print, "body"),
+            // [prettierx] breakBeforeStatement option support
+            options.breakBeforeStatement === "always" ||
+              options.breakBeforeStatement === "loops"
+          )
         ])
       );
     case "ForInStatement":
@@ -2164,7 +2191,13 @@ function printPathNoParens(path, options, print, args) {
           path.call(print, "right"),
           parenSpace,
           ")",
-          adjustClause(n.body, path.call(print, "body")),
+          adjustClause(
+            n.body,
+            path.call(print, "body"),
+            // [prettierx] breakBeforeStatement option support
+            options.breakBeforeStatement === "always" ||
+              options.breakBeforeStatement === "loops"
+          )
         ])
       );
 
@@ -2182,12 +2215,24 @@ function printPathNoParens(path, options, print, args) {
           path.call(print, "right"),
           parenSpace,
           ")",
-          adjustClause(n.body, path.call(print, "body")),
+          adjustClause(
+            n.body,
+            path.call(print, "body"),
+            // [prettierx] breakBeforeStatement option support
+            options.breakBeforeStatement === "always" ||
+              options.breakBeforeStatement === "loops"
+          )
         ])
       );
 
     case "DoWhileStatement": {
-      const clause = adjustClause(n.body, path.call(print, "body"));
+      const clause = adjustClause(
+        n.body,
+        path.call(print, "body"),
+        // [prettierx] breakBeforeStatement option support
+        options.breakBeforeStatement === "always" ||
+          options.breakBeforeStatement === "loops"
+      );
       const doBody = group(concat(["do", clause]));
       parts = [doBody];
 
@@ -6300,8 +6345,8 @@ function printAssignment(
 
   return group(concat([printedLeft, operator, printed]));
 }
-
-function adjustClause(node, clause, forceSpace) {
+// [prettierx] breakBeforeStatement option
+function adjustClause(node, clause, hardBreak, forceSpace) {
   if (node.type === "EmptyStatement") {
     return ";";
   }
@@ -6309,8 +6354,8 @@ function adjustClause(node, clause, forceSpace) {
   if (node.type === "BlockStatement" || forceSpace) {
     return concat([" ", clause]);
   }
-
-  return indent(concat([line, clause]));
+  // [prettierx] breakBeforeStatement option
+  return indent(concat([hardBreak ? hardline : line, clause]));
 }
 
 function nodeStr(node, options, isFlowOrTypeScriptDirectiveLiteral) {

@@ -44,6 +44,36 @@ Object {
           "description": "Always add a line break before else.",
           "type": "boolean",
         },
+        "breakBeforeStatement": Object {
+          "default": "never",
+          "description": "Always add line breaks before statement following if, else, with, for, for each, while and do.",
+          "oneOf": Array [
+            Object {
+              "description": "never add hard break",
+              "enum": Array [
+                "never",
+              ],
+            },
+            Object {
+              "description": "only after if, else and with",
+              "enum": Array [
+                "conditionals",
+              ],
+            },
+            Object {
+              "description": "only after for, for each, while and do",
+              "enum": Array [
+                "loops",
+              ],
+            },
+            Object {
+              "description": "add hard break",
+              "enum": Array [
+                "always",
+              ],
+            },
+          ],
+        },
         "cursorOffset": Object {
           "default": -1,
           "description": "Print (to stderr) where a cursor at the given position would move to after formatting.
