@@ -254,6 +254,7 @@ function needsParens(path, options) {
         case "TSAsExpression":
         case "TSNonNullExpression":
         case "UpdateExpression":
+          // XXX
           // [prettierx] parenSpace option support (...)
           // Logical and Binary expressions already got their parens if parent is UnaryExpression
           if (
@@ -683,9 +684,9 @@ function needsParens(path, options) {
         parent.type === "AssignmentExpression" ||
         // [prettierx] parenSpace option support (...)
         // Pipe expression already got the parens when breaking inside certain parents
-        parent.type === "UnaryExpression" ||
+        parent.type === "UnaryExpression" || // XXX
         ((parent.type === "MemberExpression" ||
-          parent.type === "OptionalMemberExpression") &&
+          parent.type === "OptionalMemberExpression") && // XXX
           !parent.computed)
       ) {
         return false;
