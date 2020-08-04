@@ -276,9 +276,8 @@ function needsParens(path, options) {
           ) {
             return false;
           }
-          // [prettierx merge from prettier@1.19.0] (...)
-          // return name === "object";
-          return name === "object" && parent.object === node;
+          // [prettierx ...]
+          return name === "object";
 
         case "AssignmentExpression":
           return (
