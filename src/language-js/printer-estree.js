@@ -4499,7 +4499,7 @@ function printArgumentsList(path, options, print) {
           concat([
             ifBreak(
               // [prettierx] parenSpace option support (...)
-              indent(concat(["(", parenLine, concat(printedExpanded)])),
+              indent(concat(["(", softline, concat(printedExpanded)])),
               concat(["(", parenSpace, concat(printedExpanded)])
             ),
             // [prettierx] parenSpace option support (...)
