@@ -7,7 +7,7 @@ const {
   getLeftSidePathName,
   hasFlowShorthandAnnotationComment,
   hasNakedLeftSide,
-  hasNode
+  hasNode,
 } = require("./utils");
 
 function needsParens(path, options) {
@@ -208,7 +208,7 @@ function needsParens(path, options) {
         return true;
       }
 
-      const isLeftOfAForStatement = node => {
+      const isLeftOfAForStatement = (node) => {
         let i = 0;
         while (node) {
           const parent = path.getParentNode(i++);
@@ -237,6 +237,17 @@ function needsParens(path, options) {
         case "CallExpression":
         case "NewExpression":
         case "OptionalCallExpression":
+          // [prettierx] parenSpace option support (...)
+          // Logical and Binary expressions already got their parens if parent is CallExpression
+          if (
+            (parent.type === "CallExpression" ||
+              parent.type === "OptionalCallExpression") &&
+            name === "callee" &&
+            (node.type === "LogicalExpression" ||
+              node.type === "BinaryExpression")
+          ) {
+            return false;
+          }
           return name === "callee";
 
         case "ClassExpression":
@@ -685,7 +696,10 @@ function needsParens(path, options) {
         parent.type === "UnaryExpression" ||
         ((parent.type === "MemberExpression" ||
           parent.type === "OptionalMemberExpression") &&
-          !parent.computed)
+          !parent.computed) ||
+        (parent.type === "CallExpression" &&
+          name === "callee" &&
+          parent.callee === node)
       ) {
         return false;
       }
@@ -754,7 +768,6 @@ function isStatement(node) {
     node.type === "ExportDefaultDeclaration" ||
     node.type === "ExportNamedDeclaration" ||
     node.type === "ExpressionStatement" ||
-    node.type === "ForAwaitStatement" ||
     node.type === "ForInStatement" ||
     node.type === "ForOfStatement" ||
     node.type === "ForStatement" ||
@@ -784,9 +797,12 @@ function isStatement(node) {
 function includesFunctionTypeInObjectType(node) {
   return hasNode(
     node,
-    n1 =>
+    (n1) =>
       (n1.type === "ObjectTypeAnnotation" &&
-        hasNode(n1, n2 => n2.type === "FunctionTypeAnnotation" || undefined)) ||
+        hasNode(
+          n1,
+          (n2) => n2.type === "FunctionTypeAnnotation" || undefined
+        )) ||
       undefined
   );
 }
@@ -864,7 +880,7 @@ function shouldWrapFunctionForExportDefault(path, options) {
   }
 
   return path.call(
-    childPath => shouldWrapFunctionForExportDefault(childPath, options),
+    (childPath) => shouldWrapFunctionForExportDefault(childPath, options),
     ...getLeftSidePathName(path, node)
   );
 }
