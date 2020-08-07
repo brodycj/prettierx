@@ -2036,7 +2036,7 @@ function printPathNoParens(path, options, print, args) {
             path.call(print, "body"),
             options.breakBeforeStatement === "always" ||
               options.breakBeforeStatement === "conditionals"
-          )
+          ),
         ])
       );
     case "IfStatement": {
@@ -2175,7 +2175,7 @@ function printPathNoParens(path, options, print, args) {
             // [prettierx] breakBeforeStatement option support
             options.breakBeforeStatement === "always" ||
               options.breakBeforeStatement === "loops"
-          )
+          ),
         ])
       );
     case "ForInStatement":
@@ -2197,7 +2197,7 @@ function printPathNoParens(path, options, print, args) {
             // [prettierx] breakBeforeStatement option support
             options.breakBeforeStatement === "always" ||
               options.breakBeforeStatement === "loops"
-          )
+          ),
         ])
       );
 
@@ -2221,7 +2221,7 @@ function printPathNoParens(path, options, print, args) {
             // [prettierx] breakBeforeStatement option support
             options.breakBeforeStatement === "always" ||
               options.breakBeforeStatement === "loops"
-          )
+          ),
         ])
       );
 

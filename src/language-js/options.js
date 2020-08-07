@@ -117,21 +117,21 @@ module.exports = {
     choices: [
       {
         value: "never",
-        description: "never add hard break"
+        description: "never add hard break",
       },
       {
         value: "conditionals",
-        description: "only after if, else and with"
+        description: "only after if, else and with",
       },
       {
         value: "loops",
-        description: "only after for, for each, while and do"
+        description: "only after for, for each, while and do",
       },
       {
         value: "always",
-        description: "add hard break"
-      }
-    ]
+        description: "add hard break",
+      },
+    ],
   },
   singleQuote: commonOptions.singleQuote,
   jsxSingleQuote: {

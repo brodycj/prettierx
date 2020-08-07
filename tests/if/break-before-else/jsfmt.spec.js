@@ -16,5 +16,5 @@ run_spec(dirpath, ["babel", "babel-flow", "flow", "typescript"], {
   breakBeforeElse: true,
   // recommended:
   trailingComma: "none", // ("Standard JS")
-  newlineBefore: true
+  newlineBefore: true,
 });
