@@ -24,11 +24,12 @@ jobs:
         node:
           - "12"
           - "10"
-        include:
-          # only enable coverage on the fastest job
-          - os: "ubuntu-latest"
-            node: "12"
-            ENABLE_CODE_COVERAGE: true
+        # [prettierx] not enabled:
+        # include:
+        #   # only enable coverage on the fastest job
+        #   - os: "ubuntu-latest"
+        #     node: "12"
+        #     ENABLE_CODE_COVERAGE: true
         exclude:
           - os: "macos-latest"
             node: "13"
