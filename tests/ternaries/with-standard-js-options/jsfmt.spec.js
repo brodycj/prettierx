@@ -23,3 +23,26 @@ run_spec(dirpath, ["babel", "babel-flow", "flow", "typescript"], {
   arrowParens: "avoid",
   trailingComma: "none",
 });
+
+run_spec(dirpath, ["babel", "babel-flow", "flow", "typescript"], {
+  // variation from ../jsfmt.spec.js:
+  useTabs: true,
+  // [prettierx] option to improve consistency with "Standard JS" in certain cases,
+  // may lead to inconsistencies in some other cases:
+  alignTernaryLines: false,
+  // [prettierx] options needed for consistency with "Standard JS":
+  arrowParens: "avoid",
+  trailingComma: "none",
+});
+
+run_spec(dirpath, ["babel", "babel-flow", "flow", "typescript"], {
+  // variation from ../jsfmt.spec.js:
+  useTabs: true,
+  tabWidth: 4,
+  // [prettierx] option to improve consistency with "Standard JS" in certain cases,
+  // may lead to inconsistencies in some other cases:
+  alignTernaryLines: false,
+  // [prettierx] options needed for consistency with "Standard JS":
+  arrowParens: "avoid",
+  trailingComma: "none",
+});
