@@ -2159,3 +2159,53 @@ const StorybookLoader = ({ match }) =><LF>
 
 ================================================================================
 `;
+
+exports[`nested-ternary-promises.js 1`] = `
+====================================options=====================================
+alignTernaryLines: false
+arrowParens: "avoid"
+endOfLine: "lf"
+generatorStarSpacing: true
+jsxSingleQuote: true
+parsers: ["babel", "babel-flow", "flow", "typescript"]
+printWidth: 80
+semi: false
+singleQuote: true
+spaceBeforeFunctionParen: true
+trailingComma: "none"
+yieldStarSpacing: true
+                                                                                | printWidth
+=====================================input======================================
+// check for consistent formatting as discussed in:<LF>
+// - https://github.com/eslint/eslint/issues/13971<LF>
+// - https://github.com/standard/standard/issues/1624<LF>
+// - https://github.com/brodybits/prettierx/issues/41<LF>
+<LF>
+function test1() {<LF>
+  return condition1<LF>
+  ? condition2<LF>
+    ? Promise(1)<LF>
+    : Promise(2)<LF>
+  : condition3<LF>
+    ? Promise(3)<LF>
+    : Promise(4)<LF>
+}<LF>
+
+=====================================output=====================================
+// check for consistent formatting as discussed in:<LF>
+// - https://github.com/eslint/eslint/issues/13971<LF>
+// - https://github.com/standard/standard/issues/1624<LF>
+// - https://github.com/brodybits/prettierx/issues/41<LF>
+<LF>
+function test1 () {<LF>
+  return condition1<LF>
+    ? condition2<LF>
+      ? Promise(1)<LF>
+      : Promise(2)<LF>
+    : condition3<LF>
+      ? Promise(3)<LF>
+      : Promise(4)<LF>
+}<LF>
+
+================================================================================
+`;
