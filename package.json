@@ -29,6 +29,9 @@
     "  with @angular/compiler version 9",
     "  (should not be an issue with @angular/compiler version >= 10)",
     "* codecov is removed from devDependencies",
+    "* debug@4.1.1 is added to dependencies to avoid an issue with",
+    "  @typescript-eslint/typescript-estree@2 in the extra prod build test ",
+    "  with regenerated yarn.lock",
     "<!-- -->"
   ],
   "dependencies": {
@@ -46,6 +49,7 @@
     "cjk-regex": "2.0.0",
     "cosmiconfig": "7.0.0",
     "dashify": "2.0.0",
+    "debug": "4.1.1",
     "dedent": "0.7.0",
     "diff": "4.0.2",
     "editorconfig": "0.15.3",
