@@ -431,8 +431,8 @@ function printTernaryOperator(path, options, print, operatorOptions) {
       consequentNode.type === operatorOptions.conditionalNodeType
         ? ifBreak("", concat(["(", parenSpace]))
         : "",
-      // [prettierx] alignTernaryLines option support:
-      options.alignTernaryLines
+      // [prettierx] alignTernaryLines / offsetTernaryExpressions option support:
+      options.alignTernaryLines && !options.offsetTernaryExpressions
         ? align(2, path.call(print, operatorOptions.consequentNodePropertyName))
         : path.call(print, operatorOptions.consequentNodePropertyName),
       // [prettierx] parenSpace option support (...)
@@ -441,8 +441,8 @@ function printTernaryOperator(path, options, print, operatorOptions) {
         : "",
       line,
       ": ",
-      // [prettierx] alignTernaryLines option support:
-      !options.alignTernaryLines ||
+      // [prettierx] alignTernaryLines / offsetTernaryExpressions option support:
+      !(options.alignTernaryLines && !options.offsetTernaryExpressions) ||
       alternateNode.type === operatorOptions.conditionalNodeType
         ? path.call(print, operatorOptions.alternateNodePropertyName)
         : align(2, path.call(print, operatorOptions.alternateNodePropertyName)),
@@ -453,14 +453,15 @@ function printTernaryOperator(path, options, print, operatorOptions) {
         parent[operatorOptions.alternateNodePropertyName] === node ||
         isParentTest
         ? part
-        : options.useTabs || !options.alignTernaryLines // [prettierx] (...)
+        : options.useTabs || // [prettierx] alignTernaryLines / offsetTernaryExpressions option support (...)
+          !(options.alignTernaryLines && !options.offsetTernaryExpressions)
         ? dedent(indent(part))
         : align(Math.max(0, options.tabWidth - 2), part)
     );
 
     // [prettierx] alignTernaryLines option support:
     // Indent the whole ternary if alignTernaryLines:false (like ESLint).
-    if (!options.alignTernaryLines) {
+    if (!(options.alignTernaryLines && !options.offsetTernaryExpressions)) {
       forceNoIndent = false;
     }
   }

@@ -2,8 +2,8 @@
 
 exports[`binary.js 1`] = `
 ====================================options=====================================
-alignTernaryLines: false
 arrowParens: "avoid"
+offsetTernaryExpressions: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 trailingComma: "none"
@@ -46,8 +46,8 @@ room = room.map((row, rowIndex) =>
 
 exports[`binary.js 2`] = `
 ====================================options=====================================
-alignTernaryLines: false
 arrowParens: "avoid"
+offsetTernaryExpressions: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 tabWidth: 4
@@ -91,8 +91,8 @@ room = room.map((row, rowIndex) =>
 
 exports[`binary.js 3`] = `
 ====================================options=====================================
-alignTernaryLines: false
 arrowParens: "avoid"
+offsetTernaryExpressions: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 trailingComma: "none"
@@ -136,8 +136,8 @@ room = room.map((row, rowIndex) =>
 
 exports[`binary.js 4`] = `
 ====================================options=====================================
-alignTernaryLines: false
 arrowParens: "avoid"
+offsetTernaryExpressions: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 tabWidth: 4
@@ -182,8 +182,8 @@ room = room.map((row, rowIndex) =>
 
 exports[`crewdress.js 1`] = `
 ====================================options=====================================
-alignTernaryLines: false
 arrowParens: "avoid"
+offsetTernaryExpressions: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 trailingComma: "none"
@@ -217,8 +217,8 @@ const dress = isSpace
 
 exports[`crewdress.js 2`] = `
 ====================================options=====================================
-alignTernaryLines: false
 arrowParens: "avoid"
+offsetTernaryExpressions: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 tabWidth: 4
@@ -253,8 +253,8 @@ const dress = isSpace
 
 exports[`crewdress.js 3`] = `
 ====================================options=====================================
-alignTernaryLines: false
 arrowParens: "avoid"
+offsetTernaryExpressions: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 trailingComma: "none"
@@ -289,8 +289,8 @@ const dress = isSpace
 
 exports[`crewdress.js 4`] = `
 ====================================options=====================================
-alignTernaryLines: false
 arrowParens: "avoid"
+offsetTernaryExpressions: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 tabWidth: 4
@@ -326,8 +326,8 @@ const dress = isSpace
 
 exports[`func-call.js 1`] = `
 ====================================options=====================================
-alignTernaryLines: false
 arrowParens: "avoid"
+offsetTernaryExpressions: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 trailingComma: "none"
@@ -357,8 +357,8 @@ fn(
 
 exports[`func-call.js 2`] = `
 ====================================options=====================================
-alignTernaryLines: false
 arrowParens: "avoid"
+offsetTernaryExpressions: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 tabWidth: 4
@@ -389,8 +389,8 @@ fn(
 
 exports[`func-call.js 3`] = `
 ====================================options=====================================
-alignTernaryLines: false
 arrowParens: "avoid"
+offsetTernaryExpressions: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 trailingComma: "none"
@@ -421,8 +421,8 @@ fn(
 
 exports[`func-call.js 4`] = `
 ====================================options=====================================
-alignTernaryLines: false
 arrowParens: "avoid"
+offsetTernaryExpressions: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 tabWidth: 4
@@ -454,8 +454,8 @@ fn(
 
 exports[`indent.js 1`] = `
 ====================================options=====================================
-alignTernaryLines: false
 arrowParens: "avoid"
+offsetTernaryExpressions: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 trailingComma: "none"
@@ -786,8 +786,8 @@ a
 
 exports[`indent.js 2`] = `
 ====================================options=====================================
-alignTernaryLines: false
 arrowParens: "avoid"
+offsetTernaryExpressions: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 tabWidth: 4
@@ -1119,8 +1119,8 @@ a
 
 exports[`indent.js 3`] = `
 ====================================options=====================================
-alignTernaryLines: false
 arrowParens: "avoid"
+offsetTernaryExpressions: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 trailingComma: "none"
@@ -1452,8 +1452,8 @@ a
 
 exports[`indent.js 4`] = `
 ====================================options=====================================
-alignTernaryLines: false
 arrowParens: "avoid"
+offsetTernaryExpressions: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 tabWidth: 4
@@ -1786,8 +1786,8 @@ a
 
 exports[`nested.js 1`] = `
 ====================================options=====================================
-alignTernaryLines: false
 arrowParens: "avoid"
+offsetTernaryExpressions: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 trailingComma: "none"
@@ -1982,8 +1982,8 @@ const foo = (
 a
   ? literalline
   : {
-    123: 12
-  }
+      123: 12
+    }
     ? line
     : softline;
 
@@ -1992,8 +1992,8 @@ a
 
 exports[`nested.js 2`] = `
 ====================================options=====================================
-alignTernaryLines: false
 arrowParens: "avoid"
+offsetTernaryExpressions: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 tabWidth: 4
@@ -2189,8 +2189,8 @@ const foo = (
 a
     ? literalline
     : {
-        123: 12
-    }
+          123: 12
+      }
         ? line
         : softline;
 
@@ -2199,8 +2199,8 @@ a
 
 exports[`nested.js 3`] = `
 ====================================options=====================================
-alignTernaryLines: false
 arrowParens: "avoid"
+offsetTernaryExpressions: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 trailingComma: "none"
@@ -2396,8 +2396,8 @@ const foo = (
 a
 	? literalline
 	: {
-		123: 12
-	}
+			123: 12
+	  }
 		? line
 		: softline;
 
@@ -2406,8 +2406,8 @@ a
 
 exports[`nested.js 4`] = `
 ====================================options=====================================
-alignTernaryLines: false
 arrowParens: "avoid"
+offsetTernaryExpressions: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 tabWidth: 4
@@ -2604,8 +2604,8 @@ const foo = (
 a
 	? literalline
 	: {
-		123: 12
-	}
+			123: 12
+	  }
 		? line
 		: softline;
 
@@ -2614,8 +2614,8 @@ a
 
 exports[`nested-in-condition.js 1`] = `
 ====================================options=====================================
-alignTernaryLines: false
 arrowParens: "avoid"
+offsetTernaryExpressions: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 trailingComma: "none"
@@ -2705,8 +2705,8 @@ const value = (
 
 exports[`nested-in-condition.js 2`] = `
 ====================================options=====================================
-alignTernaryLines: false
 arrowParens: "avoid"
+offsetTernaryExpressions: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 tabWidth: 4
@@ -2797,8 +2797,8 @@ const value = (
 
 exports[`nested-in-condition.js 3`] = `
 ====================================options=====================================
-alignTernaryLines: false
 arrowParens: "avoid"
+offsetTernaryExpressions: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 trailingComma: "none"
@@ -2889,8 +2889,8 @@ const value = (
 
 exports[`nested-in-condition.js 4`] = `
 ====================================options=====================================
-alignTernaryLines: false
 arrowParens: "avoid"
+offsetTernaryExpressions: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 tabWidth: 4
@@ -2982,8 +2982,8 @@ const value = (
 
 exports[`parenthesis.js 1`] = `
 ====================================options=====================================
-alignTernaryLines: false
 arrowParens: "avoid"
+offsetTernaryExpressions: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 trailingComma: "none"
@@ -3021,8 +3021,8 @@ a =>
 
 exports[`parenthesis.js 2`] = `
 ====================================options=====================================
-alignTernaryLines: false
 arrowParens: "avoid"
+offsetTernaryExpressions: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 tabWidth: 4
@@ -3061,8 +3061,8 @@ a =>
 
 exports[`parenthesis.js 3`] = `
 ====================================options=====================================
-alignTernaryLines: false
 arrowParens: "avoid"
+offsetTernaryExpressions: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 trailingComma: "none"
@@ -3101,8 +3101,8 @@ a =>
 
 exports[`parenthesis.js 4`] = `
 ====================================options=====================================
-alignTernaryLines: false
 arrowParens: "avoid"
+offsetTernaryExpressions: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 tabWidth: 4
@@ -3142,8 +3142,8 @@ a =>
 
 exports[`test.js 1`] = `
 ====================================options=====================================
-alignTernaryLines: false
 arrowParens: "avoid"
+offsetTernaryExpressions: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 trailingComma: "none"
@@ -3204,8 +3204,8 @@ const obj5 = conditionIsTruthy
 
 exports[`test.js 2`] = `
 ====================================options=====================================
-alignTernaryLines: false
 arrowParens: "avoid"
+offsetTernaryExpressions: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 tabWidth: 4
@@ -3267,8 +3267,8 @@ const obj5 = conditionIsTruthy
 
 exports[`test.js 3`] = `
 ====================================options=====================================
-alignTernaryLines: false
 arrowParens: "avoid"
+offsetTernaryExpressions: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 trailingComma: "none"
@@ -3330,8 +3330,8 @@ const obj5 = conditionIsTruthy
 
 exports[`test.js 4`] = `
 ====================================options=====================================
-alignTernaryLines: false
 arrowParens: "avoid"
+offsetTernaryExpressions: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 tabWidth: 4
