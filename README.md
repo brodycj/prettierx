@@ -62,7 +62,7 @@ Note that this tool does **not** follow any of the other ["Standard JS"](https:/
 
 Any known conflicts with ["Standard JS"](https://standardjs.com/) will be tracked in [open issues with the `conflict-with-standard` tag](https://github.com/brodybits/prettierx/issues?q=is%3Aissue+label%3Aconflict-with-standard+is%3Aopen).
 
-## other recommended settings
+## recommended options
 
 - `--arrow-parens avoid` (`arrowParens: "avoid"`), especially in combination with `--paren-spacing` (`parenSpacing: true`).
 
