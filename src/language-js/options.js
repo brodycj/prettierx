@@ -91,6 +91,12 @@ module.exports = {
     description:
       "Add spaces around the star ('*') in generator functions (before and after - from eslint).",
   },
+  offsetTernaryExpressions: {
+    category: CATEGORY_JAVASCRIPT,
+    type: "boolean",
+    default: false,
+    description: "XXX Align ternary lines.",
+  },
   yieldStarSpacing: {
     category: CATEGORY_JAVASCRIPT,
     type: "boolean",

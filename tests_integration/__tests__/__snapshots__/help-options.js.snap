@@ -434,6 +434,19 @@ exports[`show detailed usage with --help no-semi (stdout) 1`] = `
 
 exports[`show detailed usage with --help no-semi (write) 1`] = `Array []`;
 
+exports[`show detailed usage with --help offset-ternary-expressions (stderr) 1`] = `""`;
+
+exports[`show detailed usage with --help offset-ternary-expressions (stdout) 1`] = `
+"--offset-ternary-expressions
+
+  XXX Align ternary lines.
+
+Default: false
+"
+`;
+
+exports[`show detailed usage with --help offset-ternary-expressions (write) 1`] = `Array []`;
+
 exports[`show detailed usage with --help paren-spacing (stderr) 1`] = `""`;
 
 exports[`show detailed usage with --help paren-spacing (stdout) 1`] = `
