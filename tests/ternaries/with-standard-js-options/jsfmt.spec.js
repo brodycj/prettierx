@@ -5,19 +5,21 @@
 const dirpath = `${__dirname}/..`;
 
 run_spec(dirpath, ["babel", "babel-flow", "flow", "typescript"], {
-  // option(s):
+  // [prettierx] option to improve consistency with "Standard JS" in certain cases,
+  // may lead to inconsistencies in some other cases:
   alignTernaryLines: false,
-  // [prettierx] recommended option:
+  // [prettierx] options needed for consistency with "Standard JS":
   arrowParens: "avoid",
-  // [prettierx] "Standard JS" setting:
   trailingComma: "none",
 });
 
 run_spec(dirpath, ["babel", "babel-flow", "flow", "typescript"], {
-  alignTernaryLines: false,
+  // variation from ../jsfmt.spec.js:
   tabWidth: 4,
-  // [prettierx] recommended option:
+  // [prettierx] option to improve consistency with "Standard JS" in certain cases,
+  // may lead to inconsistencies in some other cases:
+  alignTernaryLines: false,
+  // [prettierx] options needed for consistency with "Standard JS":
   arrowParens: "avoid",
-  // [prettierx] "Standard JS" setting:
   trailingComma: "none",
 });
