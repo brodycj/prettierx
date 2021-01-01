@@ -15,3 +15,18 @@ run_spec(dirpath, ["babel", "babel-flow", "flow", "typescript"], {
   // [prettierx] option:
   alignTernaryLines: false,
 });
+
+run_spec(dirpath, ["babel", "babel-flow", "flow", "typescript"], {
+  // variation from ../jsfmt.spec.js:
+  useTabs: true,
+  // [prettierx] option:
+  alignTernaryLines: false,
+});
+
+run_spec(dirpath, ["babel", "babel-flow", "flow", "typescript"], {
+  // variation from ../jsfmt.spec.js:
+  useTabs: true,
+  tabWidth: 4,
+  // [prettierx] option:
+  alignTernaryLines: false,
+});
