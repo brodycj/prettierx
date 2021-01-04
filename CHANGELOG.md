@@ -12,6 +12,12 @@ $ git log --pretty=format:"- %s" rev1..rev2 | sed 's/#\([0-9]*\)/\[prettier\/pre
 
 [compare prettierx-0.14.3...dev](https://github.com/brodybits/prettierx/compare/prettierx-0.14.3...dev)
 
+### prettier 2.1.0
+
+[diff](https://github.com/prettier/prettier/compare/2.0.5...2.1.0)
+
+🔗 [Release Notes](https://prettier.io/blog/2020/08/24/2.1.0.html)
+
 ## prettierx 0.14.3
 
 - Update some dependencies

@@ -1,11 +1,21 @@
 "use strict";
 
+const { TEST_STANDALONE } = process.env;
+
 const fs = require("fs");
 const path = require("path");
-const raw = require("jest-snapshot-serializer-raw").wrap;
 const { isCI } = require("ci-info");
+const prettier = !TEST_STANDALONE
+  ? require("prettier/local")
+  : require("prettier/standalone");
+const checkParsers = require("./utils/check-parsers");
+const visualizeRange = require("./utils/visualize-range");
+const createSnapshot = require("./utils/create-snapshot");
+const composeOptionsForSnapshot = require("./utils/compose-options-for-snapshot");
+const visualizeEndOfLine = require("./utils/visualize-end-of-line");
+const consistentEndOfLine = require("./utils/consistent-end-of-line");
+const stringifyOptionsForTitle = require("./utils/stringify-options-for-title");
 
-const { TEST_STANDALONE } = process.env;
 const AST_COMPARE = isCI || process.env.AST_COMPARE;
 const DEEP_COMPARE = isCI || process.env.DEEP_COMPARE;
 const TEST_CRLF =
@@ -15,30 +25,24 @@ const CURSOR_PLACEHOLDER = "<|>";
 const RANGE_START_PLACEHOLDER = "<<<PRETTIER_RANGE_START>>>";
 const RANGE_END_PLACEHOLDER = "<<<PRETTIER_RANGE_END>>>";
 
-const prettier = !TEST_STANDALONE
-  ? require("prettier/local")
-  : require("prettier/standalone");
-
 // TODO: these test files need fix
 const unstableTests = new Map(
   [
-    "class_comment/comments.js",
-    ["comments/dangling_array.js", (options) => options.semi === false],
-    ["comments/jsx.js", (options) => options.semi === false],
-    "comments/return-statement.js",
-    "comments/tagged-template-literal.js",
-    "comments_closure_typecast/iife.js",
-    "graphql_interface/separator-detection.graphql",
-    "markdown_footnoteDefinition/multiline.md",
-    "markdown_spec/example-234.md",
-    "markdown_spec/example-235.md",
-    "multiparser_html_js/script-tag-escaping.html",
+    "js/class-comment/misc.js",
+    ["js/comments/dangling_array.js", (options) => options.semi === false],
+    ["js/comments/jsx.js", (options) => options.semi === false],
+    "js/comments/return-statement.js",
+    "js/comments/tagged-template-literal.js",
+    "js/comments-closure-typecast/iife.js",
+    "markdown/spec/example-234.md",
+    "markdown/spec/example-235.md",
+    "html/multiparser-js/script-tag-escaping.html",
     [
-      "multiparser_js_markdown/codeblock.js",
+      "js/multiparser-markdown/codeblock.js",
       (options) => options.proseWrap === "always",
     ],
-    ["no-semi/comments.js", (options) => options.semi === false],
-    "yaml_prettier_ignore/document.yml",
+    ["js/no-semi/comments.js", (options) => options.semi === false],
+    ["flow/no-semi/comments.js", (options) => options.semi === false],
   ].map((fixture) => {
     const [file, isUnstable = () => true] = Array.isArray(fixture)
       ? fixture
@@ -47,153 +51,261 @@ const unstableTests = new Map(
   })
 );
 
-global.run_spec = (dirname, parsers, options) => {
+const isUnstable = (filename, options) => {
+  const testFunction = unstableTests.get(filename);
+
+  if (!testFunction) {
+    return false;
+  }
+
+  return testFunction(options);
+};
+
+const shouldThrowOnVerify = (filename, options) => {
+  if (options.parser !== "babel-ts") {
+    return false;
+  }
+
+  const { disableBabelTS } = options;
+
+  if (disableBabelTS === true) {
+    return true;
+  }
+
+  if (Array.isArray(disableBabelTS) && disableBabelTS.includes(filename)) {
+    return true;
+  }
+
+  return false;
+};
+
+const isTestDirectory = (dirname, name) =>
+  dirname.startsWith(path.join(__dirname, "../tests", name));
+
+global.run_spec = (fixtures, parsers, options) => {
+  fixtures = typeof fixtures === "string" ? { dirname: fixtures } : fixtures;
+  const { dirname } = fixtures;
+
   // `IS_PARSER_INFERENCE_TESTS` mean to test `inferParser` on `standalone`
-  const IS_PARSER_INFERENCE_TESTS = dirname.endsWith("parser-inference");
+  const IS_PARSER_INFERENCE_TESTS = isTestDirectory(
+    dirname,
+    "misc/parser-inference"
+  );
+
+  // `IS_ERROR_TESTS` mean to watch errors like:
+  // - syntax parser hasn't supported yet
+  // - syntax errors that should throws
+  const IS_ERROR_TESTS = isTestDirectory(dirname, "misc/errors");
+
   if (IS_PARSER_INFERENCE_TESTS) {
     parsers = [];
   } else if (!parsers || !parsers.length) {
     throw new Error(`No parsers were specified for ${dirname}`);
   }
 
-  const files = fs.readdirSync(dirname, { withFileTypes: true });
-  for (const file of files) {
-    const basename = file.name;
-    const filename = path.join(dirname, basename);
-
-    if (
-      path.extname(basename) === ".snap" ||
-      !file.isFile() ||
-      basename[0] === "." ||
-      basename === "jsfmt.spec.js"
-    ) {
-      continue;
-    }
-
-    let rangeStart;
-    let rangeEnd;
-    let cursorOffset;
-
-    const text = fs.readFileSync(filename, "utf8");
-
-    const source = (TEST_CRLF ? text.replace(/\n/g, "\r\n") : text)
-      .replace(RANGE_START_PLACEHOLDER, (match, offset) => {
-        rangeStart = offset;
-        return "";
-      })
-      .replace(RANGE_END_PLACEHOLDER, (match, offset) => {
-        rangeEnd = offset;
-        return "";
-      });
-
-    const input = source.replace(CURSOR_PLACEHOLDER, (match, offset) => {
-      cursorOffset = offset;
-      return "";
-    });
-
-    const baseOptions = {
-      printWidth: 80,
-      ...options,
-      rangeStart,
-      rangeEnd,
-      cursorOffset,
+  const snippets = (fixtures.snippets || []).map((test, index) => {
+    test = typeof test === "string" ? { code: test } : test;
+    return {
+      ...test,
+      name: `snippet: ${test.name || `#${index}`}`,
     };
-    const mainOptions = {
-      ...baseOptions,
-      ...(IS_PARSER_INFERENCE_TESTS
-        ? { filepath: filename }
-        : { parser: parsers[0] }),
-    };
+  });
 
-    const hasEndOfLine = "endOfLine" in mainOptions;
+  const files = fs
+    .readdirSync(dirname, { withFileTypes: true })
+    .map((file) => {
+      const basename = file.name;
+      const filename = path.join(dirname, basename);
+      if (
+        path.extname(basename) === ".snap" ||
+        !file.isFile() ||
+        basename[0] === "." ||
+        basename === "jsfmt.spec.js"
+      ) {
+        return;
+      }
 
-    const output = format(input, filename, mainOptions);
-    const visualizedOutput = visualizeEndOfLine(output);
+      const text = fs.readFileSync(filename, "utf8");
 
-    test(basename, () => {
-      expect(visualizedOutput).toEqual(
-        visualizeEndOfLine(consistentEndOfLine(output))
-      );
-      expect(
-        raw(
-          createSnapshot(
-            hasEndOfLine
-              ? visualizeEndOfLine(
-                  text
-                    .replace(RANGE_START_PLACEHOLDER, "")
-                    .replace(RANGE_END_PLACEHOLDER, "")
-                )
-              : source,
-            hasEndOfLine ? visualizedOutput : output,
-            { ...baseOptions, parsers }
-          )
-        )
-      ).toMatchSnapshot();
-    });
+      return {
+        name: basename,
+        filename,
+        code: text,
+      };
+    })
+    .filter(Boolean);
 
-    const parsersToVerify = parsers.slice(1);
-    if (parsers.includes("typescript") && !parsers.includes("babel-ts")) {
-      parsersToVerify.push("babel-ts");
-    }
+  // Make sure tests are in correct location
+  // only runs on local and one task on CI
+  if (!isCI || process.env.ENABLE_CODE_COVERAGE) {
+    checkParsers({ dirname, files }, parsers);
+  }
 
-    if (
-      DEEP_COMPARE &&
-      typeof rangeStart === "undefined" &&
-      typeof rangeEnd === "undefined" &&
-      typeof cursorOffset === "undefined" &&
-      !TEST_CRLF
-    ) {
-      test(`${basename} second format`, () => {
-        const secondOutput = format(output, filename, mainOptions);
-        const isUnstable = unstableTests.get(filename);
-        if (isUnstable && isUnstable(options || {})) {
-          // To keep eye on failed tests, this assert never supposed to pass,
-          // if it fails, just remove the file from `unstableTests`
-          expect(secondOutput).not.toEqual(output);
-        } else {
-          expect(secondOutput).toEqual(output);
-        }
-      });
-    }
+  const stringifiedOptions = stringifyOptionsForTitle(options);
+  const [parser, ...verifyParsers] = parsers;
 
-    for (const parser of parsersToVerify) {
-      const verifyOptions = { ...baseOptions, parser };
+  if (parsers.includes("typescript") && !parsers.includes("babel-ts")) {
+    verifyParsers.push("babel-ts");
+  }
 
-      test(`${basename} - ${parser}-verify`, () => {
-        if (
-          parser === "babel-ts" &&
-          options &&
-          (options.disableBabelTS === true ||
-            (Array.isArray(options.disableBabelTS) &&
-              options.disableBabelTS.includes(basename)))
-        ) {
+  for (const { name, filename, code, output } of [...files, ...snippets]) {
+    describe(`${name}${
+      stringifiedOptions ? ` - ${stringifiedOptions}` : ""
+    }`, () => {
+      const formatOptions = {
+        printWidth: 80,
+        ...options,
+        filepath: filename,
+        parser,
+      };
+
+      if (IS_ERROR_TESTS) {
+        test("error test", () => {
           expect(() => {
-            format(input, filename, verifyOptions);
-          }).toThrow(TEST_STANDALONE ? undefined : SyntaxError);
-        } else {
-          const verifyOutput = format(input, filename, verifyOptions);
-          expect(visualizeEndOfLine(verifyOutput)).toEqual(visualizedOutput);
+            format(code, formatOptions);
+          }).toThrowErrorMatchingSnapshot();
+        });
+        return;
+      }
+
+      const eolReplacedCode = TEST_CRLF ? code.replace(/\n/g, "\r\n") : code;
+      const firstFormat = format(eolReplacedCode, formatOptions);
+
+      test("format", () => {
+        // Make sure output has consistent EOL
+        expect(firstFormat.eolVisualizedOutput).toEqual(
+          visualizeEndOfLine(consistentEndOfLine(firstFormat.outputWithCursor))
+        );
+
+        if (typeof output === "string") {
+          expect(firstFormat.output).toEqual(output);
+          return;
         }
-      });
-    }
 
-    if (AST_COMPARE) {
-      test(`${basename} parse`, () => {
-        const parseOptions = { ...mainOptions };
-        delete parseOptions.cursorOffset;
+        const hasEndOfLine = "endOfLine" in formatOptions;
+        let codeForSnapshot = hasEndOfLine
+          ? code
+              .replace(RANGE_START_PLACEHOLDER, "")
+              .replace(RANGE_END_PLACEHOLDER, "")
+          : firstFormat.inputWithCursor;
+        let codeOffset = 0;
+        let resultForSnapshot = firstFormat.outputWithCursor;
+        const { rangeStart, rangeEnd } = firstFormat.options;
 
-        const originalAst = parse(input, parseOptions);
-        let formattedAst;
+        if (typeof rangeStart === "number" || typeof rangeEnd === "number") {
+          if (TEST_CRLF && hasEndOfLine) {
+            codeForSnapshot = codeForSnapshot.replace(/\n/g, "\r\n");
+          }
+          codeForSnapshot = visualizeRange(codeForSnapshot, {
+            rangeStart,
+            rangeEnd,
+          });
+          codeOffset = codeForSnapshot.match(/^>?\s+1 \| /)[0].length;
+        }
 
-        expect(() => {
-          formattedAst = parse(
-            output.replace(CURSOR_PLACEHOLDER, ""),
-            parseOptions
+        // When `TEST_CRLF` and `endOfLine: "auto"`, the eol is always `\r\n`,
+        // Replace it with guess result from original input
+        let resultNote = "";
+        if (formatOptions.endOfLine === "auto") {
+          const {
+            guessEndOfLine,
+            convertEndOfLineToChars,
+          } = require("../src/common/end-of-line");
+          const originalAutoResult = convertEndOfLineToChars(
+            guessEndOfLine(code)
           );
-        }).not.toThrow();
-        expect(originalAst).toEqual(formattedAst);
+          if (originalAutoResult !== "\r\n") {
+            resultNote +=
+              "** The EOL of output might not real when `TEST_CRLF` **";
+
+            if (TEST_CRLF) {
+              resultForSnapshot = resultForSnapshot.replace(
+                /\r\n?/g,
+                originalAutoResult
+              );
+            }
+          }
+        }
+
+        if (hasEndOfLine) {
+          codeForSnapshot = visualizeEndOfLine(codeForSnapshot);
+          resultForSnapshot = visualizeEndOfLine(resultForSnapshot);
+        }
+
+        if (resultNote) {
+          resultForSnapshot = `${resultNote}\n${resultForSnapshot}`;
+        }
+
+        expect(
+          createSnapshot(
+            codeForSnapshot,
+            resultForSnapshot,
+            composeOptionsForSnapshot(firstFormat.options, parsers),
+            { codeOffset }
+          )
+        ).toMatchSnapshot();
       });
-    }
+
+      for (const parser of verifyParsers) {
+        const verifyOptions = { ...firstFormat.options, parser };
+        const runVerifyFormat = () => format(firstFormat.input, verifyOptions);
+
+        if (shouldThrowOnVerify(name, verifyOptions)) {
+          test(`verify (${parser})`, () => {
+            expect(runVerifyFormat).toThrow(
+              TEST_STANDALONE ? undefined : SyntaxError
+            );
+          });
+        } else {
+          const verifyFormat = runVerifyFormat();
+          test(`verify (${parser})`, () => {
+            expect(verifyFormat.eolVisualizedOutput).toEqual(
+              firstFormat.eolVisualizedOutput
+            );
+          });
+
+          if (AST_COMPARE && verifyFormat.changed && code.trim()) {
+            test(`verify AST (${parser})`, () => {
+              const originalAst = parse(verifyFormat.input, verifyOptions);
+              const formattedAst = parse(verifyFormat.output, verifyOptions);
+              expect(originalAst).toEqual(formattedAst);
+            });
+          }
+        }
+      }
+
+      const isUnstableTest = isUnstable(filename, formatOptions);
+      if (
+        DEEP_COMPARE &&
+        (firstFormat.changed || isUnstableTest) &&
+        // No range and cursor
+        firstFormat.input === eolReplacedCode
+      ) {
+        test("second format", () => {
+          const { eolVisualizedOutput: firstOutput, output } = firstFormat;
+          const { eolVisualizedOutput: secondOutput } = format(
+            output,
+            formatOptions
+          );
+          if (isUnstableTest) {
+            // To keep eye on failed tests, this assert never supposed to pass,
+            // if it fails, just remove the file from `unstableTests`
+            expect(secondOutput).not.toEqual(firstOutput);
+          } else {
+            expect(secondOutput).toEqual(firstOutput);
+          }
+        });
+      }
+
+      if (AST_COMPARE && firstFormat.changed) {
+        test("compare AST", () => {
+          const { input, output } = firstFormat;
+          const originalAst = parse(input, formatOptions);
+          const formattedAst = parse(output, formatOptions);
+          expect(formattedAst).toEqual(originalAst);
+        });
+      }
+    });
   }
 };
 
@@ -201,98 +313,46 @@ function parse(source, options) {
   return prettier.__debug.parse(source, options, /* massage */ true).ast;
 }
 
-function format(source, filename, options) {
-  const result = prettier.formatWithCursor(source, {
-    filepath: filename,
+function format(text, options) {
+  options = {
     ...options,
+  };
+
+  const inputWithCursor = text
+    .replace(RANGE_START_PLACEHOLDER, (match, offset) => {
+      options.rangeStart = offset;
+      return "";
+    })
+    .replace(RANGE_END_PLACEHOLDER, (match, offset) => {
+      options.rangeEnd = offset;
+      return "";
+    });
+
+  const input = inputWithCursor.replace(CURSOR_PLACEHOLDER, (match, offset) => {
+    options.cursorOffset = offset;
+    return "";
   });
 
-  return options.cursorOffset >= 0
-    ? result.formatted.slice(0, result.cursorOffset) +
+  const result = prettier.formatWithCursor(input, options);
+  const output = result.formatted;
+
+  const outputWithCursor =
+    options.cursorOffset >= 0
+      ? output.slice(0, result.cursorOffset) +
         CURSOR_PLACEHOLDER +
-        result.formatted.slice(result.cursorOffset)
-    : result.formatted;
-}
+        output.slice(result.cursorOffset)
+      : output;
+  const eolVisualizedOutput = visualizeEndOfLine(outputWithCursor);
 
-function consistentEndOfLine(text) {
-  let firstEndOfLine;
-  return text.replace(/\r\n?|\n/g, (endOfLine) => {
-    if (!firstEndOfLine) {
-      firstEndOfLine = endOfLine;
-    }
-    return firstEndOfLine;
-  });
-}
+  const changed = outputWithCursor !== inputWithCursor;
 
-function visualizeEndOfLine(text) {
-  return text.replace(/\r\n?|\n/g, (endOfLine) => {
-    switch (endOfLine) {
-      case "\n":
-        return "<LF>\n";
-      case "\r\n":
-        return "<CRLF>\n";
-      case "\r":
-        return "<CR>\n";
-      default:
-        throw new Error(`Unexpected end of line ${JSON.stringify(endOfLine)}`);
-    }
-  });
-}
-
-function createSnapshot(input, output, options) {
-  const separatorWidth = 80;
-  const printWidthIndicator =
-    options.printWidth > 0 && Number.isFinite(options.printWidth)
-      ? " ".repeat(options.printWidth) + "| printWidth"
-      : [];
-  return []
-    .concat(
-      printSeparator(separatorWidth, "options"),
-      printOptions(
-        omit(
-          options,
-          (k) =>
-            k === "rangeStart" ||
-            k === "rangeEnd" ||
-            k === "cursorOffset" ||
-            k === "disableBabelTS"
-        )
-      ),
-      printWidthIndicator,
-      printSeparator(separatorWidth, "input"),
-      input,
-      printSeparator(separatorWidth, "output"),
-      output,
-      printSeparator(separatorWidth)
-    )
-    .join("\n");
-}
-
-function printSeparator(width, description) {
-  description = description || "";
-  const leftLength = Math.floor((width - description.length) / 2);
-  const rightLength = width - leftLength - description.length;
-  return "=".repeat(leftLength) + description + "=".repeat(rightLength);
-}
-
-function printOptions(options) {
-  const keys = Object.keys(options).sort();
-  return keys.map((key) => `${key}: ${stringify(options[key])}`).join("\n");
-  function stringify(value) {
-    return value === Infinity
-      ? "Infinity"
-      : Array.isArray(value)
-      ? `[${value.map((v) => JSON.stringify(v)).join(", ")}]`
-      : JSON.stringify(value);
-  }
-}
-
-function omit(obj, fn) {
-  return Object.keys(obj).reduce((reduced, key) => {
-    const value = obj[key];
-    if (!fn(key, value)) {
-      reduced[key] = value;
-    }
-    return reduced;
-  }, {});
+  return {
+    changed,
+    options,
+    input,
+    inputWithCursor,
+    output,
+    outputWithCursor,
+    eolVisualizedOutput,
+  };
 }

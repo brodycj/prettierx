@@ -1,8 +1,8 @@
 "use strict";
 
-const chalk = require("chalk");
-const dedent = require("dedent");
 const fs = require("fs");
+const chalk = require("chalk");
+const { outdent, string: outdentString } = require("outdent");
 const semver = require("semver");
 const { waitForEnter, runYarn, logPromise } = require("../utils");
 
@@ -20,7 +20,7 @@ function getBlogPostInfo(version) {
 
 function writeChangelog({ version, previousVersion, releaseNotes }) {
   const changelog = fs.readFileSync("CHANGELOG.md", "utf-8");
-  const newEntry = dedent`
+  const newEntry = outdent`
     # ${version}
 
     [diff](https://github.com/prettier/prettier/compare/${previousVersion}...${version})
@@ -28,6 +28,18 @@ function writeChangelog({ version, previousVersion, releaseNotes }) {
     ${releaseNotes}
   `;
   fs.writeFileSync("CHANGELOG.md", newEntry + "\n\n" + changelog);
+}
+
+function formatVersion(version) {
+  return `${semver.major(version)}.${semver.minor(version)}`;
+}
+
+function replaceVersionsInBlogPost({ blogPost, version, previousVersion }) {
+  const blogPostData = fs.readFileSync(blogPost, "utf-8");
+  const newBlogPostData = blogPostData
+    .replace(/prettier stable/gi, `Prettier ${formatVersion(previousVersion)}`)
+    .replace(/prettier master/gi, `Prettier ${formatVersion(version)}`);
+  fs.writeFileSync(blogPost, newBlogPostData);
 }
 
 module.exports = async function ({ version, previousVersion }) {
@@ -41,11 +53,16 @@ module.exports = async function ({ version, previousVersion }) {
       releaseNotes: `🔗 [Release Notes](https://prettier.io/${blogPost.path})`,
     });
     if (fs.existsSync(blogPost.file)) {
+      replaceVersionsInBlogPost({
+        blogPost: blogPost.file,
+        version,
+        previousVersion,
+      });
       // Everything is fine, this step is finished
       return;
     }
     console.warn(
-      dedent(chalk`
+      outdentString(chalk`
         {yellow warning} The file {bold ${blogPost.file}} doesn't exist, but it will be referenced in {bold CHANGELOG.md}. Make sure to create it later.
 
         Press ENTER to continue.
@@ -53,7 +70,7 @@ module.exports = async function ({ version, previousVersion }) {
     );
   } else {
     console.log(
-      dedent(chalk`
+      outdentString(chalk`
         {yellow.bold A manual step is necessary.}
 
         You can copy the entries from {bold changelog_unreleased/*/pr-*.md} to {bold CHANGELOG.md}

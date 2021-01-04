@@ -163,8 +163,9 @@ function hasEndComments(node) {
 function splitWithSingleSpace(text) {
   const parts = [];
 
-  let lastPart = undefined;
+  let lastPart;
   for (const part of text.split(/( +)/g)) {
+    /* istanbul ignore else */
     if (part !== " ") {
       if (lastPart === " ") {
         parts.push(part);
@@ -178,6 +179,7 @@ function splitWithSingleSpace(text) {
     lastPart = part;
   }
 
+  /* istanbul ignore next */
   if (lastPart === " ") {
     parts.push((parts.pop() || "") + " ");
   }
@@ -246,7 +248,7 @@ function getBlockValueLineContents(
       : options.originalText
           .slice(node.position.start.offset, node.position.end.offset)
           // exclude open line `>` or `|`
-          .match(/^[^\n]*?\n([\s\S]*)$/)[1];
+          .match(/^[^\n]*?\n([\S\s]*)$/)[1];
 
   const leadingSpaceCount =
     node.indent === null

@@ -1,7 +1,5 @@
 "use strict";
 
-const { isBlockComment, hasLeadingComment } = require("./comments");
-
 const {
   builders: {
     indent,
@@ -14,8 +12,9 @@ const {
     group,
     dedentToRoot,
   },
-  utils: { mapDoc, stripTrailingHardline },
+  utils: { mapDoc },
 } = require("../document");
+const { isBlockComment, hasLeadingComment } = require("./comments");
 
 function embed(path, print, textToDoc, options) {
   const node = path.getValue();
@@ -47,7 +46,11 @@ function embed(path, print, textToDoc, options) {
                 currVal;
         }, "");
 
-        const doc = textToDoc(text, { parser: "scss" });
+        const doc = textToDoc(
+          text,
+          { parser: "scss" },
+          { stripTrailingHardline: true }
+        );
 
         // [prettierx] parenSpace option support (...)
         return transformCssDoc(doc, path, print, options);
@@ -99,11 +102,11 @@ function embed(path, print, textToDoc, options) {
             lines[numLines - 2].trim() === "";
 
           const commentsAndWhitespaceOnly = lines.every((line) =>
-            /^\s*(?:#[^\r\n]*)?$/.test(line)
+            /^\s*(?:#[^\n\r]*)?$/.test(line)
           );
 
           // Bail out if an interpolation occurs within a comment.
-          if (!isLast && /#[^\r\n]*$/.test(lines[numLines - 1])) {
+          if (!isLast && /#[^\n\r]*$/.test(lines[numLines - 1])) {
             return null;
           }
 
@@ -112,7 +115,11 @@ function embed(path, print, textToDoc, options) {
           if (commentsAndWhitespaceOnly) {
             doc = printGraphqlComments(lines);
           } else {
-            doc = stripTrailingHardline(textToDoc(text, { parser: "graphql" }));
+            doc = textToDoc(
+              text,
+              { parser: "graphql" },
+              { stripTrailingHardline: true }
+            );
           }
 
           if (doc) {
@@ -198,8 +205,12 @@ function embed(path, print, textToDoc, options) {
   }
 
   function printMarkdown(text) {
-    const doc = textToDoc(text, { parser: "markdown", __inJsTemplate: true });
-    return stripTrailingHardline(escapeTemplateCharacters(doc, true));
+    const doc = textToDoc(
+      text,
+      { parser: "markdown", __inJsTemplate: true },
+      { stripTrailingHardline: true }
+    );
+    return escapeTemplateCharacters(doc, true);
   }
 }
 
@@ -209,7 +220,7 @@ function getIndentation(str) {
 }
 
 function uncook(cookedValue) {
-  return cookedValue.replace(/([\\`]|\$\{)/g, "\\$1");
+  return cookedValue.replace(/([\\`]|\${)/g, "\\$1");
 }
 
 function escapeTemplateCharacters(doc, raw) {
@@ -218,14 +229,12 @@ function escapeTemplateCharacters(doc, raw) {
       return currentDoc;
     }
 
-    const parts = [];
-
-    currentDoc.parts.forEach((part) => {
+    const parts = currentDoc.parts.map((part) => {
       if (typeof part === "string") {
-        parts.push(raw ? part.replace(/(\\*)`/g, "$1$1\\`") : uncook(part));
-      } else {
-        parts.push(part);
+        return raw ? part.replace(/(\\*)`/g, "$1$1\\`") : uncook(part);
       }
+
+      return part;
     });
 
     return { ...currentDoc, parts };
@@ -253,12 +262,7 @@ function transformCssDoc(quasisDoc, path, print, options) {
   if (!newDoc) {
     throw new Error("Couldn't insert all the expressions");
   }
-  return concat([
-    "`",
-    indent(concat([hardline, stripTrailingHardline(newDoc)])),
-    softline,
-    "`",
-  ]);
+  return concat(["`", indent(concat([hardline, newDoc])), softline, "`"]);
 }
 
 // Search all the placeholders in the quasisDoc tree
@@ -271,12 +275,12 @@ function replacePlaceholders(quasisDoc, expressionDocs, options) {
     return quasisDoc;
   }
 
-  const expressions = expressionDocs.slice();
   let replaceCounter = 0;
   const newDoc = mapDoc(quasisDoc, (doc) => {
     if (!doc || !doc.parts || !doc.parts.length) {
       return doc;
     }
+
     let { parts } = doc;
     const atIndex = parts.indexOf("@");
     const placeholderIndex = atIndex + 1;
@@ -294,36 +298,37 @@ function replacePlaceholders(quasisDoc, expressionDocs, options) {
         .concat([at + placeholder])
         .concat(rest);
     }
-    const atPlaceholderIndex = parts.findIndex(
-      (part) =>
-        typeof part === "string" && part.startsWith("@prettier-placeholder")
-    );
-    if (atPlaceholderIndex > -1) {
-      const placeholder = parts[atPlaceholderIndex];
-      const rest = parts.slice(atPlaceholderIndex + 1);
-      const placeholderMatch = placeholder.match(
-        /@prettier-placeholder-(.+)-id([\s\S]*)/
-      );
-      const placeholderID = placeholderMatch[1];
-      // When the expression has a suffix appended, like:
-      // animation: linear ${time}s ease-out;
-      const suffix = placeholderMatch[2];
-      const expression = expressions[placeholderID];
 
+    const replacedParts = [];
+    parts.forEach((part) => {
+      if (typeof part !== "string" || !part.includes("@prettier-placeholder")) {
+        replacedParts.push(part);
+        return;
+      }
+
+      /* ** [prettierx merge todo] move out of this parts.forEach function block:
       // [prettierx] parenSpace option support (...)
       const parenSpace = options.parenSpacing ? " " : "";
+      // ** */
 
-      replaceCounter++;
-      parts = parts
-        .slice(0, atPlaceholderIndex)
-        // [prettierx] parenSpace option support (...)
-        .concat(["${", parenSpace, expression, parenSpace, "}" + suffix])
-        .concat(rest);
-    }
-    return { ...doc, parts };
+      // When we have multiple placeholders in one line, like:
+      // ${Child}${Child2}:not(:first-child)
+      part.split(/@prettier-placeholder-(\d+)-id/).forEach((component, idx) => {
+        // The placeholder is always at odd indices
+        if (idx % 2 === 0) {
+          replacedParts.push(component);
+          return;
+        }
+
+        // [prettierx todo] parenSpace option support (...)
+        // The component will always be a number at odd index
+        replacedParts.push("${", expressionDocs[component], "}");
+        replaceCounter++;
+      });
+    });
+    return { ...doc, parts: replacedParts };
   });
-
-  return expressions.length === replaceCounter ? newDoc : null;
+  return expressionDocs.length === replaceCounter ? newDoc : null;
 }
 
 function printGraphqlComments(lines) {
@@ -595,13 +600,15 @@ function printHtmlTemplateLiteral(path, print, textToDoc, parser, options) {
   let topLevelCount = 0;
 
   const contentDoc = mapDoc(
-    stripTrailingHardline(
-      textToDoc(text, {
+    textToDoc(
+      text,
+      {
         parser,
         __onHtmlRoot(root) {
           topLevelCount = root.children.length;
         },
-      })
+      },
+      { stripTrailingHardline: true }
     ),
     (doc) => {
       if (typeof doc !== "string") {

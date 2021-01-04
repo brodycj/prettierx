@@ -4,10 +4,11 @@
 const installPrettier = require("./scripts/install-prettierx");
 
 const ENABLE_CODE_COVERAGE = !!process.env.ENABLE_CODE_COVERAGE;
-if (process.env.NODE_ENV === "production") {
+if (process.env.NODE_ENV === "production" || process.env.INSTALL_PACKAGE) {
   // [prettierx]
   process.env.PRETTIERX_DIR = installPrettier();
 }
+const { TEST_STANDALONE } = process.env;
 
 module.exports = {
   setupFiles: ["<rootDir>/tests_config/run_spec.js"],
@@ -16,25 +17,19 @@ module.exports = {
     "jest-snapshot-serializer-ansi",
   ],
   testRegex: "jsfmt\\.spec\\.js$|__tests__/.*\\.js$",
+  testPathIgnorePatterns: TEST_STANDALONE
+    ? ["<rootDir>/tests_integration/"]
+    : [],
   collectCoverage: ENABLE_CODE_COVERAGE,
-  collectCoverageFrom: ["src/**/*.js", "index.js", "!<rootDir>/node_modules/"],
-  coveragePathIgnorePatterns: [
-    "<rootDir>/standalone.js",
-    "<rootDir>/src/document/doc-debug.js",
-    "<rootDir>/src/main/massage-ast.js",
-  ],
+  collectCoverageFrom: ["<rootDir>/src/**/*.js", "<rootDir>/bin/**/*.js"],
+  coveragePathIgnorePatterns: ["<rootDir>/src/document/doc-debug.js"],
   coverageReporters: ["text", "lcov"],
   moduleNameMapper: {
-    // Jest wires `fs` to `graceful-fs`, which causes a memory leak when
-    // `graceful-fs` does `require('fs')`.
-    // Ref: https://github.com/facebook/jest/issues/2179#issuecomment-355231418
-    // If this is removed, see also scripts/build/build.js.
-    "graceful-fs": "<rootDir>/tests_config/fs.js",
-
     // [prettierx merge from prettier@2.0.5]
     "prettier/local": "<rootDir>/tests_config/require_prettierx.js",
     "prettier/standalone": "<rootDir>/tests_config/require_standalone.js",
   },
+  modulePathIgnorePatterns: ["<rootDir>/dist"],
   testEnvironment: "node",
   transform: {},
   watchPlugins: [
