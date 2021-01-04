@@ -15,14 +15,18 @@ const {
   printNumber,
   hasIgnoreComment,
   hasNodeIgnoreComment,
+  // [prettierx] keep for now:
   getPenultimate,
+  // ---
   startsWithNoLookaheadToken,
   getIndentSize,
   getPreferredQuote,
 } = require("../common/util");
 const {
   isNextLineEmpty,
+  // [prettierx] keep for now:
   isNextLineEmptyAfterIndex,
+  // ---
   getNextNonSpaceNonCommentCharacterIndex,
 } = require("../common/util-shared");
 const embed = require("./embed");
@@ -38,7 +42,9 @@ const preprocess = require("./preprocess");
 const {
   classChildNeedsASIProtection,
   classPropMayCauseASIProblems,
+  // [prettierx] keep for now:
   conditionalExpressionChainContainsJSX,
+  // ---
   getFlowVariance,
   getLeftSidePathName,
   getParentExportDeclaration,
@@ -46,7 +52,9 @@ const {
   hasDanglingComments,
   hasFlowAnnotationComment,
   hasFlowShorthandAnnotationComment,
+  // [prettierx] keep for now:
   hasLeadingComment,
+  // ---
   hasLeadingOwnLineComment,
   hasNakedLeftSide,
   hasNewlineBetweenOrAfterDecorators,
@@ -59,16 +67,22 @@ const {
   isEmptyJSXElement,
   isExportDeclaration,
   isFlowAnnotationComment,
+  // [prettierx] keep for now:
   isFunctionCompositionArgs,
+  // ---
   isFunctionNotation,
+  // [prettierx] keep for now:
   isFunctionOrArrowExpression,
+  // ---
   isGetterOrSetter,
   isJestEachTemplateLiteral,
   isJSXNode,
   isJSXWhitespaceExpression,
   isLastStatement,
   isLiteral,
+  // [prettierx] keep for now:
   isLongCurriedCallExpression,
+  // ---
   isMeaningfulJSXText,
   isMemberExpressionChain,
   isMemberish,
@@ -76,7 +90,9 @@ const {
   isNumericLiteral,
   isObjectType,
   isObjectTypePropertyAFunction,
+  // [prettierx] keep for now:
   isSimpleCallArgument,
+  // ---
   isSimpleFlowType,
   isSimpleTemplateLiteral,
   isStringLiteral,
@@ -108,14 +124,24 @@ const {
     conditionalGroup,
     fill,
     ifBreak,
+    // [prettierx] keep for now:
     breakParent,
+    // ---
     lineSuffixBoundary,
     addAlignmentToDoc,
+    // [prettierx] keep for now:
     dedent,
+    // ---
   },
   utils: { willBreak, isLineNext, isEmpty, removeLines },
   printer: { printDocToString },
 } = require("../document");
+
+// [prettierx] use alias for now:
+const printTernaryOperator = printTernaryOperatorX;
+
+// [prettierx] use alias for now:
+const printMemberChain = printMemberChainX;
 
 let uid = 0;
 
@@ -325,6 +351,7 @@ function printDecorators(path, options, print) {
 }
 
 /**
+ * [prettierx] keep for now, with support for prettierx options:
  * The following is the shared logic for
  * ternary operators, namely ConditionalExpression
  * and TSConditionalType
@@ -342,7 +369,7 @@ function printDecorators(path, options, print) {
  * @param {OperatorOptions} operatorOptions
  * @returns Doc
  */
-function printTernaryOperator(path, options, print, operatorOptions) {
+function printTernaryOperatorX(path, options, print, operatorOptions) {
   const node = path.getValue();
   const consequentNode = node[operatorOptions.consequentNodePropertyName];
   const alternateNode = node[operatorOptions.alternateNodePropertyName];
@@ -1369,7 +1396,9 @@ function printPathNoParens(path, options, print, args) {
           ? `/*:: ${n.callee.trailingComments[0].value.slice(2).trim()} */`
           : "",
         printFunctionTypeParameters(path, options, print),
+        // [prettierx] keep for now:
         printArgumentsList(path, options, print),
+        // ---
       ]);
 
       // We group here when the callee is itself a call expression.
@@ -4164,6 +4193,7 @@ function printMethodInternal(path, options, print) {
   return concat(parts);
 }
 
+// [prettierx] keep for now:
 function couldGroupArg(arg) {
   return (
     (arg.type === "ObjectExpression" &&
@@ -4199,6 +4229,7 @@ function couldGroupArg(arg) {
   );
 }
 
+// [prettierx] keep for now:
 function shouldGroupLastArg(args) {
   const lastArg = getLast(args);
   const penultimateArg = getPenultimate(args);
@@ -4212,6 +4243,7 @@ function shouldGroupLastArg(args) {
   );
 }
 
+// [prettierx] keep for now:
 function shouldGroupFirstArg(args) {
   if (args.length !== 2) {
     return false;
@@ -4229,6 +4261,7 @@ function shouldGroupFirstArg(args) {
     !couldGroupArg(secondArg)
   );
 }
+// ---
 
 function printJestEachTemplateLiteral(node, expressions, options) {
   /**
@@ -4340,6 +4373,7 @@ function hasAddedLine(arg) {
   }
 }
 
+// [prettierx] keep for now:
 function printArgumentsList(path, options, print) {
   const node = path.getValue();
   const args = node.arguments;
@@ -4589,6 +4623,7 @@ function printArgumentsList(path, options, print) {
     shouldBreak: printedArguments.some(willBreak) || anyArgEmptyLine,
   });
 }
+// ---
 
 function printTypeAnnotation(path, options, print) {
   const node = path.getValue();
@@ -5244,6 +5279,7 @@ function printClass(path, options, print) {
   return parts;
 }
 
+// [prettierx] keep for now:
 function printOptionalToken(path) {
   const node = path.getValue();
   if (
@@ -5262,7 +5298,9 @@ function printOptionalToken(path) {
   }
   return "?";
 }
+// ---
 
+// [prettierx] keep for now:
 function printMemberLookup(path, options, print) {
   const property = path.call(print, "property");
   const n = path.getValue();
@@ -5292,11 +5330,15 @@ function printMemberLookup(path, options, print) {
     ])
   );
 }
+// ---
 
+// [prettierx] keep for now:
 function printBindExpressionCallee(path, options, print) {
   return concat(["::", path.call(print, "callee")]);
 }
+// ---
 
+// [prettierx] keep for now, with support for prettierx options:
 // We detect calls on member expressions specially to format a
 // common pattern better. The pattern we are looking for is this:
 //
@@ -5308,7 +5350,7 @@ function printBindExpressionCallee(path, options, print) {
 // The way it is structured in the AST is via a nested sequence of
 // MemberExpression and CallExpression. We need to traverse the AST
 // and make groups out of it to print it in the desired way.
-function printMemberChain(path, options, print) {
+function printMemberChainX(path, options, print) {
   // The first phase is to linearize the AST by traversing it down.
   //
   //   a().b()
@@ -5669,6 +5711,7 @@ function printMemberChain(path, options, print) {
     conditionalGroup([oneLine, expanded]),
   ]);
 }
+// ---
 
 function separatorNoWhitespace(
   isFacebookTranslationTag,

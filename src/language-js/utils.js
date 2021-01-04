@@ -775,6 +775,7 @@ function needsHardlineAfterDanglingComment(node) {
   );
 }
 
+// [prettierx] keep for now:
 // If we have nested conditional expressions, we want to print them in JSX mode
 // if there's at least one JSXElement somewhere in the tree.
 //
@@ -866,6 +867,7 @@ function getConditionalChainContents(node) {
   return nonConditionalExpressions;
 }
 
+// [prettierx] keep for now:
 function conditionalExpressionChainContainsJSX(node) {
   return Boolean(getConditionalChainContents(node).find(isJSXNode));
 }
@@ -1006,6 +1008,7 @@ function isTSXFile(options) {
 module.exports = {
   classChildNeedsASIProtection,
   classPropMayCauseASIProblems,
+  // [prettierx] keep for now:
   conditionalExpressionChainContainsJSX,
   getFlowVariance,
   getLeftSidePathName,
