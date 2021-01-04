@@ -2,8 +2,7 @@
 
 exports[`binary.js 1`] = `
 ====================================options=====================================
-alignTernaryLines: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["flow", "typescript"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
@@ -44,8 +43,7 @@ room = room.map((row, rowIndex) =>
 
 exports[`binary.js 2`] = `
 ====================================options=====================================
-alignTernaryLines: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["flow", "typescript"]
 printWidth: 80
 tabWidth: 4
                                                                                 | printWidth
@@ -87,8 +85,7 @@ room = room.map((row, rowIndex) =>
 
 exports[`binary.js 3`] = `
 ====================================options=====================================
-alignTernaryLines: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["flow", "typescript"]
 printWidth: 80
 useTabs: true
                                                                                 | printWidth
@@ -130,8 +127,7 @@ room = room.map((row, rowIndex) =>
 
 exports[`binary.js 4`] = `
 ====================================options=====================================
-alignTernaryLines: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["flow", "typescript"]
 printWidth: 80
 tabWidth: 4
 useTabs: true
@@ -174,8 +170,7 @@ room = room.map((row, rowIndex) =>
 
 exports[`func-call.js 1`] = `
 ====================================options=====================================
-alignTernaryLines: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["flow", "typescript"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
@@ -203,8 +198,7 @@ fn(
 
 exports[`func-call.js 2`] = `
 ====================================options=====================================
-alignTernaryLines: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["flow", "typescript"]
 printWidth: 80
 tabWidth: 4
                                                                                 | printWidth
@@ -233,8 +227,7 @@ fn(
 
 exports[`func-call.js 3`] = `
 ====================================options=====================================
-alignTernaryLines: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["flow", "typescript"]
 printWidth: 80
 useTabs: true
                                                                                 | printWidth
@@ -263,8 +256,7 @@ fn(
 
 exports[`func-call.js 4`] = `
 ====================================options=====================================
-alignTernaryLines: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["flow", "typescript"]
 printWidth: 80
 tabWidth: 4
 useTabs: true
@@ -294,8 +286,7 @@ fn(
 
 exports[`indent.js 1`] = `
 ====================================options=====================================
-alignTernaryLines: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["flow", "typescript"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
@@ -624,8 +615,7 @@ a
 
 exports[`indent.js 2`] = `
 ====================================options=====================================
-alignTernaryLines: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["flow", "typescript"]
 printWidth: 80
 tabWidth: 4
                                                                                 | printWidth
@@ -955,8 +945,7 @@ a
 
 exports[`indent.js 3`] = `
 ====================================options=====================================
-alignTernaryLines: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["flow", "typescript"]
 printWidth: 80
 useTabs: true
                                                                                 | printWidth
@@ -1286,8 +1275,7 @@ a
 
 exports[`indent.js 4`] = `
 ====================================options=====================================
-alignTernaryLines: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["flow", "typescript"]
 printWidth: 80
 tabWidth: 4
 useTabs: true
@@ -1622,8 +1610,7 @@ a
 
 exports[`nested.js 1`] = `
 ====================================options=====================================
-alignTernaryLines: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["flow", "typescript"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
@@ -1826,8 +1813,7 @@ a
 
 exports[`nested.js 2`] = `
 ====================================options=====================================
-alignTernaryLines: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["flow", "typescript"]
 printWidth: 80
 tabWidth: 4
                                                                                 | printWidth
@@ -2031,8 +2017,7 @@ a
 
 exports[`nested.js 3`] = `
 ====================================options=====================================
-alignTernaryLines: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["flow", "typescript"]
 printWidth: 80
 useTabs: true
                                                                                 | printWidth
@@ -2236,8 +2221,7 @@ a
 
 exports[`nested.js 4`] = `
 ====================================options=====================================
-alignTernaryLines: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["flow", "typescript"]
 printWidth: 80
 tabWidth: 4
 useTabs: true
@@ -2442,8 +2426,7 @@ a
 
 exports[`nested-in-condition.js 1`] = `
 ====================================options=====================================
-alignTernaryLines: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["flow", "typescript"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
@@ -2531,8 +2514,7 @@ const value = (
 
 exports[`nested-in-condition.js 2`] = `
 ====================================options=====================================
-alignTernaryLines: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["flow", "typescript"]
 printWidth: 80
 tabWidth: 4
                                                                                 | printWidth
@@ -2621,8 +2603,7 @@ const value = (
 
 exports[`nested-in-condition.js 3`] = `
 ====================================options=====================================
-alignTernaryLines: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["flow", "typescript"]
 printWidth: 80
 useTabs: true
                                                                                 | printWidth
@@ -2711,8 +2692,7 @@ const value = (
 
 exports[`nested-in-condition.js 4`] = `
 ====================================options=====================================
-alignTernaryLines: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["flow", "typescript"]
 printWidth: 80
 tabWidth: 4
 useTabs: true
@@ -2802,8 +2782,7 @@ const value = (
 
 exports[`parenthesis.js 1`] = `
 ====================================options=====================================
-alignTernaryLines: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["flow", "typescript"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
@@ -2839,8 +2818,7 @@ debug
 
 exports[`parenthesis.js 2`] = `
 ====================================options=====================================
-alignTernaryLines: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["flow", "typescript"]
 printWidth: 80
 tabWidth: 4
                                                                                 | printWidth
@@ -2877,8 +2855,7 @@ debug
 
 exports[`parenthesis.js 3`] = `
 ====================================options=====================================
-alignTernaryLines: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["flow", "typescript"]
 printWidth: 80
 useTabs: true
                                                                                 | printWidth
@@ -2915,8 +2892,7 @@ debug
 
 exports[`parenthesis.js 4`] = `
 ====================================options=====================================
-alignTernaryLines: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["flow", "typescript"]
 printWidth: 80
 tabWidth: 4
 useTabs: true
@@ -2954,8 +2930,7 @@ debug
 
 exports[`test.js 1`] = `
 ====================================options=====================================
-alignTernaryLines: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["flow", "typescript"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
@@ -3014,8 +2989,7 @@ const obj5 = conditionIsTruthy
 
 exports[`test.js 2`] = `
 ====================================options=====================================
-alignTernaryLines: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["flow", "typescript"]
 printWidth: 80
 tabWidth: 4
                                                                                 | printWidth
@@ -3075,8 +3049,7 @@ const obj5 = conditionIsTruthy
 
 exports[`test.js 3`] = `
 ====================================options=====================================
-alignTernaryLines: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["flow", "typescript"]
 printWidth: 80
 useTabs: true
                                                                                 | printWidth
@@ -3136,8 +3109,7 @@ const obj5 = conditionIsTruthy
 
 exports[`test.js 4`] = `
 ====================================options=====================================
-alignTernaryLines: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["flow", "typescript"]
 printWidth: 80
 tabWidth: 4
 useTabs: true
