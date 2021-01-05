@@ -299,6 +299,9 @@ function replacePlaceholders(quasisDoc, expressionDocs, options) {
         .concat(rest);
     }
 
+    // [prettierx] --paren-spacing option support (...)
+    const parenSpace = options.parenSpacing ? " " : "";
+
     const replacedParts = [];
     parts.forEach((part) => {
       if (typeof part !== "string" || !part.includes("@prettier-placeholder")) {
@@ -306,10 +309,6 @@ function replacePlaceholders(quasisDoc, expressionDocs, options) {
         return;
       }
 
-      /* ** [prettierx merge todo] move out of this parts.forEach function block:
-      // [prettierx] parenSpace option support (...)
-      const parenSpace = options.parenSpacing ? " " : "";
-      // ** */
 
       // When we have multiple placeholders in one line, like:
       // ${Child}${Child2}:not(:first-child)
@@ -320,9 +319,9 @@ function replacePlaceholders(quasisDoc, expressionDocs, options) {
           return;
         }
 
-        // [prettierx todo] parenSpace option support (...)
+        // [prettierx] --paren-spacing option support (...)
         // The component will always be a number at odd index
-        replacedParts.push("${", expressionDocs[component], "}");
+        replacedParts.push("${", parenSpace, expressionDocs[component], parenSpace, "}");
         replaceCounter++;
       });
     });
