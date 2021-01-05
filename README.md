@@ -5,6 +5,8 @@
 
 Unofficial fork, intended to provide some additional options to help improve consistency with [`feross/standard`](https://github.com/standard/standard) and [`Flet/semistandard`](https://github.com/Flet/semistandard). This fork is an attempt to pick up where [`arijs/prettier-miscellaneous`](https://github.com/arijs/prettier-miscellaneous) left off.
 
+NOTICE: `flow` and `typescript` parsers are deprecated, with known issues in formatting and printing in some cases. It is recommended to use `babel-flow` and `babel-ts` instead for Flow and TypeScript code.
+
 ## prettierx as a Prettier plugin
 
 Provides the additional formatting options in a prettier plugin (or two).
