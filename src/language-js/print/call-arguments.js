@@ -35,10 +35,17 @@ function printCallArguments(path, options, print) {
   const isDynamicImport = node.type === "ImportExpression";
   const args = isDynamicImport ? [node.source] : node.arguments;
 
+  // [prettierx] for --paren-spacing option support (...)
+  const parenSpace = options.parenSpacing ? " " : "";
+  const parenLine = options.parenSpacing ? line : softline;
+
   if (args.length === 0) {
     return concat([
       "(",
+      // XXX TBD/TODO ???:
+      // parenSpace,
       comments.printDanglingComments(path, options, /* sameIndent */ true),
+      // parenSpace,
       ")",
     ]);
   }
@@ -54,9 +61,13 @@ function printCallArguments(path, options, print) {
   ) {
     return concat([
       "(",
+      // [prettierx] parenSpace option support (...)
+      parenSpace,
       path.call(print, "arguments", 0),
       ", ",
       path.call(print, "arguments", 1),
+      // [prettierx] parenSpace option support (...)
+      parenSpace,
       ")",
     ]);
   }
@@ -132,8 +143,12 @@ function printCallArguments(path, options, print) {
     return group(
       concat([
         "(",
+        // [prettierx] keep break here, regardless of --paren-spacing option
         indent(concat([line, concat(printedArguments)])),
         maybeTrailingComma,
+        // [prettierx] keep break here, unless lastArgAddedLine is true
+        // line,
+        // lastArgAddedLine ? "" : line,
         line,
         ")",
       ]),
@@ -173,9 +188,21 @@ function printCallArguments(path, options, print) {
         ].concat(printedArguments.slice(1));
       }
       if (shouldGroupLast && i === args.length - 1) {
-        printedExpanded = printedArguments
-          .slice(0, -1)
-          .concat(argPath.call((p) => print(p, { expandLastArg: true })));
+        // [prettierx] with --paren-spacing option support (...)
+
+        // simplified call chain from prettier@2.1.0:
+        // printedExpanded = printedArguments
+        //   .slice(0, -1)
+        //   .concat(argPath.call((p) => print(p, { expandLastArg: true })));
+
+        // [prettierx] keep for --paren-spacing option support (...)
+        const printedLastArg = argPath.call((p) =>
+          print(p, { expandLastArg: true })
+        );
+
+        // [prettierx] with --paren-spacing option support (...)
+        // lastArgAddedLine = hasAddedLine(printedLastArg);
+        printedExpanded = printedArguments.slice(0, -1).concat(printedLastArg);
       }
       i++;
     };
@@ -188,7 +215,16 @@ function printCallArguments(path, options, print) {
 
     const somePrintedArgumentsWillBreak = printedArguments.some(willBreak);
 
-    const simpleConcat = concat(["(", concat(printedExpanded), ")"]);
+    // [prettierx] with --paren-spacing option support (...)
+    // const simpleConcat = concat(["(", concat(printedExpanded), ")"]);
+    const simpleConcat = concat([
+      "(",
+      parenSpace,
+      concat(printedExpanded),
+      // lastArgAddedLine ? "" : parenSpace,
+      parenSpace,
+      ")",
+    ]);
 
     return concat([
       somePrintedArgumentsWillBreak ? breakParent : "",
@@ -199,19 +235,25 @@ function printCallArguments(path, options, print) {
           !node.typeParameters
             ? simpleConcat
             : ifBreak(allArgsBrokenOut(), simpleConcat),
+          // [prettierx] with --paren-spacing option support (...)
           shouldGroupFirst
             ? concat([
                 "(",
+                parenSpace,
                 group(printedExpanded[0], { shouldBreak: true }),
                 concat(printedExpanded.slice(1)),
+                parenSpace,
                 ")",
               ])
             : concat([
                 "(",
+                parenSpace,
                 concat(printedArguments.slice(0, -1)),
                 group(getLast(printedExpanded), {
                   shouldBreak: true,
                 }),
+                // lastArgAddedLine ? "" : parenSpace,
+                parenSpace,
                 ")",
               ]),
           allArgsBrokenOut(),
@@ -223,9 +265,13 @@ function printCallArguments(path, options, print) {
 
   const contents = concat([
     "(",
-    indent(concat([softline, concat(printedArguments)])),
+    // [prettierx] with --paren-spacing option support (...)
+    // indent(concat([softline, concat(printedArguments)])),
+    indent(concat([parenLine, concat(printedArguments)])),
     ifBreak(maybeTrailingComma),
-    softline,
+    // [prettierx] for --paren-spacing option support (...)
+    // softline,
+    parenLine,
     ")",
   ]);
   if (isLongCurriedCallExpression(path)) {

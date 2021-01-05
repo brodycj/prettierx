@@ -134,7 +134,7 @@ const {
   startsWithNoLookaheadToken,
 } = require("./utils");
 
-/* [prettierx merge tbd] missing support for some prettierx options:
+//* [prettierx merge tbd] missing support for some prettierx options:
 const printMemberChain = require("./print/member-chain");
 // ** */
 const printCallArguments = require("./print/call-arguments");
@@ -172,7 +172,7 @@ const {
 // const printTernaryOperator = printTernaryOperatorX;
 
 // [prettierx] use alias for now:
-const printMemberChain = printMemberChainX;
+// const printMemberChain = printMemberChainX;
 
 let uid = 0;
 
