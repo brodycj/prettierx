@@ -1,7 +1,6 @@
 run_spec(__dirname, ["babel", "babel-flow", "flow", "typescript"], {
+  arrowParens: "avoid", // - recommended
   indentChains: false,
-  // recommended:
-  arrowParens: "avoid",
 });
 
 run_spec(__dirname, ["babel", "babel-flow", "flow", "typescript"], {
