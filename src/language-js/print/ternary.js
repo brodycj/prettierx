@@ -146,6 +146,9 @@ function printTernaryOperator(path, options, print, operatorOptions) {
   const alternateNode = node[operatorOptions.alternateNodePropertyName];
   const parts = [];
 
+  // [prettierx] parenSpace option support (...)
+  const parenSpace = options.parenSpacing ? " " : "";
+
   // We print a ConditionalExpression in either "JSX mode" or "normal mode".
   // See tests/jsx/conditional-expression.js for more info.
   let jsxMode = false;
@@ -222,15 +225,22 @@ function printTernaryOperator(path, options, print, operatorOptions) {
     const part = concat([
       line,
       "? ",
+      // [prettierx] parenSpace option support (...)
       consequentNode.type === operatorOptions.conditionalNodeType
-        ? ifBreak("", "(")
+        ? ifBreak("", concat(["(", parenSpace]))
         : "",
-      align(2, path.call(print, operatorOptions.consequentNodePropertyName)),
+      // [prettierx] alignTernaryLines option support:
+      options.alignTernaryLines
+        ? align(2, path.call(print, operatorOptions.consequentNodePropertyName))
+        : path.call(print, operatorOptions.consequentNodePropertyName),
+      // [prettierx] parenSpace option support (...)
       consequentNode.type === operatorOptions.conditionalNodeType
-        ? ifBreak("", ")")
+        ? ifBreak("", concat([parenSpace, ")"]))
         : "",
       line,
       ": ",
+      // [prettierx] alignTernaryLines option support:
+      !options.alignTernaryLines ||
       alternateNode.type === operatorOptions.conditionalNodeType
         ? path.call(print, operatorOptions.alternateNodePropertyName)
         : align(2, path.call(print, operatorOptions.alternateNodePropertyName)),
@@ -240,10 +250,16 @@ function printTernaryOperator(path, options, print, operatorOptions) {
         parent[operatorOptions.alternateNodePropertyName] === node ||
         isParentTest
         ? part
-        : options.useTabs
+        : options.useTabs || !options.alignTernaryLines // [prettierx] (...)
         ? dedent(indent(part))
         : align(Math.max(0, options.tabWidth - 2), part)
     );
+
+    // [prettierx] alignTernaryLines option support:
+    // Indent the whole ternary if alignTernaryLines:false (like ESLint).
+    if (!options.alignTernaryLines) {
+      forceNoIndent = false;
+    }
   }
 
   // We want a whole chain of ConditionalExpressions to all
@@ -298,6 +314,8 @@ function printTernaryOperator(path, options, print, operatorOptions) {
            *       ? d
            *       : e
            */
+          // [prettierx] alignTernaryLines option support:
+          options.alignTernaryLines &&
           parent.type === operatorOptions.conditionalNodeType &&
           parent[operatorOptions.alternateNodePropertyName] === node
             ? align(2, testDoc)

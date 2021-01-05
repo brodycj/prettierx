@@ -151,7 +151,7 @@ const {
   // ** */
 } = require("./print/misc");
 const { printModuleSource, printModuleSpecifiers } = require("./print/module");
-/* [prettierx merge] missing support for some prettierx options:
+//* [prettierx merge] missing support for some prettierx options:
 const printTernaryOperator = require("./print/ternary");
 // ** */
 
@@ -169,7 +169,7 @@ const {
 } = require("../document");
 
 // [prettierx] use alias for now:
-const printTernaryOperator = printTernaryOperatorX;
+// const printTernaryOperator = printTernaryOperatorX;
 
 // [prettierx] use alias for now:
 const printMemberChain = printMemberChainX;
