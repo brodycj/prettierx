@@ -59,7 +59,7 @@ function printModuleSpecifiers(path, options, print) {
         standalonesSpecifiers.length > 0 ||
         node.specifiers.some((node) => node.comments);
 
-      if (canBreak) {
+      if (canBreak && options.importFormatting !== "oneline") {
         parts.push(
           group(
             concat([
@@ -81,7 +81,8 @@ function printModuleSpecifiers(path, options, print) {
           concat([
             "{",
             options.bracketSpacing ? " " : "",
-            concat(groupedSpecifiers),
+            // concat(groupedSpecifiers),
+            join(", ", groupedSpecifiers),
             options.bracketSpacing ? " " : "",
             "}",
           ])
