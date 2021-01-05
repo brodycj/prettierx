@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`binary.js 1`] = `
+exports[`binary.js - {"alignTernaryLines":false,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: false
 arrowParens: "avoid"
@@ -44,7 +44,7 @@ room = room.map((row, rowIndex) =>
 ================================================================================
 `;
 
-exports[`binary.js 2`] = `
+exports[`binary.js - {"tabWidth":4,"alignTernaryLines":false,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: false
 arrowParens: "avoid"
@@ -89,7 +89,7 @@ room = room.map((row, rowIndex) =>
 ================================================================================
 `;
 
-exports[`binary.js 3`] = `
+exports[`binary.js - {"useTabs":true,"alignTernaryLines":false,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: false
 arrowParens: "avoid"
@@ -134,7 +134,7 @@ room = room.map((row, rowIndex) =>
 ================================================================================
 `;
 
-exports[`binary.js 4`] = `
+exports[`binary.js - {"useTabs":true,"tabWidth":4,"alignTernaryLines":false,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: false
 arrowParens: "avoid"
@@ -180,7 +180,7 @@ room = room.map((row, rowIndex) =>
 ================================================================================
 `;
 
-exports[`func-call.js 1`] = `
+exports[`func-call.js - {"alignTernaryLines":false,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: false
 arrowParens: "avoid"
@@ -211,7 +211,7 @@ fn(
 ================================================================================
 `;
 
-exports[`func-call.js 2`] = `
+exports[`func-call.js - {"tabWidth":4,"alignTernaryLines":false,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: false
 arrowParens: "avoid"
@@ -243,7 +243,7 @@ fn(
 ================================================================================
 `;
 
-exports[`func-call.js 3`] = `
+exports[`func-call.js - {"useTabs":true,"alignTernaryLines":false,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: false
 arrowParens: "avoid"
@@ -275,7 +275,7 @@ fn(
 ================================================================================
 `;
 
-exports[`func-call.js 4`] = `
+exports[`func-call.js - {"useTabs":true,"tabWidth":4,"alignTernaryLines":false,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: false
 arrowParens: "avoid"
@@ -308,7 +308,7 @@ fn(
 ================================================================================
 `;
 
-exports[`indent.js 1`] = `
+exports[`indent.js - {"alignTernaryLines":false,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: false
 arrowParens: "avoid"
@@ -640,7 +640,7 @@ a
 ================================================================================
 `;
 
-exports[`indent.js 2`] = `
+exports[`indent.js - {"tabWidth":4,"alignTernaryLines":false,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: false
 arrowParens: "avoid"
@@ -973,7 +973,7 @@ a
 ================================================================================
 `;
 
-exports[`indent.js 3`] = `
+exports[`indent.js - {"useTabs":true,"alignTernaryLines":false,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: false
 arrowParens: "avoid"
@@ -1306,7 +1306,7 @@ a
 ================================================================================
 `;
 
-exports[`indent.js 4`] = `
+exports[`indent.js - {"useTabs":true,"tabWidth":4,"alignTernaryLines":false,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: false
 arrowParens: "avoid"
@@ -1640,7 +1640,7 @@ a
 ================================================================================
 `;
 
-exports[`nested.js 1`] = `
+exports[`nested.js - {"alignTernaryLines":false,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: false
 arrowParens: "avoid"
@@ -1846,7 +1846,7 @@ a
 ================================================================================
 `;
 
-exports[`nested.js 2`] = `
+exports[`nested.js - {"tabWidth":4,"alignTernaryLines":false,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: false
 arrowParens: "avoid"
@@ -2053,7 +2053,7 @@ a
 ================================================================================
 `;
 
-exports[`nested.js 3`] = `
+exports[`nested.js - {"useTabs":true,"alignTernaryLines":false,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: false
 arrowParens: "avoid"
@@ -2260,7 +2260,7 @@ a
 ================================================================================
 `;
 
-exports[`nested.js 4`] = `
+exports[`nested.js - {"useTabs":true,"tabWidth":4,"alignTernaryLines":false,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: false
 arrowParens: "avoid"
@@ -2468,7 +2468,7 @@ a
 ================================================================================
 `;
 
-exports[`nested-in-condition.js 1`] = `
+exports[`nested-in-condition.js - {"alignTernaryLines":false,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: false
 arrowParens: "avoid"
@@ -2559,7 +2559,7 @@ const value = (
 ================================================================================
 `;
 
-exports[`nested-in-condition.js 2`] = `
+exports[`nested-in-condition.js - {"tabWidth":4,"alignTernaryLines":false,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: false
 arrowParens: "avoid"
@@ -2651,7 +2651,7 @@ const value = (
 ================================================================================
 `;
 
-exports[`nested-in-condition.js 3`] = `
+exports[`nested-in-condition.js - {"useTabs":true,"alignTernaryLines":false,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: false
 arrowParens: "avoid"
@@ -2743,7 +2743,7 @@ const value = (
 ================================================================================
 `;
 
-exports[`nested-in-condition.js 4`] = `
+exports[`nested-in-condition.js - {"useTabs":true,"tabWidth":4,"alignTernaryLines":false,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: false
 arrowParens: "avoid"
@@ -2836,7 +2836,7 @@ const value = (
 ================================================================================
 `;
 
-exports[`parenthesis.js 1`] = `
+exports[`parenthesis.js - {"alignTernaryLines":false,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: false
 arrowParens: "avoid"
@@ -2875,7 +2875,7 @@ a =>
 ================================================================================
 `;
 
-exports[`parenthesis.js 2`] = `
+exports[`parenthesis.js - {"tabWidth":4,"alignTernaryLines":false,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: false
 arrowParens: "avoid"
@@ -2915,7 +2915,7 @@ a =>
 ================================================================================
 `;
 
-exports[`parenthesis.js 3`] = `
+exports[`parenthesis.js - {"useTabs":true,"alignTernaryLines":false,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: false
 arrowParens: "avoid"
@@ -2955,7 +2955,7 @@ a =>
 ================================================================================
 `;
 
-exports[`parenthesis.js 4`] = `
+exports[`parenthesis.js - {"useTabs":true,"tabWidth":4,"alignTernaryLines":false,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: false
 arrowParens: "avoid"
@@ -2996,7 +2996,7 @@ a =>
 ================================================================================
 `;
 
-exports[`test.js 1`] = `
+exports[`test.js - {"alignTernaryLines":false,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: false
 arrowParens: "avoid"
@@ -3058,7 +3058,7 @@ const obj5 = conditionIsTruthy
 ================================================================================
 `;
 
-exports[`test.js 2`] = `
+exports[`test.js - {"tabWidth":4,"alignTernaryLines":false,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: false
 arrowParens: "avoid"
@@ -3121,7 +3121,7 @@ const obj5 = conditionIsTruthy
 ================================================================================
 `;
 
-exports[`test.js 3`] = `
+exports[`test.js - {"useTabs":true,"alignTernaryLines":false,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: false
 arrowParens: "avoid"
@@ -3184,7 +3184,7 @@ const obj5 = conditionIsTruthy
 ================================================================================
 `;
 
-exports[`test.js 4`] = `
+exports[`test.js - {"useTabs":true,"tabWidth":4,"alignTernaryLines":false,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: false
 arrowParens: "avoid"

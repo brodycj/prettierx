@@ -1,8 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`crewdress.js 1`] = `
+exports[`crewdress.js - {"alignTernaryLines":true,"arrowParens":"avoid"} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: true
+arrowParens: "avoid"
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
                                                                                 | printWidth
@@ -33,7 +34,7 @@ const dress = isSpace
 ================================================================================
 `;
 
-exports[`crewdress.js 2`] = `
+exports[`crewdress.js - {"alignTernaryLines":true,"tabWidth":4} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
@@ -67,41 +68,7 @@ const dress = isSpace
 ================================================================================
 `;
 
-exports[`crewdress.js 3`] = `
-====================================options=====================================
-alignTernaryLines: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
-printWidth: 80
-useTabs: true
-                                                                                | printWidth
-=====================================input======================================
-let isSpace = false
-
-const dress = isSpace ? {
-      spaceSuit: 3,
-      oxygenCylinders: 6
-    } : {
-      shirts: 3,
-      paints: 3
-    }
-
-=====================================output=====================================
-let isSpace = false;
-
-const dress = isSpace
-	? {
-			spaceSuit: 3,
-			oxygenCylinders: 6,
-	  }
-	: {
-			shirts: 3,
-			paints: 3,
-	  };
-
-================================================================================
-`;
-
-exports[`crewdress.js 4`] = `
+exports[`crewdress.js - {"alignTernaryLines":true,"useTabs":true,"tabWidth":4} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
@@ -136,9 +103,44 @@ const dress = isSpace
 ================================================================================
 `;
 
-exports[`nested-ternary-promises.js 1`] = `
+exports[`crewdress.js - {"alignTernaryLines":true,"useTabs":true} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: true
+parsers: ["babel", "babel-flow", "flow", "typescript"]
+printWidth: 80
+useTabs: true
+                                                                                | printWidth
+=====================================input======================================
+let isSpace = false
+
+const dress = isSpace ? {
+      spaceSuit: 3,
+      oxygenCylinders: 6
+    } : {
+      shirts: 3,
+      paints: 3
+    }
+
+=====================================output=====================================
+let isSpace = false;
+
+const dress = isSpace
+	? {
+			spaceSuit: 3,
+			oxygenCylinders: 6,
+	  }
+	: {
+			shirts: 3,
+			paints: 3,
+	  };
+
+================================================================================
+`;
+
+exports[`nested-ternary-promises.js - {"alignTernaryLines":true,"arrowParens":"avoid"} format 1`] = `
+====================================options=====================================
+alignTernaryLines: true
+arrowParens: "avoid"
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
                                                                                 | printWidth
@@ -177,7 +179,7 @@ function test1() {
 ================================================================================
 `;
 
-exports[`nested-ternary-promises.js 2`] = `
+exports[`nested-ternary-promises.js - {"alignTernaryLines":true,"tabWidth":4} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
@@ -219,11 +221,12 @@ function test1() {
 ================================================================================
 `;
 
-exports[`nested-ternary-promises.js 3`] = `
+exports[`nested-ternary-promises.js - {"alignTernaryLines":true,"useTabs":true,"tabWidth":4} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+tabWidth: 4
 useTabs: true
                                                                                 | printWidth
 =====================================input======================================
@@ -261,12 +264,11 @@ function test1() {
 ================================================================================
 `;
 
-exports[`nested-ternary-promises.js 4`] = `
+exports[`nested-ternary-promises.js - {"alignTernaryLines":true,"useTabs":true} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
-tabWidth: 4
 useTabs: true
                                                                                 | printWidth
 =====================================input======================================

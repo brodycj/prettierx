@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`o.js 1`] = `
+exports[`o.js - {"alignObjectProperties":true,"parenSpacing":true,"trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 alignObjectProperties: true
 parenSpacing: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["babel", "babel-flow", "flow", "babel-ts"]
 printWidth: 80
 trailingComma: "none"
                                                                                 | printWidth

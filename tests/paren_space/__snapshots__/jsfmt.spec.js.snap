@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`arrays.js 1`] = `
+exports[`arrays.js - {"parenSpacing":true} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel"]
@@ -31,7 +31,7 @@ printWidth: 80
 ================================================================================
 `;
 
-exports[`bind.js 1`] = `
+exports[`bind.js - {"parenSpacing":true} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel"]
@@ -120,7 +120,7 @@ a::( ( b ) => c );
 ================================================================================
 `;
 
-exports[`class.js 1`] = `
+exports[`class.js - {"parenSpacing":true} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel"]
@@ -161,7 +161,7 @@ class X {
 ================================================================================
 `;
 
-exports[`conditionals.js 1`] = `
+exports[`conditionals.js - {"parenSpacing":true} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel"]
@@ -229,7 +229,7 @@ foo || bar || baz || qux || xyz;
 ================================================================================
 `;
 
-exports[`destructuring.js 1`] = `
+exports[`destructuring.js - {"parenSpacing":true} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel"]
@@ -248,7 +248,7 @@ const { children, ...props } = this.props;
 ================================================================================
 `;
 
-exports[`expressions.js 1`] = `
+exports[`expressions.js - {"parenSpacing":true} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel"]
@@ -291,7 +291,7 @@ object.foo().bar().baz();
 ================================================================================
 `;
 
-exports[`functions.js 1`] = `
+exports[`functions.js - {"parenSpacing":true} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel"]
@@ -342,7 +342,7 @@ new ( function () {} )();
 ================================================================================
 `;
 
-exports[`html-template-literals.js 1`] = `
+exports[`html-template-literals.js - {"parenSpacing":true} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel"]
@@ -419,7 +419,7 @@ setFoo(
 ================================================================================
 `;
 
-exports[`import-export.js 1`] = `
+exports[`import-export.js - {"parenSpacing":true} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel"]
@@ -450,7 +450,7 @@ export default ( function f() {} );
 ================================================================================
 `;
 
-exports[`jest-test-each.js 1`] = `
+exports[`jest-test-each.js - {"parenSpacing":true} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel"]
@@ -479,7 +479,7 @@ test.each\`
 ================================================================================
 `;
 
-exports[`loops.js 1`] = `
+exports[`loops.js - {"parenSpacing":true} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel"]
@@ -535,7 +535,7 @@ for ( var i = 0, len = arr.length; i < len; i++ ) {}
 ================================================================================
 `;
 
-exports[`nullish.js 1`] = `
+exports[`nullish.js - {"parenSpacing":true} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel"]
@@ -560,7 +560,7 @@ foo ?? bar ?? baz;
 ================================================================================
 `;
 
-exports[`objects.js 1`] = `
+exports[`objects.js - {"parenSpacing":true} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel"]
@@ -591,7 +591,7 @@ a = () => ( {}.x );
 ================================================================================
 `;
 
-exports[`return.js 1`] = `
+exports[`return.js - {"parenSpacing":true} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel"]
@@ -618,7 +618,7 @@ function f() {
 ================================================================================
 `;
 
-exports[`sequence.js 1`] = `
+exports[`sequence.js - {"parenSpacing":true} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel"]
@@ -661,7 +661,7 @@ printWidth: 80
 ================================================================================
 `;
 
-exports[`spread.js 1`] = `
+exports[`spread.js - {"parenSpacing":true} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel"]
@@ -690,7 +690,7 @@ declare class C {
 ================================================================================
 `;
 
-exports[`switch.js 1`] = `
+exports[`switch.js - {"parenSpacing":true} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel"]
@@ -729,7 +729,7 @@ switch ( a ) {
 ================================================================================
 `;
 
-exports[`template-literals.js 1`] = `
+exports[`template-literals.js - {"parenSpacing":true} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel"]
@@ -851,7 +851,7 @@ return (
 ================================================================================
 `;
 
-exports[`ternaries.js 1`] = `
+exports[`ternaries.js - {"parenSpacing":true} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel"]
@@ -893,7 +893,7 @@ const obj = {
 ================================================================================
 `;
 
-exports[`throw.js 1`] = `
+exports[`throw.js - {"parenSpacing":true} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel"]
@@ -920,7 +920,7 @@ lint( ast, {
 ================================================================================
 `;
 
-exports[`try-catch.js 1`] = `
+exports[`try-catch.js - {"parenSpacing":true} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel"]
@@ -943,7 +943,7 @@ try {
 ================================================================================
 `;
 
-exports[`with.js 1`] = `
+exports[`with.js - {"parenSpacing":true} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel"]

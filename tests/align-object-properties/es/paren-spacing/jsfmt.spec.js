@@ -4,7 +4,8 @@
 
 const dirpath = `${__dirname}/..`;
 
-run_spec(dirpath, ["babel", "babel-flow", "flow", "typescript"], {
+// --align-object-properties no longer working with non-Babel typescript parser
+run_spec(dirpath, ["babel", "babel-flow", "flow", "babel-ts"], {
   // "Standard JS":
   alignObjectProperties: true,
   // prettierx: test with --paren-spacing

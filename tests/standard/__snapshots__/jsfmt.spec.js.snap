@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`correct.js 1`] = `
+exports[`correct.js - {"endOfLine":"lf","yieldStarSpacing":true,"generatorStarSpacing":true,"spaceBeforeFunctionParen":true,"singleQuote":true,"jsxSingleQuote":true,"semi":false,"alignTernaryLines":false,"trailingComma":"none","arrowParens":"avoid"} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: false
 arrowParens: "avoid"
@@ -703,7 +703,7 @@ function * generator () {<LF>
 ================================================================================
 `;
 
-exports[`correct-ternaries.js 1`] = `
+exports[`correct-ternaries.js - {"endOfLine":"lf","yieldStarSpacing":true,"generatorStarSpacing":true,"spaceBeforeFunctionParen":true,"singleQuote":true,"jsxSingleQuote":true,"semi":false,"alignTernaryLines":false,"trailingComma":"none","arrowParens":"avoid"} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: false
 arrowParens: "avoid"
@@ -1054,7 +1054,7 @@ const StorybookLoader = ({ match }) =><LF>
 ================================================================================
 `;
 
-exports[`incorrect.js 1`] = `
+exports[`incorrect.js - {"endOfLine":"lf","yieldStarSpacing":true,"generatorStarSpacing":true,"spaceBeforeFunctionParen":true,"singleQuote":true,"jsxSingleQuote":true,"semi":false,"alignTernaryLines":false,"trailingComma":"none","arrowParens":"avoid"} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: false
 arrowParens: "avoid"
@@ -1836,7 +1836,7 @@ const dress = isSpace<LF>
 ================================================================================
 `;
 
-exports[`incorrect-ternaries.js 1`] = `
+exports[`incorrect-ternaries.js - {"endOfLine":"lf","yieldStarSpacing":true,"generatorStarSpacing":true,"spaceBeforeFunctionParen":true,"singleQuote":true,"jsxSingleQuote":true,"semi":false,"alignTernaryLines":false,"trailingComma":"none","arrowParens":"avoid"} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: false
 arrowParens: "avoid"

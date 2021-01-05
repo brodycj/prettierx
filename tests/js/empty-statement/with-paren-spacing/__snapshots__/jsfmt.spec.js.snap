@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`body.js 1`] = `
+exports[`body.js - {"parenSpacing":true} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
@@ -30,7 +30,7 @@ while ( 1 );
 ================================================================================
 `;
 
-exports[`no-newline.js 1`] = `
+exports[`no-newline.js - {"parenSpacing":true} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]

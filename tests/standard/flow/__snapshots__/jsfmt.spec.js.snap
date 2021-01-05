@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`correct.js 1`] = `
+exports[`correct.js - {"arrowParens":"avoid","yieldStarSpacing":true,"generatorStarSpacing":true,"spaceBeforeFunctionParen":true,"singleQuote":true,"jsxSingleQuote":true,"semi":false,"trailingComma":"none"} format 1`] = `
 ====================================options=====================================
+arrowParens: "avoid"
 generatorStarSpacing: true
 jsxSingleQuote: true
 parsers: ["babel", "babel-flow", "flow"]
@@ -69,7 +70,7 @@ class Example<T> implements Foo<T> {
 ================================================================================
 `;
 
-exports[`correct.js 2`] = `
+exports[`correct.js - {"yieldStarSpacing":true,"generatorStarSpacing":true,"spaceBeforeFunctionParen":true,"singleQuote":true,"jsxSingleQuote":true,"semi":false} format 1`] = `
 ====================================options=====================================
 generatorStarSpacing: true
 jsxSingleQuote: true
@@ -137,8 +138,9 @@ class Example<T> implements Foo<T> {
 ================================================================================
 `;
 
-exports[`incorrect.js 1`] = `
+exports[`incorrect.js - {"arrowParens":"avoid","yieldStarSpacing":true,"generatorStarSpacing":true,"spaceBeforeFunctionParen":true,"singleQuote":true,"jsxSingleQuote":true,"semi":false,"trailingComma":"none"} format 1`] = `
 ====================================options=====================================
+arrowParens: "avoid"
 generatorStarSpacing: true
 jsxSingleQuote: true
 parsers: ["babel", "babel-flow", "flow"]
@@ -198,7 +200,7 @@ class Example<T> implements Foo<T> {
 ================================================================================
 `;
 
-exports[`incorrect.js 2`] = `
+exports[`incorrect.js - {"yieldStarSpacing":true,"generatorStarSpacing":true,"spaceBeforeFunctionParen":true,"singleQuote":true,"jsxSingleQuote":true,"semi":false} format 1`] = `
 ====================================options=====================================
 generatorStarSpacing: true
 jsxSingleQuote: true

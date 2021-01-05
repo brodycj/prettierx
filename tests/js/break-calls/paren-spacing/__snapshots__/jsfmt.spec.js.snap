@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`break.js 1`] = `
+exports[`break.js - {"parenSpacing":true,"trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
-parsers: ["babel-flow", "flow", "typescript"]
+parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 trailingComma: "none"
                                                                                 | printWidth
@@ -106,10 +106,10 @@ expect(
 ================================================================================
 `;
 
-exports[`parent.js 1`] = `
+exports[`parent.js - {"parenSpacing":true,"trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
-parsers: ["babel-flow", "flow", "typescript"]
+parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 trailingComma: "none"
                                                                                 | printWidth
@@ -138,10 +138,10 @@ runtimeAgent.getProperties(
 ================================================================================
 `;
 
-exports[`react.js 1`] = `
+exports[`react.js - {"parenSpacing":true,"trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
-parsers: ["babel-flow", "flow", "typescript"]
+parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 trailingComma: "none"
                                                                                 | printWidth
@@ -236,28 +236,6 @@ function MyComponent( props ) {
 
   return null;
 }
-
-================================================================================
-`;
-
-exports[`type_args.js 1`] = `
-====================================options=====================================
-parenSpacing: true
-parsers: ["babel-flow", "flow", "typescript"]
-printWidth: 80
-trailingComma: "none"
-                                                                                | printWidth
-=====================================input======================================
-const response = something.$http.get<ThingamabobService.DetailsData>(
-  \`api/foo.ashx/foo-details/\${myId}\`,
-  { cache: quux.httpCache, timeout }
-);
-
-=====================================output=====================================
-const response = something.$http.get< ThingamabobService.DetailsData >(
-  \`api/foo.ashx/foo-details/\${myId}\`,
-  { cache: quux.httpCache, timeout }
-);
 
 ================================================================================
 `;

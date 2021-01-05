@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`tsbaz.ts 1`] = `
+exports[`tsbaz.ts - {"arrowParens":"avoid","spaceBeforeFunctionParen":true,"trailingComma":"none"} format 1`] = `
 ====================================options=====================================
+arrowParens: "avoid"
 parsers: ["typescript"]
 printWidth: 80
 spaceBeforeFunctionParen: true
@@ -120,8 +121,9 @@ var foo = async () => 1;
 ================================================================================
 `;
 
-exports[`tsbaz.ts 2`] = `
+exports[`tsbaz.ts - {"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
+arrowParens: "avoid"
 parsers: ["typescript"]
 printWidth: 80
 trailingComma: "none"
@@ -239,7 +241,7 @@ var foo = async () => 1;
 ================================================================================
 `;
 
-exports[`tsbaz.ts 3`] = `
+exports[`tsbaz.ts - {"parenSpacing":true,"spaceBeforeFunctionParen":true,"trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["typescript"]
@@ -360,7 +362,7 @@ var foo = async () => 1;
 ================================================================================
 `;
 
-exports[`tsbaz.ts 4`] = `
+exports[`tsbaz.ts - {"parenSpacing":true,"trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["typescript"]

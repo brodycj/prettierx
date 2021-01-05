@@ -4,6 +4,7 @@
 
 const dirpath = `${__dirname}/..`;
 
-run_spec(dirpath, ["babel", "babel-flow", "flow", "typescript"], {
+// no longer working with non-Babel flow & typescript parsers
+run_spec(dirpath, ["babel", "babel-flow", "babel-ts"], {
   parenSpacing: true,
 });

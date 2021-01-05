@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`binary.js 1`] = `
+exports[`binary.js - {"alignTernaryLines":true,"parenSpacing":true,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: true
 arrowParens: "avoid"
@@ -45,7 +45,7 @@ room = room.map( ( row, rowIndex ) =>
 ================================================================================
 `;
 
-exports[`func-call.js 1`] = `
+exports[`func-call.js - {"alignTernaryLines":true,"parenSpacing":true,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: true
 arrowParens: "avoid"
@@ -77,7 +77,7 @@ fn(
 ================================================================================
 `;
 
-exports[`indent.js 1`] = `
+exports[`indent.js - {"alignTernaryLines":true,"parenSpacing":true,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: true
 arrowParens: "avoid"
@@ -410,7 +410,7 @@ a
 ================================================================================
 `;
 
-exports[`nested.js 1`] = `
+exports[`nested.js - {"alignTernaryLines":true,"parenSpacing":true,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: true
 arrowParens: "avoid"
@@ -617,7 +617,7 @@ a
 ================================================================================
 `;
 
-exports[`nested-in-condition.js 1`] = `
+exports[`nested-in-condition.js - {"alignTernaryLines":true,"parenSpacing":true,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: true
 arrowParens: "avoid"
@@ -709,7 +709,7 @@ const value = (
 ================================================================================
 `;
 
-exports[`parenthesis.js 1`] = `
+exports[`parenthesis.js - {"alignTernaryLines":true,"parenSpacing":true,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: true
 arrowParens: "avoid"
@@ -749,7 +749,7 @@ a =>
 ================================================================================
 `;
 
-exports[`test.js 1`] = `
+exports[`test.js - {"alignTernaryLines":true,"parenSpacing":true,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 alignTernaryLines: true
 arrowParens: "avoid"

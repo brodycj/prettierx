@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`arrow.js 1`] = `
+exports[`arrow.js - {"parenSpacing":true,"trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel", "babel-flow"]
@@ -28,7 +28,7 @@ trailingComma: "none"
 ================================================================================
 `;
 
-exports[`call.js 1`] = `
+exports[`call.js - {"parenSpacing":true,"trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel", "babel-flow"]
@@ -66,7 +66,7 @@ new Error( formatErrorMessage\`
 ================================================================================
 `;
 
-exports[`comment.js 1`] = `
+exports[`comment.js - {"parenSpacing":true,"trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel", "babel-flow"]
@@ -107,7 +107,7 @@ g
 ================================================================================
 `;
 
-exports[`faulty-locations.js 1`] = `
+exports[`faulty-locations.js - {"parenSpacing":true,"trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel", "babel-flow"]
@@ -149,7 +149,7 @@ var x = {
 ================================================================================
 `;
 
-exports[`graphql.js 1`] = `
+exports[`graphql.js - {"parenSpacing":true,"trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel", "babel-flow"]
@@ -197,7 +197,7 @@ module.exports = Relay.createContainer(
 ================================================================================
 `;
 
-exports[`indent.js 1`] = `
+exports[`indent.js - {"parenSpacing":true,"trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel", "babel-flow"]
@@ -252,7 +252,7 @@ line n + n
 ================================================================================
 `;
 
-exports[`inline.js 1`] = `
+exports[`inline.js - {"parenSpacing":true,"trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel", "babel-flow"]
@@ -289,35 +289,6 @@ this._pipe.write(\`
     a
   \`;
 
-(): {
-  someLong: boolean,
-  t: boolean
-} => \`
-  a
-\`;
-
-(): {
-  someLong: boolean,
-  t: boolean
-} =>
-  \`
-    a
-  \`;
-
-(
-  someLong: boolean,
-  t: boolean
-) => \`
-    a
-  \`;
-
-(
-  someLong: boolean,
-  t: boolean
-) =>
-  \`
-    a
-  \`;
 
 // https://github.com/prettier/prettier/issues/5529
 editTitle += \`\${iconHTML({ class: "reply-to-glyph" })}\`;
@@ -348,37 +319,13 @@ this._pipe.write( \`
     a
   \`;
 
-(): {
-  someLong: boolean,
-  t: boolean
-} => \`
-  a
-\`;
-
-(): {
-  someLong: boolean,
-  t: boolean
-} =>
-  \`
-    a
-  \`;
-
-( someLong: boolean, t: boolean ) => \`
-    a
-  \`;
-
-( someLong: boolean, t: boolean ) =>
-  \`
-    a
-  \`;
-
 // https://github.com/prettier/prettier/issues/5529
 editTitle += \`\${ iconHTML( { class: "reply-to-glyph" } ) }\`;
 
 ================================================================================
 `;
 
-exports[`parenthesis.js 1`] = `
+exports[`parenthesis.js - {"parenSpacing":true,"trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel", "babel-flow"]

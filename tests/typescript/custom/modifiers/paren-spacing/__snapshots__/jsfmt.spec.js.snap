@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`minustoken.ts 1`] = `
+exports[`minustoken.ts - {"parenSpacing":true} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["typescript"]
@@ -27,7 +27,7 @@ type ReadonlyPartial< T > = {
 ================================================================================
 `;
 
-exports[`question.ts 1`] = `
+exports[`question.ts - {"parenSpacing":true} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["typescript"]
@@ -46,7 +46,7 @@ var x: {
 ================================================================================
 `;
 
-exports[`readonly.ts 1`] = `
+exports[`readonly.ts - {"parenSpacing":true} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["typescript"]

@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`correct.ts 1`] = `
+exports[`correct.ts - {"arrowParens":"avoid","yieldStarSpacing":true,"generatorStarSpacing":true,"spaceBeforeFunctionParen":true,"singleQuote":true,"jsxSingleQuote":true,"semi":false} format 1`] = `
 ====================================options=====================================
+arrowParens: "avoid"
 generatorStarSpacing: true
 jsxSingleQuote: true
 parsers: ["typescript"]
@@ -52,7 +53,7 @@ class Example<T> implements Foo<T> {
 ================================================================================
 `;
 
-exports[`correct.ts 2`] = `
+exports[`correct.ts - {"parenSpacing":true,"yieldStarSpacing":true,"generatorStarSpacing":true,"spaceBeforeFunctionParen":true,"singleQuote":true,"jsxSingleQuote":true,"semi":false} format 1`] = `
 ====================================options=====================================
 generatorStarSpacing: true
 jsxSingleQuote: true
@@ -105,8 +106,9 @@ class Example< T > implements Foo< T > {
 ================================================================================
 `;
 
-exports[`incorrect.ts 1`] = `
+exports[`incorrect.ts - {"arrowParens":"avoid","yieldStarSpacing":true,"generatorStarSpacing":true,"spaceBeforeFunctionParen":true,"singleQuote":true,"jsxSingleQuote":true,"semi":false} format 1`] = `
 ====================================options=====================================
+arrowParens: "avoid"
 generatorStarSpacing: true
 jsxSingleQuote: true
 parsers: ["typescript"]
@@ -157,7 +159,7 @@ class Example<T> implements Foo<T> {
 ================================================================================
 `;
 
-exports[`incorrect.ts 2`] = `
+exports[`incorrect.ts - {"parenSpacing":true,"yieldStarSpacing":true,"generatorStarSpacing":true,"spaceBeforeFunctionParen":true,"singleQuote":true,"jsxSingleQuote":true,"semi":false} format 1`] = `
 ====================================options=====================================
 generatorStarSpacing: true
 jsxSingleQuote: true

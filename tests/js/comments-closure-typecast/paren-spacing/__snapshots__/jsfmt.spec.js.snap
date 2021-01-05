@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`binary-expr.js 1`] = `
+exports[`binary-expr.js - {"parenSpacing":true,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true
@@ -18,7 +18,7 @@ var a = b || /** @type {string} */ ( c );
 ================================================================================
 `;
 
-exports[`closure-compiler-type-cast.js 1`] = `
+exports[`closure-compiler-type-cast.js - {"parenSpacing":true,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true
@@ -155,7 +155,7 @@ const style2 = /**
 ================================================================================
 `;
 
-exports[`comment-in-the-middle.js 1`] = `
+exports[`comment-in-the-middle.js - {"parenSpacing":true,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true
@@ -192,7 +192,7 @@ console.log( a.foo() );
 ================================================================================
 `;
 
-exports[`comment-placement.js 1`] = `
+exports[`comment-placement.js - {"parenSpacing":true,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true
@@ -240,7 +240,7 @@ const foo5 = /** @type {string} */ ( value );
 ================================================================================
 `;
 
-exports[`extra-spaces-and-asterisks.js 1`] = `
+exports[`extra-spaces-and-asterisks.js - {"parenSpacing":true,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true
@@ -271,7 +271,7 @@ const foo8 = /** @type {!Foo}    ** *   *   */ ( bar );
 ================================================================================
 `;
 
-exports[`iife.js 1`] = `
+exports[`iife.js - {"parenSpacing":true,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true
@@ -308,7 +308,7 @@ const helpers = /** @type {Helpers} */ ( /** @param {Partial<Helpers>} helpers *
 ================================================================================
 `;
 
-exports[`issue-4124.js 1`] = `
+exports[`issue-4124.js - {"parenSpacing":true,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true
@@ -359,7 +359,7 @@ const test = /** @type (function (*): ?|undefined) */ ( foo );
 ================================================================================
 `;
 
-exports[`member.js 1`] = `
+exports[`member.js - {"parenSpacing":true,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true
@@ -376,7 +376,7 @@ foo = /** @type {!Baz} */ ( baz ).bar;
 ================================================================================
 `;
 
-exports[`nested.js 1`] = `
+exports[`nested.js - {"parenSpacing":true,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true
@@ -407,7 +407,7 @@ const BarImpl = /** @type {BarConstructor} */ (
 ================================================================================
 `;
 
-exports[`non-casts.js 1`] = `
+exports[`non-casts.js - {"parenSpacing":true,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true
@@ -458,7 +458,7 @@ const w1 = /** @typefoo Foo */ value;
 ================================================================================
 `;
 
-exports[`object-with-comment.js 1`] = `
+exports[`object-with-comment.js - {"parenSpacing":true,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true
@@ -496,7 +496,7 @@ const objectWithComment2 = /** @type MyType */ (
 ================================================================================
 `;
 
-exports[`ways-to-specify-type.js 1`] = `
+exports[`ways-to-specify-type.js - {"parenSpacing":true,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true

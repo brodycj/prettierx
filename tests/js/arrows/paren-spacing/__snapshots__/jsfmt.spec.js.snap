@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`arrow_function_expression.js 1`] = `
+exports[`arrow_function_expression.js - {"arrowParens":"avoid","parenSpacing":true} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true
@@ -34,7 +34,6 @@ x => ({}()())
 x => ({}()\`\`)
 x => ({}().b);
 a = b => c;
-a = (b?) => c;
 x => (y = z);
 x => (y += z);
 f(a => ({})) + 1;
@@ -72,7 +71,6 @@ x => ( {}()() );
 x => ( {}()\`\` );
 x => ( {}().b );
 a = b => c;
-a = ( b? ) => c;
 x => ( y = z );
 x => ( y += z );
 f( a => ( {} ) ) + 1;
@@ -85,7 +83,7 @@ a = b => {
 ================================================================================
 `;
 
-exports[`block_like.js 1`] = `
+exports[`block_like.js - {"arrowParens":"avoid","parenSpacing":true} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true
@@ -101,7 +99,7 @@ a = () => ( {} = this );
 ================================================================================
 `;
 
-exports[`call.js 1`] = `
+exports[`call.js - {"arrowParens":"avoid","parenSpacing":true} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true
@@ -899,7 +897,7 @@ foo(
 ================================================================================
 `;
 
-exports[`comment.js 1`] = `
+exports[`comment.js - {"arrowParens":"avoid","parenSpacing":true} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true
@@ -973,7 +971,7 @@ export const bem = block =>
 ================================================================================
 `;
 
-exports[`currying.js 1`] = `
+exports[`currying.js - {"arrowParens":"avoid","parenSpacing":true} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true
@@ -1021,7 +1019,7 @@ const middleware = options => ( req, res, next ) => {
 ================================================================================
 `;
 
-exports[`long-call-no-args.js 1`] = `
+exports[`long-call-no-args.js - {"arrowParens":"avoid","parenSpacing":true} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true
@@ -1040,7 +1038,7 @@ veryLongCall(
 ================================================================================
 `;
 
-exports[`long-contents.js 1`] = `
+exports[`long-contents.js - {"arrowParens":"avoid","parenSpacing":true} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true
@@ -1065,7 +1063,7 @@ const foo = () => {
 ================================================================================
 `;
 
-exports[`parens.js 1`] = `
+exports[`parens.js - {"arrowParens":"avoid","parenSpacing":true} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true
@@ -1113,48 +1111,6 @@ foo( a => {
 foo( c, a => b );
 foo( c, a => b, d );
 foo( a => b, d );
-
-================================================================================
-`;
-
-exports[`short_body.js 1`] = `
-====================================options=====================================
-arrowParens: "avoid"
-parenSpacing: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
-printWidth: 80
-                                                                                | printWidth
-=====================================input======================================
-const initializeSnapshotState = (
-  testFile: Path,
-  update: boolean,
-  testPath: string,
-  expand: boolean,
-) => new SnapshotState(testFile, update, testPath, expand);
-
-=====================================output=====================================
-const initializeSnapshotState = (
-  testFile: Path,
-  update: boolean,
-  testPath: string,
-  expand: boolean
-) => new SnapshotState( testFile, update, testPath, expand );
-
-================================================================================
-`;
-
-exports[`type_params.js 1`] = `
-====================================options=====================================
-arrowParens: "avoid"
-parenSpacing: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
-printWidth: 80
-                                                                                | printWidth
-=====================================input======================================
-<T>(a) => { }
-
-=====================================output=====================================
-< T >( a ) => {};
 
 ================================================================================
 `;

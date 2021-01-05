@@ -1,4 +1,5 @@
 run_spec(__dirname, ["babel", "babel-flow", "flow"], {
+  arrowParens: "avoid", // added to preserve snapshot order
   // "Standard JS":
   yieldStarSpacing: true,
   generatorStarSpacing: true,

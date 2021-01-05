@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`arrow.js 1`] = `
+exports[`arrow.js - {"parenSpacing":true} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
@@ -13,13 +13,16 @@ function f() {
   )
 }
 
-function f() {
+function f2() {
   const appEntities = getAppEntities(loadObject).map(
     entity => entity && entity.isInstallAvailable() && !entity.isQueue() && entity.isDisabled() && {
       id: entity.id
     }
   )
 }
+
+((x) => x) + '';
+'' + ((x) => x);
 
 =====================================output=====================================
 function f() {
@@ -32,7 +35,7 @@ function f() {
   );
 }
 
-function f() {
+function f2() {
   const appEntities = getAppEntities( loadObject ).map(
     ( entity ) =>
       entity &&
@@ -44,10 +47,13 @@ function f() {
   );
 }
 
+( ( x ) => x ) + "";
+"" + ( ( x ) => x );
+
 ================================================================================
 `;
 
-exports[`bitwise-flags.js 1`] = `
+exports[`bitwise-flags.js - {"parenSpacing":true} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
@@ -70,7 +76,7 @@ const all = FLAG_A | FLAG_B | FLAG_C;
 ================================================================================
 `;
 
-exports[`call.js 1`] = `
+exports[`call.js - {"parenSpacing":true} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
@@ -201,7 +207,7 @@ printWidth: 80
 ================================================================================
 `;
 
-exports[`comment.js 1`] = `
+exports[`comment.js - {"parenSpacing":true} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
@@ -214,6 +220,54 @@ a = (
   + (minVerticalFraction * yRange)
 ) - offset;
 
+a +
+ a +
+ a + // comment
+ a +
+ a;
+
+a &&
+  longLongLongLongLongLongLongLongLong &&
+  longLongLongLongLongLongLongLongLong &&  // comment
+  longLongLongLongLongLongLongLongLong &&
+  longLongLongLongLongLongLongLongLong
+
+a ||
+  longLongLongLongLongLongLongLongLong ||
+  longLongLongLongLongLongLongLongLong ||  // comment
+  longLongLongLongLongLongLongLongLong ||
+  longLongLongLongLongLongLongLongLong
+
+var a = x(abifornCringerMoshedPerplexSawder
++ kochabCooieGameOnOboleUnweave // f
++ glimseGlyphsHazardNoopsTieTie+bifornCringerMoshedPerplexSawder);
+
+foo[
+  a +
+  a + // comment
+  a +
+  bar[
+    b +
+    b +
+    b + // comment
+    b +
+    b
+  ]
+];
+
+!(
+  a +
+  a + // comment
+  a +
+  !(
+    b +
+    b +
+    b + // comment
+    b +
+    b
+  )
+);
+
 =====================================output=====================================
 a =
   // Comment 1
@@ -221,10 +275,61 @@ a =
   minVerticalFraction * yRange -
   offset;
 
+a +
+  a +
+  a + // comment
+  a +
+  a;
+
+a &&
+  longLongLongLongLongLongLongLongLong &&
+  longLongLongLongLongLongLongLongLong && // comment
+  longLongLongLongLongLongLongLongLong &&
+  longLongLongLongLongLongLongLongLong;
+
+a ||
+  longLongLongLongLongLongLongLongLong ||
+  longLongLongLongLongLongLongLongLong || // comment
+  longLongLongLongLongLongLongLongLong ||
+  longLongLongLongLongLongLongLongLong;
+
+var a = x(
+  abifornCringerMoshedPerplexSawder +
+    kochabCooieGameOnOboleUnweave + // f
+    glimseGlyphsHazardNoopsTieTie +
+    bifornCringerMoshedPerplexSawder
+);
+
+foo[
+  a +
+    a + // comment
+    a +
+    bar[
+      b +
+        b +
+        b + // comment
+        b +
+        b
+    ]
+];
+
+! (
+  a +
+  a + // comment
+  a +
+  ! (
+    b +
+    b +
+    b + // comment
+    b +
+    b
+  )
+);
+
 ================================================================================
 `;
 
-exports[`equality.js 1`] = `
+exports[`equality.js - {"parenSpacing":true} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
@@ -255,7 +360,7 @@ x !== y !== z;
 ================================================================================
 `;
 
-exports[`exp.js 1`] = `
+exports[`exp.js - {"parenSpacing":true} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
@@ -286,7 +391,7 @@ a ** ( b * c );
 ================================================================================
 `;
 
-exports[`if.js 1`] = `
+exports[`if.js - {"parenSpacing":true} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
@@ -326,7 +431,7 @@ if (
 ================================================================================
 `;
 
-exports[`inline-jsx.js 1`] = `
+exports[`inline-jsx.js - {"parenSpacing":true} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
@@ -335,11 +440,11 @@ printWidth: 80
 =====================================input======================================
 const user = renderedUser || <div><User name={this.state.user.name} age={this.state.user.age} /></div>;
 
-const user = renderedUser || shouldRenderUser && <div><User name={this.state.user.name} age={this.state.user.age} /></div>;
+const user2 = renderedUser || shouldRenderUser && <div><User name={this.state.user.name} age={this.state.user.age} /></div>;
 
 const avatar = hasAvatar && <Gravatar user={author} size={size} />;
 
-const avatar = (hasAvatar || showPlaceholder) && <Gravatar user={author} size={size} />;
+const avatar2 = (hasAvatar || showPlaceholder) && <Gravatar user={author} size={size} />;
 
 =====================================output=====================================
 const user = renderedUser || (
@@ -348,7 +453,7 @@ const user = renderedUser || (
   </div>
 );
 
-const user =
+const user2 =
   renderedUser ||
   ( shouldRenderUser && (
     <div>
@@ -358,14 +463,14 @@ const user =
 
 const avatar = hasAvatar && <Gravatar user={ author } size={ size } />;
 
-const avatar = ( hasAvatar || showPlaceholder ) && (
+const avatar2 = ( hasAvatar || showPlaceholder ) && (
   <Gravatar user={ author } size={ size } />
 );
 
 ================================================================================
 `;
 
-exports[`inline-object-array.js 1`] = `
+exports[`inline-object-array.js - {"parenSpacing":true} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
@@ -439,7 +544,7 @@ const create = () => {
   );
 }
 
-const create = () => {
+const create2 = () => {
   const result = doSomething();
   return (
     shouldReturn && result.ok && result || {
@@ -534,7 +639,7 @@ const create = () => {
   );
 };
 
-const create = () => {
+const create2 = () => {
   const result = doSomething();
   return (
     ( shouldReturn && result.ok && result ) || {
@@ -560,7 +665,7 @@ const obj = {
 ================================================================================
 `;
 
-exports[`jsx_parent.js 1`] = `
+exports[`jsx_parent.js - {"parenSpacing":true} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
@@ -645,7 +750,7 @@ printWidth: 80
 ================================================================================
 `;
 
-exports[`math.js 1`] = `
+exports[`math.js - {"parenSpacing":true} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
@@ -702,7 +807,7 @@ x & ( y >> z );
 ================================================================================
 `;
 
-exports[`return.js 1`] = `
+exports[`return.js - {"parenSpacing":true} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
@@ -713,13 +818,13 @@ function foo() {
   return this.hasPlugin("dynamicImports") && this.lookahead().type === tt.parenLeft.right;
 }
 
-function foo() {
+function foo2() {
   return this.hasPlugin("dynamicImports") && this.lookahead().type === tt.parenLeft.right
     ? true
     : false;
 }
 
-function foo() {
+function foo3() {
   return this.calculate().compute().first.numberOfThings > this.calculate().compute().last.numberOfThings
     ? true
     : false;
@@ -733,14 +838,14 @@ function foo() {
   );
 }
 
-function foo() {
+function foo2() {
   return this.hasPlugin( "dynamicImports" ) &&
     this.lookahead().type === tt.parenLeft.right
     ? true
     : false;
 }
 
-function foo() {
+function foo3() {
   return this.calculate().compute().first.numberOfThings >
     this.calculate().compute().last.numberOfThings
     ? true
@@ -750,7 +855,7 @@ function foo() {
 ================================================================================
 `;
 
-exports[`short-right.js 1`] = `
+exports[`short-right.js - {"parenSpacing":true} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
@@ -800,7 +905,7 @@ defaultContent.filter( ( defaultLocale ) => {
 ================================================================================
 `;
 
-exports[`test.js 1`] = `
+exports[`test.js - {"parenSpacing":true} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
@@ -811,19 +916,19 @@ printWidth: 80
 // break them all at the same time.
 
 const x = longVariable + longVariable + longVariable;
-const x = longVariable + longVariable + longVariable + longVariable - longVariable + longVariable;
-const x = longVariable + longVariable * longVariable + longVariable - longVariable + longVariable;
-const x = longVariable + longVariable * longVariable * longVariable / longVariable + longVariable;
+const x1 = longVariable + longVariable + longVariable + longVariable - longVariable + longVariable;
+const x2 = longVariable + longVariable * longVariable + longVariable - longVariable + longVariable;
+const x3 = longVariable + longVariable * longVariable * longVariable / longVariable + longVariable;
 
-const x = longVariable && longVariable && longVariable && longVariable && longVariable && longVariable;
-const x = longVariable && longVariable || longVariable && longVariable || longVariable && longVariable;
-const x = firstItemWithAVeryLongNameThatKeepsGoing || firstItemWithAVeryLongNameThatKeepsGoing || {};
-const x = firstItemWithAVeryLongNameThatKeepsGoing || firstItemWithAVeryLongNameThatKeepsGoing || [];
-const x = call(firstItemWithAVeryLongNameThatKeepsGoing, firstItemWithAVeryLongNameThatKeepsGoing) || [];
+const x4 = longVariable && longVariable && longVariable && longVariable && longVariable && longVariable;
+const x5 = longVariable && longVariable || longVariable && longVariable || longVariable && longVariable;
+const x6 = firstItemWithAVeryLongNameThatKeepsGoing || firstItemWithAVeryLongNameThatKeepsGoing || {};
+const x7 = firstItemWithAVeryLongNameThatKeepsGoing || firstItemWithAVeryLongNameThatKeepsGoing || [];
+const x8 = call(firstItemWithAVeryLongNameThatKeepsGoing, firstItemWithAVeryLongNameThatKeepsGoing) || [];
 
-const x = longVariable * longint && longVariable >> 0 && longVariable + longVariable;
+const x9 = longVariable * longint && longVariable >> 0 && longVariable + longVariable;
 
-const x = longVariable > longint && longVariable === 0 + longVariable * longVariable;
+const x10 = longVariable > longint && longVariable === 0 + longVariable * longVariable;
 
 foo(obj.property * new Class() && obj instanceof Class && longVariable ? number + 5 : false);
 
@@ -832,53 +937,53 @@ foo(obj.property * new Class() && obj instanceof Class && longVariable ? number 
 // break them all at the same time.
 
 const x = longVariable + longVariable + longVariable;
-const x =
+const x1 =
   longVariable +
   longVariable +
   longVariable +
   longVariable -
   longVariable +
   longVariable;
-const x =
+const x2 =
   longVariable +
   longVariable * longVariable +
   longVariable -
   longVariable +
   longVariable;
-const x =
+const x3 =
   longVariable +
   ( longVariable * longVariable * longVariable ) / longVariable +
   longVariable;
 
-const x =
+const x4 =
   longVariable &&
   longVariable &&
   longVariable &&
   longVariable &&
   longVariable &&
   longVariable;
-const x =
+const x5 =
   ( longVariable && longVariable ) ||
   ( longVariable && longVariable ) ||
   ( longVariable && longVariable );
-const x =
+const x6 =
   firstItemWithAVeryLongNameThatKeepsGoing ||
   firstItemWithAVeryLongNameThatKeepsGoing ||
   {};
-const x =
+const x7 =
   firstItemWithAVeryLongNameThatKeepsGoing ||
   firstItemWithAVeryLongNameThatKeepsGoing ||
   [];
-const x =
+const x8 =
   call(
     firstItemWithAVeryLongNameThatKeepsGoing,
     firstItemWithAVeryLongNameThatKeepsGoing
   ) || [];
 
-const x =
+const x9 =
   longVariable * longint && longVariable >> 0 && longVariable + longVariable;
 
-const x =
+const x10 =
   longVariable > longint && longVariable === 0 + longVariable * longVariable;
 
 foo(
@@ -890,7 +995,7 @@ foo(
 ================================================================================
 `;
 
-exports[`unary.js 1`] = `
+exports[`unary.js - {"parenSpacing":true} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]

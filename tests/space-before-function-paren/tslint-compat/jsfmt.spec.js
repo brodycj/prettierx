@@ -1,11 +1,13 @@
 run_spec(__dirname, ["typescript"], {
   // "Standard JS":
+  arrowParens: "avoid", // added to preserve snapshot order
   spaceBeforeFunctionParen: true,
   trailingComma: "none",
 });
 
 run_spec(__dirname, ["typescript"], {
   // "Standard JS":
+  arrowParens: "avoid", // added to preserve snapshot order
   trailingComma: "none",
 });
 

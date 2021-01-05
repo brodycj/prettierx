@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`single.js 1`] = `
+exports[`single.js - {"parenSpacing":true} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["flow", "babel", "babel-flow"]
@@ -25,7 +25,7 @@ const selectorByPath: ( Path ) => SomethingSelector<
 ================================================================================
 `;
 
-exports[`test.js 1`] = `
+exports[`test.js - {"parenSpacing":true} format 1`] = `
 ====================================options=====================================
 parenSpacing: true
 parsers: ["flow", "babel", "babel-flow"]

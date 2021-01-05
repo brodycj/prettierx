@@ -1,4 +1,5 @@
 run_spec(__dirname, ["typescript"], {
+  arrowParens: "avoid", // added to preserve snapshot order
   yieldStarSpacing: true,
   generatorStarSpacing: true,
   spaceBeforeFunctionParen: true,

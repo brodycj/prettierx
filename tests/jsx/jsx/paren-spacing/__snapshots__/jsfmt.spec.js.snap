@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`array-iter.js 1`] = `
+exports[`array-iter.js - {"singleQuote":false,"jsxSingleQuote":false,"parenSpacing":true,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 jsxSingleQuote: false
@@ -81,7 +81,7 @@ const TodoList = ( { todos } ) => (
 ================================================================================
 `;
 
-exports[`attr-comments.js 1`] = `
+exports[`attr-comments.js - {"singleQuote":false,"jsxSingleQuote":false,"parenSpacing":true,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 jsxSingleQuote: false
@@ -160,7 +160,7 @@ trailingComma: "none"
 ================================================================================
 `;
 
-exports[`conditional-expression.js 1`] = `
+exports[`conditional-expression.js - {"singleQuote":false,"jsxSingleQuote":false,"parenSpacing":true,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 jsxSingleQuote: false
@@ -462,7 +462,7 @@ foo ? (
 ================================================================================
 `;
 
-exports[`expression.js 1`] = `
+exports[`expression.js - {"singleQuote":false,"jsxSingleQuote":false,"parenSpacing":true,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 jsxSingleQuote: false
@@ -753,7 +753,7 @@ trailingComma: "none"
 ================================================================================
 `;
 
-exports[`flow_fix_me.js 1`] = `
+exports[`flow_fix_me.js - {"singleQuote":false,"jsxSingleQuote":false,"parenSpacing":true,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 jsxSingleQuote: false
@@ -780,7 +780,7 @@ const aDiv = (
 ================================================================================
 `;
 
-exports[`html_escape.js 1`] = `
+exports[`html_escape.js - {"singleQuote":false,"jsxSingleQuote":false,"parenSpacing":true,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 jsxSingleQuote: false
@@ -803,7 +803,7 @@ export default () => <a href="https://foo.bar?q1=foo&q2=bar" />;
 ================================================================================
 `;
 
-exports[`hug.js 1`] = `
+exports[`hug.js - {"singleQuote":false,"jsxSingleQuote":false,"parenSpacing":true,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 jsxSingleQuote: false
@@ -888,7 +888,7 @@ trailingComma: "none"
 ================================================================================
 `;
 
-exports[`logical-expression.js 1`] = `
+exports[`logical-expression.js - {"singleQuote":false,"jsxSingleQuote":false,"parenSpacing":true,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 jsxSingleQuote: false
@@ -969,7 +969,7 @@ trailingComma: "none"
 ================================================================================
 `;
 
-exports[`object-property.js 1`] = `
+exports[`object-property.js - {"singleQuote":false,"jsxSingleQuote":false,"parenSpacing":true,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 jsxSingleQuote: false
@@ -1012,7 +1012,7 @@ const tabs = [
 ================================================================================
 `;
 
-exports[`open-break.js 1`] = `
+exports[`open-break.js - {"singleQuote":false,"jsxSingleQuote":false,"parenSpacing":true,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 jsxSingleQuote: false
@@ -1059,7 +1059,7 @@ onClick={() => {
 ================================================================================
 `;
 
-exports[`parens.js 1`] = `
+exports[`parens.js - {"singleQuote":false,"jsxSingleQuote":false,"parenSpacing":true,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 jsxSingleQuote: false
@@ -1114,7 +1114,7 @@ new Foo( <Component /> );
 ================================================================================
 `;
 
-exports[`quotes.js 1`] = `
+exports[`quotes.js - {"singleQuote":false,"jsxSingleQuote":false,"parenSpacing":true,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 jsxSingleQuote: false
@@ -1207,7 +1207,7 @@ trailingComma: "none"
 ================================================================================
 `;
 
-exports[`return-statement.js 1`] = `
+exports[`return-statement.js - {"singleQuote":false,"jsxSingleQuote":false,"parenSpacing":true,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 jsxSingleQuote: false
@@ -1324,7 +1324,7 @@ class BreakingClass extends React.component {
 ================================================================================
 `;
 
-exports[`self-closing.js 1`] = `
+exports[`self-closing.js - {"singleQuote":false,"jsxSingleQuote":false,"parenSpacing":true,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 jsxSingleQuote: false
@@ -1345,7 +1345,7 @@ trailingComma: "none"
 ================================================================================
 `;
 
-exports[`spacing.js 1`] = `
+exports[`spacing.js - {"singleQuote":false,"jsxSingleQuote":false,"parenSpacing":true,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 jsxSingleQuote: false
@@ -1384,6 +1384,41 @@ const Labels = {
 
   label3: <fbt>Label 3</fbt>
 };
+
+================================================================================
+`;
+
+exports[`template-literal-in-attr.js - {"singleQuote":false,"jsxSingleQuote":false,"parenSpacing":true,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
+====================================options=====================================
+arrowParens: "avoid"
+jsxSingleQuote: false
+parenSpacing: true
+parsers: ["babel", "babel-flow", "flow", "typescript"]
+printWidth: 80
+singleQuote: false
+trailingComma: "none"
+                                                                                | printWidth
+=====================================input======================================
+  <div>
+    <div>
+    <div
+          className="js-structured-feedback js-trigger-feedback-negative-reasons item-feedback-button"
+          data-feedback-tags-url={\`/xhr/negative-feedback-tags/\${this.props.item.id}\`}
+        >foo</div>
+</div>
+</div>
+
+=====================================output=====================================
+<div>
+  <div>
+    <div
+      className="js-structured-feedback js-trigger-feedback-negative-reasons item-feedback-button"
+      data-feedback-tags-url={ \`/xhr/negative-feedback-tags/\${this.props.item.id}\` }
+    >
+      foo
+    </div>
+  </div>
+</div>;
 
 ================================================================================
 `;
