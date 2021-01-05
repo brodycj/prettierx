@@ -4,7 +4,7 @@ exports[`bracket_0.js - {"arrowParens":"avoid","parenSpacing":true} format 1`] =
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
@@ -37,7 +37,7 @@ exports[`break-last-call.js - {"arrowParens":"avoid","parenSpacing":true} format
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
@@ -165,7 +165,7 @@ exports[`break-last-member.js - {"arrowParens":"avoid","parenSpacing":true} form
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
@@ -237,7 +237,7 @@ exports[`break-multiple.js - {"arrowParens":"avoid","parenSpacing":true} format 
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
@@ -261,7 +261,7 @@ exports[`comment.js - {"arrowParens":"avoid","parenSpacing":true} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
@@ -390,7 +390,7 @@ exports[`complex-args.js - {"arrowParens":"avoid","parenSpacing":true} format 1`
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
@@ -412,7 +412,7 @@ exports[`computed.js - {"arrowParens":"avoid","parenSpacing":true} format 1`] = 
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
@@ -438,7 +438,7 @@ exports[`computed-merge.js - {"arrowParens":"avoid","parenSpacing":true} format 
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
@@ -484,7 +484,7 @@ exports[`conditional.js - {"arrowParens":"avoid","parenSpacing":true} format 1`]
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
@@ -551,7 +551,7 @@ exports[`cypress.js - {"arrowParens":"avoid","parenSpacing":true} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
@@ -579,7 +579,7 @@ exports[`d3.js - {"arrowParens":"avoid","parenSpacing":true} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
@@ -624,7 +624,7 @@ exports[`first_long.js - {"arrowParens":"avoid","parenSpacing":true} format 1`] 
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
@@ -705,7 +705,7 @@ exports[`fluent-configuration.js - {"arrowParens":"avoid","parenSpacing":true} f
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
@@ -746,7 +746,7 @@ exports[`inline_merge.js - {"arrowParens":"avoid","parenSpacing":true} format 1`
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
@@ -793,7 +793,7 @@ exports[`issue-3594.js - {"arrowParens":"avoid","parenSpacing":true} format 1`] 
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
@@ -821,7 +821,7 @@ exports[`issue-3621.js - {"arrowParens":"avoid","parenSpacing":true} format 1`] 
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
@@ -857,7 +857,7 @@ exports[`issue-4125.js - {"arrowParens":"avoid","parenSpacing":true} format 1`] 
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
@@ -1188,7 +1188,7 @@ exports[`logical.js - {"arrowParens":"avoid","parenSpacing":true} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
@@ -1244,7 +1244,7 @@ exports[`multiple-members.js - {"arrowParens":"avoid","parenSpacing":true} forma
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
@@ -1340,7 +1340,7 @@ exports[`object-literal.js - {"arrowParens":"avoid","parenSpacing":true} format 
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
@@ -1384,7 +1384,7 @@ exports[`pr-7889.js - {"arrowParens":"avoid","parenSpacing":true} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
@@ -1420,7 +1420,7 @@ exports[`short-names.js - {"arrowParens":"avoid","parenSpacing":true} format 1`]
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
@@ -1442,7 +1442,7 @@ exports[`simple-args.js - {"arrowParens":"avoid","parenSpacing":true} format 1`]
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
@@ -1462,7 +1462,7 @@ exports[`square_0.js - {"arrowParens":"avoid","parenSpacing":true} format 1`] = 
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
@@ -1494,7 +1494,7 @@ exports[`test.js - {"arrowParens":"avoid","parenSpacing":true} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
@@ -1521,7 +1521,7 @@ exports[`this.js - {"arrowParens":"avoid","parenSpacing":true} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 parenSpacing: true
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================

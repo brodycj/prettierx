@@ -4,7 +4,7 @@ exports[`long_import.js - {"arrowParens":"avoid","importFormatting":"oneline"} f
 ====================================options=====================================
 arrowParens: "avoid"
 importFormatting: "oneline"
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
@@ -21,7 +21,7 @@ import { Lorem, ipsum, dolor, sit, amet, consectetur, adipiscing, elit, sed, eiu
 exports[`long_import.js - {"importFormatting":"auto","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 importFormatting: "auto"
-parsers: ["babel", "babel-flow", "flow", "typescript"]
+parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
 trailingComma: "none"
                                                                                 | printWidth
