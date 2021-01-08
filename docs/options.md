@@ -217,10 +217,10 @@ Puts a hard break before single, non-block statement following: `if`, `else`, `w
 
 Valid options:
 
-- `"never"` - Only insert a soft break.
-- `"conditionals"` - Only insert hard break following conditionals: `if`, `else` and `with`.
-- `"loops"` - Only insert hard break following loops: `for`, `for await`, `for each`, `do` and `while`.
-- `"always"` - Insert a hard break for all of cases.
+- `"never"` - Never force a hard break.
+- `"conditionals"` - Only force hard break following conditionals: `if`, `else` and `with`.
+- `"loops"` - Only force hard break following loops: `for`, `for await`, `for each`, `do` and `while`.
+- `"always"` - Force a hard break for all of cases.
 
 | Default   | CLI Override                                                                           | API Override                                                                          |
 | --------- | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
