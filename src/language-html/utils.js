@@ -1,7 +1,5 @@
 "use strict";
 
-// [prettierx] support --html-void-tags option:
-const htmlVoidElements = require("html-void-elements");
 const {
   CSS_DISPLAY_TAGS,
   CSS_DISPLAY_DEFAULT,
@@ -11,6 +9,9 @@ const {
 
 const htmlTagNames = require("html-tag-names");
 const htmlElementAttributes = require("html-element-attributes");
+
+// [prettierx] support --html-void-tags option:
+const htmlVoidElements = require("html-void-elements");
 
 const HTML_TAGS = arrayToMap(htmlTagNames);
 const HTML_ELEMENT_ATTRIBUTES = mapObject(htmlElementAttributes, arrayToMap);
