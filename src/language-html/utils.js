@@ -1,5 +1,6 @@
 "use strict";
 
+// [prettierx] support --html-void-tags option:
 const htmlVoidElements = require("html-void-elements");
 const {
   CSS_DISPLAY_TAGS,
@@ -14,6 +15,7 @@ const htmlElementAttributes = require("html-element-attributes");
 const HTML_TAGS = arrayToMap(htmlTagNames);
 const HTML_ELEMENT_ATTRIBUTES = mapObject(htmlElementAttributes, arrayToMap);
 
+// [prettierx] support --html-void-tags option:
 const HTML_VOID_ELEMENT_SET = new Set(htmlVoidElements);
 
 function arrayToMap(array) {
@@ -628,6 +630,7 @@ function unescapeQuoteEntities(text) {
   return text.replace(/&apos;/g, "'").replace(/&quot;/g, '"');
 }
 
+// [prettierx] support --html-void-tags option:
 function isHtmlVoidTagNeeded(node, options) {
   return (
     options.htmlVoidTags &&
@@ -669,5 +672,6 @@ module.exports = {
   shouldNotPrintClosingTag,
   shouldPreserveContent,
   unescapeQuoteEntities,
+  // [prettierx] support --html-void-tags option:
   isHtmlVoidTagNeeded,
 };
