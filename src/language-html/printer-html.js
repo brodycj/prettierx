@@ -37,7 +37,7 @@ const {
   shouldNotPrintClosingTag,
   shouldPreserveContent,
   unescapeQuoteEntities,
-  isHtmlVoidElement,
+  isHtmlVoidTagNeeded,
 } = require("./utils");
 const { replaceEndOfLineWith } = require("../common/util");
 const preprocess = require("./preprocess");
@@ -617,7 +617,7 @@ function printOpeningTag(path, options, print) {
   return concat([
     printOpeningTagStart(node, options),
     !node.attrs || node.attrs.length === 0
-      ? node.isSelfClosing && !isHtmlVoidElement(node, options)
+      ? node.isSelfClosing && !isHtmlVoidTagNeeded(node, options)
         ? /**
            *     <br />
            *        ^
@@ -675,10 +675,10 @@ function printOpeningTag(path, options, print) {
            */
           (node.isSelfClosing &&
             needsToBorrowLastChildClosingTagEndMarker(node.parent))
-            ? node.isSelfClosing && !isHtmlVoidElement(node, options)
+            ? node.isSelfClosing && !isHtmlVoidTagNeeded(node, options)
               ? " "
               : ""
-            : node.isSelfClosing && !isHtmlVoidElement(node, options)
+            : node.isSelfClosing && !isHtmlVoidTagNeeded(node, options)
             ? forceNotToBreakAttrContent
               ? " "
               : line
@@ -908,7 +908,7 @@ function printClosingTagEndMarker(node, options) {
       return "}}";
     case "element":
       if (node.isSelfClosing) {
-        return isHtmlVoidElement(node, options) ? ">" : "/>";
+        return isHtmlVoidTagNeeded(node, options) ? ">" : "/>";
       }
     // fall through
     default:

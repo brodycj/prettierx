@@ -14,6 +14,8 @@ const htmlElementAttributes = require("html-element-attributes");
 const HTML_TAGS = arrayToMap(htmlTagNames);
 const HTML_ELEMENT_ATTRIBUTES = mapObject(htmlElementAttributes, arrayToMap);
 
+const HTML_VOID_ELEMENT_SET = new Set(htmlVoidElements);
+
 function arrayToMap(array) {
   const map = Object.create(null);
   for (const value of array) {
@@ -626,12 +628,11 @@ function unescapeQuoteEntities(text) {
   return text.replace(/&apos;/g, "'").replace(/&quot;/g, '"');
 }
 
-const htmlVoidElementsSet = new Set(htmlVoidElements);
-function isHtmlVoidElement(node, options) {
+function isHtmlVoidTagNeeded(node, options) {
   return (
     options.htmlVoidTags &&
     options.parser === "html" &&
-    htmlVoidElementsSet.has(node.fullName)
+    HTML_VOID_ELEMENT_SET.has(node.fullName)
   );
 }
 
@@ -668,5 +669,5 @@ module.exports = {
   shouldNotPrintClosingTag,
   shouldPreserveContent,
   unescapeQuoteEntities,
-  isHtmlVoidElement,
+  isHtmlVoidTagNeeded,
 };
