@@ -628,7 +628,11 @@ function unescapeQuoteEntities(text) {
 
 const htmlVoidElementsSet = new Set(htmlVoidElements);
 function isHtmlVoidElement(node, options) {
-  return options.parser === "html" && htmlVoidElementsSet.has(node.fullName);
+  return (
+    options.htmlVoidTags &&
+    options.parser === "html" &&
+    htmlVoidElementsSet.has(node.fullName)
+  );
 }
 
 module.exports = {
