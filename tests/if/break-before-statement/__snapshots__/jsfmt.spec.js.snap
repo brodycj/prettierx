@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`if.js 1`] = `
+====================================options=====================================
+breakBeforeStatement: "conditionals"
+parsers: ["babel"]
+printWidth: 80
+                                                                                | printWidth
+=====================================input======================================
+for (let i = 0; i < 2; i++) if (true) break
+
+if (true) { console.log("test") }
+
+for (const key in { p: 1 })
+    if (object.hasOwnProperty(key))
+        console.log(object[key]);
+
+=====================================output=====================================
+for (let i = 0; i < 2; i++)
+  if (true)
+    break;
+
+if (true) {
+  console.log("test");
+}
+
+for (const key in { p: 1 })
+  if (object.hasOwnProperty(key))
+    console.log(object[key]);
+
+================================================================================
+`;
+
+exports[`if.js 2`] = `
+====================================options=====================================
+breakBeforeStatement: "always"
+parsers: ["babel"]
+printWidth: 80
+                                                                                | printWidth
+=====================================input======================================
+for (let i = 0; i < 2; i++) if (true) break
+
+if (true) { console.log("test") }
+
+for (const key in { p: 1 })
+    if (object.hasOwnProperty(key))
+        console.log(object[key]);
+
+=====================================output=====================================
+for (let i = 0; i < 2; i++)
+  if (true)
+    break;
+
+if (true) {
+  console.log("test");
+}
+
+for (const key in { p: 1 })
+  if (object.hasOwnProperty(key))
+    console.log(object[key]);
+
+================================================================================
+`;

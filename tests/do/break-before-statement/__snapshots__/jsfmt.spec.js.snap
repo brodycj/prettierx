@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`do.js 1`] = `
+====================================options=====================================
+breakBeforeStatement: "loops"
+parsers: ["babel"]
+printWidth: 80
+                                                                                | printWidth
+=====================================input======================================
+do if (true) break
+while (true)
+
+do { if (true) { break } } while (true)
+
+do console.log("test")
+while (true)
+
+=====================================output=====================================
+do
+  if (true) break;
+while (true);
+
+do {
+  if (true) {
+    break;
+  }
+} while (true);
+
+do
+  console.log("test");
+while (true);
+
+================================================================================
+`;
+
+exports[`do.js 2`] = `
+====================================options=====================================
+breakBeforeStatement: "always"
+parsers: ["babel"]
+printWidth: 80
+                                                                                | printWidth
+=====================================input======================================
+do if (true) break
+while (true)
+
+do { if (true) { break } } while (true)
+
+do console.log("test")
+while (true)
+
+=====================================output=====================================
+do
+  if (true)
+    break;
+while (true);
+
+do {
+  if (true) {
+    break;
+  }
+} while (true);
+
+do
+  console.log("test");
+while (true);
+
+================================================================================
+`;

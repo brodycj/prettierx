@@ -211,6 +211,21 @@ Align colons in multiline object literals (not applied with any of the JSON pars
 | ------- | --------------------------- | ------------------------------- |
 | `false` | `--align-object-properties` | `alignObjectProperties: <bool>` |
 
+## Break before statement
+
+Puts a hard break before single, non-block statement following: `if`, `else`, `with`, `for`, `for await`, `for each`, `do` and `while`.
+
+Valid options:
+
+- `"never"` - Never force a hard break.
+- `"conditionals"` - Only force hard break following conditionals: `if`, `else` and `with`.
+- `"loops"` - Only force hard break following loops: `for`, `for await`, `for each`, `do` and `while`.
+- `"always"` - Force a hard break for all of cases.
+
+| Default   | CLI Override                                                                           | API Override                                                                          |
+| --------- | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `"never"` | <code>--break-before-statement <never&#124;conditionals&#124;loops&#124;always></code> | <code>breakBeforeStatement: "<never&#124;conditionals&#124;loops&#124;always>"</code> |
+
 ## Space before function parentheses
 
 Put a space before function parenthesis, in all declarations. (Default is to put a space before function parenthesis for anonymous functions only.)
