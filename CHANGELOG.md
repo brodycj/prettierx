@@ -8,9 +8,60 @@ To get recent changes on prettier (TBD prettier/prettier) in a nice format:
 $ git log --pretty=format:"- %s" rev1..rev2 | sed 's/#\([0-9]*\)/\[prettier\/prettier#\1\]\(https:\/\/github.com\/prettier\/prettier\/pull\/\1\)/'
 -- -->
 
-## prettierx 0.14.0-dev
+## prettierx 0.15.1-dev
 
-[compare prettierx-0.13.1...dev](https://github.com/brodybits/prettierx/compare/prettierx-0.13.1...dev)
+[compare prettierx-0.15.0...dev](https://github.com/brodybits/prettierx/compare/prettierx-0.15.0...dev)
+
+## prettierx 0.15.0
+
+- add --html-void-tags option
+- update some dependencies
+  - @babel/parser -> 7.12.11
+  - cjk-regex -> 2.0.1
+  - globby -> 11.0.2
+  - graphql -> 15.4.0
+  - html-element-attributes -> 2.3.0
+- fix & update some documentation
+
+[compare prettierx-0.14.3...prettierx-0.15.0](https://github.com/brodybits/prettierx/compare/prettierx-0.14.3...prettierx-0.15.0)
+
+## prettierx 0.14.3
+
+- Update some dependencies
+  - mem -> 6.1.1
+  - n-readlines -> 1.0.1
+  - resolve -> 1.19.0
+  - semver -> 7.3.4
+  - yaml-unist-parser -> 1.3.1
+
+[compare prettierx-0.14.2...prettierx-0.14.3](https://github.com/brodybits/prettierx/compare/prettierx-0.14.2...prettierx-0.14.3)
+
+## prettierx 0.14.2
+
+- Add tslib to avoid a peerDependencies warning
+- Update some dependencies
+  - @babel/code-frame -> 7.12.11
+  - @babel/parser -> 7.12.0
+  - camelcase -> 6.2.0
+  - lodash -> 4.17.20
+  - unified -> 9.2.0
+
+[compare prettierx-0.14.0...prettierx-0.14.2](https://github.com/brodybits/prettierx/compare/prettierx-0.14.0...prettierx-0.14.2)
+
+NOTE: prettierx release 0.14.1 was inadvertently skipped in package.json.
+
+## prettierx 0.14.0
+
+- merge updates from Prettier 2.0.0 ... 2.0.5, with some workarounds
+- parse TypeScript using Babel by default
+- move the `flow-parser` parser to `peerDependenciesMeta`, as an optional dependency (note that Prettier and `prettierx` use Babel to parse Flow by default)
+- update documentation of `--space-before-function-paren` and `--generator-star-spacing` features
+- apply some updates for `--paren-spacing` feature from `wp-prettier-2.0.5` branch of the `wp-prettier` fork
+- resolve a limited number of issues related to the `--paren-spacing` feature
+- apply some additional source code cleanup
+- update some dependencies
+
+[compare prettierx-0.13.1...prettierx-0.14.0](https://github.com/brodybits/prettierx/compare/prettierx-0.13.1...prettierx-0.14.0)
 
 ### prettier 2.0.5
 
@@ -484,7 +535,7 @@ export type a =
 
 - yaml@1.8.3 explicitly in dependencies - needed for extra npm dist build test to keep working, due to an issue between @babel/parser & recent yaml@1.9.0 update
 - update and fix some comments for prettierx-specific code
-- remove lib enrty from package files (not needed)
+- remove lib entry from package files (not needed)
 
 [compare prettierx-0.11.2...dev](https://github.com/brodybits/prettierx/compare/prettierx-0.11.2...dev)
 

@@ -5,8 +5,8 @@ exports[` 1`] = `
 - First value
 + Second value
 
-@@ -23,10 +23,12 @@
-    --break-before-else      Always add a line break before else.
+@@ -26,10 +26,12 @@
+                             Break method chains with more than 3 method calls, like Prettier 1.x.
                              Defaults to false.
     --end-of-line <lf|crlf|cr|auto>
                              Which end of line characters to apply.
@@ -15,9 +15,9 @@ exports[` 1`] = `
 +                            Defaults to bar.
     --generator-star-spacing Add spaces around the star ('*') in generator functions (before and after - from eslint).
                              Defaults to false.
-    --html-whitespace-sensitivity <css|strict|ignore>
-                             How to handle whitespaces in HTML.
-                             Defaults to css."
+    --html-void-tags         Format void HTML elements as void tags.
+                             Defaults to false.
+    --html-whitespace-sensitivity <css|strict|ignore>"
 `;
 
 exports[`show detailed external option with \`--help foo-string\` (stderr) 1`] = `""`;

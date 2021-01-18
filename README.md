@@ -16,8 +16,9 @@ Status: experimental
 
 Major TODO items:
 
-- support option to use Babel parser to parse TypeScript ref: [`brodybits/prettierx#54`](https://github.com/brodybits/prettierx/issues/54)
-- support the additional formatting options from the command line, somehow
+- update to use recent prettierx which uses Babel parser to parse TypeScript by default ref: [`brodybits/prettierx#54`](https://github.com/brodybits/prettierx/issues/54)
+- ~~support the additional formatting options from the command line, somehow~~ (additional formatting options will work from the command line if run with the plugin)
+- improve the documentation
 
 ref: [`brodybits/prettierx#8`](https://github.com/brodybits/prettierx/issues/8)
 
@@ -35,35 +36,38 @@ prettierx <options> <file(s)>
 | ---------------------------------------------------- | ------------- | ------------------------------------------ | ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Align object properties                              | `false`       | `--align-object-properties`                | `alignObjectProperties: <bool>`            | Align colons in multiline object literals (not applied with any of the JSON parsers).                                                                                                               |
 | Space before function parentheses                    | `false`       | `--space-before-function-paren`            | `spaceBeforeFunctionParen: <bool>`         | Put a space before function parenthesis, in all declarations. (Default is to put a space before function parenthesis for anonymous functions only.)                                                 |
-| Space before function parentheses                    | `false`       | `--space-before-function-paren`            | `spaceBeforeFunctionParen: <bool>`         | Put a space before function parenthesis.                                                                                                                                                            |
 | Spaces around the star (\*\) in generator functions  | `false`       | `--generator-star-spacing`                 | `generatorStarSpacing: <bool>`             | Add spaces around the star (\*) in generator functions (before and after - from eslint). (Default is after only.)                                                                                   |
 | Spaces around the star (\*\) in `yield*` expressions | `false`       | `--yield-star-spacing`                     | `yieldStarSpacing: <bool>`                 | Add spaces around the star (\*) in yield\* expressions (before and after - from eslint).                                                                                                            |
 | Indent chains                                        | `true`        | `--no-indent-chains`                       | `indentChains: <bool>`                     | Print indents at the start of chained calls.                                                                                                                                                        |
-| Align ternary lines                                  | `true`        | `--no-align-ternary-lines`                 | `alignTernaryLines: <bool>`                | Align ternary lines in case of multiline ternery term (default behavior, which is in conflict with ESLint/StandardJS behavior). Should be disabled for consistency with ESLint/StandardJS behavior. |
-| paren spacing                                        | `false`       | `--paren-spacing`                          | `parenSpacing: <bool>`                     | Print spaces between parens, WordPress style (not recommended with default `arrowParens: "always" setting).                                                                                         |
+| Align ternary lines                                  | `true`        | `--no-align-ternary-lines`                 | `alignTernaryLines: <bool>`                | Keep default alignment of ternary expression lines, which is in conflict with "Standard JS" formatting in case of certain nested ternary expressions. See [./docs/options.md](./docs/options.md) .. |
+| paren spacing                                        | `false`       | `--paren-spacing`                          | `parenSpacing: <bool>`                     | Print spaces between parens, WordPress style (not recommended with default `arrowParens: "always" setting). Status: experimental, with some known paren spacing formatting issues.                  |
 | break before else                                    | `false`       | `--break-before-else`                      | `breakBeforeElse: <bool>`                  | Always add a line break before else.                                                                                                                                                                |
 | Formatting of import statements                      | `auto`        | see [./docs/options.md](./docs/options.md) | see [./docs/options.md](./docs/options.md) | Formatting of import statements, may be `oneline` to avoid conflict with VSCode "Organize Imports" feature.                                                                                         |
+| HTML void element tags                               | `false`       | `--html-void-tags`                         | Format void HTML elements as void tags.    |
+| break long method chains                             | `false`       | `--break-long-method-chains`               | `breakLongMethodChains: <bool>`            | Break method chains with more than 3 method calls, like Prettier 1.x.                                                                                                                               |
 
-## standard-like formatting
+## "Standard JS" formatting options
 
-The following options should be used to _format_ the code according to [standard js](https://standardjs.com/):
+The following options should be used to _format_ the code _as consistently as possible_ with ["Standard JS"](https://standardjs.com/):
 
+- `--arrow-parens avoid` (`arrowParens: "avoid"`)
 - `--generator-star-spacing` (`generatorStarSpacing: true`)
 - `--space-before-function-paren` (`spaceBeforeFunctionParen: true`)
 - `--single-quote` (`singleQuote: true`)
 - `--jsx-single-quote` (`jsxSingleQuote: true`)
 - `--no-semi` (`semi: false`)
 - `--yield-star-spacing` (`yieldStarSpacing: true`)
-- `--no-align-ternary-lines` (`alignTernaryLines: false`)
 - `--trailing-comma none` (`trailingComma: "none"`)
+- and possibly `--no-align-ternary-lines` (`alignTernaryLines: false`) - see [./docs/options.md](./docs/options.md) for some more info
 
-Note that this tool does _not_ follow any of the other [standard js](https://standardjs.com/) rules. It is recommended to use this tool together with eslint, in some form, to achive correct formatting according to [standard js](https://standardjs.com/).
+Note that this tool does **not** follow any of the other ["Standard JS"](https://standardjs.com/) rules. It is recommended to use this tool together with eslint, in some form, to archive correct formatting according to ["Standard JS"](https://standardjs.com/).
 
-Any known conflicts with [standard js](https://standardjs.com/) will be tracked in [open issues with the `conflict-with-standard` tag](https://github.com/brodybits/prettierx/issues?q=is%3Aissue+label%3Aconflict-with-standard+is%3Aopen).
+Any known conflicts with ["Standard JS"](https://standardjs.com/) will be tracked in [open issues with the `conflict-with-standard` tag](https://github.com/brodybits/prettierx/issues?q=is%3Aissue+label%3Aconflict-with-standard+is%3Aopen).
 
-## other recommended settings
+## recommended options
 
 - `--arrow-parens avoid` (`arrowParens: "avoid"`), especially in combination with `--paren-spacing` (`parenSpacing: true`).
+- `break-long-method-chains`
 
 <!-- - FUTURE TBD prettierx vs prettier (???):
 ## Prettier 2.0

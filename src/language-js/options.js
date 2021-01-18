@@ -27,6 +27,7 @@ module.exports = {
     ],
   },
   bracketSpacing: commonOptions.bracketSpacing,
+  // [prettierx ...]
   indentChains: {
     category: CATEGORY_JAVASCRIPT,
     type: "boolean",
@@ -69,6 +70,7 @@ module.exports = {
     oppositeDescription:
       "Do not print semicolons, except at the beginning of lines which may need them.",
   },
+  // [prettierx ...]
   alignObjectProperties: {
     category: CATEGORY_JAVASCRIPT,
     type: "boolean",
@@ -107,6 +109,13 @@ module.exports = {
     type: "boolean",
     default: false,
     description: "Always add a line break before else.",
+  },
+  breakLongMethodChains: {
+    category: CATEGORY_JAVASCRIPT,
+    type: "boolean",
+    default: false,
+    description:
+      "Break method chains with more than 3 method calls, like Prettier 1.x.",
   },
   singleQuote: commonOptions.singleQuote,
   jsxSingleQuote: {

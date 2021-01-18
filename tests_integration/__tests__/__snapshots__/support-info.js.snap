@@ -58,12 +58,12 @@ Object {
       "scss",
     ],
     "TSX": Array [
-      "typescript",
       "babel-ts",
+      "typescript",
     ],
     "TypeScript": Array [
-      "typescript",
       "babel-ts",
+      "typescript",
     ],
     "Vue": Array [
       "vue",
@@ -97,6 +97,10 @@ Object {
       "default": false,
       "type": "boolean",
     },
+    "breakLongMethodChains": Object {
+      "default": false,
+      "type": "boolean",
+    },
     "cursorOffset": Object {
       "default": -1,
       "range": Object {
@@ -121,6 +125,10 @@ Object {
       "type": "path",
     },
     "generatorStarSpacing": Object {
+      "default": false,
+      "type": "boolean",
+    },
+    "htmlVoidTags": Object {
       "default": false,
       "type": "boolean",
     },
@@ -395,7 +403,7 @@ exports[`CLI --support-info (stdout) 1`] = `
       \\"interpreters\\": [\\"deno\\", \\"ts-node\\"],
       \\"linguistLanguageId\\": 378,
       \\"name\\": \\"TypeScript\\",
-      \\"parsers\\": [\\"typescript\\", \\"babel-ts\\"],
+      \\"parsers\\": [\\"babel-ts\\", \\"typescript\\"],
       \\"since\\": \\"1.4.0\\",
       \\"tmScope\\": \\"source.ts\\",
       \\"type\\": \\"programming\\",
@@ -409,7 +417,7 @@ exports[`CLI --support-info (stdout) 1`] = `
       \\"group\\": \\"TypeScript\\",
       \\"linguistLanguageId\\": 94901924,
       \\"name\\": \\"TSX\\",
-      \\"parsers\\": [\\"typescript\\", \\"babel-ts\\"],
+      \\"parsers\\": [\\"babel-ts\\", \\"typescript\\"],
       \\"since\\": \\"1.4.0\\",
       \\"tmScope\\": \\"source.tsx\\",
       \\"type\\": \\"programming\\",
@@ -783,6 +791,14 @@ exports[`CLI --support-info (stdout) 1`] = `
       \\"type\\": \\"boolean\\"
     },
     {
+      \\"category\\": \\"JavaScript\\",
+      \\"default\\": false,
+      \\"description\\": \\"Break method chains with more than 3 method calls, like Prettier 1.x.\\",
+      \\"name\\": \\"breakLongMethodChains\\",
+      \\"pluginDefaults\\": {},
+      \\"type\\": \\"boolean\\"
+    },
+    {
       \\"category\\": \\"Special\\",
       \\"default\\": -1,
       \\"description\\": \\"Print (to stderr) where a cursor at the given position would move to after formatting.\\\\nThis option cannot be used with --range-start and --range-end.\\",
@@ -832,6 +848,14 @@ exports[`CLI --support-info (stdout) 1`] = `
       \\"default\\": false,
       \\"description\\": \\"Add spaces around the star ('*') in generator functions (before and after - from eslint).\\",
       \\"name\\": \\"generatorStarSpacing\\",
+      \\"pluginDefaults\\": {},
+      \\"type\\": \\"boolean\\"
+    },
+    {
+      \\"category\\": \\"HTML\\",
+      \\"default\\": false,
+      \\"description\\": \\"Format void HTML elements as void tags.\\",
+      \\"name\\": \\"htmlVoidTags\\",
       \\"pluginDefaults\\": {},
       \\"type\\": \\"boolean\\"
     },

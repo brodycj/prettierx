@@ -1,49 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`o1.json 1`] = `
+exports[`input.html 1`] = `
 ====================================options=====================================
-alignObjectProperties: true
-parsers: ["json", "json-stringify"]
+parsers: ["html", "angular", "vue"]
 printWidth: 80
-trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================
-{
-  2:3,
-  "k-2":2,
-  keyasdf:3
-}
+<input type='text'>
 
 =====================================output=====================================
-{
-  2: 3,
-  "k-2": 2,
-  "keyasdf": 3
-}
+<input type="text" />
 
 ================================================================================
 `;
 
-exports[`o1.json 2`] = `
+exports[`input.html 2`] = `
 ====================================options=====================================
-alignObjectProperties: true
-parsers: ["json5"]
+htmlVoidTags: true
+parsers: ["html"]
 printWidth: 80
-trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================
-{
-  2:3,
-  "k-2":2,
-  keyasdf:3
-}
+<input type='text'>
 
 =====================================output=====================================
-{
-  2: 3,
-  "k-2": 2,
-  keyasdf: 3
-}
+<input type="text">
+
+================================================================================
+`;
+
+exports[`input.html 3`] = `
+====================================options=====================================
+htmlVoidTags: true
+parsers: ["angular", "vue"]
+printWidth: 80
+                                                                                | printWidth
+=====================================input======================================
+<input type='text'>
+
+=====================================output=====================================
+<input type="text" />
 
 ================================================================================
 `;

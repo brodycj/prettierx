@@ -211,6 +211,14 @@ Align colons in multiline object literals (not applied with any of the JSON pars
 | ------- | --------------------------- | ------------------------------- |
 | `false` | `--align-object-properties` | `alignObjectProperties: <bool>` |
 
+## break long method chains
+
+Break method chains with more than 3 method calls, like Prettier 1.x.
+
+| Default | CLI Override                 | API Override                    |
+| ------- | ---------------------------- | ------------------------------- |
+| `false` | `--break-long-method-chains` | `breakLongMethodChains: <bool>` |
+
 ## Space before function parentheses
 
 Put a space before function parenthesis, in all declarations. (Default is to put a space before function parenthesis for anonymous functions only.)
@@ -237,13 +245,12 @@ Add spaces around the star (\*) in `yield_` expressions (before and after - from
 
 ## Align ternary lines
 
-Align ternary lines in case of multiline ternary term (default behavior, which is in conflict with ESLint/StandardJS behavior).
-Should be disabled for consistency with ESLint/StandardJS behavior.
+Keep default alignment of ternary expression lines, which is in conflict with "Standard JS" formatting in case of certain nested ternary expressions.
 
 Valid options:
 
-- `true` - Align ternary lines in case of multiline ternary term.
-- `false` - Do not align ternary lines in case of multiline ternary term.
+- `true` - Keep default alignment of ternary expression lines.
+- `false` - Disable default alignment of ternary expression lines. Adds some more consistency with "Standard JS" in case of certain nested ternary expressions, may lead to some other conflicts with "Standard JS".
 
 | Default | CLI Override               | API Override                |
 | ------- | -------------------------- | --------------------------- |
@@ -252,6 +259,8 @@ Valid options:
 ## paren spacing
 
 Print spaces between parens, WordPress style (not recommended with default `arrowParens: "always" setting).
+
+Status: experimental, with some known paren spacing formatting issues.
 
 | Default | CLI Override      | API Override           |
 | ------- | ----------------- | ---------------------- |
@@ -277,6 +286,14 @@ Valid options:
 | Default  | CLI Override                                         | API Override                                         |
 | -------- | ---------------------------------------------------- | ---------------------------------------------------- |
 | `"auto"` | <code>--import-formatting <auto&#124;oneline></code> | <code>importFormatting: "<auto&#124;oneline>"</code> |
+
+## HTML void element tags
+
+Format void HTML elements as void tags.
+
+| Default | CLI Override       | API Override           |
+| ------- | ------------------ | ---------------------- |
+| `false` | `--html-void-tags` | `htmlVoidTags: <bool>` |
 
 ## Parser
 
