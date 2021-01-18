@@ -287,7 +287,10 @@ function needsParens(path, options) {
           ) {
             return false;
           }
-          // [prettierx ...]
+          // [prettierx] cleanup: removed extra parent.object condition
+          // not needed ref:
+          // - https://github.com/brodybits/prettierx/pull/333
+          // - https://github.com/prettier/prettier/pull/8878
           return name === "object";
 
         case "AssignmentExpression":
