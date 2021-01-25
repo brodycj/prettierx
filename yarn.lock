@@ -1725,18 +1725,32 @@
   dependencies:
     "@types/yargs-parser" "*"
 
-"@typescript-eslint/typescript-estree@2.34.0":
-  version "2.34.0"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/typescript-estree/-/typescript-estree-2.34.0.tgz#14aeb6353b39ef0732cc7f1b8285294937cf37d5"
-  integrity sha512-OMAr+nJWKdlVM9LOqCqh3pQQPwxHAN7Du8DR6dmwCrAmxtiXQnhHJ6tBNtf+cggqfo51SG/FCwnKhXCIM7hnVg==
+"@typescript-eslint/types@4.14.1":
+  version "4.14.1"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/types/-/types-4.14.1.tgz#b3d2eb91dafd0fd8b3fce7c61512ac66bd0364aa"
+  integrity sha512-SkhzHdI/AllAgQSxXM89XwS1Tkic7csPdndUuTKabEwRcEfR8uQ/iPA3Dgio1rqsV3jtqZhY0QQni8rLswJM2w==
+
+"@typescript-eslint/typescript-estree@4.14.1":
+  version "4.14.1"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/typescript-estree/-/typescript-estree-4.14.1.tgz#20d3b8c8e3cdc8f764bdd5e5b0606dd83da6075b"
+  integrity sha512-M8+7MbzKC1PvJIA8kR2sSBnex8bsR5auatLCnVlNTJczmJgqRn8M+sAlQfkEq7M4IY3WmaNJ+LJjPVRrREVSHQ==
   dependencies:
+    "@typescript-eslint/types" "4.14.1"
+    "@typescript-eslint/visitor-keys" "4.14.1"
     debug "^4.1.1"
-    eslint-visitor-keys "^1.1.0"
-    glob "^7.1.6"
+    globby "^11.0.1"
     is-glob "^4.0.1"
     lodash "^4.17.15"
     semver "^7.3.2"
     tsutils "^3.17.1"
+
+"@typescript-eslint/visitor-keys@4.14.1":
+  version "4.14.1"
+  resolved "https://registry.yarnpkg.com/@typescript-eslint/visitor-keys/-/visitor-keys-4.14.1.tgz#e93c2ff27f47ee477a929b970ca89d60a117da91"
+  integrity sha512-TAblbDXOI7bd0C/9PE1G+AFo7R5uc+ty1ArDoxmrC1ah61Hn6shURKy7gLdRb1qKJmjHkqu5Oq+e4Kt0jwf1IA==
+  dependencies:
+    "@typescript-eslint/types" "4.14.1"
+    eslint-visitor-keys "^2.0.0"
 
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"
@@ -4291,7 +4305,7 @@ globals@^12.1.0:
   dependencies:
     type-fest "^0.8.1"
 
-globby@11.0.2:
+globby@11.0.2, globby@^11.0.1:
   version "11.0.2"
   resolved "https://registry.yarnpkg.com/globby/-/globby-11.0.2.tgz#1af538b766a3b540ebfb58a32b2e2d5897321d83"
   integrity sha512-2ZThXDvvV8fYFRVIxnrMQBipZQDr7MxKAmQK1vujaj9/7eF0efG7BPUKJ7jP7G5SLF37xKDXvO4S/KKLj/Z0og==
