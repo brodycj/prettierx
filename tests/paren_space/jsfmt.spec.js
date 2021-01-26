@@ -3,4 +3,5 @@ run_spec(__dirname, ["babel", "babel-flow", "babel-ts"], {
   arrayBracketSpacing: true,
   computedPropertySpacing: true,
   spaceUnaryOps: true,
+  templateCurlySpacing: true,
 });

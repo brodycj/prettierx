@@ -327,6 +327,14 @@ Print spaces after unary operator symbols, except in the middle of combinations 
 | ------- | ------------------- | ----------------------- |
 | `false` | `--space-unary-ops` | `spaceUnaryOps: <bool>` |
 
+## Template curly spacing
+
+Print spaces between template curly brackets. Status: experimental, with limited testing.
+
+| Default | CLI Override               | API Override                   |
+| ------- | -------------------------- | ------------------------------ |
+| `false` | `--template-curly-spacing` | `templateCurlySpacing: <bool>` |
+
 ## Parser
 
 Specify which parser to use.

@@ -10,6 +10,7 @@ parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 singleQuote: false
+templateCurlySpacing: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================
@@ -93,6 +94,7 @@ parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 singleQuote: false
+templateCurlySpacing: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================
@@ -174,6 +176,7 @@ parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 singleQuote: false
+templateCurlySpacing: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================
@@ -478,6 +481,7 @@ parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 singleQuote: false
+templateCurlySpacing: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================
@@ -771,6 +775,7 @@ parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 singleQuote: false
+templateCurlySpacing: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================
@@ -800,6 +805,7 @@ parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 singleQuote: false
+templateCurlySpacing: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================
@@ -825,6 +831,7 @@ parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 singleQuote: false
+templateCurlySpacing: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================
@@ -912,6 +919,7 @@ parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 singleQuote: false
+templateCurlySpacing: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================
@@ -995,6 +1003,7 @@ parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 singleQuote: false
+templateCurlySpacing: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================
@@ -1040,6 +1049,7 @@ parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 singleQuote: false
+templateCurlySpacing: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================
@@ -1089,6 +1099,7 @@ parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 singleQuote: false
+templateCurlySpacing: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================
@@ -1146,6 +1157,7 @@ parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 singleQuote: false
+templateCurlySpacing: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================
@@ -1241,6 +1253,7 @@ parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 singleQuote: false
+templateCurlySpacing: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================
@@ -1360,6 +1373,7 @@ parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 singleQuote: false
+templateCurlySpacing: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================
@@ -1383,6 +1397,7 @@ parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 singleQuote: false
+templateCurlySpacing: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================

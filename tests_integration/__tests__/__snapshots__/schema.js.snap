@@ -419,6 +419,11 @@ in order for it to be formatted.",
           "description": "Number of spaces per indentation level.",
           "type": "integer",
         },
+        "templateCurlySpacing": Object {
+          "default": false,
+          "description": "Print spaces between template curly brackets. Status: experimental, with limited testing.",
+          "type": "boolean",
+        },
         "trailingComma": Object {
           "default": "es5",
           "description": "Print trailing commas wherever possible when multi-line.",

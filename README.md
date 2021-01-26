@@ -49,6 +49,7 @@ prettierx <options> <file(s)>
 | CSS paren spacing                                    | `false`       | `--css-paren-spacing`                      | `cssParenSpacing: <bool>`                  | Print spaces between parens in CSS, WordPress style. Status: experimental, with limited testing.                                                                                                    |
 | Computed property spacing                            | `false`       | `--computed-property-spacing`              | `computedPropertySpacing: <bool>`          | Print spaces between computed property brackets. Status: experimental, with limited testing.                                                                                                        |
 | Space after unary operator symbols                   | `false`       | `--space-unary-ops`                        | `spaceUnaryOps: <bool>`                    | Print spaces after unary operator symbols, except in the middle of combinations such as !!. Status: experimental, with limited testing.                                                             |
+| Template curly spacing                               | `false`       | `--template-curly-spacing`                 | `templateCurlySpacing: <bool>`             | Print spaces between template curly brackets. Status: experimental, with limited testing.                                                                                                           |
 
 ## "Standard JS" formatting options
 

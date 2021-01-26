@@ -9,5 +9,6 @@ run_spec(dirpath, ["babel", "babel-flow"], {
   parenSpacing: true,
   arrayBracketSpacing: true,
   computedPropertySpacing: true,
+  templateCurlySpacing: true,
   trailingComma: "none", // ("Standard JS")
 });

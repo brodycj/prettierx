@@ -7,6 +7,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+templateCurlySpacing: true
                                                                                 | printWidth
 =====================================input======================================
 (a => {}).length
@@ -93,6 +94,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+templateCurlySpacing: true
                                                                                 | printWidth
 =====================================input======================================
 a = () => ({} = this);
@@ -110,6 +112,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+templateCurlySpacing: true
                                                                                 | printWidth
 =====================================input======================================
 Seq(typeDef.interface.groups).forEach(group =>
@@ -909,6 +912,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+templateCurlySpacing: true
                                                                                 | printWidth
 =====================================input======================================
 /**
@@ -984,6 +988,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+templateCurlySpacing: true
                                                                                 | printWidth
 =====================================input======================================
 const fn = b => c => d => {
@@ -1033,6 +1038,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+templateCurlySpacing: true
                                                                                 | printWidth
 =====================================input======================================
 veryLongCall(VERY_VERY_VERY_VERY_VERY_VERY_VERY_VERY_VERY_VERY_LONG_CONSTANT, () => {})
@@ -1053,6 +1059,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+templateCurlySpacing: true
                                                                                 | printWidth
 =====================================input======================================
 const foo = () => {
@@ -1079,6 +1086,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+templateCurlySpacing: true
                                                                                 | printWidth
 =====================================input======================================
 promise.then(
@@ -1132,6 +1140,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+templateCurlySpacing: true
                                                                                 | printWidth
 =====================================input======================================
 const initializeSnapshotState = (
@@ -1159,6 +1168,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+templateCurlySpacing: true
                                                                                 | printWidth
 =====================================input======================================
 <T>(a) => { }

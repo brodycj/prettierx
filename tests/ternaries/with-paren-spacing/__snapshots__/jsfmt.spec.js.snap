@@ -10,6 +10,7 @@ parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 spaceUnaryOps: true
+templateCurlySpacing: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================
@@ -58,6 +59,7 @@ parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 spaceUnaryOps: true
+templateCurlySpacing: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================
@@ -93,6 +95,7 @@ parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 spaceUnaryOps: true
+templateCurlySpacing: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================
@@ -429,6 +432,7 @@ parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 spaceUnaryOps: true
+templateCurlySpacing: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================
@@ -639,6 +643,7 @@ parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 spaceUnaryOps: true
+templateCurlySpacing: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================
@@ -734,6 +739,7 @@ parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 spaceUnaryOps: true
+templateCurlySpacing: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================
@@ -777,6 +783,7 @@ parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 spaceUnaryOps: true
+templateCurlySpacing: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================

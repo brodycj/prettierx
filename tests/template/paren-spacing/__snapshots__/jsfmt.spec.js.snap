@@ -7,6 +7,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow"]
 printWidth: 80
+templateCurlySpacing: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================
@@ -37,6 +38,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow"]
 printWidth: 80
+templateCurlySpacing: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================
@@ -77,6 +79,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow"]
 printWidth: 80
+templateCurlySpacing: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================
@@ -120,6 +123,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow"]
 printWidth: 80
+templateCurlySpacing: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================
@@ -164,6 +168,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow"]
 printWidth: 80
+templateCurlySpacing: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================
@@ -214,6 +219,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow"]
 printWidth: 80
+templateCurlySpacing: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================
@@ -271,6 +277,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow"]
 printWidth: 80
+templateCurlySpacing: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================
@@ -399,6 +406,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow"]
 printWidth: 80
+templateCurlySpacing: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================

@@ -526,6 +526,10 @@ function printPathNoParens(path, options, print, args) {
   const parenSpace = options.parenSpacing ? " " : "";
   const parenLine = options.parenSpacing ? line : softline;
 
+  // [prettierx] templateCurlySpacing option support (...)
+  const templateCurlySpace = options.templateCurlySpacing ? " " : "";
+  const templateCurlyLine = options.templateCurlySpacing ? line : softline;
+
   if (!n) {
     return "";
   }
@@ -2406,21 +2410,21 @@ function printPathNoParens(path, options, print, args) {
             const n = p.getValue();
 
             if (!n.comments || !n.comments.length) {
-              // [prettierx] with --paren-spacing option support (...)
-              return concat([parenSpace, printed, parenSpace]);
+              // [prettierx] templateCurlySpacing option support (...)
+              return concat([templateCurlySpace, printed, templateCurlySpace]);
             }
 
-            // [prettierx] with --paren-spacing option support (...)
+            // [prettierx] with templateCurlySpacing option support (...)
             return concat([
               indent(
                 concat([
-                  // [prettierx] with --paren-spacing option support (...)
-                  parenLine,
+                  // [prettierx] templateCurlySpacing option support (...)
+                  templateCurlyLine,
                   comments.printComments(p, () => printed, options),
                 ])
               ),
-              // [prettierx] with --paren-spacing option support (...)
-              parenLine,
+              // [prettierx] templateCurlySpacing option support (...)
+              templateCurlyLine,
             ]);
           },
           n.type === "JSXSpreadAttribute" ? "argument" : "expression"
@@ -2453,26 +2457,26 @@ function printPathNoParens(path, options, print, args) {
       if (shouldInline) {
         const printed = path.call(print, "expression");
         return group(
-          // [prettierx] parenSpace option support (...)
+          // [prettierx] templateCurlySpacing option support (...)
           concat([
             "{",
-            // [prettierx] parenSpace option support (...)
-            parenSpace,
+            // [prettierx] templateCurlySpacing option support (...)
+            templateCurlySpace,
             printed,
             lineSuffixBoundary,
-            hasAddedLine(printed) ? "" : parenSpace,
+            hasAddedLine(printed) ? "" : templateCurlySpace,
             "}",
           ])
         );
       }
 
       return group(
-        // [prettierx] parenSpace option support (...)
+        // [prettierx] templateCurlySpacing option support (...)
         concat([
           "{",
-          // [prettierx] parenSpace option support (...)
-          indent(concat([parenLine, path.call(print, "expression")])),
-          parenLine,
+          // [prettierx] templateCurlySpacing option support (...)
+          indent(concat([templateCurlyLine, path.call(print, "expression")])),
+          templateCurlyLine,
           lineSuffixBoundary,
           "}",
         ])
@@ -2756,7 +2760,7 @@ function printPathNoParens(path, options, print, args) {
           if (!isSimple) {
             // Breaks at the template element boundaries (${ and }) are preferred to breaking
             // in the middle of a MemberExpression
-            // [prettierx] with --paren-spacing option support (...)
+            // [prettierx] templateCurlySpacing option support (...)
             if (
               (n.expressions[i].comments && n.expressions[i].comments.length) ||
               n.expressions[i].type === "MemberExpression" ||
@@ -2767,13 +2771,17 @@ function printPathNoParens(path, options, print, args) {
               isBinaryish(n.expressions[i])
             ) {
               printed = concat([
-                // [prettierx] with --paren-spacing option support (...)
-                indent(concat([parenLine, printed])),
-                parenLine,
+                // [prettierx] templateCurlySpacing option support (...)
+                indent(concat([templateCurlyLine, printed])),
+                templateCurlyLine,
               ]);
             } else {
-              // [prettierx] --paren-spacing option support (...)
-              printed = concat([parenSpace, printed, parenSpace]);
+              // [prettierx] templateCurlySpacing option support (...)
+              printed = concat([
+                templateCurlySpace,
+                printed,
+                templateCurlySpace,
+              ]);
             }
           }
 
@@ -4252,21 +4260,21 @@ function printJestEachTemplateLiteral(node, expressions, options) {
   ) {
     const parts = [];
 
-    // [prettierx] parenSpace option support (...)
-    const parenSpace = options.parenSpacing ? " " : "";
+    // [prettierx] templateCurlySpacing option support (...)
+    const templateCurlySpace = options.templateCurlySpacing ? " " : "";
 
     const stringifiedExpressions = expressions.map(
       // [prettierx merge from prettier@2.0.5 ...]
       (doc) =>
-        // [prettierx] parenSpace option support (...)
+        // [prettierx] templateCurlySpacing option support (...)
         "${" +
-        parenSpace +
+        templateCurlySpace +
         printDocToString(doc, {
           ...options,
           printWidth: Infinity,
           endOfLine: "lf",
         }).formatted +
-        parenSpace +
+        templateCurlySpace +
         "}"
     );
 

@@ -288,6 +288,10 @@ Object {
       },
       "type": "int",
     },
+    "templateCurlySpacing": Object {
+      "default": false,
+      "type": "boolean",
+    },
     "trailingComma": Object {
       "choices": Array [
         "es5",
@@ -1177,6 +1181,14 @@ exports[`CLI --support-info (stdout) 1`] = `
       \\"pluginDefaults\\": {},
       \\"range\\": { \\"end\\": null, \\"start\\": 0, \\"step\\": 1 },
       \\"type\\": \\"int\\"
+    },
+    {
+      \\"category\\": \\"JavaScript\\",
+      \\"default\\": false,
+      \\"description\\": \\"Print spaces between template curly brackets. Status: experimental, with limited testing.\\",
+      \\"name\\": \\"templateCurlySpacing\\",
+      \\"pluginDefaults\\": {},
+      \\"type\\": \\"boolean\\"
     },
     {
       \\"category\\": \\"JavaScript\\",

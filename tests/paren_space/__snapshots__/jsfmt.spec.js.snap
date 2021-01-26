@@ -8,6 +8,7 @@ parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
 spaceUnaryOps: true
+templateCurlySpacing: true
                                                                                 | printWidth
 =====================================input======================================
 [[]];
@@ -42,6 +43,7 @@ parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
 spaceUnaryOps: true
+templateCurlySpacing: true
                                                                                 | printWidth
 =====================================input======================================
 (a || b):: c;
@@ -134,6 +136,7 @@ parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
 spaceUnaryOps: true
+templateCurlySpacing: true
                                                                                 | printWidth
 =====================================input======================================
 class c {
@@ -178,6 +181,7 @@ parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
 spaceUnaryOps: true
+templateCurlySpacing: true
                                                                                 | printWidth
 =====================================input======================================
 if (someVeryLongFunc(someVeryLongArgA, someVeryLongArgB, someVeryLongArgC, someVeryLongArgD)) { }
@@ -249,6 +253,7 @@ parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
 spaceUnaryOps: true
+templateCurlySpacing: true
                                                                                 | printWidth
 =====================================input======================================
 const [one, two = null, three = null] = arr;
@@ -271,6 +276,7 @@ parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
 spaceUnaryOps: true
+templateCurlySpacing: true
                                                                                 | printWidth
 =====================================input======================================
 (this.x++).toString()
@@ -317,6 +323,7 @@ parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
 spaceUnaryOps: true
+templateCurlySpacing: true
                                                                                 | printWidth
 =====================================input======================================
 function* f() {
@@ -371,6 +378,7 @@ parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
 spaceUnaryOps: true
+templateCurlySpacing: true
                                                                                 | printWidth
 =====================================input======================================
 const nestedFun = /* HTML */ \`\${outerExpr(1)}
@@ -451,6 +459,7 @@ parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
 spaceUnaryOps: true
+templateCurlySpacing: true
                                                                                 | printWidth
 =====================================input======================================
 import { fitsIn, oneLine } from '.';
@@ -485,6 +494,7 @@ parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
 spaceUnaryOps: true
+templateCurlySpacing: true
                                                                                 | printWidth
 =====================================input======================================
 test.each\`
@@ -517,6 +527,7 @@ parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
 spaceUnaryOps: true
+templateCurlySpacing: true
                                                                                 | printWidth
 =====================================input======================================
 while (someVeryLongFunc(someVeryLongArgA, someVeryLongArgB, someVeryLongArgC, someVeryLongArgD)) { }
@@ -576,6 +587,7 @@ parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
 spaceUnaryOps: true
+templateCurlySpacing: true
                                                                                 | printWidth
 =====================================input======================================
 const x = (foo, bar = foo ?? bar) => { };
@@ -604,6 +616,7 @@ parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
 spaceUnaryOps: true
+templateCurlySpacing: true
                                                                                 | printWidth
 =====================================input======================================
 () => ({}\`\`);
@@ -638,6 +651,7 @@ parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
 spaceUnaryOps: true
+templateCurlySpacing: true
                                                                                 | printWidth
 =====================================input======================================
 function f() {
@@ -668,6 +682,7 @@ parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
 spaceUnaryOps: true
+templateCurlySpacing: true
                                                                                 | printWidth
 =====================================input======================================
 (a = b ? c : function () { return 0; }),
@@ -714,6 +729,7 @@ parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
 spaceUnaryOps: true
+templateCurlySpacing: true
                                                                                 | printWidth
 =====================================input======================================
 const foo = { ...(a || b) };
@@ -746,6 +762,7 @@ parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
 spaceUnaryOps: true
+templateCurlySpacing: true
                                                                                 | printWidth
 =====================================input======================================
 switch (a) {
@@ -788,6 +805,7 @@ parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
 spaceUnaryOps: true
+templateCurlySpacing: true
                                                                                 | printWidth
 =====================================input======================================
 \`\${1 ?? 2}\`;
@@ -913,6 +931,7 @@ parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
 spaceUnaryOps: true
+templateCurlySpacing: true
                                                                                 | printWidth
 =====================================input======================================
 a => a ? () => { a } : () => { a }
@@ -958,6 +977,7 @@ parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
 spaceUnaryOps: true
+templateCurlySpacing: true
                                                                                 | printWidth
 =====================================input======================================
 function f() {
@@ -988,6 +1008,7 @@ parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
 spaceUnaryOps: true
+templateCurlySpacing: true
                                                                                 | printWidth
 =====================================input======================================
 try { foo() }
@@ -1014,6 +1035,7 @@ parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
 spaceUnaryOps: true
+templateCurlySpacing: true
                                                                                 | printWidth
 =====================================input======================================
 with (0) { };

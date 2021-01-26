@@ -9,4 +9,5 @@ run_spec(dirpath, ["babel", "babel-flow", "flow", "typescript"], {
   parenSpacing: true,
   computedPropertySpacing: true,
   spaceUnaryOps: true,
+  templateCurlySpacing: true,
 });
