@@ -45,6 +45,7 @@ prettierx <options> <file(s)>
 | Formatting of import statements                      | `auto`        | see [./docs/options.md](./docs/options.md) | see [./docs/options.md](./docs/options.md) | Formatting of import statements, may be `oneline` to avoid conflict with VSCode "Organize Imports" feature.                                                                                         |
 | HTML void element tags                               | `false`       | `--html-void-tags`                         | Format void HTML elements as void tags.    |
 | break long method chains                             | `false`       | `--break-long-method-chains`               | `breakLongMethodChains: <bool>`            | Break method chains with more than 3 method calls, like Prettier 1.x.                                                                                                                               |
+| CSS paren spacing                                    | `false`       | `--css-paren-spacing`                      | `cssParenSpacing: <bool>`                  | Print spaces between parens in CSS, WordPress style. Status: experimental, with limited testing.                                                                                                    |
 
 ## "Standard JS" formatting options
 

@@ -139,6 +139,19 @@ Default: cli-override
 
 exports[`show detailed usage with --help config-precedence (write) 1`] = `Array []`;
 
+exports[`show detailed usage with --help css-paren-spacing (stderr) 1`] = `""`;
+
+exports[`show detailed usage with --help css-paren-spacing (stdout) 1`] = `
+"--css-paren-spacing
+
+  Print spaces between parens in CSS, WordPress style. Status: experimental, with limited testing.
+
+Default: false
+"
+`;
+
+exports[`show detailed usage with --help css-paren-spacing (write) 1`] = `Array []`;
+
 exports[`show detailed usage with --help cursor-offset (stderr) 1`] = `""`;
 
 exports[`show detailed usage with --help cursor-offset (stdout) 1`] = `

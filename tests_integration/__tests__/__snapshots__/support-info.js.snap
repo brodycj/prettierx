@@ -101,6 +101,10 @@ Object {
       "default": false,
       "type": "boolean",
     },
+    "cssParenSpacing": Object {
+      "default": false,
+      "type": "boolean",
+    },
     "cursorOffset": Object {
       "default": -1,
       "range": Object {
@@ -795,6 +799,14 @@ exports[`CLI --support-info (stdout) 1`] = `
       \\"default\\": false,
       \\"description\\": \\"Break method chains with more than 3 method calls, like Prettier 1.x.\\",
       \\"name\\": \\"breakLongMethodChains\\",
+      \\"pluginDefaults\\": {},
+      \\"type\\": \\"boolean\\"
+    },
+    {
+      \\"category\\": \\"Other\\",
+      \\"default\\": false,
+      \\"description\\": \\"Print spaces between parens in CSS, WordPress style. Status: experimental, with limited testing.\\",
+      \\"name\\": \\"cssParenSpacing\\",
       \\"pluginDefaults\\": {},
       \\"type\\": \\"boolean\\"
     },

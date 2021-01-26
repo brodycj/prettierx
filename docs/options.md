@@ -295,6 +295,14 @@ Format void HTML elements as void tags.
 | ------- | ------------------ | ---------------------- |
 | `false` | `--html-void-tags` | `htmlVoidTags: <bool>` |
 
+## CSS paren spacing
+
+Print spaces between parens in CSS, WordPress style. Status: experimental, with limited testing.
+
+| Default | CLI Override          | API Override              |
+| ------- | --------------------- | ------------------------- |
+| `false` | `--css-paren-spacing` | `cssParenSpacing: <bool>` |
+
 ## Parser
 
 Specify which parser to use.
