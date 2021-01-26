@@ -275,6 +275,10 @@ Object {
       "default": false,
       "type": "boolean",
     },
+    "spaceUnaryOps": Object {
+      "default": false,
+      "type": "boolean",
+    },
     "tabWidth": Object {
       "default": 2,
       "range": Object {
@@ -1154,6 +1158,14 @@ exports[`CLI --support-info (stdout) 1`] = `
       \\"default\\": false,
       \\"description\\": \\"Put a space before function parenthesis.\\",
       \\"name\\": \\"spaceBeforeFunctionParen\\",
+      \\"pluginDefaults\\": {},
+      \\"type\\": \\"boolean\\"
+    },
+    {
+      \\"category\\": \\"JavaScript\\",
+      \\"default\\": false,
+      \\"description\\": \\"Print spaces after unary operator symbols, except in the middle of combinations such as !!. Status: experimental, with limited testing.\\",
+      \\"name\\": \\"spaceUnaryOps\\",
       \\"pluginDefaults\\": {},
       \\"type\\": \\"boolean\\"
     },

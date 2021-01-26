@@ -8,4 +8,5 @@ run_spec(dirpath, ["babel", "babel-flow", "flow", "typescript"], {
   // [prettierx] test with --paren-spacing
   parenSpacing: true,
   computedPropertySpacing: true,
+  spaceUnaryOps: true,
 });

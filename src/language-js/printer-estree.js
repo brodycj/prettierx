@@ -1899,16 +1899,11 @@ function printPathNoParens(path, options, print, args) {
     case "UnaryExpression":
       parts.push(n.operator);
 
-      // [prettierx] with --paren-spacing option support (...)
+      // [prettierx] spaceUnaryOps option support (...)
       if (
         /[a-z]$/.test(n.operator) ||
-        (options.parenSpacing &&
-          n.operator === "!" &&
-          !(
-            n.argument &&
-            n.argument.type === "UnaryExpression" &&
-            n.argument.operator === "!"
-          ))
+        (options.spaceUnaryOps &&
+          !(n.argument && n.argument.type === "UnaryExpression"))
       ) {
         parts.push(" ");
       }

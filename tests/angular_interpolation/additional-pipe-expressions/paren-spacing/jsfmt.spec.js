@@ -9,4 +9,5 @@ run_spec(dirpath, ["__ng_interpolation"], {
   parenSpacing: true,
   computedPropertySpacing: true,
   trailingComma: "none",
+  spaceUnaryOps: true,
 });

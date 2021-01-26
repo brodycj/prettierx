@@ -707,6 +707,19 @@ Default: false
 
 exports[`show detailed usage with --help space-before-function-paren (write) 1`] = `Array []`;
 
+exports[`show detailed usage with --help space-unary-ops (stderr) 1`] = `""`;
+
+exports[`show detailed usage with --help space-unary-ops (stdout) 1`] = `
+"--space-unary-ops
+
+  Print spaces after unary operator symbols, except in the middle of combinations such as !!. Status: experimental, with limited testing.
+
+Default: false
+"
+`;
+
+exports[`show detailed usage with --help space-unary-ops (write) 1`] = `Array []`;
+
 exports[`show detailed usage with --help stdin-filepath (stderr) 1`] = `""`;
 
 exports[`show detailed usage with --help stdin-filepath (stdout) 1`] = `

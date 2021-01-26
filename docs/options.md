@@ -319,6 +319,14 @@ Print spaces between computed property brackets. Status: experimental, with limi
 | ------- | ----------------------------- | --------------------------------- |
 | `false` | `--computed-property-spacing` | `computedPropertySpacing: <bool>` |
 
+## Space after unary operator symbols
+
+Print spaces after unary operator symbols, except in the middle of combinations such as !!. Status: experimental, with limited testing.
+
+| Default | CLI Override        | API Override            |
+| ------- | ------------------- | ----------------------- |
+| `false` | `--space-unary-ops` | `spaceUnaryOps: <bool>` |
+
 ## Parser
 
 Specify which parser to use.

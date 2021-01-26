@@ -68,6 +68,13 @@ module.exports = {
       },
     ],
   },
+  spaceUnaryOps: {
+    category: CATEGORY_JAVASCRIPT,
+    type: "boolean",
+    default: false,
+    description:
+      "Print spaces after unary operator symbols, except in the middle of combinations such as !!. Status: experimental, with limited testing.",
+  },
   jsxBracketSameLine: {
     since: "0.17.0",
     category: CATEGORY_JAVASCRIPT,

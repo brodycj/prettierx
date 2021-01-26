@@ -123,6 +123,8 @@ Format options:
   --space-before-function-paren
                            Put a space before function parenthesis.
                            Defaults to false.
+  --space-unary-ops        Print spaces after unary operator symbols, except in the middle of combinations such as !!. Status: experimental, with limited testing.
+                           Defaults to false.
   --tab-width <int>        Number of spaces per indentation level.
                            Defaults to 2.
   --trailing-comma <es5|none|all>
@@ -309,6 +311,8 @@ Format options:
                            Defaults to false.
   --space-before-function-paren
                            Put a space before function parenthesis.
+                           Defaults to false.
+  --space-unary-ops        Print spaces after unary operator symbols, except in the middle of combinations such as !!. Status: experimental, with limited testing.
                            Defaults to false.
   --tab-width <int>        Number of spaces per indentation level.
                            Defaults to 2.

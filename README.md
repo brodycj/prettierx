@@ -48,6 +48,7 @@ prettierx <options> <file(s)>
 | Array bracket spacing                                | `false`       | `--array-bracket-spacing`                  | `arrayBracketSpacing: <bool>`              | Print spaces between array brackets. Status: experimental, with limited testing.                                                                                                                    |
 | CSS paren spacing                                    | `false`       | `--css-paren-spacing`                      | `cssParenSpacing: <bool>`                  | Print spaces between parens in CSS, WordPress style. Status: experimental, with limited testing.                                                                                                    |
 | Computed property spacing                            | `false`       | `--computed-property-spacing`              | `computedPropertySpacing: <bool>`          | Print spaces between computed property brackets. Status: experimental, with limited testing.                                                                                                        |
+| Space after unary operator symbols                   | `false`       | `--space-unary-ops`                        | `spaceUnaryOps: <bool>`                    | Print spaces after unary operator symbols, except in the middle of combinations such as !!. Status: experimental, with limited testing.                                                             |
 
 ## "Standard JS" formatting options
 

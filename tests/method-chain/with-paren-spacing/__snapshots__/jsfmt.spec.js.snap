@@ -8,6 +8,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 function a() {
@@ -43,6 +44,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 export default store => {
@@ -173,6 +175,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 SomeVeryLongUpperCaseConstant.someVeryLongCallExpression().some_very_long_member_expression
@@ -247,6 +250,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 object.foo().bar().baz();
@@ -273,6 +277,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 function f() {
@@ -429,6 +434,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 nock(/test/)
@@ -457,6 +463,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 [].forEach(key => {
@@ -505,6 +512,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 (a ? b : c).d();
@@ -574,6 +582,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 d3.select('body')
@@ -621,6 +630,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 export default function theFunction(action$, store) {
@@ -704,6 +714,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 Object.keys(
@@ -753,6 +764,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 // examples from https://github.com/prettier/prettier/issues/4125
@@ -918,7 +930,7 @@ const x = moment().add( 1, "day" ).valueOf();
 
 // should stay on one line:
 obj.foo( 1 ).foo( 2 ).foo( 3 );
-obj.foo( -1 ).foo( import( "2" ) ).foo( ! x ).check( /[A-Z]/ );
+obj.foo( - 1 ).foo( import( "2" ) ).foo( ! x ).check( /[A-Z]/ );
 
 // better on multiple lines:
 somePromise
@@ -1086,6 +1098,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 const someLongVariableName = (idx(
@@ -1144,6 +1157,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 if (testConfig.ENABLE_ONLINE_TESTS === "true") {
@@ -1242,6 +1256,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 of("test")
@@ -1288,6 +1303,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 const svgJsFiles = fs
@@ -1312,6 +1328,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 const version = someLongString
@@ -1346,6 +1363,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 method().then(x => x)
@@ -1375,6 +1393,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 const sel = this.connections

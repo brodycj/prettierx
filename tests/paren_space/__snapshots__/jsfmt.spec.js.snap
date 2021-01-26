@@ -7,6 +7,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 [[]];
@@ -40,6 +41,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 (a || b):: c;
@@ -86,7 +88,7 @@ a:: (b => c);
 a || b::c;
 ::obj.prop;
 ( void 0 )::func();
-( +0 )::is( -0 );
+( + 0 )::is( - 0 );
 a::b.c;
 a::( b.c() );
 a::b.c();
@@ -131,6 +133,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 class c {
@@ -174,6 +177,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 if (someVeryLongFunc(someVeryLongArgA, someVeryLongArgB, someVeryLongArgC, someVeryLongArgD)) { }
@@ -244,6 +248,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 const [one, two = null, three = null] = arr;
@@ -265,6 +270,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 (this.x++).toString()
@@ -310,6 +316,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 function* f() {
@@ -363,6 +370,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 const nestedFun = /* HTML */ \`\${outerExpr(1)}
@@ -442,6 +450,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 import { fitsIn, oneLine } from '.';
@@ -475,6 +484,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 test.each\`
@@ -506,6 +516,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 while (someVeryLongFunc(someVeryLongArgA, someVeryLongArgB, someVeryLongArgC, someVeryLongArgD)) { }
@@ -564,6 +575,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 const x = (foo, bar = foo ?? bar) => { };
@@ -591,6 +603,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 () => ({}\`\`);
@@ -624,6 +637,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 function f() {
@@ -653,6 +667,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 (a = b ? c : function () { return 0; }),
@@ -698,6 +713,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 const foo = { ...(a || b) };
@@ -729,6 +745,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 switch (a) {
@@ -770,6 +787,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 \`\${1 ?? 2}\`;
@@ -894,6 +912,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 a => a ? () => { a } : () => { a }
@@ -938,6 +957,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 function f() {
@@ -967,6 +987,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 try { foo() }
@@ -992,6 +1013,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 with (0) { };

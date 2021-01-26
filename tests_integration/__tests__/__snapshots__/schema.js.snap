@@ -409,6 +409,11 @@ in order for it to be formatted.",
           "description": "Put a space before function parenthesis.",
           "type": "boolean",
         },
+        "spaceUnaryOps": Object {
+          "default": false,
+          "description": "Print spaces after unary operator symbols, except in the middle of combinations such as !!. Status: experimental, with limited testing.",
+          "type": "boolean",
+        },
         "tabWidth": Object {
           "default": 2,
           "description": "Number of spaces per indentation level.",

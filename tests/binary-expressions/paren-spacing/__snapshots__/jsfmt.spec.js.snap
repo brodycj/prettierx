@@ -6,6 +6,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 function f() {
@@ -54,6 +55,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 const FLAG_A = 1 << 0;
@@ -78,6 +80,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 (
@@ -210,6 +213,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 a = (
@@ -234,6 +238,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 x == y == z;
@@ -266,6 +271,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 a ** b ** c;
@@ -282,9 +288,9 @@ a ** (b * c);
 a ** ( b ** c );
 ( a ** b ) ** c;
 a.b ** c;
-( -a ) ** b;
-a ** -b;
--( a ** b );
+( - a ) ** b;
+a ** - b;
+- ( a ** b );
 ( a * b ) ** c;
 a ** ( b * c );
 ( a % b ) ** c;
@@ -298,6 +304,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 if (this.hasPlugin("dynamicImports") && this.lookahead().type) {}
@@ -339,6 +346,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 const user = renderedUser || <div><User name={this.state.user.name} age={this.state.user.age} /></div>;
@@ -379,6 +387,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 prevState = prevState || {
@@ -575,6 +584,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 <div
@@ -661,6 +671,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 x + y / z;
@@ -719,6 +730,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 function foo() {
@@ -768,6 +780,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 this._cumulativeHeights &&
@@ -804,7 +817,7 @@ foooooooooooooooooooooooooooooooooooooooooooooooooooooooooo(
 const isPartOfPackageJSON =
   dependenciesArray.indexOf(
     dependencyWithOutRelativePath.split( "/" )[ 0 ]
-  ) !== -1;
+  ) !== - 1;
 
 defaultContent.filter( ( defaultLocale ) => {
   // ...
@@ -819,6 +832,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 // It should always break the highest precedence operators first, and
@@ -910,6 +924,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================
 const anyTestFailures = !(

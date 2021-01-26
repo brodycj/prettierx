@@ -7,6 +7,7 @@ const dirpath = `${__dirname}/..`;
 run_spec(dirpath, ["babel", "babel-flow", "flow", "typescript"], {
   indentChains: false,
   parenSpacing: true,
+  spaceUnaryOps: true,
   // recommended:
   arrowParens: "avoid",
 });

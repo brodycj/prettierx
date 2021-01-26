@@ -9,6 +9,7 @@ run_spec(dirpath, ["babel", "babel-flow", "flow", "typescript"], {
   parenSpacing: true,
   arrayBracketSpacing: true,
   computedPropertySpacing: true,
+  spaceUnaryOps: true,
   // [prettierx] recommended option:
   arrowParens: "avoid",
   // [prettierx] "Standard JS" setting:

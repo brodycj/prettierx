@@ -6,6 +6,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["__ng_interpolation"]
 printWidth: 80
+spaceUnaryOps: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================
@@ -22,6 +23,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["__ng_interpolation"]
 printWidth: 80
+spaceUnaryOps: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================
@@ -38,6 +40,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["__ng_interpolation"]
 printWidth: 80
+spaceUnaryOps: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================
@@ -54,6 +57,7 @@ computedPropertySpacing: true
 parenSpacing: true
 parsers: ["__ng_interpolation"]
 printWidth: 80
+spaceUnaryOps: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================
