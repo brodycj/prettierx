@@ -295,6 +295,14 @@ Format void HTML elements as void tags.
 | ------- | ------------------ | ---------------------- |
 | `false` | `--html-void-tags` | `htmlVoidTags: <bool>` |
 
+## Array bracket spacing
+
+Print spaces between array brackets. Status: experimental, with limited testing.
+
+| Default | CLI Override              | API Override                  |
+| ------- | ------------------------- | ----------------------------- |
+| `false` | `--array-bracket-spacing` | `arrayBracketSpacing: <bool>` |
+
 ## CSS paren spacing
 
 Print spaces between parens in CSS, WordPress style. Status: experimental, with limited testing.

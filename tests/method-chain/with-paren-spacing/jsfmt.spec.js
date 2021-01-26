@@ -9,5 +9,6 @@ run_spec(dirpath, ["babel", "babel-flow", "flow", "typescript"], {
   arrowParens: "avoid",
   // [prettierx] test with --paren-spacing
   parenSpacing: true,
+  arrayBracketSpacing: true,
   computedPropertySpacing: true,
 });

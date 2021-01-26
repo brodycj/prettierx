@@ -2,6 +2,7 @@
 
 exports[`array-iter.js 1`] = `
 ====================================options=====================================
+arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
 jsxSingleQuote: false
@@ -84,6 +85,7 @@ const TodoList = ( { todos } ) => (
 
 exports[`attr-comments.js 1`] = `
 ====================================options=====================================
+arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
 jsxSingleQuote: false
@@ -164,6 +166,7 @@ trailingComma: "none"
 
 exports[`conditional-expression.js 1`] = `
 ====================================options=====================================
+arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
 jsxSingleQuote: false
@@ -467,6 +470,7 @@ foo ? (
 
 exports[`expression.js 1`] = `
 ====================================options=====================================
+arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
 jsxSingleQuote: false
@@ -759,6 +763,7 @@ trailingComma: "none"
 
 exports[`flow_fix_me.js 1`] = `
 ====================================options=====================================
+arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
 jsxSingleQuote: false
@@ -787,6 +792,7 @@ const aDiv = (
 
 exports[`html_escape.js 1`] = `
 ====================================options=====================================
+arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
 jsxSingleQuote: false
@@ -811,6 +817,7 @@ export default () => <a href="https://foo.bar?q1=foo&q2=bar" />;
 
 exports[`hug.js 1`] = `
 ====================================options=====================================
+arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
 jsxSingleQuote: false
@@ -897,6 +904,7 @@ trailingComma: "none"
 
 exports[`logical-expression.js 1`] = `
 ====================================options=====================================
+arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
 jsxSingleQuote: false
@@ -979,6 +987,7 @@ trailingComma: "none"
 
 exports[`object-property.js 1`] = `
 ====================================options=====================================
+arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
 jsxSingleQuote: false
@@ -1023,6 +1032,7 @@ const tabs = [
 
 exports[`open-break.js 1`] = `
 ====================================options=====================================
+arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
 jsxSingleQuote: false
@@ -1071,6 +1081,7 @@ onClick={() => {
 
 exports[`parens.js 1`] = `
 ====================================options=====================================
+arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
 jsxSingleQuote: false
@@ -1127,6 +1138,7 @@ new Foo( <Component /> );
 
 exports[`quotes.js 1`] = `
 ====================================options=====================================
+arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
 jsxSingleQuote: false
@@ -1221,6 +1233,7 @@ trailingComma: "none"
 
 exports[`return-statement.js 1`] = `
 ====================================options=====================================
+arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
 jsxSingleQuote: false
@@ -1339,6 +1352,7 @@ class BreakingClass extends React.component {
 
 exports[`self-closing.js 1`] = `
 ====================================options=====================================
+arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
 jsxSingleQuote: false
@@ -1361,6 +1375,7 @@ trailingComma: "none"
 
 exports[`spacing.js 1`] = `
 ====================================options=====================================
+arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
 jsxSingleQuote: false

@@ -2,6 +2,7 @@
 
 exports[`arrow.js 1`] = `
 ====================================options=====================================
+arrayBracketSpacing: true
 computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow"]
@@ -31,6 +32,7 @@ trailingComma: "none"
 
 exports[`call.js 1`] = `
 ====================================options=====================================
+arrayBracketSpacing: true
 computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow"]
@@ -70,6 +72,7 @@ new Error( formatErrorMessage\`
 
 exports[`comment.js 1`] = `
 ====================================options=====================================
+arrayBracketSpacing: true
 computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow"]
@@ -112,6 +115,7 @@ g
 
 exports[`faulty-locations.js 1`] = `
 ====================================options=====================================
+arrayBracketSpacing: true
 computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow"]
@@ -155,6 +159,7 @@ var x = {
 
 exports[`graphql.js 1`] = `
 ====================================options=====================================
+arrayBracketSpacing: true
 computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow"]
@@ -204,6 +209,7 @@ module.exports = Relay.createContainer(
 
 exports[`indent.js 1`] = `
 ====================================options=====================================
+arrayBracketSpacing: true
 computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow"]
@@ -260,6 +266,7 @@ line n + n
 
 exports[`inline.js 1`] = `
 ====================================options=====================================
+arrayBracketSpacing: true
 computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow"]
@@ -387,6 +394,7 @@ editTitle += \`\${ iconHTML( { class: "reply-to-glyph" } ) }\`;
 
 exports[`parenthesis.js 1`] = `
 ====================================options=====================================
+arrayBracketSpacing: true
 computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow"]

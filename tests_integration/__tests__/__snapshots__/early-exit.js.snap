@@ -71,6 +71,8 @@ Format options:
                            Align colons in multiline object literals.
                            Defaults to false.
   --no-align-ternary-lines Do not align ternary lines.
+  --array-bracket-spacing  Print spaces between array brackets. Status: experimental, with limited testing.
+                           Defaults to false.
   --arrow-parens <always|avoid>
                            Include parentheses around a sole arrow function parameter.
                            Defaults to always.
@@ -256,6 +258,8 @@ Format options:
                            Align colons in multiline object literals.
                            Defaults to false.
   --no-align-ternary-lines Do not align ternary lines.
+  --array-bracket-spacing  Print spaces between array brackets. Status: experimental, with limited testing.
+                           Defaults to false.
   --arrow-parens <always|avoid>
                            Include parentheses around a sole arrow function parameter.
                            Defaults to always.

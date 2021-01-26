@@ -2,6 +2,7 @@
 
 exports[`break.js 1`] = `
 ====================================options=====================================
+arrayBracketSpacing: true
 computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel-flow", "flow", "typescript"]
@@ -109,6 +110,7 @@ expect(
 
 exports[`parent.js 1`] = `
 ====================================options=====================================
+arrayBracketSpacing: true
 computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel-flow", "flow", "typescript"]
@@ -142,6 +144,7 @@ runtimeAgent.getProperties(
 
 exports[`react.js 1`] = `
 ====================================options=====================================
+arrayBracketSpacing: true
 computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel-flow", "flow", "typescript"]
@@ -245,6 +248,7 @@ function MyComponent( props ) {
 
 exports[`type_args.js 1`] = `
 ====================================options=====================================
+arrayBracketSpacing: true
 computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel-flow", "flow", "typescript"]

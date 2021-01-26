@@ -1790,17 +1790,17 @@ function printPathNoParens(path, options, print, args) {
             return element[itemsKey] && element[itemsKey].length > 1;
           });
 
-        // [prettierx merge from prettier@1.19.0] (...)
+        // [prettierx] arrayBracketSpacing option support (...)
         parts.push(
           group(
-            // [prettierx] parenSpace option support (...)
+            // [prettierx] arrayBracketSpacing option support (...)
             concat([
               "[",
               indent(
-                // [prettierx] parenSpace option support (...)
+                // [prettierx] arrayBracketSpacing option support (...)
                 concat([
-                  // [prettierx merge from prettier@2.0.5 ...]
-                  parenLine,
+                  // [prettierx] arrayBracketSpacing option support (...)
+                  options.arrayBracketSpacing ? line : softline,
                   printArrayItems(path, options, "elements", print),
                 ])
               ),
@@ -1817,9 +1817,8 @@ function printPathNoParens(path, options, print, args) {
                 options,
                 /* sameIndent */ true
               ),
-              // [prettierx] parenSpace option support (...)
-              parenLine,
-              // [prettierx merge from prettier@2.0.5 ...]
+              // [prettierx] arrayBracketSpacing option support (...)
+              options.arrayBracketSpacing ? line : softline,
               "]",
             ]),
             { shouldBreak }

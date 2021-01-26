@@ -16,6 +16,11 @@ Object {
           "description": "Align ternary lines.",
           "type": "boolean",
         },
+        "arrayBracketSpacing": Object {
+          "default": false,
+          "description": "Print spaces between array brackets. Status: experimental, with limited testing.",
+          "type": "boolean",
+        },
         "arrowParens": Object {
           "default": "always",
           "description": "Include parentheses around a sole arrow function parameter.",

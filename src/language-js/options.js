@@ -28,6 +28,13 @@ module.exports = {
   },
   bracketSpacing: commonOptions.bracketSpacing,
   // [prettierx ...]
+  arrayBracketSpacing: {
+    category: CATEGORY_JAVASCRIPT,
+    type: "boolean",
+    default: false,
+    description:
+      "Print spaces between array brackets. Status: experimental, with limited testing.",
+  },
   computedPropertySpacing: {
     category: CATEGORY_JAVASCRIPT,
     type: "boolean",

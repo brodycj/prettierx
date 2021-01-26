@@ -81,6 +81,10 @@ Object {
       "default": true,
       "type": "boolean",
     },
+    "arrayBracketSpacing": Object {
+      "default": false,
+      "type": "boolean",
+    },
     "arrowParens": Object {
       "choices": Array [
         "always",
@@ -758,6 +762,14 @@ exports[`CLI --support-info (stdout) 1`] = `
       \\"description\\": \\"Align ternary lines.\\",
       \\"name\\": \\"alignTernaryLines\\",
       \\"oppositeDescription\\": \\"Do not align ternary lines.\\",
+      \\"pluginDefaults\\": {},
+      \\"type\\": \\"boolean\\"
+    },
+    {
+      \\"category\\": \\"JavaScript\\",
+      \\"default\\": false,
+      \\"description\\": \\"Print spaces between array brackets. Status: experimental, with limited testing.\\",
+      \\"name\\": \\"arrayBracketSpacing\\",
       \\"pluginDefaults\\": {},
       \\"type\\": \\"boolean\\"
     },
