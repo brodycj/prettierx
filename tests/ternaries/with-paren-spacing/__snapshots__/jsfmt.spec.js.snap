@@ -4,6 +4,7 @@ exports[`binary.js 1`] = `
 ====================================options=====================================
 alignTernaryLines: true
 arrowParens: "avoid"
+computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
@@ -49,6 +50,7 @@ exports[`func-call.js 1`] = `
 ====================================options=====================================
 alignTernaryLines: true
 arrowParens: "avoid"
+computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
@@ -81,6 +83,7 @@ exports[`indent.js 1`] = `
 ====================================options=====================================
 alignTernaryLines: true
 arrowParens: "avoid"
+computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
@@ -414,6 +417,7 @@ exports[`nested.js 1`] = `
 ====================================options=====================================
 alignTernaryLines: true
 arrowParens: "avoid"
+computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
@@ -621,6 +625,7 @@ exports[`nested-in-condition.js 1`] = `
 ====================================options=====================================
 alignTernaryLines: true
 arrowParens: "avoid"
+computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
@@ -713,6 +718,7 @@ exports[`parenthesis.js 1`] = `
 ====================================options=====================================
 alignTernaryLines: true
 arrowParens: "avoid"
+computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
@@ -753,6 +759,7 @@ exports[`test.js 1`] = `
 ====================================options=====================================
 alignTernaryLines: true
 arrowParens: "avoid"
+computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80

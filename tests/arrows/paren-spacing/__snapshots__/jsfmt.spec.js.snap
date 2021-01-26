@@ -3,6 +3,7 @@
 exports[`arrow_function_expression.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
+computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
@@ -88,6 +89,7 @@ a = b => {
 exports[`block_like.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
+computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
@@ -104,6 +106,7 @@ a = () => ( {} = this );
 exports[`call.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
+computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
@@ -902,6 +905,7 @@ foo(
 exports[`comment.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
+computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
@@ -976,6 +980,7 @@ export const bem = block =>
 exports[`currying.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
+computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
@@ -1024,6 +1029,7 @@ const middleware = options => ( req, res, next ) => {
 exports[`long-call-no-args.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
+computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
@@ -1043,6 +1049,7 @@ veryLongCall(
 exports[`long-contents.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
+computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
@@ -1068,6 +1075,7 @@ const foo = () => {
 exports[`parens.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
+computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
@@ -1120,6 +1128,7 @@ foo( a => b, d );
 exports[`short_body.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
+computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
@@ -1146,6 +1155,7 @@ const initializeSnapshotState = (
 exports[`type_params.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
+computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80

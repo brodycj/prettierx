@@ -46,6 +46,7 @@ prettierx <options> <file(s)>
 | HTML void element tags                               | `false`       | `--html-void-tags`                         | Format void HTML elements as void tags.    |
 | break long method chains                             | `false`       | `--break-long-method-chains`               | `breakLongMethodChains: <bool>`            | Break method chains with more than 3 method calls, like Prettier 1.x.                                                                                                                               |
 | CSS paren spacing                                    | `false`       | `--css-paren-spacing`                      | `cssParenSpacing: <bool>`                  | Print spaces between parens in CSS, WordPress style. Status: experimental, with limited testing.                                                                                                    |
+| Computed property spacing                            | `false`       | `--computed-property-spacing`              | `computedPropertySpacing: <bool>`          | Print spaces between computed property brackets. Status: experimental, with limited testing.                                                                                                        |
 
 ## "Standard JS" formatting options
 

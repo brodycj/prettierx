@@ -3,6 +3,7 @@
 exports[`array-iter.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
+computedPropertySpacing: true
 jsxSingleQuote: false
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
@@ -84,6 +85,7 @@ const TodoList = ( { todos } ) => (
 exports[`attr-comments.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
+computedPropertySpacing: true
 jsxSingleQuote: false
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
@@ -163,6 +165,7 @@ trailingComma: "none"
 exports[`conditional-expression.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
+computedPropertySpacing: true
 jsxSingleQuote: false
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
@@ -465,6 +468,7 @@ foo ? (
 exports[`expression.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
+computedPropertySpacing: true
 jsxSingleQuote: false
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
@@ -756,6 +760,7 @@ trailingComma: "none"
 exports[`flow_fix_me.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
+computedPropertySpacing: true
 jsxSingleQuote: false
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
@@ -783,6 +788,7 @@ const aDiv = (
 exports[`html_escape.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
+computedPropertySpacing: true
 jsxSingleQuote: false
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
@@ -806,6 +812,7 @@ export default () => <a href="https://foo.bar?q1=foo&q2=bar" />;
 exports[`hug.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
+computedPropertySpacing: true
 jsxSingleQuote: false
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
@@ -891,6 +898,7 @@ trailingComma: "none"
 exports[`logical-expression.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
+computedPropertySpacing: true
 jsxSingleQuote: false
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
@@ -972,6 +980,7 @@ trailingComma: "none"
 exports[`object-property.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
+computedPropertySpacing: true
 jsxSingleQuote: false
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
@@ -1015,6 +1024,7 @@ const tabs = [
 exports[`open-break.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
+computedPropertySpacing: true
 jsxSingleQuote: false
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
@@ -1062,6 +1072,7 @@ onClick={() => {
 exports[`parens.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
+computedPropertySpacing: true
 jsxSingleQuote: false
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
@@ -1117,6 +1128,7 @@ new Foo( <Component /> );
 exports[`quotes.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
+computedPropertySpacing: true
 jsxSingleQuote: false
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
@@ -1210,6 +1222,7 @@ trailingComma: "none"
 exports[`return-statement.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
+computedPropertySpacing: true
 jsxSingleQuote: false
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
@@ -1327,6 +1340,7 @@ class BreakingClass extends React.component {
 exports[`self-closing.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
+computedPropertySpacing: true
 jsxSingleQuote: false
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
@@ -1348,6 +1362,7 @@ trailingComma: "none"
 exports[`spacing.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
+computedPropertySpacing: true
 jsxSingleQuote: false
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]

@@ -80,6 +80,9 @@ Format options:
   --break-long-method-chains
                            Break method chains with more than 3 method calls, like Prettier 1.x.
                            Defaults to false.
+  --computed-property-spacing
+                           Print spaces between computed property brackets. Status: experimental, with limited testing.
+                           Defaults to false.
   --css-paren-spacing      Print spaces between parens in CSS, WordPress style. Status: experimental, with limited testing.
                            Defaults to false.
   --end-of-line <lf|crlf|cr|auto>
@@ -261,6 +264,9 @@ Format options:
                            Defaults to false.
   --break-long-method-chains
                            Break method chains with more than 3 method calls, like Prettier 1.x.
+                           Defaults to false.
+  --computed-property-spacing
+                           Print spaces between computed property brackets. Status: experimental, with limited testing.
                            Defaults to false.
   --css-paren-spacing      Print spaces between parens in CSS, WordPress style. Status: experimental, with limited testing.
                            Defaults to false.

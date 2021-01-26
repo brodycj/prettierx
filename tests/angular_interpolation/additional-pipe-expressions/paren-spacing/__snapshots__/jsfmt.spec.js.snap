@@ -2,6 +2,7 @@
 
 exports[`inside-computed-member-expression.ng 1`] = `
 ====================================options=====================================
+computedPropertySpacing: true
 parenSpacing: true
 parsers: ["__ng_interpolation"]
 printWidth: 80
@@ -17,6 +18,7 @@ trailingComma: "none"
 
 exports[`inside-member-expression.ng 1`] = `
 ====================================options=====================================
+computedPropertySpacing: true
 parenSpacing: true
 parsers: ["__ng_interpolation"]
 printWidth: 80
@@ -32,6 +34,7 @@ trailingComma: "none"
 
 exports[`inside-optional-expression.ng 1`] = `
 ====================================options=====================================
+computedPropertySpacing: true
 parenSpacing: true
 parsers: ["__ng_interpolation"]
 printWidth: 80
@@ -47,6 +50,7 @@ trailingComma: "none"
 
 exports[`inside-unary.ng 1`] = `
 ====================================options=====================================
+computedPropertySpacing: true
 parenSpacing: true
 parsers: ["__ng_interpolation"]
 printWidth: 80

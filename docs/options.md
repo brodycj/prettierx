@@ -303,6 +303,14 @@ Print spaces between parens in CSS, WordPress style. Status: experimental, with 
 | ------- | --------------------- | ------------------------- |
 | `false` | `--css-paren-spacing` | `cssParenSpacing: <bool>` |
 
+## Computed property spacing
+
+Print spaces between computed property brackets. Status: experimental, with limited testing.
+
+| Default | CLI Override                  | API Override                      |
+| ------- | ----------------------------- | --------------------------------- |
+| `false` | `--computed-property-spacing` | `computedPropertySpacing: <bool>` |
+
 ## Parser
 
 Specify which parser to use.

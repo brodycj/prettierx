@@ -108,6 +108,19 @@ Default: true
 
 exports[`show detailed usage with --help color (write) 1`] = `Array []`;
 
+exports[`show detailed usage with --help computed-property-spacing (stderr) 1`] = `""`;
+
+exports[`show detailed usage with --help computed-property-spacing (stdout) 1`] = `
+"--computed-property-spacing
+
+  Print spaces between computed property brackets. Status: experimental, with limited testing.
+
+Default: false
+"
+`;
+
+exports[`show detailed usage with --help computed-property-spacing (write) 1`] = `Array []`;
+
 exports[`show detailed usage with --help config (stderr) 1`] = `""`;
 
 exports[`show detailed usage with --help config (stdout) 1`] = `

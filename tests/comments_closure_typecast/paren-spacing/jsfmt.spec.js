@@ -7,6 +7,7 @@ const dirpath = `${__dirname}/..`;
 run_spec(dirpath, ["babel", "babel-flow"], {
   // [prettierx] test with --paren-spacing
   parenSpacing: true,
+  computedPropertySpacing: true,
   // [prettierx] recommended option:
   arrowParens: "avoid",
   // [prettierx] "Standard JS" setting:

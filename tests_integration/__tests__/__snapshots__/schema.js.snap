@@ -49,6 +49,11 @@ Object {
           "description": "Break method chains with more than 3 method calls, like Prettier 1.x.",
           "type": "boolean",
         },
+        "computedPropertySpacing": Object {
+          "default": false,
+          "description": "Print spaces between computed property brackets. Status: experimental, with limited testing.",
+          "type": "boolean",
+        },
         "cssParenSpacing": Object {
           "default": false,
           "description": "Print spaces between parens in CSS, WordPress style. Status: experimental, with limited testing.",

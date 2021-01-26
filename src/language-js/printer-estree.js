@@ -252,7 +252,7 @@ function genericPrint(path, options, printPath, args) {
 }
 
 // [prettierx] for alignObjectProperties option
-// (with parenSpacing support):
+// with computedPropertySpacing option support
 function getPropertyPadding(options, path) {
   if (!options.alignObjectProperties) {
     return "";
@@ -286,7 +286,8 @@ function getPropertyPadding(options, path) {
       ? n.extra.raw.length
       : undefined;
 
-  const computedPropertyOverhead = options.parenSpacing ? 4 : 2;
+  // [prettierx] computedPropertySpacing option support
+  const computedPropertyOverhead = options.computedPropertySpacing ? 4 : 2;
 
   // FUTURE TBD from arijs/prettier-miscellaneous#10
   // (does not seem to be needed to pass the tests):
@@ -1652,9 +1653,16 @@ function printPathNoParens(path, options, print, args) {
         // to use the same printPropertyKey call for both
         // computed & non-computed properties
 
+        // [prettierx] computedPropertySpacing option support
+        const computedPropertySpace = options.computedPropertySpacing
+          ? " "
+          : "";
+
         // [prettierx] calculate this overhead in case it is needed,
-        // with parenSpacing support:
-        const computedPropertyOverhead = options.parenSpacing ? 4 : 2;
+        // with computedPropertySpacing option support:
+        const computedPropertyOverhead = options.computedPropertySpacing
+          ? 4
+          : 2;
 
         // [prettierx] compose left part,
         // for alignObjectProperties option
@@ -1663,11 +1671,11 @@ function printPathNoParens(path, options, print, args) {
               // [prettierx] computed property key,
               // with padding as needed for alignment
               "[",
-              // [prettierx] parenSpace option support (...)
-              parenSpace,
+              // [prettierx] computedPropertySpacing option support (...)
+              computedPropertySpace,
               path.call(print, "key"),
-              // [prettierx] parenSpace option support (...)
-              parenSpace,
+              // [prettierx] computedPropertySpacing option support (...)
+              computedPropertySpace,
               "]",
               propertyPadding.slice(computedPropertyOverhead),
             ])
@@ -4046,9 +4054,15 @@ function printPropertyKey(path, options, print) {
   const node = path.getNode();
 
   if (node.computed) {
-    // [prettierx] parenSpacing option support (...)
-    const parenSpace = options.parenSpacing ? " " : "";
-    return concat(["[", parenSpace, path.call(print, "key"), parenSpace, "]"]);
+    // [prettierx] computedPropertySpacing option support (...)
+    const computedPropertySpace = options.computedPropertySpacing ? " " : "";
+    return concat([
+      "[",
+      computedPropertySpace,
+      path.call(print, "key"),
+      computedPropertySpace,
+      "]",
+    ]);
   }
 
   const parent = path.getParentNode();
@@ -5268,26 +5282,36 @@ function printMemberLookup(path, options, print) {
   const n = path.getValue();
   const optional = printOptionalToken(path);
 
-  // [prettierx] parenSpace option support (...)
-  const parenSpace = options.parenSpacing ? " " : "";
-  const parenLine = options.parenSpacing ? line : softline;
+  // [prettierx] computedPropertySpacing option support
+  const computedPropertySpace = options.computedPropertySpacing ? " " : "";
+  const computedPropertyLine = options.computedPropertySpacing
+    ? line
+    : softline;
 
   if (!n.computed) {
     return concat([optional, ".", property]);
   }
 
   if (!n.property || isNumericLiteral(n.property)) {
-    return concat([optional, "[", parenSpace, property, parenSpace, "]"]);
+    // [prettierx] computedPropertySpacing option support
+    return concat([
+      optional,
+      "[",
+      computedPropertySpace,
+      property,
+      computedPropertySpace,
+      "]",
+    ]);
   }
 
-  // [prettierx] parenSpace option support (...)
+  // [prettierx] computedPropertySpacing option support
   return group(
     concat([
       optional,
       "[",
-      // [prettierx] parenSpace option support (...)
-      indent(concat([parenLine, property])),
-      parenLine,
+      // [prettierx] computedPropertySpacing option support
+      indent(concat([computedPropertyLine, property])),
+      computedPropertyLine,
       "]",
     ])
   );

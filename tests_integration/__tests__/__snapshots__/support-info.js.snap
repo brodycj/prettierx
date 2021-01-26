@@ -101,6 +101,10 @@ Object {
       "default": false,
       "type": "boolean",
     },
+    "computedPropertySpacing": Object {
+      "default": false,
+      "type": "boolean",
+    },
     "cssParenSpacing": Object {
       "default": false,
       "type": "boolean",
@@ -799,6 +803,14 @@ exports[`CLI --support-info (stdout) 1`] = `
       \\"default\\": false,
       \\"description\\": \\"Break method chains with more than 3 method calls, like Prettier 1.x.\\",
       \\"name\\": \\"breakLongMethodChains\\",
+      \\"pluginDefaults\\": {},
+      \\"type\\": \\"boolean\\"
+    },
+    {
+      \\"category\\": \\"JavaScript\\",
+      \\"default\\": false,
+      \\"description\\": \\"Print spaces between computed property brackets. Status: experimental, with limited testing.\\",
+      \\"name\\": \\"computedPropertySpacing\\",
       \\"pluginDefaults\\": {},
       \\"type\\": \\"boolean\\"
     },

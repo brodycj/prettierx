@@ -3,6 +3,7 @@
 exports[`bracket_0.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
+computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
@@ -36,6 +37,7 @@ function a() {
 exports[`break-last-call.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
+computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
@@ -164,6 +166,7 @@ it( "should group messages with same created time", () => {
 exports[`break-last-member.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
+computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
@@ -236,6 +239,7 @@ const {
 exports[`break-multiple.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
+computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
@@ -260,6 +264,7 @@ foo().bar.baz();
 exports[`comment.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
+computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
@@ -414,6 +419,7 @@ angular
 exports[`computed.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
+computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
@@ -440,6 +446,7 @@ nock( /test/ )
 exports[`computed-merge.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
+computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
@@ -486,6 +493,7 @@ window.Data[ key ]( "foo" )
 exports[`conditional.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
+computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
@@ -553,6 +561,7 @@ object[
 exports[`d3.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
+computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
@@ -598,6 +607,7 @@ not.d3.scaleLinear().domain( [ 1950, 1980 ] ).range( [ 0, width ] );
 exports[`first_long.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
+computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
@@ -679,6 +689,7 @@ function f() {
 exports[`inline_merge.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
+computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
@@ -726,6 +737,7 @@ var jqxhr = $.ajax( "example.php" ).done( doneFn ).fail( failFn );
 exports[`issue-4125.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
+computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
@@ -1057,6 +1069,7 @@ var l = base
 exports[`logical.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
+computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
@@ -1113,6 +1126,7 @@ const someLongVariableName = (
 exports[`multiple-members.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
+computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
@@ -1209,6 +1223,7 @@ wrapper
 exports[`object-literal.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
+computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
@@ -1253,6 +1268,7 @@ of( "test" )
 exports[`short-names.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
+computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
@@ -1275,6 +1291,7 @@ const svgJsFiles = fs
 exports[`square_0.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
+computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
@@ -1307,6 +1324,7 @@ const component = find( ".org-lclp-edit-copy-url-banner__link" )[ 0 ]
 exports[`test.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
+computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
@@ -1334,6 +1352,7 @@ method()
 exports[`this.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
+computedPropertySpacing: true
 parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
