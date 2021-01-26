@@ -10,6 +10,7 @@ parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 spaceUnaryOps: true
 templateCurlySpacing: true
+typeAngleBracketSpacing: true
                                                                                 | printWidth
 =====================================input======================================
 function a() {
@@ -47,6 +48,7 @@ parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 spaceUnaryOps: true
 templateCurlySpacing: true
+typeAngleBracketSpacing: true
                                                                                 | printWidth
 =====================================input======================================
 export default store => {
@@ -179,6 +181,7 @@ parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 spaceUnaryOps: true
 templateCurlySpacing: true
+typeAngleBracketSpacing: true
                                                                                 | printWidth
 =====================================input======================================
 SomeVeryLongUpperCaseConstant.someVeryLongCallExpression().some_very_long_member_expression
@@ -255,6 +258,7 @@ parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 spaceUnaryOps: true
 templateCurlySpacing: true
+typeAngleBracketSpacing: true
                                                                                 | printWidth
 =====================================input======================================
 object.foo().bar().baz();
@@ -283,6 +287,7 @@ parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 spaceUnaryOps: true
 templateCurlySpacing: true
+typeAngleBracketSpacing: true
                                                                                 | printWidth
 =====================================input======================================
 function f() {
@@ -441,6 +446,7 @@ parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 spaceUnaryOps: true
 templateCurlySpacing: true
+typeAngleBracketSpacing: true
                                                                                 | printWidth
 =====================================input======================================
 nock(/test/)
@@ -471,6 +477,7 @@ parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 spaceUnaryOps: true
 templateCurlySpacing: true
+typeAngleBracketSpacing: true
                                                                                 | printWidth
 =====================================input======================================
 [].forEach(key => {
@@ -521,6 +528,7 @@ parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 spaceUnaryOps: true
 templateCurlySpacing: true
+typeAngleBracketSpacing: true
                                                                                 | printWidth
 =====================================input======================================
 (a ? b : c).d();
@@ -592,6 +600,7 @@ parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 spaceUnaryOps: true
 templateCurlySpacing: true
+typeAngleBracketSpacing: true
                                                                                 | printWidth
 =====================================input======================================
 d3.select('body')
@@ -641,6 +650,7 @@ parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 spaceUnaryOps: true
 templateCurlySpacing: true
+typeAngleBracketSpacing: true
                                                                                 | printWidth
 =====================================input======================================
 export default function theFunction(action$, store) {
@@ -726,6 +736,7 @@ parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 spaceUnaryOps: true
 templateCurlySpacing: true
+typeAngleBracketSpacing: true
                                                                                 | printWidth
 =====================================input======================================
 Object.keys(
@@ -777,6 +788,7 @@ parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 spaceUnaryOps: true
 templateCurlySpacing: true
+typeAngleBracketSpacing: true
                                                                                 | printWidth
 =====================================input======================================
 // examples from https://github.com/prettier/prettier/issues/4125
@@ -1112,6 +1124,7 @@ parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 spaceUnaryOps: true
 templateCurlySpacing: true
+typeAngleBracketSpacing: true
                                                                                 | printWidth
 =====================================input======================================
 const someLongVariableName = (idx(
@@ -1172,6 +1185,7 @@ parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 spaceUnaryOps: true
 templateCurlySpacing: true
+typeAngleBracketSpacing: true
                                                                                 | printWidth
 =====================================input======================================
 if (testConfig.ENABLE_ONLINE_TESTS === "true") {
@@ -1272,6 +1286,7 @@ parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 spaceUnaryOps: true
 templateCurlySpacing: true
+typeAngleBracketSpacing: true
                                                                                 | printWidth
 =====================================input======================================
 of("test")
@@ -1320,6 +1335,7 @@ parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 spaceUnaryOps: true
 templateCurlySpacing: true
+typeAngleBracketSpacing: true
                                                                                 | printWidth
 =====================================input======================================
 const svgJsFiles = fs
@@ -1346,6 +1362,7 @@ parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 spaceUnaryOps: true
 templateCurlySpacing: true
+typeAngleBracketSpacing: true
                                                                                 | printWidth
 =====================================input======================================
 const version = someLongString
@@ -1382,6 +1399,7 @@ parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 spaceUnaryOps: true
 templateCurlySpacing: true
+typeAngleBracketSpacing: true
                                                                                 | printWidth
 =====================================input======================================
 method().then(x => x)
@@ -1413,6 +1431,7 @@ parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 spaceUnaryOps: true
 templateCurlySpacing: true
+typeAngleBracketSpacing: true
                                                                                 | printWidth
 =====================================input======================================
 const sel = this.connections

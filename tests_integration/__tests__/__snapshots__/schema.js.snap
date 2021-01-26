@@ -448,6 +448,16 @@ in order for it to be formatted.",
             },
           ],
         },
+        "typeAngleBracketSpacing": Object {
+          "default": false,
+          "description": "Print spaces between type angle brackets. Status: experimental, with limited testing.",
+          "type": "boolean",
+        },
+        "typeBracketSpacing": Object {
+          "default": false,
+          "description": "Print spaces between type brackets. Status: experimental, with limited testing.",
+          "type": "boolean",
+        },
         "useTabs": Object {
           "default": false,
           "description": "Indent with tabs instead of spaces.",

@@ -5,6 +5,7 @@ exports[`single.js 1`] = `
 parenSpacing: true
 parsers: ["flow", "babel", "babel-flow"]
 printWidth: 80
+typeAngleBracketSpacing: true
                                                                                 | printWidth
 =====================================input======================================
 const selectorByPath:
@@ -30,6 +31,7 @@ exports[`test.js 1`] = `
 parenSpacing: true
 parsers: ["flow", "babel", "babel-flow"]
 printWidth: 80
+typeAngleBracketSpacing: true
                                                                                 | printWidth
 =====================================input======================================
 type Banana = {

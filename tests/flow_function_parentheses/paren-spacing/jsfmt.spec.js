@@ -9,4 +9,5 @@ const dirpath = `${__dirname}/..`;
 // (note that this combination is **not** recommended)
 run_spec(dirpath, ["flow", "babel", "babel-flow"], {
   parenSpacing: true,
+  typeAngleBracketSpacing: true,
 });

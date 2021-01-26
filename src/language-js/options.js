@@ -82,6 +82,20 @@ module.exports = {
     description:
       "Print spaces between template curly brackets. Status: experimental, with limited testing.",
   },
+  typeAngleBracketSpacing: {
+    category: CATEGORY_JAVASCRIPT,
+    type: "boolean",
+    default: false,
+    description:
+      "Print spaces between type angle brackets. Status: experimental, with limited testing.",
+  },
+  typeBracketSpacing: {
+    category: CATEGORY_JAVASCRIPT,
+    type: "boolean",
+    default: false,
+    description:
+      "Print spaces between type brackets. Status: experimental, with limited testing.",
+  },
   jsxBracketSameLine: {
     since: "0.17.0",
     category: CATEGORY_JAVASCRIPT,

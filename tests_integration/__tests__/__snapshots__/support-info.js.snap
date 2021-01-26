@@ -301,6 +301,14 @@ Object {
       "default": "es5",
       "type": "choice",
     },
+    "typeAngleBracketSpacing": Object {
+      "default": false,
+      "type": "boolean",
+    },
+    "typeBracketSpacing": Object {
+      "default": false,
+      "type": "boolean",
+    },
     "useTabs": Object {
       "default": false,
       "type": "boolean",
@@ -1209,6 +1217,22 @@ exports[`CLI --support-info (stdout) 1`] = `
       \\"pluginDefaults\\": {},
       \\"since\\": \\"0.0.0\\",
       \\"type\\": \\"choice\\"
+    },
+    {
+      \\"category\\": \\"JavaScript\\",
+      \\"default\\": false,
+      \\"description\\": \\"Print spaces between type angle brackets. Status: experimental, with limited testing.\\",
+      \\"name\\": \\"typeAngleBracketSpacing\\",
+      \\"pluginDefaults\\": {},
+      \\"type\\": \\"boolean\\"
+    },
+    {
+      \\"category\\": \\"JavaScript\\",
+      \\"default\\": false,
+      \\"description\\": \\"Print spaces between type brackets. Status: experimental, with limited testing.\\",
+      \\"name\\": \\"typeBracketSpacing\\",
+      \\"pluginDefaults\\": {},
+      \\"type\\": \\"boolean\\"
     },
     {
       \\"category\\": \\"Global\\",

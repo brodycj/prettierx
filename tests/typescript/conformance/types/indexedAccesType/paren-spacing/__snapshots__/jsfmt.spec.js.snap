@@ -5,6 +5,8 @@ exports[`indexedAccesType.ts 1`] = `
 parenSpacing: true
 parsers: ["typescript"]
 printWidth: 80
+typeAngleBracketSpacing: true
+typeBracketSpacing: true
                                                                                 | printWidth
 =====================================input======================================
 const a: Foo['bar'] = {

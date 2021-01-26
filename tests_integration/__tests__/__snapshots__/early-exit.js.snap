@@ -132,6 +132,11 @@ Format options:
   --trailing-comma <es5|none|all>
                            Print trailing commas wherever possible when multi-line.
                            Defaults to es5.
+  --type-angle-bracket-spacing
+                           Print spaces between type angle brackets. Status: experimental, with limited testing.
+                           Defaults to false.
+  --type-bracket-spacing   Print spaces between type brackets. Status: experimental, with limited testing.
+                           Defaults to false.
   --use-tabs               Indent with tabs instead of spaces.
                            Defaults to false.
   --vue-indent-script-and-style
@@ -323,6 +328,11 @@ Format options:
   --trailing-comma <es5|none|all>
                            Print trailing commas wherever possible when multi-line.
                            Defaults to es5.
+  --type-angle-bracket-spacing
+                           Print spaces between type angle brackets. Status: experimental, with limited testing.
+                           Defaults to false.
+  --type-bracket-spacing   Print spaces between type brackets. Status: experimental, with limited testing.
+                           Defaults to false.
   --use-tabs               Indent with tabs instead of spaces.
                            Defaults to false.
   --vue-indent-script-and-style

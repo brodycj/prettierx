@@ -9,5 +9,6 @@ run_spec(dirpath, ["babel-flow", "flow", "typescript"], {
   parenSpacing: true,
   arrayBracketSpacing: true,
   computedPropertySpacing: true,
+  typeAngleBracketSpacing: true,
   trailingComma: "none", // ("Standard JS")
 });

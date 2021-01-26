@@ -8,6 +8,7 @@ run_spec(dirpath, ["typescript"], {
   parenSpacing: true,
   yieldStarSpacing: true,
   generatorStarSpacing: true,
+  typeAngleBracketSpacing: true,
   spaceBeforeFunctionParen: true,
   singleQuote: true,
   jsxSingleQuote: true,

@@ -335,6 +335,22 @@ Print spaces between template curly brackets. Status: experimental, with limited
 | ------- | -------------------------- | ------------------------------ |
 | `false` | `--template-curly-spacing` | `templateCurlySpacing: <bool>` |
 
+## Type angle bracket spacing
+
+Print spaces between type angle brackets. Status: experimental, with limited testing.
+
+| Default | CLI Override                   | API Override                      |
+| ------- | ------------------------------ | --------------------------------- |
+| `false` | `--type-angle-bracket-spacing` | `typeAngleBracketSpacing: <bool>` |
+
+## Type bracket spacing
+
+Print spaces between type brackets. Status: experimental, with limited testing.
+
+| Default | CLI Override             | API Override                 |
+| ------- | ------------------------ | ---------------------------- |
+| `false` | `--type-bracket-spacing` | `typeBracketSpacing: <bool>` |
+
 ## Parser
 
 Specify which parser to use.

@@ -787,6 +787,32 @@ Default: es5
 
 exports[`show detailed usage with --help trailing-comma (write) 1`] = `Array []`;
 
+exports[`show detailed usage with --help type-angle-bracket-spacing (stderr) 1`] = `""`;
+
+exports[`show detailed usage with --help type-angle-bracket-spacing (stdout) 1`] = `
+"--type-angle-bracket-spacing
+
+  Print spaces between type angle brackets. Status: experimental, with limited testing.
+
+Default: false
+"
+`;
+
+exports[`show detailed usage with --help type-angle-bracket-spacing (write) 1`] = `Array []`;
+
+exports[`show detailed usage with --help type-bracket-spacing (stderr) 1`] = `""`;
+
+exports[`show detailed usage with --help type-bracket-spacing (stdout) 1`] = `
+"--type-bracket-spacing
+
+  Print spaces between type brackets. Status: experimental, with limited testing.
+
+Default: false
+"
+`;
+
+exports[`show detailed usage with --help type-bracket-spacing (write) 1`] = `Array []`;
+
 exports[`show detailed usage with --help use-tabs (stderr) 1`] = `""`;
 
 exports[`show detailed usage with --help use-tabs (stdout) 1`] = `

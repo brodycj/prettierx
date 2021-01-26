@@ -10,6 +10,7 @@ printWidth: 80
 semi: false
 singleQuote: true
 spaceBeforeFunctionParen: true
+typeAngleBracketSpacing: true
 yieldStarSpacing: true
                                                                                 | printWidth
 =====================================input======================================
@@ -63,6 +64,7 @@ printWidth: 80
 semi: false
 singleQuote: true
 spaceBeforeFunctionParen: true
+typeAngleBracketSpacing: true
 yieldStarSpacing: true
                                                                                 | printWidth
 =====================================input======================================

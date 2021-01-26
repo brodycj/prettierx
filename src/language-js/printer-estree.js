@@ -3383,13 +3383,14 @@ function printPathNoParens(path, options, print, args) {
     case "TypeParameter": {
       const parent = path.getParentNode();
       if (parent.type === "TSMappedType") {
-        // [prettierx] parenSpacing option support (...)
-        parts.push("[", parenSpace, path.call(print, "name"));
+        // [prettierx] typeBracketSpacing option support (...)
+        const typeBracketSpace = options.typeBracketSpacing ? " " : "";
+        parts.push("[", typeBracketSpace, path.call(print, "name"));
         if (n.constraint) {
           parts.push(" in ", path.call(print, "constraint"));
         }
-        // [prettierx] parenSpacing option support (...)
-        parts.push(parenSpace, "]");
+        // [prettierx] typeBracketSpacing option support (...)
+        parts.push(typeBracketSpace, "]");
         return concat(parts);
       }
 
@@ -3610,12 +3611,11 @@ function printPathNoParens(path, options, print, args) {
       return concat([
         path.call(print, "objectType"),
         "[",
-        // [prettierx] parenSpacing option support (...)
-        parenSpace,
+        // [prettierx] typeBracketSpacing option support (...)
+        options.typeBracketSpacing ? " " : "",
         path.call(print, "indexType"),
-        // [prettierx] parenSpacing option support (...)
-        parenSpace,
-        // [prettierx merge from prettier@2.0.5 ...]
+        // [prettierx] typeBracketSpacing option support (...)
+        options.typeBracketSpacing ? " " : "",
         "]",
       ]);
     case "TSConstructSignatureDeclaration":
@@ -5060,9 +5060,11 @@ function printTypeScriptModifiers(path, options, print) {
 function printTypeParameters(path, options, print, paramsKey) {
   const n = path.getValue();
 
-  // [prettierx] for --paren-spacing option support (...)
-  const parenSpace = options.parenSpacing ? " " : "";
-  const parenLine = options.parenSpacing ? line : softline;
+  // [prettierx] typeAngleBracketSpacing option support (...)
+  const typeAngleBracketSpace = options.typeAngleBracketSpacing ? " " : "";
+  const typeAngleBracketLine = options.typeAngleBracketSpacing
+    ? line
+    : softline;
 
   if (!n[paramsKey]) {
     return "";
@@ -5123,28 +5125,28 @@ function printTypeParameters(path, options, print, paramsKey) {
   }
 
   if (shouldInline) {
-    // [prettierx] with --paren-spacing option support (...)
+    // [prettierx] typeAngleBracketSpacing option support (...)
     return concat([
       "<",
-      // [prettierx] with --paren-spacing option support (...)
-      parenSpace,
+      // [prettierx] typeAngleBracketSpacing option support (...)
+      typeAngleBracketSpace,
       join(", ", path.map(print, paramsKey)),
-      parenSpace,
+      typeAngleBracketSpace,
       printDanglingCommentsForInline(n),
       ">",
     ]);
   }
 
   return group(
-    // [prettierx] with --paren-spacing option support (...)
+    // [prettierx] typeAngleBracketSpacing option support (...)
     concat([
       "<",
       indent(
         concat([
-          // [prettierx] with --paren-spacing option support (...)
-          parenLine,
+          // [prettierx] typeAngleBracketSpacing option support (...)
+          typeAngleBracketLine,
           // [prettierx] keep break after comma here,
-          // regardless of --paren-spacing option (...)
+          // regardless of typeAngleBracketSpacing option (...)
           join(concat([",", line]), path.map(print, paramsKey)),
         ])
       ),
@@ -5155,8 +5157,8 @@ function printTypeParameters(path, options, print, paramsKey) {
           ? ","
           : ""
       ),
-      // [prettierx] with --paren-spacing option support (...)
-      parenLine,
+      // [prettierx] typeAngleBracketSpacing option support (...)
+      typeAngleBracketLine,
       ">",
     ])
   );

@@ -8,6 +8,7 @@ parenSpacing: true
 parsers: ["babel-flow", "flow", "typescript"]
 printWidth: 80
 trailingComma: "none"
+typeAngleBracketSpacing: true
                                                                                 | printWidth
 =====================================input======================================
 h(f(g(() => {
@@ -116,6 +117,7 @@ parenSpacing: true
 parsers: ["babel-flow", "flow", "typescript"]
 printWidth: 80
 trailingComma: "none"
+typeAngleBracketSpacing: true
                                                                                 | printWidth
 =====================================input======================================
 runtimeAgent.getProperties(
@@ -150,6 +152,7 @@ parenSpacing: true
 parsers: ["babel-flow", "flow", "typescript"]
 printWidth: 80
 trailingComma: "none"
+typeAngleBracketSpacing: true
                                                                                 | printWidth
 =====================================input======================================
 function helloWorld() {
@@ -254,6 +257,7 @@ parenSpacing: true
 parsers: ["babel-flow", "flow", "typescript"]
 printWidth: 80
 trailingComma: "none"
+typeAngleBracketSpacing: true
                                                                                 | printWidth
 =====================================input======================================
 const response = something.$http.get<ThingamabobService.DetailsData>(

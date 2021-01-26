@@ -12,6 +12,7 @@ printWidth: 80
 singleQuote: false
 templateCurlySpacing: true
 trailingComma: "none"
+typeAngleBracketSpacing: true
                                                                                 | printWidth
 =====================================input======================================
 const UsersList = ({ users }) => (
@@ -96,6 +97,7 @@ printWidth: 80
 singleQuote: false
 templateCurlySpacing: true
 trailingComma: "none"
+typeAngleBracketSpacing: true
                                                                                 | printWidth
 =====================================input======================================
 <Component
@@ -178,6 +180,7 @@ printWidth: 80
 singleQuote: false
 templateCurlySpacing: true
 trailingComma: "none"
+typeAngleBracketSpacing: true
                                                                                 | printWidth
 =====================================input======================================
 // There are two ways to print ConditionalExpressions: "normal mode" and
@@ -483,6 +486,7 @@ printWidth: 80
 singleQuote: false
 templateCurlySpacing: true
 trailingComma: "none"
+typeAngleBracketSpacing: true
                                                                                 | printWidth
 =====================================input======================================
 <View
@@ -777,6 +781,7 @@ printWidth: 80
 singleQuote: false
 templateCurlySpacing: true
 trailingComma: "none"
+typeAngleBracketSpacing: true
                                                                                 | printWidth
 =====================================input======================================
 const aDiv = (
@@ -807,6 +812,7 @@ printWidth: 80
 singleQuote: false
 templateCurlySpacing: true
 trailingComma: "none"
+typeAngleBracketSpacing: true
                                                                                 | printWidth
 =====================================input======================================
 export default () => <a href="https://foo.bar?q1=foo&q2=bar" />;
@@ -833,6 +839,7 @@ printWidth: 80
 singleQuote: false
 templateCurlySpacing: true
 trailingComma: "none"
+typeAngleBracketSpacing: true
                                                                                 | printWidth
 =====================================input======================================
 <div>
@@ -921,6 +928,7 @@ printWidth: 80
 singleQuote: false
 templateCurlySpacing: true
 trailingComma: "none"
+typeAngleBracketSpacing: true
                                                                                 | printWidth
 =====================================input======================================
 <div>
@@ -1005,6 +1013,7 @@ printWidth: 80
 singleQuote: false
 templateCurlySpacing: true
 trailingComma: "none"
+typeAngleBracketSpacing: true
                                                                                 | printWidth
 =====================================input======================================
 const tabs = [
@@ -1051,6 +1060,7 @@ printWidth: 80
 singleQuote: false
 templateCurlySpacing: true
 trailingComma: "none"
+typeAngleBracketSpacing: true
                                                                                 | printWidth
 =====================================input======================================
 <td
@@ -1101,6 +1111,7 @@ printWidth: 80
 singleQuote: false
 templateCurlySpacing: true
 trailingComma: "none"
+typeAngleBracketSpacing: true
                                                                                 | printWidth
 =====================================input======================================
 a = [
@@ -1159,6 +1170,7 @@ printWidth: 80
 singleQuote: false
 templateCurlySpacing: true
 trailingComma: "none"
+typeAngleBracketSpacing: true
                                                                                 | printWidth
 =====================================input======================================
 <div id="&quot;'<>&amp;quot;" />;
@@ -1255,6 +1267,7 @@ printWidth: 80
 singleQuote: false
 templateCurlySpacing: true
 trailingComma: "none"
+typeAngleBracketSpacing: true
                                                                                 | printWidth
 =====================================input======================================
 const NonBreakingArrowExpression = () => <div />;
@@ -1375,6 +1388,7 @@ printWidth: 80
 singleQuote: false
 templateCurlySpacing: true
 trailingComma: "none"
+typeAngleBracketSpacing: true
                                                                                 | printWidth
 =====================================input======================================
 <Foo></Foo>;
@@ -1399,6 +1413,7 @@ printWidth: 80
 singleQuote: false
 templateCurlySpacing: true
 trailingComma: "none"
+typeAngleBracketSpacing: true
                                                                                 | printWidth
 =====================================input======================================
 const Labels = {
