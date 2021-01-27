@@ -1,4 +1,4 @@
-# prettierx - less opinionated code formatter fork of prettier
+# prettierX - less opinionated code formatter fork of prettier
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 [![npm](https://img.shields.io/npm/v/prettierx.svg)](https://www.npmjs.com/package/prettierx)
