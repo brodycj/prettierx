@@ -478,6 +478,11 @@ in order for it to be formatted.",
           "description": "Indent script and style tags in Vue files.",
           "type": "boolean",
         },
+        "yamlBracketSpacing": Object {
+          "default": true,
+          "description": "Put spaces between brackets & curly braces for Yaml.",
+          "type": "boolean",
+        },
         "yieldStarSpacing": Object {
           "default": false,
           "description": "Add spaces around the star ('*') in \`yield*\` expressions (before and after - from eslint).",

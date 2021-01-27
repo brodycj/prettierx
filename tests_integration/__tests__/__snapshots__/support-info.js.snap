@@ -325,6 +325,10 @@ Object {
       "default": false,
       "type": "boolean",
     },
+    "yamlBracketSpacing": Object {
+      "default": true,
+      "type": "boolean",
+    },
     "yieldStarSpacing": Object {
       "default": false,
       "type": "boolean",
@@ -1275,6 +1279,15 @@ exports[`CLI --support-info (stdout) 1`] = `
       \\"name\\": \\"vueIndentScriptAndStyle\\",
       \\"pluginDefaults\\": {},
       \\"since\\": \\"1.19.0\\",
+      \\"type\\": \\"boolean\\"
+    },
+    {
+      \\"category\\": \\"Other\\",
+      \\"default\\": true,
+      \\"description\\": \\"Put spaces between brackets & curly braces for Yaml.\\",
+      \\"name\\": \\"yamlBracketSpacing\\",
+      \\"oppositeDescription\\": \\"Do not put spaces between brackets or curly braces for Yaml. Option status: experimental, with limited testing.\\",
+      \\"pluginDefaults\\": {},
       \\"type\\": \\"boolean\\"
     },
     {

@@ -534,6 +534,17 @@ exports[`show detailed usage with --help no-type-curly-spacing (stdout) 1`] = `
 
 exports[`show detailed usage with --help no-type-curly-spacing (write) 1`] = `Array []`;
 
+exports[`show detailed usage with --help no-yaml-bracket-spacing (stderr) 1`] = `""`;
+
+exports[`show detailed usage with --help no-yaml-bracket-spacing (stdout) 1`] = `
+"--no-yaml-bracket-spacing
+
+  Do not put spaces between brackets or curly braces for Yaml. Option status: experimental, with limited testing.
+"
+`;
+
+exports[`show detailed usage with --help no-yaml-bracket-spacing (write) 1`] = `Array []`;
+
 exports[`show detailed usage with --help parser (stderr) 1`] = `""`;
 
 exports[`show detailed usage with --help parser (stdout) 1`] = `
@@ -919,6 +930,19 @@ exports[`show detailed usage with --help write (stdout) 1`] = `
 `;
 
 exports[`show detailed usage with --help write (write) 1`] = `Array []`;
+
+exports[`show detailed usage with --help yaml-bracket-spacing (stderr) 1`] = `""`;
+
+exports[`show detailed usage with --help yaml-bracket-spacing (stdout) 1`] = `
+"--yaml-bracket-spacing
+
+  Put spaces between brackets & curly braces for Yaml.
+
+Default: true
+"
+`;
+
+exports[`show detailed usage with --help yaml-bracket-spacing (write) 1`] = `Array []`;
 
 exports[`show detailed usage with --help yield-star-spacing (stderr) 1`] = `""`;
 

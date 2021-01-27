@@ -51,6 +51,7 @@ prettierx <options> <file(s)>
 - `--type-angle-bracket-spacing` (`typeAngleBracketSpacing: <bool>`): Put spaces between type angle brackets. Status: experimental, with limited testing.
 - `--type-bracket-spacing` (`typeBracketSpacing: <bool>`): Put spaces between type brackets. Status: experimental, with limited testing.
 - `--no-graphql-curly-spacing` (`graphqlCurlySpacing: <bool>`): Do not put spaces between curly braces for GraphQL. Option status: experimental, with limited testing.
+- `--no-no-yaml-bracket-spacing` (`yamlBracketSpacing: <bool>`): Do not put spaces between brackets or curly for Yaml. Option status: experimental, with limited testing.
 - `--no-type-curly-spacing` (`typeCurlySpacing: <bool>`): Do not put spaces between type curly braces. Option status: experimental, with limited testing.
 
 (See [./docs/options.md](./docs/options.md) for more information.)

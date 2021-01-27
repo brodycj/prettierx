@@ -357,6 +357,14 @@ Put or do not put spaces between curly braces for GraphQL. Option status: experi
 | ------- | ---------------------------- | ----------------------------- |
 | `true`  | `--no-graphql-curly-spacing` | `graphqlCurlySpacing: <bool>` |
 
+## Yaml curly spacing
+
+Do not put spaces between brackets or curly for Yaml. Option status: experimental, with limited testing.
+
+| Default | CLI Override                   | API Override                 |
+| ------- | ------------------------------ | ---------------------------- |
+| `true`  | `--no-no-yaml-bracket-spacing` | `yamlBracketSpacing: <bool>` |
+
 ## Type curly spacing
 
 Put or do not put spaces between type curly braces. Option status: experimental, with limited testing.
