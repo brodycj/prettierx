@@ -4,9 +4,9 @@ exports[`arrays.js 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
                                                                                 | printWidth
@@ -39,9 +39,9 @@ exports[`bind.js 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
                                                                                 | printWidth
@@ -132,9 +132,9 @@ exports[`class.js 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
                                                                                 | printWidth
@@ -177,9 +177,9 @@ exports[`conditionals.js 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
                                                                                 | printWidth
@@ -249,9 +249,9 @@ exports[`destructuring.js 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
                                                                                 | printWidth
@@ -272,9 +272,9 @@ exports[`expressions.js 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
                                                                                 | printWidth
@@ -319,9 +319,9 @@ exports[`functions.js 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
                                                                                 | printWidth
@@ -374,9 +374,9 @@ exports[`html-template-literals.js 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
                                                                                 | printWidth
@@ -455,9 +455,9 @@ exports[`import-export.js 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
                                                                                 | printWidth
@@ -490,9 +490,9 @@ exports[`jest-test-each.js 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
                                                                                 | printWidth
@@ -523,9 +523,9 @@ exports[`loops.js 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
                                                                                 | printWidth
@@ -583,9 +583,9 @@ exports[`nullish.js 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
                                                                                 | printWidth
@@ -612,9 +612,9 @@ exports[`objects.js 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
                                                                                 | printWidth
@@ -647,9 +647,9 @@ exports[`return.js 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
                                                                                 | printWidth
@@ -678,9 +678,9 @@ exports[`sequence.js 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
                                                                                 | printWidth
@@ -725,9 +725,9 @@ exports[`spread.js 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
                                                                                 | printWidth
@@ -758,9 +758,9 @@ exports[`switch.js 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
                                                                                 | printWidth
@@ -801,9 +801,9 @@ exports[`template-literals.js 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
                                                                                 | printWidth
@@ -927,9 +927,9 @@ exports[`ternaries.js 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
                                                                                 | printWidth
@@ -973,9 +973,9 @@ exports[`throw.js 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
                                                                                 | printWidth
@@ -1004,9 +1004,9 @@ exports[`try-catch.js 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
                                                                                 | printWidth
@@ -1031,9 +1031,9 @@ exports[`with.js 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "babel-ts"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
                                                                                 | printWidth

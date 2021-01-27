@@ -256,16 +256,6 @@ Valid options:
 | ------- | -------------------------- | --------------------------- |
 | `true`  | `--no-align-ternary-lines` | `alignTernaryLines: <bool>` |
 
-## paren spacing
-
-Print spaces between parens, WordPress style (not recommended with default `arrowParens: "always" setting).
-
-Status: experimental, with some known paren spacing formatting issues.
-
-| Default | CLI Override      | API Override           |
-| ------- | ----------------- | ---------------------- |
-| `false` | `--paren-spacing` | `parenSpacing: <bool>` |
-
 ## Align object properties
 
 Always add a line break before else.
@@ -326,6 +316,14 @@ Print spaces after unary operator symbols, except in the middle of combinations 
 | Default | CLI Override        | API Override            |
 | ------- | ------------------- | ----------------------- |
 | `false` | `--space-unary-ops` | `spaceUnaryOps: <bool>` |
+
+## Spaces in parens
+
+Print spaces in between parens, WordPress style (not recommended in combination with the default `arrowParens: "always" option). Status: experimental, with limited testing.
+
+| Default | CLI Override        | API Override            |
+| ------- | ------------------- | ----------------------- |
+| `false` | `--space-in-parens` | `spaceInParens: <bool>` |
 
 ## Template curly spacing
 

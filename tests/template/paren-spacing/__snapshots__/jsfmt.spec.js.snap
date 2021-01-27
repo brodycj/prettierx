@@ -4,9 +4,9 @@ exports[`arrow.js 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow"]
 printWidth: 80
+spaceInParens: true
 templateCurlySpacing: true
 trailingComma: "none"
                                                                                 | printWidth
@@ -35,9 +35,9 @@ exports[`call.js 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow"]
 printWidth: 80
+spaceInParens: true
 templateCurlySpacing: true
 trailingComma: "none"
                                                                                 | printWidth
@@ -76,9 +76,9 @@ exports[`comment.js 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow"]
 printWidth: 80
+spaceInParens: true
 templateCurlySpacing: true
 trailingComma: "none"
                                                                                 | printWidth
@@ -120,9 +120,9 @@ exports[`faulty-locations.js 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow"]
 printWidth: 80
+spaceInParens: true
 templateCurlySpacing: true
 trailingComma: "none"
                                                                                 | printWidth
@@ -165,9 +165,9 @@ exports[`graphql.js 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow"]
 printWidth: 80
+spaceInParens: true
 templateCurlySpacing: true
 trailingComma: "none"
                                                                                 | printWidth
@@ -216,9 +216,9 @@ exports[`indent.js 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow"]
 printWidth: 80
+spaceInParens: true
 templateCurlySpacing: true
 trailingComma: "none"
                                                                                 | printWidth
@@ -274,9 +274,9 @@ exports[`inline.js 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow"]
 printWidth: 80
+spaceInParens: true
 templateCurlySpacing: true
 trailingComma: "none"
                                                                                 | printWidth
@@ -403,9 +403,9 @@ exports[`parenthesis.js 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow"]
 printWidth: 80
+spaceInParens: true
 templateCurlySpacing: true
 trailingComma: "none"
                                                                                 | printWidth

@@ -4,9 +4,9 @@ exports[`arrow_function_expression.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 templateCurlySpacing: true
 typeAngleBracketSpacing: true
                                                                                 | printWidth
@@ -92,9 +92,9 @@ exports[`block_like.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 templateCurlySpacing: true
 typeAngleBracketSpacing: true
                                                                                 | printWidth
@@ -111,9 +111,9 @@ exports[`call.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 templateCurlySpacing: true
 typeAngleBracketSpacing: true
                                                                                 | printWidth
@@ -912,9 +912,9 @@ exports[`comment.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 templateCurlySpacing: true
 typeAngleBracketSpacing: true
                                                                                 | printWidth
@@ -989,9 +989,9 @@ exports[`currying.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 templateCurlySpacing: true
 typeAngleBracketSpacing: true
                                                                                 | printWidth
@@ -1040,9 +1040,9 @@ exports[`long-call-no-args.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 templateCurlySpacing: true
 typeAngleBracketSpacing: true
                                                                                 | printWidth
@@ -1062,9 +1062,9 @@ exports[`long-contents.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 templateCurlySpacing: true
 typeAngleBracketSpacing: true
                                                                                 | printWidth
@@ -1090,9 +1090,9 @@ exports[`parens.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 templateCurlySpacing: true
 typeAngleBracketSpacing: true
                                                                                 | printWidth
@@ -1145,9 +1145,9 @@ exports[`short_body.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 templateCurlySpacing: true
 typeAngleBracketSpacing: true
                                                                                 | printWidth
@@ -1174,9 +1174,9 @@ exports[`type_params.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 templateCurlySpacing: true
 typeAngleBracketSpacing: true
                                                                                 | printWidth

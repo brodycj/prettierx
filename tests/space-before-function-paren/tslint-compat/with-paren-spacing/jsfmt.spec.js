@@ -5,7 +5,7 @@
 const dirpath = `${__dirname}/..`;
 
 run_spec(dirpath, ["typescript"], {
-  parenSpacing: true,
+  spaceInParens: true,
   typeAngleBracketSpacing: true,
   // "Standard JS":
   spaceBeforeFunctionParen: true,
@@ -13,7 +13,7 @@ run_spec(dirpath, ["typescript"], {
 });
 
 run_spec(dirpath, ["typescript"], {
-  parenSpacing: true,
+  spaceInParens: true,
   typeAngleBracketSpacing: true,
   // "Standard JS":
   trailingComma: "none",

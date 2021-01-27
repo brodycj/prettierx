@@ -105,8 +105,6 @@ Format options:
                            Defaults to false.
   --jsx-single-quote       Use single quotes in JSX.
                            Defaults to false.
-  --paren-spacing          Print spaces between parens, WordPress style.
-                           Defaults to false.
   --parser <flow|babel|babel-flow|babel-ts|typescript|css|less|scss|json|json5|json-stringify|graphql|markdown|mdx|vue|yaml|html|angular|lwc>
                            Which parser to use.
   --print-width <int>      The line length where Prettier will try wrap.
@@ -122,6 +120,8 @@ Format options:
                            Defaults to false.
   --space-before-function-paren
                            Put a space before function parenthesis.
+                           Defaults to false.
+  --space-in-parens        Print spaces in between parens, WordPress style (not recommended in combination with the default \`arrowParens: \\"always\\" option). Status: experimental, with limited testing.
                            Defaults to false.
   --space-unary-ops        Print spaces after unary operator symbols, except in the middle of combinations such as !!. Status: experimental, with limited testing.
                            Defaults to false.
@@ -301,8 +301,6 @@ Format options:
                            Defaults to false.
   --jsx-single-quote       Use single quotes in JSX.
                            Defaults to false.
-  --paren-spacing          Print spaces between parens, WordPress style.
-                           Defaults to false.
   --parser <flow|babel|babel-flow|babel-ts|typescript|css|less|scss|json|json5|json-stringify|graphql|markdown|mdx|vue|yaml|html|angular|lwc>
                            Which parser to use.
   --print-width <int>      The line length where Prettier will try wrap.
@@ -318,6 +316,8 @@ Format options:
                            Defaults to false.
   --space-before-function-paren
                            Put a space before function parenthesis.
+                           Defaults to false.
+  --space-in-parens        Print spaces in between parens, WordPress style (not recommended in combination with the default \`arrowParens: \\"always\\" option). Status: experimental, with limited testing.
                            Defaults to false.
   --space-unary-ops        Print spaces after unary operator symbols, except in the middle of combinations such as !!. Status: experimental, with limited testing.
                            Defaults to false.

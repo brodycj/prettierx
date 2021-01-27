@@ -178,11 +178,6 @@ This option cannot be used with --range-start and --range-end.",
           "description": "Use single quotes in JSX.",
           "type": "boolean",
         },
-        "parenSpacing": Object {
-          "default": false,
-          "description": "Print spaces between parens, WordPress style.",
-          "type": "boolean",
-        },
         "parser": Object {
           "default": undefined,
           "description": "Which parser to use.",
@@ -407,6 +402,11 @@ in order for it to be formatted.",
         "spaceBeforeFunctionParen": Object {
           "default": false,
           "description": "Put a space before function parenthesis.",
+          "type": "boolean",
+        },
+        "spaceInParens": Object {
+          "default": false,
+          "description": "Print spaces in between parens, WordPress style (not recommended in combination with the default \`arrowParens: \\"always\\" option). Status: experimental, with limited testing.",
           "type": "boolean",
         },
         "spaceUnaryOps": Object {

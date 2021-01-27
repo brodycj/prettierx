@@ -5,9 +5,9 @@ exports[`bracket_0.js 1`] = `
 arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
 typeAngleBracketSpacing: true
@@ -43,9 +43,9 @@ exports[`break-last-call.js 1`] = `
 arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
 typeAngleBracketSpacing: true
@@ -176,9 +176,9 @@ exports[`break-last-member.js 1`] = `
 arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
 typeAngleBracketSpacing: true
@@ -253,9 +253,9 @@ exports[`break-multiple.js 1`] = `
 arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
 typeAngleBracketSpacing: true
@@ -282,9 +282,9 @@ exports[`comment.js 1`] = `
 arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
 typeAngleBracketSpacing: true
@@ -441,9 +441,9 @@ exports[`computed.js 1`] = `
 arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
 typeAngleBracketSpacing: true
@@ -472,9 +472,9 @@ exports[`computed-merge.js 1`] = `
 arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
 typeAngleBracketSpacing: true
@@ -523,9 +523,9 @@ exports[`conditional.js 1`] = `
 arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
 typeAngleBracketSpacing: true
@@ -595,9 +595,9 @@ exports[`d3.js 1`] = `
 arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
 typeAngleBracketSpacing: true
@@ -645,9 +645,9 @@ exports[`first_long.js 1`] = `
 arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
 typeAngleBracketSpacing: true
@@ -731,9 +731,9 @@ exports[`inline_merge.js 1`] = `
 arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
 typeAngleBracketSpacing: true
@@ -783,9 +783,9 @@ exports[`issue-4125.js 1`] = `
 arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
 typeAngleBracketSpacing: true
@@ -1119,9 +1119,9 @@ exports[`logical.js 1`] = `
 arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
 typeAngleBracketSpacing: true
@@ -1180,9 +1180,9 @@ exports[`multiple-members.js 1`] = `
 arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
 typeAngleBracketSpacing: true
@@ -1281,9 +1281,9 @@ exports[`object-literal.js 1`] = `
 arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
 typeAngleBracketSpacing: true
@@ -1330,9 +1330,9 @@ exports[`short-names.js 1`] = `
 arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
 typeAngleBracketSpacing: true
@@ -1357,9 +1357,9 @@ exports[`square_0.js 1`] = `
 arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
 typeAngleBracketSpacing: true
@@ -1394,9 +1394,9 @@ exports[`test.js 1`] = `
 arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
 typeAngleBracketSpacing: true
@@ -1426,9 +1426,9 @@ exports[`this.js 1`] = `
 arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
 typeAngleBracketSpacing: true

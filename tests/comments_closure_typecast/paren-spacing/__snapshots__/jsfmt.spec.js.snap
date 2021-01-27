@@ -5,9 +5,9 @@ exports[`binary-expr.js 1`] = `
 arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow"]
 printWidth: 80
+spaceInParens: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================
@@ -25,9 +25,9 @@ exports[`closure-compiler-type-cast.js 1`] = `
 arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow"]
 printWidth: 80
+spaceInParens: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================
@@ -164,9 +164,9 @@ exports[`comment-in-the-middle.js 1`] = `
 arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow"]
 printWidth: 80
+spaceInParens: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================
@@ -203,9 +203,9 @@ exports[`comment-placement.js 1`] = `
 arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow"]
 printWidth: 80
+spaceInParens: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================
@@ -253,9 +253,9 @@ exports[`extra-spaces-and-asterisks.js 1`] = `
 arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow"]
 printWidth: 80
+spaceInParens: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================
@@ -286,9 +286,9 @@ exports[`iife.js 1`] = `
 arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow"]
 printWidth: 80
+spaceInParens: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================
@@ -325,9 +325,9 @@ exports[`issue-4124.js 1`] = `
 arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow"]
 printWidth: 80
+spaceInParens: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================
@@ -378,9 +378,9 @@ exports[`member.js 1`] = `
 arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow"]
 printWidth: 80
+spaceInParens: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================
@@ -397,9 +397,9 @@ exports[`nested.js 1`] = `
 arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow"]
 printWidth: 80
+spaceInParens: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================
@@ -430,9 +430,9 @@ exports[`non-casts.js 1`] = `
 arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow"]
 printWidth: 80
+spaceInParens: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================
@@ -483,9 +483,9 @@ exports[`object-with-comment.js 1`] = `
 arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow"]
 printWidth: 80
+spaceInParens: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================
@@ -523,9 +523,9 @@ exports[`ways-to-specify-type.js 1`] = `
 arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow"]
 printWidth: 80
+spaceInParens: true
 trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================

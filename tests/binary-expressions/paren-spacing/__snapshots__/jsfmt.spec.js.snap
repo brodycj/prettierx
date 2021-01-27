@@ -3,9 +3,9 @@
 exports[`arrow.js 1`] = `
 ====================================options=====================================
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
                                                                                 | printWidth
@@ -53,9 +53,9 @@ function f() {
 exports[`bitwise-flags.js 1`] = `
 ====================================options=====================================
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
                                                                                 | printWidth
@@ -79,9 +79,9 @@ const all = FLAG_A | FLAG_B | FLAG_C;
 exports[`call.js 1`] = `
 ====================================options=====================================
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
                                                                                 | printWidth
@@ -213,9 +213,9 @@ templateCurlySpacing: true
 exports[`comment.js 1`] = `
 ====================================options=====================================
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
                                                                                 | printWidth
@@ -239,9 +239,9 @@ a =
 exports[`equality.js 1`] = `
 ====================================options=====================================
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
                                                                                 | printWidth
@@ -273,9 +273,9 @@ x !== y !== z;
 exports[`exp.js 1`] = `
 ====================================options=====================================
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
                                                                                 | printWidth
@@ -307,9 +307,9 @@ a ** ( b * c );
 exports[`if.js 1`] = `
 ====================================options=====================================
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
                                                                                 | printWidth
@@ -350,9 +350,9 @@ if (
 exports[`inline-jsx.js 1`] = `
 ====================================options=====================================
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
                                                                                 | printWidth
@@ -392,9 +392,9 @@ const avatar = ( hasAvatar || showPlaceholder ) && (
 exports[`inline-object-array.js 1`] = `
 ====================================options=====================================
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
                                                                                 | printWidth
@@ -590,9 +590,9 @@ const obj = {
 exports[`jsx_parent.js 1`] = `
 ====================================options=====================================
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
                                                                                 | printWidth
@@ -678,9 +678,9 @@ templateCurlySpacing: true
 exports[`math.js 1`] = `
 ====================================options=====================================
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
                                                                                 | printWidth
@@ -738,9 +738,9 @@ x & ( y >> z );
 exports[`return.js 1`] = `
 ====================================options=====================================
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
                                                                                 | printWidth
@@ -789,9 +789,9 @@ function foo() {
 exports[`short-right.js 1`] = `
 ====================================options=====================================
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
                                                                                 | printWidth
@@ -842,9 +842,9 @@ defaultContent.filter( ( defaultLocale ) => {
 exports[`test.js 1`] = `
 ====================================options=====================================
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
                                                                                 | printWidth
@@ -935,9 +935,9 @@ foo(
 exports[`unary.js 1`] = `
 ====================================options=====================================
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
                                                                                 | printWidth

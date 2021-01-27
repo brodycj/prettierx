@@ -4,9 +4,9 @@ exports[`break.js 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 trailingComma: "none"
 typeAngleBracketSpacing: true
                                                                                 | printWidth
@@ -113,9 +113,9 @@ exports[`parent.js 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 trailingComma: "none"
 typeAngleBracketSpacing: true
                                                                                 | printWidth
@@ -148,9 +148,9 @@ exports[`react.js 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 trailingComma: "none"
 typeAngleBracketSpacing: true
                                                                                 | printWidth
@@ -253,9 +253,9 @@ exports[`type_args.js 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 trailingComma: "none"
 typeAngleBracketSpacing: true
                                                                                 | printWidth

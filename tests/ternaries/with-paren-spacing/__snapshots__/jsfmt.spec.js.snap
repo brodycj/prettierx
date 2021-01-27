@@ -6,9 +6,9 @@ alignTernaryLines: true
 arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
 trailingComma: "none"
@@ -55,9 +55,9 @@ alignTernaryLines: true
 arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
 trailingComma: "none"
@@ -91,9 +91,9 @@ alignTernaryLines: true
 arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
 trailingComma: "none"
@@ -428,9 +428,9 @@ alignTernaryLines: true
 arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
 trailingComma: "none"
@@ -639,9 +639,9 @@ alignTernaryLines: true
 arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
 trailingComma: "none"
@@ -735,9 +735,9 @@ alignTernaryLines: true
 arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
 trailingComma: "none"
@@ -779,9 +779,9 @@ alignTernaryLines: true
 arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
 templateCurlySpacing: true
 trailingComma: "none"

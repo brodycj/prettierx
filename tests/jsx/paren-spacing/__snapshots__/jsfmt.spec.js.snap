@@ -6,10 +6,10 @@ arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
 jsxSingleQuote: false
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 singleQuote: false
+spaceInParens: true
 templateCurlySpacing: true
 trailingComma: "none"
 typeAngleBracketSpacing: true
@@ -91,10 +91,10 @@ arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
 jsxSingleQuote: false
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 singleQuote: false
+spaceInParens: true
 templateCurlySpacing: true
 trailingComma: "none"
 typeAngleBracketSpacing: true
@@ -174,10 +174,10 @@ arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
 jsxSingleQuote: false
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 singleQuote: false
+spaceInParens: true
 templateCurlySpacing: true
 trailingComma: "none"
 typeAngleBracketSpacing: true
@@ -480,10 +480,10 @@ arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
 jsxSingleQuote: false
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 singleQuote: false
+spaceInParens: true
 templateCurlySpacing: true
 trailingComma: "none"
 typeAngleBracketSpacing: true
@@ -775,10 +775,10 @@ arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
 jsxSingleQuote: false
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 singleQuote: false
+spaceInParens: true
 templateCurlySpacing: true
 trailingComma: "none"
 typeAngleBracketSpacing: true
@@ -806,10 +806,10 @@ arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
 jsxSingleQuote: false
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 singleQuote: false
+spaceInParens: true
 templateCurlySpacing: true
 trailingComma: "none"
 typeAngleBracketSpacing: true
@@ -833,10 +833,10 @@ arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
 jsxSingleQuote: false
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 singleQuote: false
+spaceInParens: true
 templateCurlySpacing: true
 trailingComma: "none"
 typeAngleBracketSpacing: true
@@ -922,10 +922,10 @@ arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
 jsxSingleQuote: false
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 singleQuote: false
+spaceInParens: true
 templateCurlySpacing: true
 trailingComma: "none"
 typeAngleBracketSpacing: true
@@ -1007,10 +1007,10 @@ arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
 jsxSingleQuote: false
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 singleQuote: false
+spaceInParens: true
 templateCurlySpacing: true
 trailingComma: "none"
 typeAngleBracketSpacing: true
@@ -1054,10 +1054,10 @@ arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
 jsxSingleQuote: false
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 singleQuote: false
+spaceInParens: true
 templateCurlySpacing: true
 trailingComma: "none"
 typeAngleBracketSpacing: true
@@ -1105,10 +1105,10 @@ arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
 jsxSingleQuote: false
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 singleQuote: false
+spaceInParens: true
 templateCurlySpacing: true
 trailingComma: "none"
 typeAngleBracketSpacing: true
@@ -1164,10 +1164,10 @@ arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
 jsxSingleQuote: false
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 singleQuote: false
+spaceInParens: true
 templateCurlySpacing: true
 trailingComma: "none"
 typeAngleBracketSpacing: true
@@ -1261,10 +1261,10 @@ arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
 jsxSingleQuote: false
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 singleQuote: false
+spaceInParens: true
 templateCurlySpacing: true
 trailingComma: "none"
 typeAngleBracketSpacing: true
@@ -1382,10 +1382,10 @@ arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
 jsxSingleQuote: false
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 singleQuote: false
+spaceInParens: true
 templateCurlySpacing: true
 trailingComma: "none"
 typeAngleBracketSpacing: true
@@ -1407,10 +1407,10 @@ arrayBracketSpacing: true
 arrowParens: "avoid"
 computedPropertySpacing: true
 jsxSingleQuote: false
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 singleQuote: false
+spaceInParens: true
 templateCurlySpacing: true
 trailingComma: "none"
 typeAngleBracketSpacing: true

@@ -49,7 +49,6 @@ module.exports = {
     description: "Print indents at the start of chained calls.",
     oppositeDescription: "Do not print indents at the start of chained calls.",
   },
-  parenSpacing: commonOptions.parenSpacing,
   importFormatting: {
     category: CATEGORY_JAVASCRIPT,
     type: "choice",
@@ -67,6 +66,13 @@ module.exports = {
         description: "keep import statements on one line",
       },
     ],
+  },
+  spaceInParens: {
+    category: CATEGORY_JAVASCRIPT,
+    type: "boolean",
+    default: false,
+    description:
+      'Print spaces in between parens, WordPress style (not recommended in combination with the default `arrowParens: "always" option). Status: experimental, with limited testing.',
   },
   spaceUnaryOps: {
     category: CATEGORY_JAVASCRIPT,

@@ -4,9 +4,9 @@ exports[`angular_async.js 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 arrowParens: "avoid"
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 templateCurlySpacing: true
 typeAngleBracketSpacing: true
                                                                                 | printWidth
@@ -83,9 +83,9 @@ exports[`angular_fakeAsync.js 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 arrowParens: "avoid"
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 templateCurlySpacing: true
 typeAngleBracketSpacing: true
                                                                                 | printWidth
@@ -151,9 +151,9 @@ exports[`angularjs_inject.js 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 arrowParens: "avoid"
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 templateCurlySpacing: true
 typeAngleBracketSpacing: true
                                                                                 | printWidth
@@ -225,9 +225,9 @@ exports[`jest-each.js 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 arrowParens: "avoid"
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 templateCurlySpacing: true
 typeAngleBracketSpacing: true
                                                                                 | printWidth
@@ -374,9 +374,9 @@ exports[`test_declarations.js 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 arrowParens: "avoid"
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 templateCurlySpacing: true
 typeAngleBracketSpacing: true
                                                                                 | printWidth

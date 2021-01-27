@@ -4,9 +4,9 @@ exports[`member-chain.js 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 indentChains: false
-parenSpacing: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+spaceInParens: true
 spaceUnaryOps: true
                                                                                 | printWidth
 =====================================input======================================

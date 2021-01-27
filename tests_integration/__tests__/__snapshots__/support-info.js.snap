@@ -177,10 +177,6 @@ Object {
       "default": false,
       "type": "boolean",
     },
-    "parenSpacing": Object {
-      "default": false,
-      "type": "boolean",
-    },
     "parser": Object {
       "choices": Array [
         "flow",
@@ -272,6 +268,10 @@ Object {
       "type": "boolean",
     },
     "spaceBeforeFunctionParen": Object {
+      "default": false,
+      "type": "boolean",
+    },
+    "spaceInParens": Object {
       "default": false,
       "type": "boolean",
     },
@@ -989,15 +989,6 @@ exports[`CLI --support-info (stdout) 1`] = `
       \\"type\\": \\"boolean\\"
     },
     {
-      \\"category\\": \\"Common\\",
-      \\"default\\": false,
-      \\"description\\": \\"Print spaces between parens, WordPress style.\\",
-      \\"name\\": \\"parenSpacing\\",
-      \\"pluginDefaults\\": {},
-      \\"since\\": \\"0.0.0\\",
-      \\"type\\": \\"boolean\\"
-    },
-    {
       \\"category\\": \\"Global\\",
       \\"choices\\": [
         { \\"description\\": \\"Flow\\", \\"value\\": \\"flow\\" },
@@ -1170,6 +1161,14 @@ exports[`CLI --support-info (stdout) 1`] = `
       \\"default\\": false,
       \\"description\\": \\"Put a space before function parenthesis.\\",
       \\"name\\": \\"spaceBeforeFunctionParen\\",
+      \\"pluginDefaults\\": {},
+      \\"type\\": \\"boolean\\"
+    },
+    {
+      \\"category\\": \\"JavaScript\\",
+      \\"default\\": false,
+      \\"description\\": \\"Print spaces in between parens, WordPress style (not recommended in combination with the default \`arrowParens: \\\\\\"always\\\\\\" option). Status: experimental, with limited testing.\\",
+      \\"name\\": \\"spaceInParens\\",
       \\"pluginDefaults\\": {},
       \\"type\\": \\"boolean\\"
     },
