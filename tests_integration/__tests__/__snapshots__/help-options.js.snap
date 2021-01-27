@@ -499,6 +499,17 @@ exports[`show detailed usage with --help no-semi (stdout) 1`] = `
 
 exports[`show detailed usage with --help no-semi (write) 1`] = `Array []`;
 
+exports[`show detailed usage with --help no-type-curly-spacing (stderr) 1`] = `""`;
+
+exports[`show detailed usage with --help no-type-curly-spacing (stdout) 1`] = `
+"--no-type-curly-spacing
+
+  Do not put spaces between type curly braces. Option status: experimental, with limited testing.
+"
+`;
+
+exports[`show detailed usage with --help no-type-curly-spacing (write) 1`] = `Array []`;
+
 exports[`show detailed usage with --help parser (stderr) 1`] = `""`;
 
 exports[`show detailed usage with --help parser (stdout) 1`] = `
@@ -812,6 +823,19 @@ Default: false
 `;
 
 exports[`show detailed usage with --help type-bracket-spacing (write) 1`] = `Array []`;
+
+exports[`show detailed usage with --help type-curly-spacing (stderr) 1`] = `""`;
+
+exports[`show detailed usage with --help type-curly-spacing (stdout) 1`] = `
+"--type-curly-spacing
+
+  Put spaces between type curly braces.
+
+Default: true
+"
+`;
+
+exports[`show detailed usage with --help type-curly-spacing (write) 1`] = `Array []`;
 
 exports[`show detailed usage with --help use-tabs (stderr) 1`] = `""`;
 

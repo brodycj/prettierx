@@ -102,6 +102,14 @@ module.exports = {
     description:
       "Put spaces between type brackets. Status: experimental, with limited testing.",
   },
+  typeCurlySpacing: {
+    category: CATEGORY_JAVASCRIPT,
+    type: "boolean",
+    default: true,
+    description: "Put spaces between type curly braces.",
+    oppositeDescription:
+      "Do not put spaces between type curly braces. Option status: experimental, with limited testing.",
+  },
   jsxBracketSameLine: {
     since: "0.17.0",
     category: CATEGORY_JAVASCRIPT,

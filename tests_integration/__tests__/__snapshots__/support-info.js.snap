@@ -309,6 +309,10 @@ Object {
       "default": false,
       "type": "boolean",
     },
+    "typeCurlySpacing": Object {
+      "default": true,
+      "type": "boolean",
+    },
     "useTabs": Object {
       "default": false,
       "type": "boolean",
@@ -1230,6 +1234,15 @@ exports[`CLI --support-info (stdout) 1`] = `
       \\"default\\": false,
       \\"description\\": \\"Put spaces between type brackets. Status: experimental, with limited testing.\\",
       \\"name\\": \\"typeBracketSpacing\\",
+      \\"pluginDefaults\\": {},
+      \\"type\\": \\"boolean\\"
+    },
+    {
+      \\"category\\": \\"JavaScript\\",
+      \\"default\\": true,
+      \\"description\\": \\"Put spaces between type curly braces.\\",
+      \\"name\\": \\"typeCurlySpacing\\",
+      \\"oppositeDescription\\": \\"Do not put spaces between type curly braces. Option status: experimental, with limited testing.\\",
       \\"pluginDefaults\\": {},
       \\"type\\": \\"boolean\\"
     },

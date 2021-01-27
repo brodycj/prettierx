@@ -122,7 +122,7 @@ Valid options:
 
 ## Bracket Spacing
 
-Print spaces between brackets in object literals.
+Put spaces between brackets in object literals.
 
 Valid options:
 
@@ -348,6 +348,14 @@ Put spaces between type brackets. Status: experimental, with limited testing.
 | Default | CLI Override             | API Override                 |
 | ------- | ------------------------ | ---------------------------- |
 | `false` | `--type-bracket-spacing` | `typeBracketSpacing: <bool>` |
+
+## Type curly spacing
+
+Put or do not put spaces between type curly braces. Option status: experimental, with limited testing.
+
+| Default | CLI Override              | API Override               |
+| ------- | ------------------------- | -------------------------- |
+| `true`  | `--no-type-curly-spacing` | `typeCurlySpacing: <bool>` |
 
 ## Parser
 

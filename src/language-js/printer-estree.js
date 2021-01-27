@@ -3660,7 +3660,8 @@ function printPathNoParens(path, options, print, args) {
           "{",
           indent(
             concat([
-              options.bracketSpacing ? line : softline,
+              // [prettierx] typeCurlySpacing option support:
+              options.typeCurlySpacing ? line : softline,
               n.readonly
                 ? concat([
                     getTypeScriptMappedTypeModifier(n.readonly, "readonly"),
@@ -3678,7 +3679,8 @@ function printPathNoParens(path, options, print, args) {
             ])
           ),
           comments.printDanglingComments(path, options, /* sameIndent */ true),
-          options.bracketSpacing ? line : softline,
+          // [prettierx] typeCurlySpacing option support:
+          options.typeCurlySpacing ? line : softline,
           "}",
         ]),
         { shouldBreak }

@@ -458,6 +458,11 @@ in order for it to be formatted.",
           "description": "Put spaces between type brackets. Status: experimental, with limited testing.",
           "type": "boolean",
         },
+        "typeCurlySpacing": Object {
+          "default": true,
+          "description": "Put spaces between type curly braces.",
+          "type": "boolean",
+        },
         "useTabs": Object {
           "default": false,
           "description": "Indent with tabs instead of spaces.",
