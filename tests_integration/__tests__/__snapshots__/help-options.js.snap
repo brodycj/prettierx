@@ -760,7 +760,7 @@ exports[`show detailed usage with --help template-curly-spacing (stderr) 1`] = `
 exports[`show detailed usage with --help template-curly-spacing (stdout) 1`] = `
 "--template-curly-spacing
 
-  Print spaces between template curly brackets. Status: experimental, with limited testing.
+  Print spaces between template curly braces. Status: experimental, with limited testing.
 
 Default: false
 "

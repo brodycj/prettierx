@@ -327,7 +327,7 @@ Print spaces in between parens, WordPress style (not recommended in combination 
 
 ## Template curly spacing
 
-Print spaces between template curly brackets. Status: experimental, with limited testing.
+Print spaces between template curly braces. Status: experimental, with limited testing.
 
 | Default | CLI Override               | API Override                   |
 | ------- | -------------------------- | ------------------------------ |

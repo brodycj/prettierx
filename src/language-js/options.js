@@ -86,7 +86,7 @@ module.exports = {
     type: "boolean",
     default: false,
     description:
-      "Print spaces between template curly brackets. Status: experimental, with limited testing.",
+      "Print spaces between template curly braces. Status: experimental, with limited testing.",
   },
   typeAngleBracketSpacing: {
     category: CATEGORY_JAVASCRIPT,

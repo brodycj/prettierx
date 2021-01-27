@@ -127,7 +127,7 @@ Format options:
                            Defaults to false.
   --tab-width <int>        Number of spaces per indentation level.
                            Defaults to 2.
-  --template-curly-spacing Print spaces between template curly brackets. Status: experimental, with limited testing.
+  --template-curly-spacing Print spaces between template curly braces. Status: experimental, with limited testing.
                            Defaults to false.
   --trailing-comma <es5|none|all>
                            Print trailing commas wherever possible when multi-line.
@@ -323,7 +323,7 @@ Format options:
                            Defaults to false.
   --tab-width <int>        Number of spaces per indentation level.
                            Defaults to 2.
-  --template-curly-spacing Print spaces between template curly brackets. Status: experimental, with limited testing.
+  --template-curly-spacing Print spaces between template curly braces. Status: experimental, with limited testing.
                            Defaults to false.
   --trailing-comma <es5|none|all>
                            Print trailing commas wherever possible when multi-line.

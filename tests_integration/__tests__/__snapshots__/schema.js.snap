@@ -421,7 +421,7 @@ in order for it to be formatted.",
         },
         "templateCurlySpacing": Object {
           "default": false,
-          "description": "Print spaces between template curly brackets. Status: experimental, with limited testing.",
+          "description": "Print spaces between template curly braces. Status: experimental, with limited testing.",
           "type": "boolean",
         },
         "trailingComma": Object {
