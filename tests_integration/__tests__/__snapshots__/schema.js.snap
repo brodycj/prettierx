@@ -18,7 +18,7 @@ Object {
         },
         "arrayBracketSpacing": Object {
           "default": false,
-          "description": "Print spaces between array brackets. Status: experimental, with limited testing.",
+          "description": "Put spaces between array brackets. Status: experimental, with limited testing.",
           "type": "boolean",
         },
         "arrowParens": Object {
@@ -56,7 +56,7 @@ Object {
         },
         "computedPropertySpacing": Object {
           "default": false,
-          "description": "Print spaces between computed property brackets. Status: experimental, with limited testing.",
+          "description": "Put spaces between computed property brackets. Status: experimental, with limited testing.",
           "type": "boolean",
         },
         "cssParenSpacing": Object {
@@ -406,12 +406,12 @@ in order for it to be formatted.",
         },
         "spaceInParens": Object {
           "default": false,
-          "description": "Print spaces in between parens, WordPress style (not recommended in combination with the default \`arrowParens: \\"always\\" option). Status: experimental, with limited testing.",
+          "description": "Put spaces in between parens, WordPress style (not recommended in combination with the default \`arrowParens: \\"always\\" option). Status: experimental, with limited testing.",
           "type": "boolean",
         },
         "spaceUnaryOps": Object {
           "default": false,
-          "description": "Print spaces after unary operator symbols, except in the middle of combinations such as !!. Status: experimental, with limited testing.",
+          "description": "Put spaces after unary operator symbols, except in the middle of combinations such as !!. Status: experimental, with limited testing.",
           "type": "boolean",
         },
         "tabWidth": Object {
@@ -421,7 +421,7 @@ in order for it to be formatted.",
         },
         "templateCurlySpacing": Object {
           "default": false,
-          "description": "Print spaces between template curly braces. Status: experimental, with limited testing.",
+          "description": "Put spaces between template curly braces. Status: experimental, with limited testing.",
           "type": "boolean",
         },
         "trailingComma": Object {
@@ -450,12 +450,12 @@ in order for it to be formatted.",
         },
         "typeAngleBracketSpacing": Object {
           "default": false,
-          "description": "Print spaces between type angle brackets. Status: experimental, with limited testing.",
+          "description": "Put spaces between type angle brackets. Status: experimental, with limited testing.",
           "type": "boolean",
         },
         "typeBracketSpacing": Object {
           "default": false,
-          "description": "Print spaces between type brackets. Status: experimental, with limited testing.",
+          "description": "Put spaces between type brackets. Status: experimental, with limited testing.",
           "type": "boolean",
         },
         "useTabs": Object {

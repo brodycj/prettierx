@@ -71,7 +71,7 @@ Format options:
                            Align colons in multiline object literals.
                            Defaults to false.
   --no-align-ternary-lines Do not align ternary lines.
-  --array-bracket-spacing  Print spaces between array brackets. Status: experimental, with limited testing.
+  --array-bracket-spacing  Put spaces between array brackets. Status: experimental, with limited testing.
                            Defaults to false.
   --arrow-parens <always|avoid>
                            Include parentheses around a sole arrow function parameter.
@@ -83,7 +83,7 @@ Format options:
                            Break method chains with more than 3 method calls, like Prettier 1.x.
                            Defaults to false.
   --computed-property-spacing
-                           Print spaces between computed property brackets. Status: experimental, with limited testing.
+                           Put spaces between computed property brackets. Status: experimental, with limited testing.
                            Defaults to false.
   --css-paren-spacing      Print spaces between parens in CSS, WordPress style. Status: experimental, with limited testing.
                            Defaults to false.
@@ -121,21 +121,21 @@ Format options:
   --space-before-function-paren
                            Put a space before function parenthesis.
                            Defaults to false.
-  --space-in-parens        Print spaces in between parens, WordPress style (not recommended in combination with the default \`arrowParens: \\"always\\" option). Status: experimental, with limited testing.
+  --space-in-parens        Put spaces in between parens, WordPress style (not recommended in combination with the default \`arrowParens: \\"always\\" option). Status: experimental, with limited testing.
                            Defaults to false.
-  --space-unary-ops        Print spaces after unary operator symbols, except in the middle of combinations such as !!. Status: experimental, with limited testing.
+  --space-unary-ops        Put spaces after unary operator symbols, except in the middle of combinations such as !!. Status: experimental, with limited testing.
                            Defaults to false.
   --tab-width <int>        Number of spaces per indentation level.
                            Defaults to 2.
-  --template-curly-spacing Print spaces between template curly braces. Status: experimental, with limited testing.
+  --template-curly-spacing Put spaces between template curly braces. Status: experimental, with limited testing.
                            Defaults to false.
   --trailing-comma <es5|none|all>
                            Print trailing commas wherever possible when multi-line.
                            Defaults to es5.
   --type-angle-bracket-spacing
-                           Print spaces between type angle brackets. Status: experimental, with limited testing.
+                           Put spaces between type angle brackets. Status: experimental, with limited testing.
                            Defaults to false.
-  --type-bracket-spacing   Print spaces between type brackets. Status: experimental, with limited testing.
+  --type-bracket-spacing   Put spaces between type brackets. Status: experimental, with limited testing.
                            Defaults to false.
   --use-tabs               Indent with tabs instead of spaces.
                            Defaults to false.
@@ -267,7 +267,7 @@ Format options:
                            Align colons in multiline object literals.
                            Defaults to false.
   --no-align-ternary-lines Do not align ternary lines.
-  --array-bracket-spacing  Print spaces between array brackets. Status: experimental, with limited testing.
+  --array-bracket-spacing  Put spaces between array brackets. Status: experimental, with limited testing.
                            Defaults to false.
   --arrow-parens <always|avoid>
                            Include parentheses around a sole arrow function parameter.
@@ -279,7 +279,7 @@ Format options:
                            Break method chains with more than 3 method calls, like Prettier 1.x.
                            Defaults to false.
   --computed-property-spacing
-                           Print spaces between computed property brackets. Status: experimental, with limited testing.
+                           Put spaces between computed property brackets. Status: experimental, with limited testing.
                            Defaults to false.
   --css-paren-spacing      Print spaces between parens in CSS, WordPress style. Status: experimental, with limited testing.
                            Defaults to false.
@@ -317,21 +317,21 @@ Format options:
   --space-before-function-paren
                            Put a space before function parenthesis.
                            Defaults to false.
-  --space-in-parens        Print spaces in between parens, WordPress style (not recommended in combination with the default \`arrowParens: \\"always\\" option). Status: experimental, with limited testing.
+  --space-in-parens        Put spaces in between parens, WordPress style (not recommended in combination with the default \`arrowParens: \\"always\\" option). Status: experimental, with limited testing.
                            Defaults to false.
-  --space-unary-ops        Print spaces after unary operator symbols, except in the middle of combinations such as !!. Status: experimental, with limited testing.
+  --space-unary-ops        Put spaces after unary operator symbols, except in the middle of combinations such as !!. Status: experimental, with limited testing.
                            Defaults to false.
   --tab-width <int>        Number of spaces per indentation level.
                            Defaults to 2.
-  --template-curly-spacing Print spaces between template curly braces. Status: experimental, with limited testing.
+  --template-curly-spacing Put spaces between template curly braces. Status: experimental, with limited testing.
                            Defaults to false.
   --trailing-comma <es5|none|all>
                            Print trailing commas wherever possible when multi-line.
                            Defaults to es5.
   --type-angle-bracket-spacing
-                           Print spaces between type angle brackets. Status: experimental, with limited testing.
+                           Put spaces between type angle brackets. Status: experimental, with limited testing.
                            Defaults to false.
-  --type-bracket-spacing   Print spaces between type brackets. Status: experimental, with limited testing.
+  --type-bracket-spacing   Put spaces between type brackets. Status: experimental, with limited testing.
                            Defaults to false.
   --use-tabs               Indent with tabs instead of spaces.
                            Defaults to false.

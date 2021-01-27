@@ -287,7 +287,7 @@ Format void HTML elements as void tags.
 
 ## Array bracket spacing
 
-Print spaces between array brackets. Status: experimental, with limited testing.
+Put spaces between array brackets. Status: experimental, with limited testing.
 
 | Default | CLI Override              | API Override                  |
 | ------- | ------------------------- | ----------------------------- |
@@ -295,7 +295,7 @@ Print spaces between array brackets. Status: experimental, with limited testing.
 
 ## CSS paren spacing
 
-Print spaces between parens in CSS, WordPress style. Status: experimental, with limited testing.
+Put spaces between parens in CSS, WordPress style. Status: experimental, with limited testing.
 
 | Default | CLI Override          | API Override              |
 | ------- | --------------------- | ------------------------- |
@@ -303,7 +303,7 @@ Print spaces between parens in CSS, WordPress style. Status: experimental, with 
 
 ## Computed property spacing
 
-Print spaces between computed property brackets. Status: experimental, with limited testing.
+Put spaces between computed property brackets. Status: experimental, with limited testing.
 
 | Default | CLI Override                  | API Override                      |
 | ------- | ----------------------------- | --------------------------------- |
@@ -311,7 +311,7 @@ Print spaces between computed property brackets. Status: experimental, with limi
 
 ## Space after unary operator symbols
 
-Print spaces after unary operator symbols, except in the middle of combinations such as !!. Status: experimental, with limited testing.
+Put spaces after unary operator symbols, except in the middle of combinations such as !!. Status: experimental, with limited testing.
 
 | Default | CLI Override        | API Override            |
 | ------- | ------------------- | ----------------------- |
@@ -319,7 +319,7 @@ Print spaces after unary operator symbols, except in the middle of combinations 
 
 ## Spaces in parens
 
-Print spaces in between parens, WordPress style (not recommended in combination with the default `arrowParens: "always" option). Status: experimental, with limited testing.
+Put spaces in between parens, WordPress style (not recommended in combination with the default `arrowParens: "always" option). Status: experimental, with limited testing.
 
 | Default | CLI Override        | API Override            |
 | ------- | ------------------- | ----------------------- |
@@ -327,7 +327,7 @@ Print spaces in between parens, WordPress style (not recommended in combination 
 
 ## Template curly spacing
 
-Print spaces between template curly braces. Status: experimental, with limited testing.
+Put spaces between template curly braces. Status: experimental, with limited testing.
 
 | Default | CLI Override               | API Override                   |
 | ------- | -------------------------- | ------------------------------ |
@@ -335,7 +335,7 @@ Print spaces between template curly braces. Status: experimental, with limited t
 
 ## Type angle bracket spacing
 
-Print spaces between type angle brackets. Status: experimental, with limited testing.
+Put spaces between type angle brackets. Status: experimental, with limited testing.
 
 | Default | CLI Override                   | API Override                      |
 | ------- | ------------------------------ | --------------------------------- |
@@ -343,7 +343,7 @@ Print spaces between type angle brackets. Status: experimental, with limited tes
 
 ## Type bracket spacing
 
-Print spaces between type brackets. Status: experimental, with limited testing.
+Put spaces between type brackets. Status: experimental, with limited testing.
 
 | Default | CLI Override             | API Override                 |
 | ------- | ------------------------ | ---------------------------- |

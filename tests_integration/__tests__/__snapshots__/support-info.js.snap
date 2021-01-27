@@ -784,7 +784,7 @@ exports[`CLI --support-info (stdout) 1`] = `
     {
       \\"category\\": \\"JavaScript\\",
       \\"default\\": false,
-      \\"description\\": \\"Print spaces between array brackets. Status: experimental, with limited testing.\\",
+      \\"description\\": \\"Put spaces between array brackets. Status: experimental, with limited testing.\\",
       \\"name\\": \\"arrayBracketSpacing\\",
       \\"pluginDefaults\\": {},
       \\"type\\": \\"boolean\\"
@@ -837,7 +837,7 @@ exports[`CLI --support-info (stdout) 1`] = `
     {
       \\"category\\": \\"JavaScript\\",
       \\"default\\": false,
-      \\"description\\": \\"Print spaces between computed property brackets. Status: experimental, with limited testing.\\",
+      \\"description\\": \\"Put spaces between computed property brackets. Status: experimental, with limited testing.\\",
       \\"name\\": \\"computedPropertySpacing\\",
       \\"pluginDefaults\\": {},
       \\"type\\": \\"boolean\\"
@@ -1167,7 +1167,7 @@ exports[`CLI --support-info (stdout) 1`] = `
     {
       \\"category\\": \\"JavaScript\\",
       \\"default\\": false,
-      \\"description\\": \\"Print spaces in between parens, WordPress style (not recommended in combination with the default \`arrowParens: \\\\\\"always\\\\\\" option). Status: experimental, with limited testing.\\",
+      \\"description\\": \\"Put spaces in between parens, WordPress style (not recommended in combination with the default \`arrowParens: \\\\\\"always\\\\\\" option). Status: experimental, with limited testing.\\",
       \\"name\\": \\"spaceInParens\\",
       \\"pluginDefaults\\": {},
       \\"type\\": \\"boolean\\"
@@ -1175,7 +1175,7 @@ exports[`CLI --support-info (stdout) 1`] = `
     {
       \\"category\\": \\"JavaScript\\",
       \\"default\\": false,
-      \\"description\\": \\"Print spaces after unary operator symbols, except in the middle of combinations such as !!. Status: experimental, with limited testing.\\",
+      \\"description\\": \\"Put spaces after unary operator symbols, except in the middle of combinations such as !!. Status: experimental, with limited testing.\\",
       \\"name\\": \\"spaceUnaryOps\\",
       \\"pluginDefaults\\": {},
       \\"type\\": \\"boolean\\"
@@ -1192,7 +1192,7 @@ exports[`CLI --support-info (stdout) 1`] = `
     {
       \\"category\\": \\"JavaScript\\",
       \\"default\\": false,
-      \\"description\\": \\"Print spaces between template curly braces. Status: experimental, with limited testing.\\",
+      \\"description\\": \\"Put spaces between template curly braces. Status: experimental, with limited testing.\\",
       \\"name\\": \\"templateCurlySpacing\\",
       \\"pluginDefaults\\": {},
       \\"type\\": \\"boolean\\"
@@ -1220,7 +1220,7 @@ exports[`CLI --support-info (stdout) 1`] = `
     {
       \\"category\\": \\"JavaScript\\",
       \\"default\\": false,
-      \\"description\\": \\"Print spaces between type angle brackets. Status: experimental, with limited testing.\\",
+      \\"description\\": \\"Put spaces between type angle brackets. Status: experimental, with limited testing.\\",
       \\"name\\": \\"typeAngleBracketSpacing\\",
       \\"pluginDefaults\\": {},
       \\"type\\": \\"boolean\\"
@@ -1228,7 +1228,7 @@ exports[`CLI --support-info (stdout) 1`] = `
     {
       \\"category\\": \\"JavaScript\\",
       \\"default\\": false,
-      \\"description\\": \\"Print spaces between type brackets. Status: experimental, with limited testing.\\",
+      \\"description\\": \\"Put spaces between type brackets. Status: experimental, with limited testing.\\",
       \\"name\\": \\"typeBracketSpacing\\",
       \\"pluginDefaults\\": {},
       \\"type\\": \\"boolean\\"

@@ -42,14 +42,14 @@ prettierx <options> <file(s)>
 - `--import-formatting <auto|oneline>` (`importFormatting: "<auto|oneline>"`): Formatting of import statements, may be`oneline` to avoid conflict with VSCode "Organize Imports" feature.
 - `--html-void-tags` (`htmlVoidTags: <bool>`): Format void HTML elements as void tags.
 - `--break-long-method-chains` (`breakLongMethodChains: <bool>`): Break method chains with more than 3 method calls, like Prettier 1.x.
-- `--array-bracket-spacing` (`arrayBracketSpacing: <bool>`): Print spaces between array brackets. Status: experimental, with limited testing.
-- `--css-paren-spacing` (`cssParenSpacing: <bool>`): Print spaces between parens in CSS, WordPress style. Status: experimental, with limited testing.
-- `--computed-property-spacing` (`computedPropertySpacing: <bool>`): Print spaces between computed property brackets. Status: experimental, with limited testing.
-- `--space-unary-ops` (`spaceUnaryOps: <bool>`): Print spaces after unary operator symbols, except in the middle of combinations such as !!. Status: experimental, with limited testing.
-- `--space-in-parens` (`spaceInParens: <bool>`): Print spaces in between parens, WordPress style (not recommended in combination with the default `arrowParens: "always" option). Status: experimental, with limited testing.
-- `--template-curly-spacing` (`templateCurlySpacing: <bool>`): Print spaces between template curly braces. Status: experimental, with limited testing.
-- `--type-angle-bracket-spacing` (`typeAngleBracketSpacing: <bool>`): Print spaces between type angle brackets. Status: experimental, with limited testing.
-- `--type-bracket-spacing` (`typeBracketSpacing: <bool>`): Print spaces between type brackets. Status: experimental, with limited testing.
+- `--array-bracket-spacing` (`arrayBracketSpacing: <bool>`): Put spaces between array brackets. Status: experimental, with limited testing.
+- `--css-paren-spacing` (`cssParenSpacing: <bool>`): Put spaces between parens in CSS, WordPress style. Status: experimental, with limited testing.
+- `--computed-property-spacing` (`computedPropertySpacing: <bool>`): Put spaces between computed property brackets. Status: experimental, with limited testing.
+- `--space-unary-ops` (`spaceUnaryOps: <bool>`): Put spaces after unary operator symbols, except in the middle of combinations such as !!. Status: experimental, with limited testing.
+- `--space-in-parens` (`spaceInParens: <bool>`): Put spaces in between parens, WordPress style (not recommended in combination with the default `arrowParens: "always" option). Status: experimental, with limited testing.
+- `--template-curly-spacing` (`templateCurlySpacing: <bool>`): Put spaces between template curly braces. Status: experimental, with limited testing.
+- `--type-angle-bracket-spacing` (`typeAngleBracketSpacing: <bool>`): Put spaces between type angle brackets. Status: experimental, with limited testing.
+- `--type-bracket-spacing` (`typeBracketSpacing: <bool>`): Put spaces between type brackets. Status: experimental, with limited testing.
 
 (See [./docs/options.md](./docs/options.md) for more information.)
 

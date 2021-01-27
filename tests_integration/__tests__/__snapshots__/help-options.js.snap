@@ -31,7 +31,7 @@ exports[`show detailed usage with --help array-bracket-spacing (stderr) 1`] = `"
 exports[`show detailed usage with --help array-bracket-spacing (stdout) 1`] = `
 "--array-bracket-spacing
 
-  Print spaces between array brackets. Status: experimental, with limited testing.
+  Put spaces between array brackets. Status: experimental, with limited testing.
 
 Default: false
 "
@@ -126,7 +126,7 @@ exports[`show detailed usage with --help computed-property-spacing (stderr) 1`] 
 exports[`show detailed usage with --help computed-property-spacing (stdout) 1`] = `
 "--computed-property-spacing
 
-  Print spaces between computed property brackets. Status: experimental, with limited testing.
+  Put spaces between computed property brackets. Status: experimental, with limited testing.
 
 Default: false
 "
@@ -699,7 +699,7 @@ exports[`show detailed usage with --help space-in-parens (stderr) 1`] = `""`;
 exports[`show detailed usage with --help space-in-parens (stdout) 1`] = `
 "--space-in-parens
 
-  Print spaces in between parens, WordPress style (not recommended in combination with the default \`arrowParens: \\"always\\" option). Status: experimental, with limited testing.
+  Put spaces in between parens, WordPress style (not recommended in combination with the default \`arrowParens: \\"always\\" option). Status: experimental, with limited testing.
 
 Default: false
 "
@@ -712,7 +712,7 @@ exports[`show detailed usage with --help space-unary-ops (stderr) 1`] = `""`;
 exports[`show detailed usage with --help space-unary-ops (stdout) 1`] = `
 "--space-unary-ops
 
-  Print spaces after unary operator symbols, except in the middle of combinations such as !!. Status: experimental, with limited testing.
+  Put spaces after unary operator symbols, except in the middle of combinations such as !!. Status: experimental, with limited testing.
 
 Default: false
 "
@@ -760,7 +760,7 @@ exports[`show detailed usage with --help template-curly-spacing (stderr) 1`] = `
 exports[`show detailed usage with --help template-curly-spacing (stdout) 1`] = `
 "--template-curly-spacing
 
-  Print spaces between template curly braces. Status: experimental, with limited testing.
+  Put spaces between template curly braces. Status: experimental, with limited testing.
 
 Default: false
 "
@@ -792,7 +792,7 @@ exports[`show detailed usage with --help type-angle-bracket-spacing (stderr) 1`]
 exports[`show detailed usage with --help type-angle-bracket-spacing (stdout) 1`] = `
 "--type-angle-bracket-spacing
 
-  Print spaces between type angle brackets. Status: experimental, with limited testing.
+  Put spaces between type angle brackets. Status: experimental, with limited testing.
 
 Default: false
 "
@@ -805,7 +805,7 @@ exports[`show detailed usage with --help type-bracket-spacing (stderr) 1`] = `""
 exports[`show detailed usage with --help type-bracket-spacing (stdout) 1`] = `
 "--type-bracket-spacing
 
-  Print spaces between type brackets. Status: experimental, with limited testing.
+  Put spaces between type brackets. Status: experimental, with limited testing.
 
 Default: false
 "

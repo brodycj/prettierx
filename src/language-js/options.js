@@ -33,14 +33,14 @@ module.exports = {
     type: "boolean",
     default: false,
     description:
-      "Print spaces between array brackets. Status: experimental, with limited testing.",
+      "Put spaces between array brackets. Status: experimental, with limited testing.",
   },
   computedPropertySpacing: {
     category: CATEGORY_JAVASCRIPT,
     type: "boolean",
     default: false,
     description:
-      "Print spaces between computed property brackets. Status: experimental, with limited testing.",
+      "Put spaces between computed property brackets. Status: experimental, with limited testing.",
   },
   indentChains: {
     category: CATEGORY_JAVASCRIPT,
@@ -72,35 +72,35 @@ module.exports = {
     type: "boolean",
     default: false,
     description:
-      'Print spaces in between parens, WordPress style (not recommended in combination with the default `arrowParens: "always" option). Status: experimental, with limited testing.',
+      'Put spaces in between parens, WordPress style (not recommended in combination with the default `arrowParens: "always" option). Status: experimental, with limited testing.',
   },
   spaceUnaryOps: {
     category: CATEGORY_JAVASCRIPT,
     type: "boolean",
     default: false,
     description:
-      "Print spaces after unary operator symbols, except in the middle of combinations such as !!. Status: experimental, with limited testing.",
+      "Put spaces after unary operator symbols, except in the middle of combinations such as !!. Status: experimental, with limited testing.",
   },
   templateCurlySpacing: {
     category: CATEGORY_JAVASCRIPT,
     type: "boolean",
     default: false,
     description:
-      "Print spaces between template curly braces. Status: experimental, with limited testing.",
+      "Put spaces between template curly braces. Status: experimental, with limited testing.",
   },
   typeAngleBracketSpacing: {
     category: CATEGORY_JAVASCRIPT,
     type: "boolean",
     default: false,
     description:
-      "Print spaces between type angle brackets. Status: experimental, with limited testing.",
+      "Put spaces between type angle brackets. Status: experimental, with limited testing.",
   },
   typeBracketSpacing: {
     category: CATEGORY_JAVASCRIPT,
     type: "boolean",
     default: false,
     description:
-      "Print spaces between type brackets. Status: experimental, with limited testing.",
+      "Put spaces between type brackets. Status: experimental, with limited testing.",
   },
   jsxBracketSameLine: {
     since: "0.17.0",
