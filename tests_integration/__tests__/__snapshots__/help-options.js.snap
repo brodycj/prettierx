@@ -57,19 +57,6 @@ Default: always
 
 exports[`show detailed usage with --help arrow-parens (write) 1`] = `Array []`;
 
-exports[`show detailed usage with --help bracket-spacing (stderr) 1`] = `""`;
-
-exports[`show detailed usage with --help bracket-spacing (stdout) 1`] = `
-"--bracket-spacing
-
-  Print spaces between brackets.
-
-Default: true
-"
-`;
-
-exports[`show detailed usage with --help bracket-spacing (write) 1`] = `Array []`;
-
 exports[`show detailed usage with --help break-before-else (stderr) 1`] = `""`;
 
 exports[`show detailed usage with --help break-before-else (stdout) 1`] = `
@@ -446,17 +433,6 @@ exports[`show detailed usage with --help no-align-ternary-lines (stdout) 1`] = `
 
 exports[`show detailed usage with --help no-align-ternary-lines (write) 1`] = `Array []`;
 
-exports[`show detailed usage with --help no-bracket-spacing (stderr) 1`] = `""`;
-
-exports[`show detailed usage with --help no-bracket-spacing (stdout) 1`] = `
-"--no-bracket-spacing
-
-  Do not print spaces between brackets.
-"
-`;
-
-exports[`show detailed usage with --help no-bracket-spacing (write) 1`] = `Array []`;
-
 exports[`show detailed usage with --help no-color (stderr) 1`] = `""`;
 
 exports[`show detailed usage with --help no-color (stdout) 1`] = `
@@ -512,6 +488,17 @@ exports[`show detailed usage with --help no-indent-chains (stdout) 1`] = `
 
 exports[`show detailed usage with --help no-indent-chains (write) 1`] = `Array []`;
 
+exports[`show detailed usage with --help no-object-curly-spacing (stderr) 1`] = `""`;
+
+exports[`show detailed usage with --help no-object-curly-spacing (stdout) 1`] = `
+"--no-object-curly-spacing
+
+  Do not put spaces between object curly braces.
+"
+`;
+
+exports[`show detailed usage with --help no-object-curly-spacing (write) 1`] = `Array []`;
+
 exports[`show detailed usage with --help no-semi (stderr) 1`] = `""`;
 
 exports[`show detailed usage with --help no-semi (stdout) 1`] = `
@@ -544,6 +531,19 @@ exports[`show detailed usage with --help no-yaml-bracket-spacing (stdout) 1`] = 
 `;
 
 exports[`show detailed usage with --help no-yaml-bracket-spacing (write) 1`] = `Array []`;
+
+exports[`show detailed usage with --help object-curly-spacing (stderr) 1`] = `""`;
+
+exports[`show detailed usage with --help object-curly-spacing (stdout) 1`] = `
+"--object-curly-spacing
+
+  Put spaces between object curly braces.
+
+Default: true
+"
+`;
+
+exports[`show detailed usage with --help object-curly-spacing (write) 1`] = `Array []`;
 
 exports[`show detailed usage with --help parser (stderr) 1`] = `""`;
 

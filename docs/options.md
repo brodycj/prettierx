@@ -120,18 +120,18 @@ Valid options:
 | ------- | --------------------------------- | --------------------------------- |
 | `"es5"` | `--trailing-comma <es5|none|all>` | `trailingComma: "<es5|none|all>"` |
 
-## Bracket Spacing
+## Object curly spacing
 
-Put spaces between brackets in object literals.
+Put or do not put spaces between object curly braces.
 
 Valid options:
 
 - `true` - Example: `{ foo: bar }`.
 - `false` - Example: `{foo: bar}`.
 
-| Default | CLI Override           | API Override             |
-| ------- | ---------------------- | ------------------------ |
-| `true`  | `--no-bracket-spacing` | `bracketSpacing: <bool>` |
+| Default | CLI Override                | API Override                 |
+| ------- | --------------------------- | ---------------------------- |
+| `true`  | `--no-object-curly-spacing` | `objectCurlySpacing: <bool>` |
 
 ## JSX Brackets
 

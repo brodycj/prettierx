@@ -93,10 +93,6 @@ Object {
       "default": "always",
       "type": "choice",
     },
-    "bracketSpacing": Object {
-      "default": true,
-      "type": "boolean",
-    },
     "breakBeforeElse": Object {
       "default": false,
       "type": "boolean",
@@ -179,6 +175,10 @@ Object {
     },
     "jsxSingleQuote": Object {
       "default": false,
+      "type": "boolean",
+    },
+    "objectCurlySpacing": Object {
+      "default": true,
       "type": "boolean",
     },
     "parser": Object {
@@ -821,16 +821,6 @@ exports[`CLI --support-info (stdout) 1`] = `
       \\"type\\": \\"choice\\"
     },
     {
-      \\"category\\": \\"Common\\",
-      \\"default\\": true,
-      \\"description\\": \\"Print spaces between brackets.\\",
-      \\"name\\": \\"bracketSpacing\\",
-      \\"oppositeDescription\\": \\"Do not print spaces between brackets.\\",
-      \\"pluginDefaults\\": {},
-      \\"since\\": \\"0.0.0\\",
-      \\"type\\": \\"boolean\\"
-    },
-    {
       \\"category\\": \\"JavaScript\\",
       \\"default\\": false,
       \\"description\\": \\"Always add a line break before else.\\",
@@ -1007,6 +997,15 @@ exports[`CLI --support-info (stdout) 1`] = `
       \\"name\\": \\"jsxSingleQuote\\",
       \\"pluginDefaults\\": {},
       \\"since\\": \\"1.15.0\\",
+      \\"type\\": \\"boolean\\"
+    },
+    {
+      \\"category\\": \\"JavaScript\\",
+      \\"default\\": true,
+      \\"description\\": \\"Put spaces between object curly braces.\\",
+      \\"name\\": \\"objectCurlySpacing\\",
+      \\"oppositeDescription\\": \\"Do not put spaces between object curly braces.\\",
+      \\"pluginDefaults\\": {},
       \\"type\\": \\"boolean\\"
     },
     {

@@ -26,7 +26,6 @@ module.exports = {
       },
     ],
   },
-  bracketSpacing: commonOptions.bracketSpacing,
   // [prettierx ...]
   arrayBracketSpacing: {
     category: CATEGORY_JAVASCRIPT,
@@ -80,6 +79,13 @@ module.exports = {
     default: false,
     description:
       "Put spaces after unary operator symbols, except in the middle of combinations such as !!. Status: experimental, with limited testing.",
+  },
+  objectCurlySpacing: {
+    category: CATEGORY_JAVASCRIPT,
+    type: "boolean",
+    default: true,
+    description: "Put spaces between object curly braces.",
+    oppositeDescription: "Do not put spaces between object curly braces.",
   },
   templateCurlySpacing: {
     category: CATEGORY_JAVASCRIPT,

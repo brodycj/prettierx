@@ -1192,10 +1192,10 @@ function printPathNoParens(path, options, print, args) {
           parts.push(
             concat([
               "{",
-              options.bracketSpacing ? " " : "",
+              options.objectCurlySpacing ? " " : "",
               // prettierx: importFormatting
               join(", ", grouped),
-              options.bracketSpacing ? " " : "",
+              options.objectCurlySpacing ? " " : "",
               "}",
             ])
           );
@@ -1206,12 +1206,12 @@ function printPathNoParens(path, options, print, args) {
                 "{",
                 indent(
                   concat([
-                    options.bracketSpacing ? line : softline,
+                    options.objectCurlySpacing ? line : softline,
                     join(concat([",", line]), grouped),
                   ])
                 ),
                 ifBreak(shouldPrintComma(options) ? "," : ""),
-                options.bracketSpacing ? line : softline,
+                options.objectCurlySpacing ? line : softline,
                 "}",
               ])
             )
@@ -1596,7 +1596,10 @@ function printPathNoParens(path, options, print, args) {
         content = concat([
           leftBrace,
           indent(
-            concat([options.bracketSpacing ? line : softline, concat(props)])
+            concat([
+              options.objectCurlySpacing ? line : softline,
+              concat(props),
+            ])
           ),
           ifBreak(
             canHaveTrailingSeparator &&
@@ -1604,7 +1607,7 @@ function printPathNoParens(path, options, print, args) {
               ? separator
               : ""
           ),
-          concat([options.bracketSpacing ? line : softline, rightBrace]),
+          concat([options.objectCurlySpacing ? line : softline, rightBrace]),
           printOptionalToken(path),
           printTypeAnnotation(path, options, print),
         ]);
@@ -4994,21 +4997,21 @@ function printExportDeclaration(path, options, print) {
               "{",
               indent(
                 concat([
-                  options.bracketSpacing ? line : softline,
+                  options.objectCurlySpacing ? line : softline,
                   join(concat([",", line]), specifiers),
                 ])
               ),
               ifBreak(shouldPrintComma(options) ? "," : ""),
-              options.bracketSpacing ? line : softline,
+              options.objectCurlySpacing ? line : softline,
               "}",
             ])
           );
         } else {
           printed = concat([
             "{",
-            options.bracketSpacing ? " " : "",
+            options.objectCurlySpacing ? " " : "",
             concat(specifiers),
-            options.bracketSpacing ? " " : "",
+            options.objectCurlySpacing ? " " : "",
             "}",
           ]);
         }
