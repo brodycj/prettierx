@@ -111,6 +111,11 @@ This option cannot be used with --range-start and --range-end.",
           "description": "Add spaces around the star ('*') in generator functions (before and after - from eslint).",
           "type": "boolean",
         },
+        "graphqlCurlySpacing": Object {
+          "default": true,
+          "description": "Put spaces between curly braces for GraphQL.",
+          "type": "boolean",
+        },
         "htmlVoidTags": Object {
           "default": false,
           "description": "Format void HTML elements as void tags.",

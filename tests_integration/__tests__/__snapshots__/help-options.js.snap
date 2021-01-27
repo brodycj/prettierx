@@ -263,6 +263,19 @@ Default: false
 
 exports[`show detailed usage with --help generator-star-spacing (write) 1`] = `Array []`;
 
+exports[`show detailed usage with --help graphql-curly-spacing (stderr) 1`] = `""`;
+
+exports[`show detailed usage with --help graphql-curly-spacing (stdout) 1`] = `
+"--graphql-curly-spacing
+
+  Put spaces between curly braces for GraphQL.
+
+Default: true
+"
+`;
+
+exports[`show detailed usage with --help graphql-curly-spacing (write) 1`] = `Array []`;
+
 exports[`show detailed usage with --help help (stderr) 1`] = `""`;
 
 exports[`show detailed usage with --help help (stdout) 1`] = `
@@ -476,6 +489,17 @@ exports[`show detailed usage with --help no-editorconfig (stdout) 1`] = `
 `;
 
 exports[`show detailed usage with --help no-editorconfig (write) 1`] = `Array []`;
+
+exports[`show detailed usage with --help no-graphql-curly-spacing (stderr) 1`] = `""`;
+
+exports[`show detailed usage with --help no-graphql-curly-spacing (stdout) 1`] = `
+"--no-graphql-curly-spacing
+
+  Do not put spaces between curly braces for GraphQL. Option status: experimental, with limited testing.
+"
+`;
+
+exports[`show detailed usage with --help no-graphql-curly-spacing (write) 1`] = `Array []`;
 
 exports[`show detailed usage with --help no-indent-chains (stderr) 1`] = `""`;
 

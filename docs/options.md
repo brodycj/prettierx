@@ -349,6 +349,14 @@ Put spaces between type brackets. Status: experimental, with limited testing.
 | ------- | ------------------------ | ---------------------------- |
 | `false` | `--type-bracket-spacing` | `typeBracketSpacing: <bool>` |
 
+## GraphQL curly spacing
+
+Put or do not put spaces between curly braces for GraphQL. Option status: experimental, with limited testing.
+
+| Default | CLI Override                 | API Override                  |
+| ------- | ---------------------------- | ----------------------------- |
+| `true`  | `--no-graphql-curly-spacing` | `graphqlCurlySpacing: <bool>` |
+
 ## Type curly spacing
 
 Put or do not put spaces between type curly braces. Option status: experimental, with limited testing.

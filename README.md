@@ -50,6 +50,7 @@ prettierx <options> <file(s)>
 - `--template-curly-spacing` (`templateCurlySpacing: <bool>`): Put spaces between template curly braces. Status: experimental, with limited testing.
 - `--type-angle-bracket-spacing` (`typeAngleBracketSpacing: <bool>`): Put spaces between type angle brackets. Status: experimental, with limited testing.
 - `--type-bracket-spacing` (`typeBracketSpacing: <bool>`): Put spaces between type brackets. Status: experimental, with limited testing.
+- `--no-graphql-curly-spacing` (`graphqlCurlySpacing: <bool>`): Do not put spaces between curly braces for GraphQL. Option status: experimental, with limited testing.
 - `--no-type-curly-spacing` (`typeCurlySpacing: <bool>`): Do not put spaces between type curly braces. Option status: experimental, with limited testing.
 
 (See [./docs/options.md](./docs/options.md) for more information.)

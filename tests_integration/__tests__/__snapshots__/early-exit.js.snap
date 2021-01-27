@@ -92,6 +92,8 @@ Format options:
                            Defaults to lf.
   --generator-star-spacing Add spaces around the star ('*') in generator functions (before and after - from eslint).
                            Defaults to false.
+  --no-graphql-curly-spacing
+                           Do not put spaces between curly braces for GraphQL. Option status: experimental, with limited testing.
   --html-void-tags         Format void HTML elements as void tags.
                            Defaults to false.
   --html-whitespace-sensitivity <css|strict|ignore>
@@ -289,6 +291,8 @@ Format options:
                            Defaults to lf.
   --generator-star-spacing Add spaces around the star ('*') in generator functions (before and after - from eslint).
                            Defaults to false.
+  --no-graphql-curly-spacing
+                           Do not put spaces between curly braces for GraphQL. Option status: experimental, with limited testing.
   --html-void-tags         Format void HTML elements as void tags.
                            Defaults to false.
   --html-whitespace-sensitivity <css|strict|ignore>

@@ -140,6 +140,10 @@ Object {
       "default": false,
       "type": "boolean",
     },
+    "graphqlCurlySpacing": Object {
+      "default": true,
+      "type": "boolean",
+    },
     "htmlVoidTags": Object {
       "default": false,
       "type": "boolean",
@@ -904,6 +908,15 @@ exports[`CLI --support-info (stdout) 1`] = `
       \\"default\\": false,
       \\"description\\": \\"Add spaces around the star ('*') in generator functions (before and after - from eslint).\\",
       \\"name\\": \\"generatorStarSpacing\\",
+      \\"pluginDefaults\\": {},
+      \\"type\\": \\"boolean\\"
+    },
+    {
+      \\"category\\": \\"Other\\",
+      \\"default\\": true,
+      \\"description\\": \\"Put spaces between curly braces for GraphQL.\\",
+      \\"name\\": \\"graphqlCurlySpacing\\",
+      \\"oppositeDescription\\": \\"Do not put spaces between curly braces for GraphQL. Option status: experimental, with limited testing.\\",
       \\"pluginDefaults\\": {},
       \\"type\\": \\"boolean\\"
     },
