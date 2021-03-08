@@ -433,7 +433,7 @@ function printTernaryOperator(path, options, print, operatorOptions) {
         ? ifBreak("", concat(["(", parenSpace]))
         : "",
       // [prettierx] offsetTernaryExpressions option support:
-      !options.offsetTernaryExpressions
+      true // !options.offsetTernaryExpressions
         ? align(2, path.call(print, operatorOptions.consequentNodePropertyName))
         : path.call(print, operatorOptions.consequentNodePropertyName),
       // [prettierx] spaceInParens option support (...)
@@ -443,7 +443,8 @@ function printTernaryOperator(path, options, print, operatorOptions) {
       line,
       ": ",
       // [prettierx] offsetTernaryExpressions option support:
-      options.offsetTernaryExpressions ||
+      // options.offsetTernaryExpressions ||
+      !options.offsetTernaryExpressions &&
       alternateNode.type === operatorOptions.conditionalNodeType
         ? path.call(print, operatorOptions.alternateNodePropertyName)
         : align(2, path.call(print, operatorOptions.alternateNodePropertyName)),
@@ -454,7 +455,7 @@ function printTernaryOperator(path, options, print, operatorOptions) {
         parent[operatorOptions.alternateNodePropertyName] === node ||
         isParentTest
         ? part
-        : options.useTabs || options.offsetTernaryExpressions // [prettierx] offsetTernaryExpressions option support (...)
+        : options.useTabs //|| options.offsetTernaryExpressions // [prettierx] offsetTernaryExpressions option support (...)
         ? dedent(indent(part))
         : align(Math.max(0, options.tabWidth - 2), part)
     );
@@ -463,7 +464,7 @@ function printTernaryOperator(path, options, print, operatorOptions) {
     // Indent the whole ternary if offsetTernaryExpressions is enabled
     // (like ESLint).
     if (options.offsetTernaryExpressions) {
-      forceNoIndent = false;
+      // forceNoIndent = false;
     }
   }
 
