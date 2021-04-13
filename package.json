@@ -131,7 +131,7 @@
     "tempy": "1.0.1",
     "terser-webpack-plugin": "4.2.3",
     "typescript": "3.9.9",
-    "webpack": "4.46.0"
+    "webpack": "5.32.0"
   },
   "peerDependenciesMeta": {
     "flow-parser": {
