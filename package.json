@@ -84,7 +84,7 @@
     "remark-parse": "5.0.0",
     "resolve": "1.20.0",
     "semver": "7.3.5",
-    "srcset": "3.0.0",
+    "srcset": "3.0.1",
     "string-width": "4.2.2",
     "tslib": "1.14.1",
     "unicode-regex": "3.0.0",
