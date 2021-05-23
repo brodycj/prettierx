@@ -8,7 +8,7 @@ const sandbox = vm.createContext();
 
 const source = globby
   .sync(["standalone.js", "parser-*.js"], {
-    cwd: process.env.PRETTIER_DIR,
+    cwd: process.env.PRETTIERX_DIR,
     absolute: true,
   })
   .map((file) => fs.readFileSync(file, "utf8"))
