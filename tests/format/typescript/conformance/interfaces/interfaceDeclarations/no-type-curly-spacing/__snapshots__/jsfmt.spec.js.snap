@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`interfaceWithMultipleBaseTypes2.ts - {"typeCurlySpacing":false} format 1`] = `
+====================================options=====================================
+parsers: ["typescript"]
+printWidth: 80
+typeCurlySpacing: false
+                                                                                | printWidth
+=====================================input======================================
+interface Base {
+    x: {
+        a?: string; b: string;
+    }
+}
+
+interface Base2 {
+    x: {
+        b: string; c?: number;
+    }
+}
+
+interface Derived extends Base, Base2 {
+    x: { b: string }
+}
+
+interface Derived2 extends Base, Base2 {
+    x: { a: number; b: string }
+}
+
+interface Derived3 extends Base, Base2 {
+    x: { a: string; b: string }
+}
+
+=====================================output=====================================
+interface Base {
+  x: {
+    a?: string;
+    b: string;
+  };
+}
+
+interface Base2 {
+  x: {
+    b: string;
+    c?: number;
+  };
+}
+
+interface Derived extends Base, Base2 {
+  x: {b: string};
+}
+
+interface Derived2 extends Base, Base2 {
+  x: {a: number; b: string};
+}
+
+interface Derived3 extends Base, Base2 {
+  x: {a: string; b: string};
+}
+
+================================================================================
+`;
+
+exports[`mappedType.ts 1`] = `
+====================================options=====================================
+parsers: ["typescript"]
+printWidth: 80
+typeCurlySpacing: false
+                                                                                | printWidth
+=====================================input======================================
+type Keys = 'option1' | 'option2';
+type Flags = { [K in Keys]: boolean };
+
+
+=====================================output=====================================
+type Keys = "option1" | "option2";
+type Flags = {[K in Keys]: boolean};
+
+================================================================================
+`;
