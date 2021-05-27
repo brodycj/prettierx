@@ -176,7 +176,8 @@ function genericPrint(path, options, print) {
     case "ObjectValue": {
       return group([
         "{",
-        options.bracketSpacing && node.fields.length > 0 ? " " : "",
+        // [prettierx]: graphqlCurlySpacing option
+        options.graphqlCurlySpacing && node.fields.length > 0 ? " " : "",
         indent([
           softline,
           join([ifBreak("", ", "), softline], path.map(print, "fields")),
@@ -184,7 +185,8 @@ function genericPrint(path, options, print) {
         softline,
         ifBreak(
           "",
-          options.bracketSpacing && node.fields.length > 0 ? " " : ""
+          // [prettierx]: graphqlCurlySpacing option
+          options.graphqlCurlySpacing && node.fields.length > 0 ? " " : ""
         ),
         "}",
       ]);
