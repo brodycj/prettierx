@@ -16,7 +16,7 @@ const currentVersion = require("../../package.json").version;
 const coreOptions = require("./core-options").options;
 
 // [prettierx] quick workaround:
-const currentVersion = "2.0.0";
+const currentVersion = "2.3.0";
 
 /**
  * Strings in `plugins` and `pluginSearchDirs` are handled by a wrapped version
