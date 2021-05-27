@@ -60,7 +60,8 @@ function embed(path, print, textToDoc, options) {
   }
 
   if (language === "graphql") {
-    return formatGraphql(path, print, textToDoc);
+    // [prettierx] templateCurlySpacing option support (...)
+    return formatGraphql(path, print, textToDoc, options);
   }
 
   if (language === "html" || language === "angular") {
