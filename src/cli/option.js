@@ -1,6 +1,8 @@
 "use strict";
 
 const dashify = require("dashify");
+// [prettierx]: inherited option support
+const camelCase = require("camelcase");
 
 const fromPairs = require("lodash/fromPairs");
 
@@ -108,6 +110,37 @@ function applyConfigPrecedence(context, options) {
   }
 }
 
+// [prettierx]: inherited option support
+/**
+ * Sets values for options which inherit the value of another option. If the
+ * inherited option's value is set, but the inheritor's is not, the inheritor's
+ * value is replaced with that of the inhereted option.
+ * @param {{ [optionName: string]: import("../main/core-options").OptionInfo }} optionMap
+ * @param {{ [optionName: string]: any }} options
+ */
+function setInheritedOptionValues(optionMap, options) {
+  for (const [optionCliKey, optionInfo] of Object.entries(optionMap)) {
+    if (!optionInfo || !optionInfo.inherit) {
+      continue;
+    }
+
+    const optionApiKey = camelCase(optionCliKey);
+
+    const optionValue = options[optionApiKey];
+    if (optionValue !== undefined) {
+      continue;
+    }
+
+    const inheritedValue = options[optionInfo.inherit];
+
+    if (inheritedValue === undefined) {
+      continue;
+    }
+
+    options[optionApiKey] = inheritedValue;
+  }
+}
+
 function getOptionsForFile(context, filepath) {
   const options = getOptionsOrDie(context, filepath);
 
@@ -127,6 +160,9 @@ function getOptionsForFile(context, filepath) {
     ),
   };
 
+  // [prettierx]: inherited option support
+  setInheritedOptionValues(context.detailedOptionMap, appliedOptions);
+
   context.logger.debug(
     `applied config-precedence (${context.argv["config-precedence"]}): ` +
       `${JSON.stringify(appliedOptions)}`
@@ -142,4 +178,6 @@ function getOptionsForFile(context, filepath) {
 module.exports = {
   getOptionsForFile,
   createMinimistOptions,
+  // [prettierx]: inherited option support
+  setInheritedOptionValues,
 };
