@@ -297,9 +297,11 @@ function printImportAssertions(path, options, print) {
   if (isNonEmptyArray(node.assertions)) {
     return [
       " assert {",
-      options.bracketSpacing ? " " : "",
+      // [prettierx] importCurlySpacing option
+      options.importCurlySpacing ? " " : "",
       join(", ", path.map(print, "assertions")),
-      options.bracketSpacing ? " " : "",
+      // [prettierx] importCurlySpacing option
+      options.importCurlySpacing ? " " : "",
       "}",
     ];
   }
