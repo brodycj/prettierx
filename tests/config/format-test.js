@@ -57,6 +57,8 @@ const espreeDisabledTests = new Set(
   [
     // These tests only work for `babel`
     "comments-closure-typecast",
+    // [prettierx]: tests --paren-spacing option support
+    "comments-closure-typecast/with-inner-spacing/..",
   ].map((directory) => path.join(__dirname, "../format/js", directory))
 );
 const meriyahDisabledTests = espreeDisabledTests;

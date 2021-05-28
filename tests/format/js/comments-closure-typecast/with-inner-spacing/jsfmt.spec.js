@@ -2,7 +2,8 @@
 // This test script runs for test files in parent directory,
 // **not** on any files in *this* directory.
 
-const dirpath = `${__dirname}/..`;
+const path = require("path");
+const dirpath = path.join(`${__dirname}/..`);
 
 run_spec(dirpath, ["babel", "babel-flow"], {
   // [prettierx] test with --paren-spacing
