@@ -1,18 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-<<<<<<< HEAD:tests_integration/__tests__/__snapshots__/early-exit.js.snap
-exports[`node version error (stderr) 1`] = `
-"prettierx requires at least version 10.13.0 of Node, please upgrade
-"
-=======
 exports[`node version error 1`] = `
 Object {
-  "stderr": "prettier requires at least version 10.13.0 of Node, please upgrade
+  "stderr": "prettierx requires at least version 10.13.0 of Node, please upgrade
 ",
   "stdout": "",
   "write": Array [],
 }
->>>>>>> upstream-2.3.0:tests/integration/__tests__/__snapshots__/early-exit.js.snap
 `;
 
 exports[`show detailed usage with --help l (alias) (stderr) 1`] = `""`;
@@ -81,7 +75,7 @@ Format options:
   --arrow-parens <always|avoid>
                            Include parentheses around a sole arrow function parameter.
                            Defaults to always.
-<<<<<<< HEAD:tests_integration/__tests__/__snapshots__/early-exit.js.snap
+  --no-bracket-spacing     Do not print spaces between brackets.
   --break-before-else      Always add a line break before else.
                            Defaults to false.
   --break-long-method-chains
@@ -92,12 +86,9 @@ Format options:
                            Defaults to false.
   --css-paren-spacing      Print spaces between parens in CSS, WordPress style. Status: experimental, with limited testing.
                            Defaults to false.
-=======
-  --no-bracket-spacing     Do not print spaces between brackets.
   --embedded-language-formatting <auto|off>
                            Control how Prettier formats quoted code embedded in the file.
                            Defaults to auto.
->>>>>>> upstream-2.3.0:tests/integration/__tests__/__snapshots__/early-exit.js.snap
   --end-of-line <lf|crlf|cr|auto>
                            Which end of line characters to apply.
                            Defaults to lf.
@@ -122,16 +113,12 @@ Format options:
                            Defaults to false.
   --jsx-single-quote       Use single quotes in JSX.
                            Defaults to false.
-<<<<<<< HEAD:tests_integration/__tests__/__snapshots__/early-exit.js.snap
   --no-object-curly-spacing
                            Disable spaces between object curly braces.
   --offset-ternary-expressions
                            Indent and align ternary expression branches more consistently with \\"Standard JS\\" (similar to the corresponding eslint option).
                            Defaults to false.
-  --parser <flow|babel|babel-flow|babel-ts|typescript|css|less|scss|json|json5|json-stringify|graphql|markdown|mdx|vue|yaml|html|angular|lwc>
-=======
   --parser <flow|babel|babel-flow|babel-ts|typescript|espree|meriyah|css|less|scss|json|json5|json-stringify|graphql|markdown|mdx|vue|yaml|glimmer|html|angular|lwc>
->>>>>>> upstream-2.3.0:tests/integration/__tests__/__snapshots__/early-exit.js.snap
                            Which parser to use.
   --print-width <int>      The line length where Prettier will try wrap.
                            Defaults to 80.
@@ -306,7 +293,7 @@ Format options:
   --arrow-parens <always|avoid>
                            Include parentheses around a sole arrow function parameter.
                            Defaults to always.
-<<<<<<< HEAD:tests_integration/__tests__/__snapshots__/early-exit.js.snap
+  --no-bracket-spacing     Do not print spaces between brackets.
   --break-before-else      Always add a line break before else.
                            Defaults to false.
   --break-long-method-chains
@@ -317,12 +304,9 @@ Format options:
                            Defaults to false.
   --css-paren-spacing      Print spaces between parens in CSS, WordPress style. Status: experimental, with limited testing.
                            Defaults to false.
-=======
-  --no-bracket-spacing     Do not print spaces between brackets.
   --embedded-language-formatting <auto|off>
                            Control how Prettier formats quoted code embedded in the file.
                            Defaults to auto.
->>>>>>> upstream-2.3.0:tests/integration/__tests__/__snapshots__/early-exit.js.snap
   --end-of-line <lf|crlf|cr|auto>
                            Which end of line characters to apply.
                            Defaults to lf.
@@ -347,16 +331,12 @@ Format options:
                            Defaults to false.
   --jsx-single-quote       Use single quotes in JSX.
                            Defaults to false.
-<<<<<<< HEAD:tests_integration/__tests__/__snapshots__/early-exit.js.snap
   --no-object-curly-spacing
                            Disable spaces between object curly braces.
   --offset-ternary-expressions
                            Indent and align ternary expression branches more consistently with \\"Standard JS\\" (similar to the corresponding eslint option).
                            Defaults to false.
-  --parser <flow|babel|babel-flow|babel-ts|typescript|css|less|scss|json|json5|json-stringify|graphql|markdown|mdx|vue|yaml|html|angular|lwc>
-=======
   --parser <flow|babel|babel-flow|babel-ts|typescript|espree|meriyah|css|less|scss|json|json5|json-stringify|graphql|markdown|mdx|vue|yaml|glimmer|html|angular|lwc>
->>>>>>> upstream-2.3.0:tests/integration/__tests__/__snapshots__/early-exit.js.snap
                            Which parser to use.
   --print-width <int>      The line length where Prettier will try wrap.
                            Defaults to 80.
