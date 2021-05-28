@@ -1,4 +1,4 @@
-# Contributing to Prettierx
+# Contributing to prettierX
 
 To get up and running, install the dependencies and run the tests:
 
