@@ -16,7 +16,7 @@ const source = globby
 
 vm.runInContext(source, sandbox);
 
-const allowedGlobalObjects = new Set(["prettier", "prettierPlugins"]);
+const allowedGlobalObjects = new Set(["prettierx", "prettierPlugins"]);
 const globalObjects = Object.keys(sandbox).filter(
   (property) => !allowedGlobalObjects.has(property)
 );
