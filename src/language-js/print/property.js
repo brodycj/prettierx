@@ -173,7 +173,10 @@ function printProperty(path, options, print) {
 
   // [prettierx] calculate property padding
   // for alignObjectProperties option
-  const propertyPadding = getPropertyPadding(options, "key");
+  const propertyPadding = path.call(
+    getPropertyPadding.bind(null, options),
+    "key"
+  );
 
   // [prettierx] FUTURE TBD: it should be possible to refactor the code
   // to use the same printPropertyKey call for both
