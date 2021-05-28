@@ -4,6 +4,7 @@ const { isNonEmptyArray } = require("../../common/util");
 const {
   builders: { softline, group, indent, join, line, ifBreak, hardline },
 } = require("../../document");
+const { removeLines } = require("../../document/doc-utils");
 const { printDanglingComments } = require("../../main/comments");
 
 const {
@@ -258,7 +259,7 @@ function printModuleSpecifiers(path, options, print) {
           ])
         );
       } else {
-        parts.push([
+        parts.push(removeLines([
           "{",
           // [prettierx] importCurlySpacing, exportCurlySpacing options
           curlyLine,
@@ -266,7 +267,7 @@ function printModuleSpecifiers(path, options, print) {
           // [prettierx] importCurlySpacing, exportCurlySpacing options
           curlyLine,
           "}",
-        ]);
+        ]));
       }
     }
   } else {
