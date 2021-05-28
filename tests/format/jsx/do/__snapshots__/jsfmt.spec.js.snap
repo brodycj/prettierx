@@ -2,7 +2,7 @@
 
 exports[`do.js format 1`] = `
 ====================================options=====================================
-parsers: ["babel"]
+parsers: ["babel", "babel-flow"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================

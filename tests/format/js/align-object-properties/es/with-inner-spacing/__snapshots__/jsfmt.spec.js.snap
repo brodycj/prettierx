@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`o.js 1`] = `
+exports[`o.js - {"alignObjectProperties":true,"computedPropertySpacing":true,"trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 alignObjectProperties: true
 computedPropertySpacing: true
@@ -10,14 +10,14 @@ trailingComma: "none"
                                                                                 | printWidth
 =====================================input======================================
 o = {
-  [name]: 'value',
+  [name]: "value",
   2:3,
   "k-2":2,
   keyasdf:3
 }
 
 o = {
-  [namelonglonglong]: 'value',
+  [namelonglonglong]: "value",
   2:3,
   "k-2":2,
   keyasdf:3
@@ -26,7 +26,7 @@ o = {
 // with shorthand member:
 o = {
   shorthand,
-  [namelonglonglong]: 'value',
+  [namelonglonglong]: "value",
   2:3,
   "k-2":2,
   keyasdf:3
@@ -35,23 +35,23 @@ o = {
 // with extra-long shorthand member:
 o = {
   extraLongShorthand,
-  [name]: 'value',
+  [name]: "value",
   2:3,
   "k-2":2,
   keyasdf:3
 }
 
 // Ensure this object does not get extra padding:
-o = { [name]: 'value', 2:3, "k-2":2, keyasdf:3 }
+o = { [name]: "value", 2:3, "k-2":2, keyasdf:3 }
 
 // Ensure this also does not get extra padding:
-o = { [name]: 'value', 2:3, "k-2":2,
+o = { [name]: "value", 2:3, "k-2":2,
   keyasdf:3
 }
 
 // Ensure this one *does* get the padding:
 o = { // with a comment here
-  [name]: 'value',
+  [name]: "value",
   2:3,
   "k-2":2,
   keyasdf:3
@@ -59,16 +59,16 @@ o = { // with a comment here
 
 // with multiple entries on a single line in the input:
 o = {
-  [namelonglonglong]: 'value',
+  [namelonglonglong]: "value",
   2:3, "k-2":2, keyasdf:3
 }
 
 // longer object on a single line:
-o = { [namelonglonglong]: 'value', 2:3, "k-2":2, keyasdf:3 }
+o = { [namelonglonglong]: "value", 2:3, "k-2":2, keyasdf:3 }
 
 // with nested object member:
 o = {
-  [name]: 'value',
+  [name]: "value",
   2:3,
   "k-2":2,
   nested: {
@@ -81,7 +81,7 @@ o = {
 // with nested object member on a single line
 // (which should not get extra padding):
 o = {
-  [name]: 'value',
+  [name]: "value",
   2:3,
   "k-2":2,
   nested: { a:1, next:2 },
@@ -91,7 +91,7 @@ o = {
 // with nested object member which is reformatted onto single line
 // (which should not get extra padding):
 o = {
-  [name]: 'value',
+  [name]: "value",
   2:3,
   "k-2":2,
   nested: {a:1,

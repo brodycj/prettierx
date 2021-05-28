@@ -1,26 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`indexedAccesType.ts 1`] = `
-====================================options=====================================
-parsers: ["typescript"]
-printWidth: 80
-spaceInParens: true
-typeAngleBracketSpacing: true
-typeBracketSpacing: true
-                                                                                | printWidth
-=====================================input======================================
-const a: Foo['bar'] = {
-  baz: 'yawp'
-}
-
-=====================================output=====================================
-const a: Foo[ "bar" ] = {
-  baz: "yawp",
-};
-
-================================================================================
-`;
-
 exports[`symbolProperty15.ts - {"spaceInParens":true,"typeAngleBracketSpacing":true,"typeBracketSpacing":true} format 1`] = `
 ====================================options=====================================
 parsers: ["typescript"]
@@ -49,7 +28,7 @@ bar(i);
 //@target: ES6
 class C {}
 interface I {
-  [Symbol.iterator]?: {x};
+  [Symbol.iterator]?: { x };
 }
 
 declare function foo( i: I ): I;

@@ -22,48 +22,7 @@ type Y = new ( options: {
 ================================================================================
 `;
 
-exports[`single-parameter.ts 1`] = `
-====================================options=====================================
-parsers: ["typescript"]
-printWidth: 80
-spaceInParens: true
-                                                                                | printWidth
-=====================================input======================================
-type X = (options:{ a: string; b: AbstractCompositeThingamabobberFactoryProvider}) => {};
-type Y = new (options:{ a: string; b: AbstractCompositeThingamabobberFactoryProvider}) => {};
-=====================================output=====================================
-type X = ( options: {
-  a: string;
-  b: AbstractCompositeThingamabobberFactoryProvider;
-} ) => {};
-type Y = new ( options: {
-  a: string;
-  b: AbstractCompositeThingamabobberFactoryProvider;
-} ) => {};
-
-================================================================================
-`;
-
 exports[`type-annotation.ts - {"spaceInParens":true} format 1`] = `
-====================================options=====================================
-parsers: ["typescript"]
-printWidth: 80
-spaceInParens: true
-                                                                                | printWidth
-=====================================input======================================
-const foo = (): () => void => (): void => null;
-const bar = (): (() => void) => (): void => null;
-const baz = (): ((() => void)) => (): void => null;
-
-=====================================output=====================================
-const foo = (): ( () => void ) => (): void => null;
-const bar = (): ( () => void ) => (): void => null;
-const baz = (): ( () => void ) => (): void => null;
-
-================================================================================
-`;
-
-exports[`type-annotation.ts 1`] = `
 ====================================options=====================================
 parsers: ["typescript"]
 printWidth: 80

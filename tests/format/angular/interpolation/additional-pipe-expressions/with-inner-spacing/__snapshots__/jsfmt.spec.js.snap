@@ -17,41 +17,7 @@ trailingComma: "none"
 ================================================================================
 `;
 
-exports[`inside-computed-member-expression.ng 1`] = `
-====================================options=====================================
-computedPropertySpacing: true
-parsers: ["__ng_interpolation"]
-printWidth: 80
-spaceInParens: true
-spaceUnaryOps: true
-trailingComma: "none"
-                                                                                | printWidth
-=====================================input======================================
-(a|b)[c]
-
-=====================================output=====================================
-( a | b )[ c ]
-================================================================================
-`;
-
 exports[`inside-member-expression.ng - {"spaceInParens":true,"computedPropertySpacing":true,"trailingComma":"none","spaceUnaryOps":true} format 1`] = `
-====================================options=====================================
-computedPropertySpacing: true
-parsers: ["__ng_interpolation"]
-printWidth: 80
-spaceInParens: true
-spaceUnaryOps: true
-trailingComma: "none"
-                                                                                | printWidth
-=====================================input======================================
-(a|b).c
-
-=====================================output=====================================
- a | b .c
-================================================================================
-`;
-
-exports[`inside-member-expression.ng 1`] = `
 ====================================options=====================================
 computedPropertySpacing: true
 parsers: ["__ng_interpolation"]
@@ -81,45 +47,11 @@ trailingComma: "none"
 (a|b)?.c
 
 =====================================output=====================================
- a | b ?.c
-================================================================================
-`;
-
-exports[`inside-optional-expression.ng 1`] = `
-====================================options=====================================
-computedPropertySpacing: true
-parsers: ["__ng_interpolation"]
-printWidth: 80
-spaceInParens: true
-spaceUnaryOps: true
-trailingComma: "none"
-                                                                                | printWidth
-=====================================input======================================
-(a|b)?.c
-
-=====================================output=====================================
 ( a | b )?.c
 ================================================================================
 `;
 
 exports[`inside-unary.ng - {"spaceInParens":true,"computedPropertySpacing":true,"trailingComma":"none","spaceUnaryOps":true} format 1`] = `
-====================================options=====================================
-computedPropertySpacing: true
-parsers: ["__ng_interpolation"]
-printWidth: 80
-spaceInParens: true
-spaceUnaryOps: true
-trailingComma: "none"
-                                                                                | printWidth
-=====================================input======================================
-!(a|b)
-
-=====================================output=====================================
-!  a | b 
-================================================================================
-`;
-
-exports[`inside-unary.ng 1`] = `
 ====================================options=====================================
 computedPropertySpacing: true
 parsers: ["__ng_interpolation"]

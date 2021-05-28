@@ -61,7 +61,7 @@ const sel = this.connections
 =====================================output=====================================
 foo
   .doSomething("Hello World")
-  .doAnotherThing("Foo", {foo: bar})
+  .doAnotherThing("Foo", { foo: bar })
   // App configuration.
   .doOneMoreThing(config)
   .run(() => console.log("Bar"));
@@ -70,7 +70,7 @@ bigDeal
   .doSomething("Hello World")
 
   // Hello world
-  .doAnotherThing("Foo", {foo: bar})
+  .doAnotherThing("Foo", { foo: bar })
 
   // App configuration.
   .doOneMoreThing(config)
@@ -81,7 +81,7 @@ bar.baz
   .doSomething("Hello World")
 
   // Hello world
-  .foo.bar.doAnotherThing("Foo", {foo: bar})
+  .foo.bar.doAnotherThing("Foo", { foo: bar })
 
   .doOneMoreThing(config)
   .bar.run(() => console.log("Bar"));
@@ -89,16 +89,16 @@ bar.baz
 (somethingGood ? thisIsIt : maybeNot)
   // Hello world
   .doSomething("Hello World")
-  .doAnotherThing("Foo", {foo: bar}) // Run this
+  .doAnotherThing("Foo", { foo: bar }) // Run this
   .run(() => console.log("Bar")); // Do this
 
 helloWorld.text().then(t => t);
 
-
+(
   veryLongVeryLongVeryLong ||
   anotherVeryLongVeryLongVeryLong ||
   veryVeryVeryLongError
-
+)
   .map(tickets => TicketRecord.createFromSomeLongString())
 
   .filter(obj => Boolean(obj));
@@ -106,116 +106,6 @@ helloWorld.text().then(t => t);
 const sel = this.connections
   .concat(this.activities.concat(this.operators))
   .filter(x => x.selected);
-
-================================================================================
-`;
-
-exports[`member-chain.js 1`] = `
-====================================options=====================================
-arrowParens: "avoid"
-indentChains: false
-parsers: ["babel", "babel-flow", "flow", "typescript"]
-printWidth: 80
-                                                                                | printWidth
-=====================================input======================================
-foo.doSomething('Hello World').doAnotherThing('Foo', { foo: bar })
-  // App configuration.
-  .doOneMoreThing(config)
-  .run(() => console.log('Bar'));
-
-bigDeal
-  .doSomething('Hello World')
-
-  // Hello world
-  .doAnotherThing('Foo', { foo: bar })
-
-  // App configuration.
-  .doOneMoreThing(config)
-
-  .run(() => console.log('Bar'));
-
-
-bar.baz
-  .doSomething('Hello World')
-
-  // Hello world
-  .foo.bar.doAnotherThing('Foo', { foo: bar })
-
-  .doOneMoreThing(config)
-  .bar.run(() => console.log('Bar'));
-
-(
-  somethingGood ? thisIsIt : maybeNot
-)
-  // Hello world
-  .doSomething('Hello World')
-  .doAnotherThing('Foo', { foo: bar }) // Run this
-  .run(() => console.log('Bar')); // Do this
-
-helloWorld
-  .text()
-  .then(t => t);
-
-(veryLongVeryLongVeryLong ||
- anotherVeryLongVeryLongVeryLong ||
- veryVeryVeryLongError
-)
-  .map(tickets => TicketRecord.createFromSomeLongString())
-
-  .filter(obj => !!obj);
-
-const sel = this.connections
-  .concat(this.activities.concat(this.operators))
-  .filter(x => x.selected);
-
-=====================================output=====================================
-foo
-.doSomething("Hello World")
-.doAnotherThing("Foo", { foo: bar })
-// App configuration.
-.doOneMoreThing(config)
-.run(() => console.log("Bar"));
-
-bigDeal
-.doSomething("Hello World")
-
-// Hello world
-.doAnotherThing("Foo", { foo: bar })
-
-// App configuration.
-.doOneMoreThing(config)
-
-.run(() => console.log("Bar"));
-
-bar.baz
-.doSomething("Hello World")
-
-// Hello world
-.foo.bar.doAnotherThing("Foo", { foo: bar })
-
-.doOneMoreThing(config)
-.bar.run(() => console.log("Bar"));
-
-(somethingGood ? thisIsIt : maybeNot)
-// Hello world
-.doSomething("Hello World")
-.doAnotherThing("Foo", { foo: bar }) // Run this
-.run(() => console.log("Bar")); // Do this
-
-helloWorld.text().then(t => t);
-
-(
-  veryLongVeryLongVeryLong ||
-  anotherVeryLongVeryLongVeryLong ||
-  veryVeryVeryLongError
-)
-.map(tickets => TicketRecord.createFromSomeLongString())
-
-.filter(obj => !!obj);
-
-const sel = this.connections
-.concat(this.activities.concat(this.operators))
-.filter(x => x.selected);
 
 ================================================================================
 `;
