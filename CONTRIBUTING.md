@@ -1,4 +1,4 @@
-# Contributing to Prettier
+# Contributing to Prettierx
 
 To get up and running, install the dependencies and run the tests:
 
@@ -16,18 +16,18 @@ Here's what you need to know about the tests:
   - `AST_COMPARE` That formats each file, re-parses it, and compares the new AST with the original one and makes sure they are semantically equivalent.
   - `DEEP_COMPARE` That formats each file, then formats the output again, and checks that the second output is the same as the first.
 - Each test folder has a `jsfmt.spec.js` that runs the tests. For JavaScript files, generally you can just put `run_spec(__dirname, ["babel", "flow", "typescript"]);` there. This will verify that the output using each parser is the same. You can also pass options as the third argument, like this: `run_spec(__dirname, ["babel"], { trailingComma: "es5" });`
-- `tests/flow/` contains the Flow test suite, and is not supposed to be edited by hand. To update it, clone the Flow repo next to the Prettier repo and run: `node scripts/sync-flow-tests.js ../flow/tests/`.
-- If you would like to debug prettier locally, you can either debug it in node or the browser. The easiest way to debug it in the browser is to run the interactive `docs` REPL locally. The easiest way to debug it in node, is to create a local test file with some example code you want formatted and either run it in an editor like VS Code or run it directly via `./bin/prettier.js <your_test_file>`.
+- `tests/flow/` contains the Flow test suite, and is not supposed to be edited by hand. To update it, clone the Flow repo next to the Prettierx repo and run: `node scripts/sync-flow-tests.js ../flow/tests/`.
+- If you would like to debug prettierx locally, you can either debug it in node or the browser. The easiest way to debug it in the browser is to run the interactive `docs` REPL locally. The easiest way to debug it in node, is to create a local test file with some example code you want formatted and either run it in an editor like VS Code or run it directly via `./bin/prettier.js <your_test_file>`.
 
 Run `yarn lint:eslint --fix` to automatically format files.
 
 If you can, take look at [commands.md](commands.md) and check out [Wadler's paper](http://homepages.inf.ed.ac.uk/wadler/papers/prettier/prettier.pdf) to understand how Prettier works.
 
-If you want to know more about Prettier's GitHub labels, see the [Issue Labels](https://github.com/prettier/prettier/wiki/Issue-Labels) page on the Wiki.
+If you want to know more about Prettierx's GitHub labels, see the [Issue Labels](https://github.com/brodybits/prettierx/wiki/Issue-Labels) page on the Wiki.
 
 ## Performance
 
-If you're contributing a performance improvement, the following Prettier CLI options can help:
+If you're contributing a performance improvement, the following Prettierx CLI options can help:
 
 - `--debug-repeat N` uses a naïve loop to repeat the formatting `N` times and measures the average run duration. It can be useful to highlight hot functions in the profiler. The measurements are printed at the debug log level, use `--loglevel debug` to see them.
 - `--debug-benchmark` uses [`benchmark`](https://npm.im/benchmark) module to produce statistically significant duration measurements. The measurements are printed at the debug log level, use `--loglevel debug` to see them.
@@ -42,8 +42,8 @@ _Unfortunately, [`yarn` simply appends passed arguments to commands, cannot refe
 
 In the above commands:
 
-- `yarn && yarn build` ensures the compiler-optimized version of Prettier is built prior to launching it. Prettier's own environment checks are defaulted to production and removed during the build. The build output is cached, so a rebuild will happen only if the source code changes.
-- `NODE_ENV=production` ensures Prettier and its dependencies run in production mode.
+- `yarn && yarn build` ensures the compiler-optimized version of Prettierx is built prior to launching it. Prettierx's own environment checks are defaulted to production and removed during the build. The build output is cached, so a rebuild will happen only if the source code changes.
+- `NODE_ENV=production` ensures Prettierx and its dependencies run in production mode.
 - `node --inspect-brk` pauses the script execution until Inspector is connected to the Node process.
 - `--loglevel debug` ensures the `--debug-repeat` or `--debug-benchmark` measurements are printed to `stderr`.
 - `> /dev/null` ensures the formatted output is discarded.
