@@ -3,9 +3,9 @@
 // **not** on any files in *this* directory.
 
 const path = require("path");
-const dirpath = path.join(`${__dirname}/..`);
+const dirPath = path.join(`${__dirname}/..`);
 
-run_spec(dirpath, ["babel", "babel-flow"], {
+run_spec(dirPath, ["babel", "babel-flow"], {
   // [prettierx] test with --paren-spacing
   spaceInParens: true,
   arrayBracketSpacing: true,

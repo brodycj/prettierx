@@ -2,12 +2,12 @@
 // This test script runs for test files in parent directory,
 // **not** on any files in *this* directory.
 
-const dirpath = `${__dirname}/..`;
+const dirPath = `${__dirname}/..`;
 
 // [prettierx] test with --paren-spacing, only with defaults
 // including arrowParens: "avoid"
 // (note that this combination is **not** recommended)
-run_spec(dirpath, ["flow", "babel", "babel-flow"], {
+run_spec(dirPath, ["flow", "babel", "babel-flow"], {
   spaceInParens: true,
   typeAngleBracketSpacing: true,
   typeBracketSpacing: false

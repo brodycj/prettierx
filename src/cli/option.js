@@ -114,7 +114,7 @@ function applyConfigPrecedence(context, options) {
 /**
  * Sets values for options which inherit the value of another option. If the
  * inherited option's value is set, but the inheritor's is not, the inheritor's
- * value is replaced with that of the inhereted option.
+ * value is replaced with that of the inherited option.
  * @param {{ [optionName: string]: import("../main/core-options").OptionInfo }} optionMap
  * @param {{ [optionName: string]: any }} options
  */
