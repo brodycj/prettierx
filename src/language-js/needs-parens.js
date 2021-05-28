@@ -256,15 +256,16 @@ function needsParens(path, options) {
         case "OptionalCallExpression":
           // [prettierx] parenSpace option support (...)
           // Logical and Binary expressions already got their parens if parent is CallExpression
-          if (
-            name === "callee" &&
-            (parent.type === "CallExpression" ||
-              parent.type === "OptionalCallExpression") &&
-            (node.type === "LogicalExpression" ||
-              node.type === "BinaryExpression")
-          ) {
-            return false;
-          }
+          // if (
+          //   name === "callee" &&
+          //   ((parent.type === "CallExpression" ||
+          //     parent.type === "OptionalCallExpression") &&
+          //   (node.type === "LogicalExpression" ||
+          //     node.type === "BinaryExpression")) &&
+          //     !(node.extra && node.extra.parenthesized)
+          // ) {
+          //   return false;
+          // }
           return name === "callee";
 
         case "ClassExpression":
@@ -283,26 +284,28 @@ function needsParens(path, options) {
         case "UpdateExpression":
           // [prettierx] parenSpace option support (...)
           // Logical and Binary expressions already got their parens if parent is UnaryExpression
-          if (
-            parent.type === "UnaryExpression" &&
-            (node.type === "LogicalExpression" ||
-              node.type === "BinaryExpression")
-          ) {
-            return false;
-          }
+          // if (
+          //   (parent.type === "UnaryExpression" &&
+          //   (node.type === "LogicalExpression" ||
+          //     node.type === "BinaryExpression")) &&
+          //     !(node.extra && node.extra.parenthesized)
+          // ) {
+          //   return false;
+          // }
           return true;
 
         case "MemberExpression":
         case "OptionalMemberExpression":
           // [prettierx] parenSpace option support (...)
           // Logical and Binary expressions already got their parens if parent is MemberExpression
-          if (
-            !parent.computed &&
-            (node.type === "LogicalExpression" ||
-              node.type === "BinaryExpression")
-          ) {
-            return false;
-          }
+          // if (
+          //   !parent.computed &&
+          //   (node.type === "LogicalExpression" ||
+          //     node.type === "BinaryExpression") &&
+          //     !(node.extra && node.extra.parenthesized)
+          // ) {
+          //   return false;
+          // }
           // [prettierx] cleanup: removed extra parent.object condition
           // not needed ref:
           // - https://github.com/brodybits/prettierx/pull/333
@@ -770,15 +773,16 @@ function needsParens(path, options) {
         (isCallExpression(parent) && parent.arguments[name] === node) ||
         (name === "right" && parent.type === "NGPipeExpression") ||
         (name === "property" && parent.type === "MemberExpression") ||
-        parent.type === "AssignmentExpression" ||
+        parent.type === "AssignmentExpression" // ||
         // [prettierx] parenSpace option support (...)
         // Pipe expression already got the parens when breaking inside certain parents
-        parent.type === "UnaryExpression" ||
-        ((parent.type === "MemberExpression" ||
-          parent.type === "OptionalMemberExpression") &&
-          !parent.computed) ||
-        (name === "callee" &&
-          parent.type === "CallExpression")
+        // ((parent.type === "UnaryExpression" ||
+        // ((parent.type === "MemberExpression" ||
+        //   parent.type === "OptionalMemberExpression") &&
+        //   !parent.computed) ||
+        // (name === "callee" &&
+        //   parent.type === "CallExpression")) &&
+        //   !(node.extra && node.extra.parenthesized))
       ) {
         return false;
       }
