@@ -63,7 +63,9 @@ module.exports = {
               ...($$$options.plugins || []),
             ],
           };
-          prettierx.__debug.parse($$$input, options, ${JSON.stringify(massage)});
+          prettierx.__debug.parse($$$input, options, ${JSON.stringify(
+            massage
+          )});
         `,
         { $$$input: input, $$$options: options, ...sandbox }
       );
