@@ -165,10 +165,8 @@
     "* prepublishOnly is changed to just log some info",
     "* prepare-release script is normally not run on prettierx,",
     "  use prepare-extra-release instead",
-    "* build script is normally not run on prettierx,",
-    "  use build-extra-dist instead",
-    "* keeping build-extra-dist & test:dist scripts to",
-    "  help restore browser build support someday ref:",
+    "* keeping build & test:dist scripts to help restore",
+    "  browser build support someday ref:",
     "  https://github.com/brodybits/prettierx/issues/95",
     "<!-- -->"
   ],

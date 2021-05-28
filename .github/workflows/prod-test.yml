@@ -38,7 +38,7 @@ jobs:
             v2-build-cache-${{ hashFiles('yarn.lock') }}-${{ hashFiles('scripts/build/**/*') }}-refs/heads/main-
 
       - name: Build Package
-        run: yarn build-extra-dist
+        run: yarn build
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
