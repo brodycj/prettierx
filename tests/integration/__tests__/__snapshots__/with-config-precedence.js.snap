@@ -134,6 +134,27 @@ function noConfigJs() {
     \\"no-config/file.js should have no semicolons\\"
   )
 }
+import { name } from \\"package\\";
+
+function optionInheritanceJs() {
+  const obj =
+    {
+      x: 1,
+    };
+  console.log(
+    \\"option-inheritance/file.js should have no spacing in object brackets\\"
+  );
+  console.log(
+    \\"option-inheritance/file.js should have spacing in import brackets\\"
+  );
+}
+\\"use strict\\";
+
+module.exports =
+  {
+    bracketSpacing: true,
+    objectCurlySpacing: false,
+  };
 function packageJs() {
    console.log(
       \\"package/file.js should have tab width 3\\"
@@ -229,6 +250,27 @@ function noConfigJs() {
     \\"no-config/file.js should have no semicolons\\"
   )
 }
+import { name } from \\"package\\";
+
+function optionInheritanceJs() {
+  const obj =
+    {
+      x: 1,
+    };
+  console.log(
+    \\"option-inheritance/file.js should have no spacing in object brackets\\"
+  );
+  console.log(
+    \\"option-inheritance/file.js should have spacing in import brackets\\"
+  );
+}
+\\"use strict\\";
+
+module.exports =
+  {
+    bracketSpacing: true,
+    objectCurlySpacing: false,
+  };
 function packageJs() {
    console.log(
       \\"package/file.js should have tab width 3\\"
