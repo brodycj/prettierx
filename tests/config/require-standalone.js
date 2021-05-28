@@ -46,7 +46,7 @@ module.exports = {
             ...($$$options.plugins || []),
           ],
         };
-        prettier.formatWithCursor($$$input, options);
+        prettierx.formatWithCursor($$$input, options);
       `,
       { $$$input: input, $$$options: options, ...sandbox }
     );
@@ -63,7 +63,7 @@ module.exports = {
               ...($$$options.plugins || []),
             ],
           };
-          prettier.__debug.parse($$$input, options, ${JSON.stringify(massage)});
+          prettierx.__debug.parse($$$input, options, ${JSON.stringify(massage)});
         `,
         { $$$input: input, $$$options: options, ...sandbox }
       );
