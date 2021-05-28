@@ -1,4 +1,4 @@
-# Contributing to Prettier
+# Contributing to prettierX
 
 To get up and running, install the dependencies and run the tests:
 
@@ -70,18 +70,18 @@ After opening a PR, describe your changes in a file in the `changelog_unreleased
 
 Take a look at [`commands.md`](commands.md) and, if you know Haskell, check out [Wadler's paper](http://homepages.inf.ed.ac.uk/wadler/papers/prettier/prettier.pdf) to understand how Prettier works.
 
-If you want to know more about Prettier's GitHub labels, see the [Issue Labels](https://github.com/prettier/prettier/wiki/Issue-Labels) page on the Wiki.
+~~If you want to know more about prettier(X)'s GitHub labels, see the [Prettier Issue Labels](https://github.com/prettier/prettier/wiki/Issue-Labels) page on the Wiki.~~
 
 # Advanced topics
 
 ## Performance
 
-If you're contributing a performance improvement, the following Prettier CLI options can help:
+If you're contributing a performance improvement, the following prettier(X) CLI options can help:
 
 - `--debug-repeat N` uses a naïve loop to repeat the formatting `N` times and measures the average run duration. It can be useful to highlight hot functions in the profiler. The measurements are printed at the debug log level, use `--loglevel debug` to see them.
 - `--debug-benchmark` uses [`benchmark`](https://npm.im/benchmark) module to produce statistically significant duration measurements. The measurements are printed at the debug log level, use `--loglevel debug` to see them.
 
-For convenience, the following commands for profiling are available via `package.json` `scripts`.
+~~For convenience, the following commands for profiling are available via `package.json` `scripts`.~~ _The convenience `perf:` package scripts are [currently broken](https://github.com/brodybits/prettierx/issues/554)._
 
 _Unfortunately, [`yarn` simply appends passed arguments to commands, cannot reference them by name](https://github.com/yarnpkg/yarn/issues/5207), so we have to use inline environment variables to pass them._
 
@@ -91,8 +91,8 @@ _Unfortunately, [`yarn` simply appends passed arguments to commands, cannot refe
 
 In the above commands:
 
-- `yarn && yarn build` ensures the compiler-optimized version of Prettier is built prior to launching it. Prettier's own environment checks are defaulted to production and removed during the build. The build output is cached, so a rebuild will happen only if the source code changes.
-- `NODE_ENV=production` ensures Prettier and its dependencies run in production mode.
+- `yarn && yarn build-extra-dist` ensures the compiler-optimized version of prettierX is built prior to launching it; prettierX's own environment checks are defaulted to production and removed during the build. The build output is cached, so a rebuild will happen only if the source code changes.
+- `NODE_ENV=production` ensures prettierX and its dependencies run in production mode.
 - `node --inspect-brk` pauses the script execution until Inspector is connected to the Node process.
 - `--loglevel debug` ensures the `--debug-repeat` or `--debug-benchmark` measurements are printed to `stderr`.
 - `> /dev/null` ensures the formatted output is discarded.
