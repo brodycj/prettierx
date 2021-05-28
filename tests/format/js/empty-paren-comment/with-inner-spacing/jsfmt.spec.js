@@ -6,4 +6,5 @@ const dirpath = `${__dirname}/..`;
 
 run_spec(dirpath, ["babel", "babel-flow", "flow", "typescript"], {
   spaceInParens: true,
+  errors: { espree: ["class-property.js"] },
 });
