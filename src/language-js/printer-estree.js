@@ -544,14 +544,17 @@ function printPathNoParens(path, options, print, args) {
             ? CommentCheckFlags.Trailing
             : CommentCheckFlags.Trailing | CommentCheckFlags.Line
         ) || needsHardlineAfterDanglingComment(node);
+        // [prettierx] --break-before-else option support (...)
         const elseOnSameLine =
-          node.consequent.type === "BlockStatement" && !commentOnOwnLine;
+          node.consequent.type === "BlockStatement" &&
+          !commentOnOwnLine &&
+          !options.breakBeforeElse;
         parts.push(elseOnSameLine ? " " : hardline);
 
         if (hasComment(node, CommentCheckFlags.Dangling)) {
           parts.push(
             printDanglingComments(path, options, true),
-            commentOnOwnLine ? hardline : " "
+            commentOnOwnLine || options.breakBeforeElse ? hardline : " "
           );
         }
 

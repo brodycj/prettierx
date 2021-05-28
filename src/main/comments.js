@@ -504,15 +504,6 @@ function printTrailingComment(path, options) {
     return lineSuffix([hardline, isLineBeforeEmpty ? hardline : "", printed]);
   }
 
-  if (
-    // [prettierx]: --break-before-else option (...)
-    options.breakBeforeElse &&
-    comment.enclosingNode.type === "IfStatement" &&
-    comment.enclosingNode.alternate
-  ) {
-    return [hardline, printed]
-  }
-
   let parts = [" ", printed];
 
   // Trailing block comments never need a newline

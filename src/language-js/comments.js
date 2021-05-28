@@ -169,6 +169,7 @@ function handleIfStatementComments({
   enclosingNode,
   followingNode,
   text,
+  options,
 }) {
   if (
     !enclosingNode ||
@@ -200,7 +201,7 @@ function handleIfStatementComments({
     precedingNode === enclosingNode.consequent &&
     followingNode === enclosingNode.alternate
   ) {
-    if (precedingNode.type === "BlockStatement") {
+    if (precedingNode.type === "BlockStatement" && !options.breakBeforeElse) {
       addTrailingComment(precedingNode, comment);
     } else {
       addDanglingComment(enclosingNode, comment);
