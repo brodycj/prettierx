@@ -712,10 +712,16 @@ function printAttributes(path, options, print) {
     forceNotToBreakAttrContent
   ) {
     // [prettierx] support --html-void-tags option
-    parts.push(node.isSelfClosing && !isHtmlVoidTagNeeded(node, options) ? " " : "");
+    parts.push(
+      node.isSelfClosing && !isHtmlVoidTagNeeded(node, options) ? " " : ""
+    );
   } else {
     // [prettierx] support --html-void-tags option
-    parts.push(node.isSelfClosing && !isHtmlVoidTagNeeded(node, options) ? line : softline);
+    parts.push(
+      node.isSelfClosing && !isHtmlVoidTagNeeded(node, options)
+        ? line
+        : softline
+    );
   }
 
   return parts;

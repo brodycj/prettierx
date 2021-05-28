@@ -84,8 +84,7 @@ function printTypeParameters(path, options, print, paramsKey) {
         typeAngleBracketLine,
         // [prettierx] keep break after comma here,
         // regardless of typeAngleBracketSpacing option (...)
-        join([",", line],
-        path.map(print, paramsKey))
+        join([",", line], path.map(print, paramsKey)),
       ]),
       trailingComma,
       // [prettierx] typeAngleBracketSpacing option support (...)

@@ -65,10 +65,7 @@ function printFunctionDeclaration(path, print, options, expandArg) {
 
   if (node.generator) {
     // [prettierx] support generatorStarSpacing option (...)
-    parts.push(
-      "function",
-      options.generatorStarSpacing ? " * " : "* "
-    );
+    parts.push("function", options.generatorStarSpacing ? " * " : "* ");
   } else {
     parts.push("function ");
   }
@@ -371,10 +368,10 @@ function printArrowFunctionExpression(path, options, print, args) {
     !startsWithNoLookaheadToken(node.body, /* forbidFunctionAndClass */ false);
 
   // [prettierx] with --paren-spacing option support (...)
-  return group([
-    ...parts,
-    group(
-      [
+  return group(
+    [
+      ...parts,
+      group([
         indent([
           line,
           shouldAddParens ? ifBreak("", ["(", parenSpace]) : "",
@@ -384,7 +381,7 @@ function printArrowFunctionExpression(path, options, print, args) {
         shouldAddLine
           ? [ifBreak(printTrailingComma ? "," : ""), parenLine]
           : "",
-      ])
+      ]),
     ],
     // [prettierx] --paren-spacing option support (...)
     { addedLine: shouldAddLine && options.spaceInParens }

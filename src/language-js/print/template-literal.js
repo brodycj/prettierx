@@ -235,7 +235,7 @@ function printTemplateExpression(path, print, options) {
     printed,
     lineSuffixBoundary,
     templateCurlySpace,
-    "}"
+    "}",
   ];
 }
 

@@ -26,7 +26,7 @@ function printPropertyKey(path, options, print) {
       computedPropertySpace,
       print("key"),
       computedPropertySpace,
-      "]"
+      "]",
     ];
   }
 
@@ -116,7 +116,7 @@ function getPropertyPadding(options, path) {
   // grandparent node:
   const parentObject = path.getParentNode(1);
 
-  const { locStart, locEnd } = options
+  const { locStart, locEnd } = options;
 
   // THIS IS A HACK:
   const shouldBreak = options.originalText
@@ -183,15 +183,11 @@ function printProperty(path, options, print) {
   // computed & non-computed properties
 
   // [prettierx] computedPropertySpacing option support
-  const computedPropertySpace = options.computedPropertySpacing
-    ? " "
-    : "";
+  const computedPropertySpace = options.computedPropertySpacing ? " " : "";
 
   // [prettierx] calculate this overhead in case it is needed,
   // with computedPropertySpacing option support:
-  const computedPropertyOverhead = options.computedPropertySpacing
-    ? 4
-    : 2;
+  const computedPropertyOverhead = options.computedPropertySpacing ? 4 : 2;
 
   // [prettierx] compose left part,
   // for alignObjectProperties option

@@ -63,7 +63,7 @@ function printCallArguments(path, options, print) {
       print(["arguments", 1]),
       // [prettierx] spaceInParens option support (...)
       parenSpace,
-      ")"
+      ")",
     ];
   }
 
@@ -108,7 +108,7 @@ function printCallArguments(path, options, print) {
         maybeTrailingComma,
         // [prettierx] keep break here, unless lastArgAddedLine is true
         lastArgAddedLine ? "" : line,
-        ")"
+        ")",
       ],
       { shouldBreak: true }
     );
@@ -189,7 +189,7 @@ function printCallArguments(path, options, print) {
           ...printedExpanded,
           // [prettierx] spaceInParens option support (...)
           lastArgAddedLine ? "" : parenSpace,
-          ")"
+          ")",
         ],
         shouldGroupFirst
           ? [

@@ -106,7 +106,7 @@ function printFunctionParameters(
       removeLines(printed),
       // [prettierx] spaceInParens option support (...)
       parenSpace,
-      ")"
+      ")",
     ]);
   }
 
@@ -128,7 +128,7 @@ function printFunctionParameters(
       ...printed,
       // [prettierx] spaceInParens option support (...)
       parenSpace,
-      ")"
+      ")",
     ];
   }
 
@@ -143,7 +143,7 @@ function printFunctionParameters(
       ...printed,
       // [prettierx] spaceInParens option support (...)
       parenSpace,
-      ")"
+      ")",
     ];
   }
 

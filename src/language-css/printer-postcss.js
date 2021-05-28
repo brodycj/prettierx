@@ -469,7 +469,7 @@ function genericPrint(path, options, print) {
               parenSpace,
               join(", ", path.map(print, "nodes")),
               parenSpace,
-              ")"
+              ")",
             ]
           : "",
       ];
@@ -873,12 +873,10 @@ function genericPrint(path, options, print) {
 
       // prettierx: cssParenSpacing option support (...)
       if (node.groups.length === 0) {
-        return group(
-          [
-            node.open ? print("open") : "",
-            node.close ? print("close") : "",
-          ]
-        );
+        return group([
+          node.open ? print("open") : "",
+          node.close ? print("close") : "",
+        ]);
       }
 
       const isSCSSMapItem = isSCSSMapItemNode(path);

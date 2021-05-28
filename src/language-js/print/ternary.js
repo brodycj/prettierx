@@ -288,8 +288,7 @@ function printTernary(path, options, print) {
       // [prettierx] spaceInParens option support (...)
       ...(consequentNode.type === node.type
         ? [ifBreak("", "("), parenSpace]
-        : [""]
-      ),
+        : [""]),
       // [prettierx] offsetTernaryExpressions option support:
       !options.offsetTernaryExpressions
         ? align(2, print(consequentNodePropertyName))
@@ -297,13 +296,11 @@ function printTernary(path, options, print) {
       // [prettierx] spaceInParens option support (...)
       ...(consequentNode.type === node.type
         ? [parenSpace, ifBreak("", ")")]
-        : [""]
-      ),
+        : [""]),
       line,
       ": ",
       // [prettierx] offsetTernaryExpressions option support:
-      options.offsetTernaryExpressions ||
-      alternateNode.type === node.type
+      options.offsetTernaryExpressions || alternateNode.type === node.type
         ? print(alternateNodePropertyName)
         : align(2, print(alternateNodePropertyName)),
     ];

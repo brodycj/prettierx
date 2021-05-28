@@ -11,7 +11,7 @@ run_spec(__dirname, ["babel", "babel-flow", "babel-ts"], {
       "objects.js",
       "spread.js",
       "throw.js",
-      "try-catch.js"
+      "try-catch.js",
     ],
     meriyah: [
       "bind.js",
@@ -19,7 +19,7 @@ run_spec(__dirname, ["babel", "babel-flow", "babel-ts"], {
       "objects.js",
       "spread.js",
       "throw.js",
-      "try-catch.js"
-    ]
+      "try-catch.js",
+    ],
   },
 });

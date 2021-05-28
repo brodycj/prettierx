@@ -83,7 +83,7 @@ function printBinaryishExpression(path, options, print) {
   ) {
     // [prettierx] spaceInParens option support (...)
     return group([indent([parenLine, ...parts]), parenLine], {
-      addedLine: options.spaceInParens
+      addedLine: options.spaceInParens,
     });
   }
 

@@ -531,7 +531,7 @@ function printJsxExpressionContainer(path, options, print) {
       lineSuffixBoundary,
       // [prettierx] templateCurlySpacing option support (...)
       hasAddedLine(printed) ? "" : templateCurlySpace,
-      "}"
+      "}",
     ]);
   }
 

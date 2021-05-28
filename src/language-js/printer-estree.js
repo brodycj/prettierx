@@ -137,7 +137,7 @@ function genericPrint(path, options, print, args) {
   const parts = [
     args && args.needsSemi ? ";(" : "(",
     addLeadingSpace ? parenSpace : "",
-    printed
+    printed,
   ];
 
   if (hasFlowShorthandAnnotationComment(node)) {
@@ -521,7 +521,6 @@ function printPathNoParens(path, options, print, args) {
       return group(parts);
     }
     case "WithStatement":
-
       // [prettierx] spaceInParens option support (...)
       return group([
         "with (",
@@ -547,12 +546,13 @@ function printPathNoParens(path, options, print, args) {
 
       if (node.alternate) {
         // [prettierx] --break-before-else option support (...)
-        const commentOnOwnLine = hasComment(
-          node.consequent,
-          (options.breakBeforeElse)
-            ? CommentCheckFlags.Trailing
-            : CommentCheckFlags.Trailing | CommentCheckFlags.Line
-        ) || needsHardlineAfterDanglingComment(node);
+        const commentOnOwnLine =
+          hasComment(
+            node.consequent,
+            options.breakBeforeElse
+              ? CommentCheckFlags.Trailing
+              : CommentCheckFlags.Trailing | CommentCheckFlags.Line
+          ) || needsHardlineAfterDanglingComment(node);
         // [prettierx] --break-before-else option support (...)
         const elseOnSameLine =
           node.consequent.type === "BlockStatement" &&
@@ -632,7 +632,6 @@ function printPathNoParens(path, options, print, args) {
         adjustClause(node.body, print("body")),
       ]);
     case "ForInStatement":
-
       // [prettierx] spaceInParens option support (...)
       return group([
         "for (",

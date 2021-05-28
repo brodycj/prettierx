@@ -687,15 +687,14 @@ function startsWithSpace(arg) {
     }
 
     return item;
-  }
+  };
 
   const firstItem = getFirstItem(arg);
 
-  return firstItem &&
-    (
-      firstItem === " " ||
-      (firstItem.type === "line" && !firstItem.soft)
-    );
+  return (
+    firstItem &&
+    (firstItem === " " || (firstItem.type === "line" && !firstItem.soft))
+  );
 }
 
 // [prettierx] for --paren-spacing option support (...)

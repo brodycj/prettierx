@@ -315,7 +315,7 @@ function printIndexedAccessType(path, options, print) {
     print("indexType"),
     // [prettierx] typeBracketSpacing option support (...)
     options.typeBracketSpacing ? " " : "",
-    "]"
+    "]",
   ];
 }
 

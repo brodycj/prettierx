@@ -76,18 +76,18 @@ function printMemberLookup(path, options, print) {
       computedPropertySpace,
       property,
       computedPropertySpace,
-      "]"
+      "]",
     ];
   }
 
-    // [prettierx] computedPropertySpacing option support
+  // [prettierx] computedPropertySpacing option support
   return group([
     optional,
     "[",
     // [prettierx] computedPropertySpacing option support
     indent([computedPropertyLine, property]),
     computedPropertyLine,
-    "]"
+    "]",
   ]);
 }
 
