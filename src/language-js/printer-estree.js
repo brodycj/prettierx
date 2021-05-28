@@ -21,6 +21,7 @@ const {
   getCallArguments,
   hasFlowShorthandAnnotationComment,
   hasComment,
+  // [prettierx]: for --paren-spacing option support
   hasAddedLine,
   CommentCheckFlags,
   isFunctionNotation,
@@ -35,6 +36,8 @@ const {
   hasIgnoreComment,
   isCallExpression,
   isMemberExpression,
+  // [prettierx]: for --paren-spacing option support
+  startsWithSpace,
 } = require("./utils");
 const { locStart, locEnd } = require("./loc");
 
@@ -128,8 +131,14 @@ function genericPrint(path, options, print, args) {
   // [prettierx] spaceInParens option support (...)
   const parenSpace = options.spaceInParens ? " " : "";
 
+  const addLeadingSpace = !startsWithSpace(printed);
+  const addTrailingSpace = !hasAddedLine(printed);
 
-  const parts = [args && args.needsSemi ? ";(" : "(", parenSpace, printed];
+  const parts = [
+    args && args.needsSemi ? ";(" : "(",
+    addLeadingSpace ? parenSpace : "",
+    printed
+  ];
 
   if (hasFlowShorthandAnnotationComment(node)) {
     const [comment] = node.trailingComments;
@@ -138,7 +147,7 @@ function genericPrint(path, options, print, args) {
   }
 
   // [prettierx] spaceInParens option support (...)
-  parts.push(hasAddedLine(printed) ? "" : parenSpace, ")");
+  parts.push(addTrailingSpace ? parenSpace : "", ")");
 
   return parts;
 }

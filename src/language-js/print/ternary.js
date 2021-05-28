@@ -370,9 +370,9 @@ function printTernary(path, options, print) {
   const result = maybeGroup([
     printTernaryTest(path, options, print),
     forceNoIndent ? parts : indent(parts),
-    breakClosingParen ? parenLine : "",
+    // [prettierx]: spaceInParens option (...)
     isConditionalExpression && breakClosingParen && !shouldExtraIndent
-      ? softline
+      ? parenLine
       : "",
   ]);
 

@@ -387,7 +387,7 @@ function printArrowFunctionExpression(path, options, print, args) {
       ])
     ],
     // [prettierx] --paren-spacing option support (...)
-    { addedLine: shouldAddLine }
+    { addedLine: shouldAddLine && options.spaceInParens }
   );
 }
 

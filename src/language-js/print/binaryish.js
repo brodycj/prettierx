@@ -82,7 +82,9 @@ function printBinaryishExpression(path, options, print) {
     (isMemberExpression(parent) && !parent.computed)
   ) {
     // [prettierx] spaceInParens option support (...)
-    return group([indent([parenLine, ...parts]), parenLine]);
+    return group([indent([parenLine, ...parts]), parenLine], {
+      addedLine: options.spaceInParens
+    });
   }
 
   // Avoid indenting sub-expressions in some cases where the first sub-expression is already
