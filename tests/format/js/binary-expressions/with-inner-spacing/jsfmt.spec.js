@@ -10,4 +10,5 @@ run_spec(dirpath, ["babel", "babel-flow", "flow", "typescript"], {
   computedPropertySpacing: true,
   spaceUnaryOps: true,
   templateCurlySpacing: true,
+  errors: { espree: ["like-regexp.js"] },
 });
