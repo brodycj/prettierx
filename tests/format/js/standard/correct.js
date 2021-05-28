@@ -1,5 +1,5 @@
 // Needs to be at the top but belongs to object-curly-spacing
-import { foo } from 'bar'
+import { fooA } from 'bar'
 
 // Needs to be at the top but belongs to indent rule
 import {
@@ -25,7 +25,7 @@ if (foo) {
 }
 
 // "brace-style": [ "error", "1tbs", { "allowSingleLine": true } ],
-function foo () {
+function foo1 () {
   return true
 }
 if (foo) {
@@ -43,14 +43,14 @@ try {
 }
 
 // "comma-spacing": [ "error", { "before": false, "after": true } ],
-var foo = 1
+var fooB = 1
 var baz = 3
 var arr = [1, 2]
 var arr = [1, , 3]
 var obj = { foo: 'bar', baz: 'qur' }
 foo(a, b)
 new Foo(a, b)
-function foo (a, b) {}
+function foo2 (a, b) {}
 a, b
 
 // "eol-last": "error",
@@ -60,7 +60,7 @@ a, b
 fn()
 
 // "generator-star-spacing": [ "error", { "before": true, "after": true } ],
-function * generator () {}
+function * generator1 () {}
 var anonymous = function * () {}
 var shorthand = { * generator () {} }
 class Example {
@@ -93,12 +93,12 @@ switch (a) {
     break
 }
 
-var aajshdfaljskdhflakjshdflkjashdlfjkhasldkjfhlasjkdfhlaskjdhfalsjkdfha,
-  bajshdfaljskdhflakjshdflkjashdlfjkhasldkjfhlasjkdfhlaskjdhfalsjkdfha,
-  bajshdfaljskdhflakjshdflkjashdlfjkhasldkjfhlasjkdfhlaskjdhfalsjkdfha
-let aajshdfaljskdhflakjshdflkjashdlfjkhasldkjfhlasjkdfhlaskjdhfalsjkdfha,
-  bajshdfaljskdhflakjshdflkjashdlfjkhasldkjfhlasjkdfhlaskjdhfalsjkdfha,
-  bajshdfaljskdhflakjshdflkjashdlfjkhasldkjfhlasjkdfhlaskjdhfalsjkdfha
+var aajshdfaljskdhflakjshdflkjashdlfjkhasldkjfhlasjkdfhlaskjdhfalsjkdfha1,
+  bajshdfaljskdhflakjshdflkjashdlfjkhasldkjfhlasjkdfhlaskjdhfalsjkdfha2,
+  bajshdfaljskdhflakjshdflkjashdlfjkhasldkjfhlasjkdfhlaskjdhfalsjkdfha3
+let aajshdfaljskdhflakjshdflkjashdlfjkhasldkjfhlasjkdfhlaskjdhfalsjkdfha4,
+  bajshdfaljskdhflakjshdflkjashdlfjkhasldkjfhlasjkdfhlaskjdhfalsjkdfha5,
+  bajshdfaljskdhflakjshdflkjashdlfjkhasldkjfhlasjkdfhlaskjdhfalsjkdfha6
 const a = 1
 const b = 2
 const c = 3
@@ -110,7 +110,7 @@ const c = 3
 if (y) {
   console.log('foo')
 }
-function foo (
+function foo3 (
   barverylongverylongverylongverylongverylongverylongverylongverylong,
   bazverylongverylongverylongverylongverylongverylongverylongverylong,
   quxverylongverylongverylongverylongverylongverylongverylongverylong
@@ -122,17 +122,17 @@ foo(
   bazverylongverylongverylongverylongverylongverylongverylongverylong,
   quxverylongverylongverylongverylongverylongverylongverylongverylong
 )
-var foo = [
+var fooC = [
   barverylongverylongverylongverylongverylongverylongverylongverylong,
   bazverylongverylongverylongverylongverylongverylongverylongverylong,
   quxverylongverylongverylongverylongverylongverylongverylongverylong
 ]
-var foo = {
+var fooD = {
   barverylongverylongverylongverylongverylongverylongverylongverylong: 1,
   bazverylongverylongverylongverylongverylongverylongverylongverylong: 2,
   quxverylongverylongverylongverylongverylongverylongverylongverylong: 3
 }
-var a = barverylongverylongverylongverylongverylongverylongverylongverylong
+var d = barverylongverylongverylongverylongverylongverylongverylongverylong
   ? bar
   : barverylongverylongverylongverylongverylongverylongverylongverylong
 
@@ -149,7 +149,7 @@ if (foo) {
 }
 
 // "no-multi-spaces": "error",
-var a = 1
+var e = 1
 if (foo === 'bar') {
 }
 a << b
@@ -175,10 +175,10 @@ var obj = { foo: { bar: 'baz' }, qux: 'quxx' }
 var obj = {
   foo: 'bar'
 }
-var { x } = y
+var { destructured } = destructure
 
 // "object-property-newline": [ "error", { "allowMultiplePropertiesPerLine": true } ],
-const obj = { foo: 'foo', bar: 'bar' }
+const obj1 = { foo: 'foo', bar: 'bar' }
 const obj2 = {
   foo: 'foo',
   bar: 'bar',
@@ -228,7 +228,7 @@ if (a) {
 } else {
   c()
 }
-function a () {}
+function a1 () {}
 for (;;) {
   b()
 }
@@ -236,7 +236,7 @@ try {
 } catch (a) {}
 
 // "space-before-function-paren": [ "error", "always" ],
-function foo () {
+function foo4 () {
   // ...
 }
 
@@ -262,20 +262,20 @@ class Foo {
   }
 }
 
-var foo = {
+var foo5 = {
   bar () {
     // ...
   }
 }
 
-var foo = async () => 1
+var foo6 = async () => 1
 
 // "space-in-parens": [ "error", "never" ],
 foo()
 
 foo('bar')
 
-var foo = (1 + 2) * 3
+var foo7 = (1 + 2) * 3
 ;(function () {
   return 'bar'
 })()
@@ -284,9 +284,9 @@ var foo = (1 + 2) * 3
 a + b
 a + b
 a ? b : c
-const a = { b: 1 }
-var { a = 0 } = bar
-function foo (a = 0) {}
+const aB = { b: 1 }
+var { d = 0 } = bar
+function foo8 (a = 0) {}
 
 // "space-unary-ops": [ "error", { "words": true, "nonwords": false } ],
 delete foo.bar
@@ -334,7 +334,7 @@ func`Hello world`
 var abc
 
 // "yield-star-spacing": [ "error", "both" ]
-function * generator () {
+function * generator2 () {
   yield * other()
 }
 

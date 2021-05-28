@@ -6,4 +6,4 @@ export a, { b } from "./baz";
 
 export default () => { };
 
-export default (function f() { })
+export const c = (function f() { })

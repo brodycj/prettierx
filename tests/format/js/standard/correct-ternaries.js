@@ -1,7 +1,7 @@
 /* eslint-disable no-undef, no-unused-vars, no-redefine, no-unused-expressions,
   no-constant-condition, eqeqeq, react/jsx-no-undef */
 /*
-  Add other cases for pure SntandardJS style.
+  Add other cases for pure StandardJS style.
 */
 
 const testingValue = [1, 2, 3, 4, 5]
