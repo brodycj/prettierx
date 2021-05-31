@@ -38,7 +38,7 @@ module.exports = (packageDir) => {
   shell.exec(getInstallCommand(`"${tarPath}"`), { cwd: tmpDir });
 
   // [prettierx]: typescript/flow-parser optional dep support
-  const optionalDeps = new Set()
+  const optionalDeps = new Set();
 
   for (const dependency of Object.keys(pkg.peerDependenciesMeta)) {
     if (pkg.peerDependenciesMeta[dependency].optional) {
