@@ -308,6 +308,7 @@ test("no-identifier-n", {
   ],
 });
 
+/* **
 test("no-node-comments", {
   valid: [
     "const comments = node.notComments",
@@ -341,6 +342,7 @@ test("no-node-comments", {
     },
   ],
 });
+// ** */
 
 test("prefer-ast-path-each", {
   valid: ["const foo = path.map()"],

@@ -1,5 +1,6 @@
 "use strict";
-const path = require("path");
+
+// const path = require("path");
 
 // `node.comments`
 const memberExpressionSelector = [
@@ -45,7 +46,8 @@ module.exports = {
         }
         const { file, functions } = option;
         return [
-          path.join(__dirname, "../../..", file),
+          // (...)
+          file,
           functions ? new Set(functions) : true,
         ];
       })
@@ -58,9 +60,14 @@ module.exports = {
           return;
         }
 
-        if (ignored.has(fileName)) {
+        const fn = "src" + fileName.split("src")[1];
+
+        if (ignored && ignored.has(fn)) {
           const functionNames = ignored.get(fileName);
           if (functionNames === true) {
+            return;
+          }
+          if (!functionNames) {
             return;
           }
           let isIgnored;
