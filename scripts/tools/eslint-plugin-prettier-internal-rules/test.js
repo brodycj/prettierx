@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 "use strict";
 
-const path = require("path");
+// const path = require("path");
 const { outdent } = require("outdent");
 const { RuleTester } = require("eslint");
 const { rules } = require(".");
