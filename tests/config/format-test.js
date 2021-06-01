@@ -278,13 +278,6 @@ function runTest({
   let formatResult = mainParserFormatResult;
   let formatTestTitle = "format";
 
-  // [prettierx]: disable test files by parser/options
-  const isDisabledTest = isDisabled(filename, parser, formatOptions);
-
-  if (isDisabledTest) {
-    return;
-  }
-
   // Verify parsers or error tests
   if (
     mainParserFormatResult.error ||
@@ -331,6 +324,11 @@ function runTest({
   });
 
   if (!FULL_TEST) {
+    return;
+  }
+
+  // [prettierx]: disable test files by parser/options
+  if (isDisabled(filename, parser, formatOptions)) {
     return;
   }
 
