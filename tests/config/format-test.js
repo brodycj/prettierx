@@ -53,31 +53,6 @@ const unstableTests = new Map(
 
 const unstableAstTests = new Map();
 
-// [prettierx]: disable test files by parser/options
-const disabledTests = new Map(
-  [
-    // [prettierx]: babel-ts parser bugs
-    [
-      "js/ternaries/nested.js",
-      "babel-ts",
-      (options) => options.arrowParens === "avoid",
-    ],
-    [
-      "js/standard/correct-ternaries.js",
-      "babel-ts",
-      (options) => options.arrowParens === "avoid",
-    ],
-  ].map(([file, parsers, isDisabled]) => {
-    const parserSet = new Set(Array.isArray(parsers) ? parsers : [parsers]);
-
-    const isDisabledFunc = isDisabled
-      ? (parser, options) => parserSet.has(parser) && isDisabled(options)
-      : (parser) => parserSet.has(parser);
-
-    return [path.join(__dirname, "../format/", file), isDisabledFunc];
-  })
-);
-
 const espreeDisabledTests = new Set(
   [
     // These tests only work for `babel`
@@ -87,17 +62,6 @@ const espreeDisabledTests = new Set(
   ].map((directory) => path.join(__dirname, "../format/js", directory))
 );
 const meriyahDisabledTests = espreeDisabledTests;
-
-// [prettierx]: disable test files by parser/options
-const isDisabled = (filename, parser, options) => {
-  const testFunction = disabledTests.get(filename);
-
-  if (!testFunction) {
-    return false;
-  }
-
-  return testFunction(parser, options);
-};
 
 const isUnstable = (filename, options) => {
   const testFunction = unstableTests.get(filename);
@@ -277,13 +241,6 @@ function runTest({
   let formatOptions = mainParserFormatOptions;
   let formatResult = mainParserFormatResult;
   let formatTestTitle = "format";
-
-  // [prettierx]: disable test files by parser/options
-  const isDisabledTest = isDisabled(filename, parser, formatOptions);
-
-  if (isDisabledTest) {
-    return;
-  }
 
   // Verify parsers or error tests
   if (
