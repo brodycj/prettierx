@@ -259,7 +259,7 @@ function printModuleSpecifiers(path, options, print) {
             "{",
             // [prettierx] importCurlySpacing, exportCurlySpacing options
             curlyLine,
-            ...groupedSpecifiers,
+            join([",", line], groupedSpecifiers),
             // [prettierx] importCurlySpacing, exportCurlySpacing options
             curlyLine,
             "}",
