@@ -89,7 +89,7 @@ const espreeDisabledTests = new Set(
 const meriyahDisabledTests = espreeDisabledTests;
 
 // [prettierx]: skip round-trip with some test files by parser/options
-const skipRoundTripErrorTest = (filename, parser, options) => {
+const skipRoundTripErrorTest = (filename, options, parser) => {
   const testFunction = roundTripErrorTests.get(filename);
 
   if (!testFunction) {
@@ -328,7 +328,7 @@ function runTest({
   }
 
   // [prettierx]: skip round-trip with some test files by parser/options
-  if (skipRoundTripErrorTest(filename, parser, formatOptions)) {
+  if (skipRoundTripErrorTest(filename, formatOptions, parser)) {
     return;
   }
 
