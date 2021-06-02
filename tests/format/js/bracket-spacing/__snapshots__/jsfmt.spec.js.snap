@@ -1,15 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`array.js - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
+exports[`array.js - {"objectCurlySpacing":false} format 1`] = `
 ====================================options=====================================
-exportCurlySpacing: false
-graphqlCurlySpacing: false
-importCurlySpacing: false
 objectCurlySpacing: false
 parsers: ["babel", "flow", "typescript"]
 printWidth: 80
-typeCurlySpacing: false
-yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 const arr1 = [1,2,3,4];
@@ -38,16 +33,11 @@ const arr2 = [1, 2, 3, 4];
 ================================================================================
 `;
 
-exports[`object.js - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
+exports[`object.js - {"objectCurlySpacing":false} format 1`] = `
 ====================================options=====================================
-exportCurlySpacing: false
-graphqlCurlySpacing: false
-importCurlySpacing: false
 objectCurlySpacing: false
 parsers: ["babel", "flow", "typescript"]
 printWidth: 80
-typeCurlySpacing: false
-yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 const obj1 = {a:1, b:2, c:3}

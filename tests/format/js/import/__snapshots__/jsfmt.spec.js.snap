@@ -1,15 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`brackets.js - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
+exports[`brackets.js - {"importCurlySpacing":false} format 1`] = `
 ====================================options=====================================
-exportCurlySpacing: false
-graphqlCurlySpacing: false
 importCurlySpacing: false
-objectCurlySpacing: false
 parsers: ["babel", "flow", "typescript"]
 printWidth: 80
-typeCurlySpacing: false
-yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 import {
@@ -74,16 +69,11 @@ import { fitsIn, oneLine } from ".";
 ================================================================================
 `;
 
-exports[`comments.js - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
+exports[`comments.js - {"importCurlySpacing":false} format 1`] = `
 ====================================options=====================================
-exportCurlySpacing: false
-graphqlCurlySpacing: false
 importCurlySpacing: false
-objectCurlySpacing: false
 parsers: ["babel", "flow", "typescript"]
 printWidth: 80
-typeCurlySpacing: false
-yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 import { a //comment1
@@ -288,16 +278,11 @@ import x, {
 ================================================================================
 `;
 
-exports[`empty-import.js - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
+exports[`empty-import.js - {"importCurlySpacing":false} format 1`] = `
 ====================================options=====================================
-exportCurlySpacing: false
-graphqlCurlySpacing: false
 importCurlySpacing: false
-objectCurlySpacing: false
 parsers: ["babel", "flow", "typescript"]
 printWidth: 80
-typeCurlySpacing: false
-yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 import { } from '@types/googlemaps';
@@ -322,16 +307,11 @@ import {} from "@types/googlemaps";
 ================================================================================
 `;
 
-exports[`inline.js - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
+exports[`inline.js - {"importCurlySpacing":false} format 1`] = `
 ====================================options=====================================
-exportCurlySpacing: false
-graphqlCurlySpacing: false
 importCurlySpacing: false
-objectCurlySpacing: false
 parsers: ["babel", "flow", "typescript"]
 printWidth: 80
-typeCurlySpacing: false
-yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 import somethingSuperLongsomethingSuperLong from 'somethingSuperLongsomethingSuperLongsomethingSuperLong'
@@ -378,16 +358,11 @@ import {
 ================================================================================
 `;
 
-exports[`long-line.js - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
+exports[`long-line.js - {"importCurlySpacing":false} format 1`] = `
 ====================================options=====================================
-exportCurlySpacing: false
-graphqlCurlySpacing: false
 importCurlySpacing: false
-objectCurlySpacing: false
 parsers: ["babel", "flow", "typescript"]
 printWidth: 80
-typeCurlySpacing: false
-yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 import someCoolUtilWithARatherLongName from '../../../../utils/someCoolUtilWithARatherLongName';
@@ -412,16 +387,11 @@ import someCoolUtilWithARatherLongName from "../../../../utils/someCoolUtilWithA
 ================================================================================
 `;
 
-exports[`multiple_standalones.js - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
+exports[`multiple_standalones.js - {"importCurlySpacing":false} format 1`] = `
 ====================================options=====================================
-exportCurlySpacing: false
-graphqlCurlySpacing: false
 importCurlySpacing: false
-objectCurlySpacing: false
 parsers: ["babel", "flow", "typescript"]
 printWidth: 80
-typeCurlySpacing: false
-yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 import a, * as b from 'a';
@@ -446,16 +416,11 @@ import a, * as b from "a";
 ================================================================================
 `;
 
-exports[`same-local-and-imported.js - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
+exports[`same-local-and-imported.js - {"importCurlySpacing":false} format 1`] = `
 ====================================options=====================================
-exportCurlySpacing: false
-graphqlCurlySpacing: false
 importCurlySpacing: false
-objectCurlySpacing: false
 parsers: ["babel", "flow", "typescript"]
 printWidth: 80
-typeCurlySpacing: false
-yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 import {a} from 'a';
