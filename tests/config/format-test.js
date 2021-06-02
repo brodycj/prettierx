@@ -7,10 +7,6 @@ const path = require("path");
 const prettier = !TEST_STANDALONE
   ? require("prettier-local")
   : require("prettier-standalone");
-// [prettierx]: inherited option support
-const { setInheritedOptionValues } = require("../../src/cli/option");
-// [prettierx]: inherited option support
-const { getContextOptions } = require("../../src/cli/context");
 const checkParsers = require("./utils/check-parsers");
 const createSnapshot = require("./utils/create-snapshot");
 const visualizeEndOfLine = require("./utils/visualize-end-of-line");
@@ -481,19 +477,9 @@ function format(originalText, originalOptions) {
   );
   const inputWithCursor = insertCursor(input, options.cursorOffset);
 
-  // [prettierx]: inherited option support
-  const effectiveOptions = { ...options };
-
-  // [prettierx]: inherited option support
-  setInheritedOptionValues(
-    getContextOptions().detailedOptionMap,
-    effectiveOptions
-  );
-
   const { formatted: output, cursorOffset } = prettier.formatWithCursor(
     input,
-    // [prettierx]: inherited option support
-    effectiveOptions
+    options
   );
   const outputWithCursor = insertCursor(output, cursorOffset);
   const eolVisualizedOutput = visualizeEndOfLine(outputWithCursor);

@@ -27,7 +27,6 @@ module.exports = {
       },
     ],
   },
-  bracketSpacing: commonOptions.bracketSpacing,
   // [prettierx ...]
   arrayBracketSpacing: {
     category: CATEGORY_JAVASCRIPT,
@@ -107,7 +106,6 @@ module.exports = {
     category: CATEGORY_JAVASCRIPT,
     type: "boolean",
     default: true,
-    inherit: "bracketSpacing",
     description: "Put spaces between export curly braces.",
     oppositeDescription: "Disable spaces between export curly braces.",
   },
@@ -115,7 +113,6 @@ module.exports = {
     category: CATEGORY_JAVASCRIPT,
     type: "boolean",
     default: true,
-    inherit: "bracketSpacing",
     description: "Put spaces between import curly braces.",
     oppositeDescription: "Disable spaces between import curly braces.",
   },
@@ -123,7 +120,6 @@ module.exports = {
     category: CATEGORY_JAVASCRIPT,
     type: "boolean",
     default: true,
-    inherit: "bracketSpacing",
     description:
       "Put spaces between object curly braces (similar to the corresponding eslint option).",
     oppositeDescription: "Disable spaces between object curly braces.",
@@ -132,7 +128,6 @@ module.exports = {
     category: CATEGORY_JAVASCRIPT,
     type: "boolean",
     default: true,
-    inherit: "bracketSpacing",
     description: "Put spaces between type curly braces.",
     oppositeDescription: "Disable spaces between type curly braces.",
   },

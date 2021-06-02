@@ -44,19 +44,6 @@ Default: always
 
 exports[`show detailed usage with --help arrow-parens (write) 1`] = `Array []`;
 
-exports[`show detailed usage with --help bracket-spacing (stderr) 1`] = `""`;
-
-exports[`show detailed usage with --help bracket-spacing (stdout) 1`] = `
-"--bracket-spacing
-
-  Print spaces between brackets.
-
-Default: true
-"
-`;
-
-exports[`show detailed usage with --help bracket-spacing (write) 1`] = `Array []`;
-
 exports[`show detailed usage with --help break-before-else (stderr) 1`] = `""`;
 
 exports[`show detailed usage with --help break-before-else (stdout) 1`] = `
@@ -476,17 +463,6 @@ Default: log
 `;
 
 exports[`show detailed usage with --help loglevel (write) 1`] = `Array []`;
-
-exports[`show detailed usage with --help no-bracket-spacing (stderr) 1`] = `""`;
-
-exports[`show detailed usage with --help no-bracket-spacing (stdout) 1`] = `
-"--no-bracket-spacing
-
-  Do not print spaces between brackets.
-"
-`;
-
-exports[`show detailed usage with --help no-bracket-spacing (write) 1`] = `Array []`;
 
 exports[`show detailed usage with --help no-color (stderr) 1`] = `""`;
 

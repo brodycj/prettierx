@@ -34,11 +34,6 @@ Object {
             },
           ],
         },
-        "bracketSpacing": Object {
-          "default": true,
-          "description": "Print spaces between brackets.",
-          "type": "boolean",
-        },
         "breakBeforeElse": Object {
           "default": false,
           "description": "Always add a line break before else.",

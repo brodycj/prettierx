@@ -75,7 +75,6 @@ Format options:
   --arrow-parens <always|avoid>
                            Include parentheses around a sole arrow function parameter.
                            Defaults to always.
-  --no-bracket-spacing     Do not print spaces between brackets.
   --break-before-else      Always add a line break before else.
                            Defaults to false.
   --break-long-method-chains
@@ -293,7 +292,6 @@ Format options:
   --arrow-parens <always|avoid>
                            Include parentheses around a sole arrow function parameter.
                            Defaults to always.
-  --no-bracket-spacing     Do not print spaces between brackets.
   --break-before-else      Always add a line break before else.
                            Defaults to false.
   --break-long-method-chains

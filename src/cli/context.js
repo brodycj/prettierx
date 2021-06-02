@@ -134,5 +134,4 @@ function parseArgvWithoutPlugins(rawArguments, logger, keys) {
   );
 }
 
-// [prettierx]: inherited option support
-module.exports = { Context, parseArgvWithoutPlugins, getContextOptions };
+module.exports = { Context, parseArgvWithoutPlugins };

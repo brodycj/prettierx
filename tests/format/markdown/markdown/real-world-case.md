@@ -612,17 +612,6 @@ Default | CLI Override | API Override
 --------|--------------|-------------
 `"none"` | <code>--trailing-comma <none&#124;es5&#124;all></code> | <code>trailingComma: "<none&#124;es5&#124;all>"</code>
 
-### Bracket Spacing
-Print spaces between brackets in object literals.
-
-Valid options:
- * `true` - Example: `{ foo: bar }`.
- * `false` - Example: `{foo: bar}`.
-
-Default | CLI Override | API Override
---------|--------------|-------------
-`true` | `--no-bracket-spacing` | `bracketSpacing: <bool>`
-
 ### JSX Brackets
 Put the `>` of a multi-line JSX element at the end of the last line instead of being alone on the next line (does not apply to self closing elements).
 
