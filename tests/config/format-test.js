@@ -60,19 +60,24 @@ const disabledTests = new Map(
     [
       "js/ternaries/nested.js",
       "babel-ts",
-      (options) => options.arrowParens === "avoid",
+      (options, roundtrip) => roundtrip && options.arrowParens === "avoid",
     ],
     [
       "js/standard/correct-ternaries.js",
       "babel-ts",
-      (options) => options.arrowParens === "avoid",
+      (options, roundtrip) => roundtrip && options.arrowParens === "avoid",
     ],
   ].map(([file, parsers, isDisabled]) => {
+    // Allow parsers to be set either by "parser" or ["parser", "parser"]
     const parserSet = new Set(Array.isArray(parsers) ? parsers : [parsers]);
 
     const isDisabledFunc = isDisabled
-      ? (parser, options) => parserSet.has(parser) && isDisabled(options)
-      : (parser) => parserSet.has(parser);
+      ? // If a callback is provided, after confirming the parser matches, use its
+        // return value to determine whether or not the test should be skipped.
+        (parser, options, roundtrip) =>
+          parserSet.has(parser) && isDisabled(options, roundtrip)
+      : // Otherwise, simply rely on whether or not the parser matches.
+        (parser) => parserSet.has(parser);
 
     return [path.join(__dirname, "../format/", file), isDisabledFunc];
   })
@@ -89,14 +94,22 @@ const espreeDisabledTests = new Set(
 const meriyahDisabledTests = espreeDisabledTests;
 
 // [prettierx]: disable test files by parser/options
-const isDisabled = (filename, parser, options) => {
+/**
+ * Checks whether or not the test should be skipped.
+ * @param {string} filename The path to the test file.
+ * @param {string} parser The parser being used in the test.
+ * @param {{[key: string]: any}} options The options set for the test.
+ * @param {boolean} roundtrip Whether or not the test run is a round trip.
+ * @returns `true` if the test should be skipped, `false` if it shouldn't.
+ */
+const isDisabled = (filename, parser, options, roundtrip) => {
   const testFunction = disabledTests.get(filename);
 
   if (!testFunction) {
     return false;
   }
 
-  return testFunction(parser, options);
+  return testFunction(parser, options, roundtrip);
 };
 
 const isUnstable = (filename, options) => {
@@ -278,6 +291,11 @@ function runTest({
   let formatResult = mainParserFormatResult;
   let formatTestTitle = "format";
 
+  // [prettierx]: disable test files by parser/options
+  if (isDisabled(filename, parser, formatOptions, false)) {
+    return;
+  }
+
   // Verify parsers or error tests
   if (
     mainParserFormatResult.error ||
@@ -328,7 +346,7 @@ function runTest({
   }
 
   // [prettierx]: disable test files by parser/options
-  if (isDisabled(filename, parser, formatOptions)) {
+  if (isDisabled(filename, parser, formatOptions, true)) {
     return;
   }
 
