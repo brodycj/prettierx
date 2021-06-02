@@ -24,10 +24,6 @@
     "  due to a possible issue with firewalls in certain organizations",
     "* flow-parser & typescript are moved to devDependencies, and",
     "  they are specified as optional in peerDependenciesMeta",
-    "* tslib@1 is added to dependencies to avoid a peerDependencies warning",
-    "  with @angular/compiler version 9",
-    "  (newer tslib seems to lead to warning due to version mismatch)",
-    "  Note that this should not be an issue with @angular/compiler >= 10.",
     "* codecov is removed from devDependencies",
     "<!-- -->"
   ],
@@ -93,7 +89,6 @@
     "srcset": "3.0.0",
     "string-width": "4.2.2",
     "strip-ansi": "6.0.0",
-    "tslib": "2.2.0",
     "unicode-regex": "3.0.0",
     "unified": "9.2.1",
     "vnopts": "1.0.2",

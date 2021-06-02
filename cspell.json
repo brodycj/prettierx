@@ -397,7 +397,6 @@
         "TSESTree",
         "TSESTreeOptions",
         "TSJS",
-        "tslib",
         "typeahead",
         "typecasted",
         "typecheck",
