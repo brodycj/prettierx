@@ -17,9 +17,6 @@ const CATEGORY_SPECIAL = "Special";
  * @property {'int' | 'boolean' | 'choice' | 'path'} type
  * @property {boolean} [array] - indicate it's an array of the specified type
  * @property {OptionValueInfo} [default]
- * @property {string} [inherit] The name of the option that this option should
- * inherit the value of when no value is provided to this option but one is
- * provided to the option from which this one inherits its value.
  * @property {OptionRangeInfo} [range] - for type int
  * @property {string} description
  * @property {string} [deprecated] - deprecated since version
