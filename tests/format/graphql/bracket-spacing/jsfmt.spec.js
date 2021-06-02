@@ -1,3 +1,3 @@
 run_spec(__dirname, ["graphql"]);
-run_spec(__dirname, ["graphql"], { bracketSpacing: false });
+// [prettierx] updated option:
 run_spec(__dirname, ["graphql"], { graphqlCurlySpacing: false });
