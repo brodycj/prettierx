@@ -1,6 +1,8 @@
 "use strict";
 
 const path = require("path");
+
+// [prettierx]
 const installPrettier = require("./scripts/install-prettierx");
 
 const PROJECT_ROOT = __dirname;
@@ -9,6 +11,7 @@ const ENABLE_CODE_COVERAGE = Boolean(process.env.ENABLE_CODE_COVERAGE);
 const TEST_STANDALONE = Boolean(process.env.TEST_STANDALONE);
 const INSTALL_PACKAGE = Boolean(process.env.INSTALL_PACKAGE);
 
+// [prettierx]
 let PRETTIERX_DIR = isProduction
   ? path.join(PROJECT_ROOT, "dist")
   : PROJECT_ROOT;
@@ -68,6 +71,7 @@ module.exports = {
   ],
   coverageReporters: ["text", "lcov"],
   moduleNameMapper: {
+    // [prettierx]
     "prettier-local": "<rootDir>/tests/config/require-prettierx.js",
     "prettier-standalone": "<rootDir>/tests/config/require-standalone.js",
   },
