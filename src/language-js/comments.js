@@ -169,6 +169,7 @@ function handleIfStatementComments({
   enclosingNode,
   followingNode,
   text,
+  // [prettierx] support --break-before-else option
   options,
 }) {
   if (
@@ -201,6 +202,7 @@ function handleIfStatementComments({
     precedingNode === enclosingNode.consequent &&
     followingNode === enclosingNode.alternate
   ) {
+    // [prettierx] --break-before-else option support
     if (precedingNode.type === "BlockStatement" && !options.breakBeforeElse) {
       addTrailingComment(precedingNode, comment);
     } else {
