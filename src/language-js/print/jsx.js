@@ -25,7 +25,7 @@ const {
   isCallExpression,
   isStringLiteral,
   isBinaryish,
-  hasAddedLine,
+  hasAddedLine, // [prettierx] for templateCurlySpacing option support (...)
   hasComment,
   CommentCheckFlags,
   hasNodeIgnoreComment,

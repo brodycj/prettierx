@@ -154,7 +154,7 @@ function postprocess(ast, options) {
           node.optional = true;
         }
         break;
-      case "IfStatement": // quick workaround for ast compare & breakBeforeElse
+      case "IfStatement": // [prettierx] quick workaround breakBeforeElse & AST compare test
         if (node.consequent.innerComments) {
           delete node.consequent.innerComments;
         }

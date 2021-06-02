@@ -26,7 +26,7 @@ const {
 } = require("../../document");
 const {
   getFunctionParameters,
-  hasAddedLine,
+  hasAddedLine, // [prettierx] for spaceInParens option support
   hasLeadingOwnLineComment,
   isFlowAnnotationComment,
   isJsxNode,
@@ -331,8 +331,8 @@ function printArrowFunctionExpression(path, options, print, args) {
       node.body.type === "ArrowFunctionExpression" ||
       node.body.type === "DoExpression")
   ) {
+    // [prettierx] with spaceInParens option support (...)
     return group([...parts, " ", body], {
-      // [prettierx] spaceInParens option support (...)
       addedLine: hasAddedLine(body), // pass the option from a nested => arrow => function
     });
   }
