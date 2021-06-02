@@ -3,4 +3,3 @@ run_spec(__dirname, ["babel", "flow", "typescript"], {
   // [prettierx] updated option:
   importCurlySpacing: false,
 });
-
