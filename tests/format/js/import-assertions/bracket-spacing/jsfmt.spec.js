@@ -1,5 +1,8 @@
 run_spec(__dirname, ["babel"], {
-  bracketSpacing: false,
+  // [prettierx] updated options:
+  importCurlySpacing: false,
+  exportCurlySpacing: false,
+  objectCurlySpacing: false,
   errors: {
     espree: [
       "dynamic-import.js",
