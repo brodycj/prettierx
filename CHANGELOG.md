@@ -12,108 +12,13 @@ $ git log --pretty=format:"- %s" rev1..rev2 | sed 's/#\([0-9]*\)/\[prettier\/pre
 
 [compare prettierx-0.18.0...dev](https://github.com/brodybits/prettierx/compare/prettierx-0.18.0...dev)
 
-## prettierx 0.18.0
-
-[compare prettierx-0.17.0...prettierx-0.18.0](https://github.com/brodybits/prettierx/compare/prettierx-0.17.0...prettierx-0.18.0)
-
-- Update some dependencies
-  - @babel/code-frame -> 7.12.13
-  - ci-info -> 3.1.1
-  - diff -> 5.0.0
-  - globby -> 11.0.3
-  - lodash -> 4.17.21
-  - mem -> 8.1.0
-  - postcss-less -> 4.0.1
-  - resolve -> 1.20.0
-  - semver -> 7.3.5
-  - string-width -> 4.2.2
-  - unified -> 9.2.1
-
-## prettierx 0.17.0
-
-- replace --no-align-ternary-lines with --offset-ternary-expressions (with updated formatting)
-- replace --no-bracket-spacing with finer-grained options
-- replace --paren-spacing with finer-grained options
-- update graphql -> 15.5.0
-- update some descriptions & update some documentation
-
-[compare prettierx-0.16.1...prettierx-0.17.0](https://github.com/brodybits/prettierx/compare/prettierx-0.16.1...prettierx-0.17.0)
-
-## prettierx 0.16.1
-
-- fix some descriptions
-- update some documentation
-
-[compare prettierx-0.16.0...prettierx-0.16.1](https://github.com/brodybits/prettierx/compare/prettierx-0.16.0...prettierx-0.16.1)
-
-## prettierx 0.16.0
-
-- add & implement --break-long-method-chains option
-- Update fast-glob -> 3.2.5 in dependencies
-- cleanup: remove extra parent.object conditions not needed
-
-[compare prettierx-0.15.0...prettierx-0.16.0](https://github.com/brodybits/prettierx/compare/prettierx-0.15.0...prettierx-0.16.0)
-
-## prettierx 0.15.0
-
-- add --html-void-tags option
-- update some dependencies
-  - @babel/parser -> 7.12.11
-  - cjk-regex -> 2.0.1
-  - globby -> 11.0.2
-  - graphql -> 15.4.0
-  - html-element-attributes -> 2.3.0
-- fix & update some documentation
-
-[compare prettierx-0.14.3...prettierx-0.15.0](https://github.com/brodybits/prettierx/compare/prettierx-0.14.3...prettierx-0.15.0)
-
-## prettierx 0.14.3
-
-- Update some dependencies
-  - mem -> 6.1.1
-  - n-readlines -> 1.0.1
-  - resolve -> 1.19.0
-  - semver -> 7.3.4
-  - yaml-unist-parser -> 1.3.1
-
-[compare prettierx-0.14.2...prettierx-0.14.3](https://github.com/brodybits/prettierx/compare/prettierx-0.14.2...prettierx-0.14.3)
-
-## prettierx 0.14.2
-
-- Add tslib to avoid a peerDependencies warning
-- Update some dependencies
-  - @babel/code-frame -> 7.12.11
-  - @babel/parser -> 7.12.0
-  - camelcase -> 6.2.0
-  - lodash -> 4.17.20
-  - unified -> 9.2.0
-
-[compare prettierx-0.14.0...prettierx-0.14.2](https://github.com/brodybits/prettierx/compare/prettierx-0.14.0...prettierx-0.14.2)
-
-NOTE: prettierx release 0.14.1 was inadvertently skipped in package.json.
-
-## prettierx 0.14.0
-
-- merge updates from Prettier 2.0.0 ... 2.0.5, with some workarounds
-- parse TypeScript using Babel by default
-- move the `flow-parser` parser to `peerDependenciesMeta`, as an optional dependency (note that Prettier and `prettierx` use Babel to parse Flow by default)
-- update documentation of `--space-before-function-paren` and `--generator-star-spacing` features
-- apply some updates for `--paren-spacing` feature from `wp-prettier-2.0.5` branch of the `wp-prettier` fork
-- resolve a limited number of issues related to the `--paren-spacing` feature
-- apply some additional source code cleanup
-- update some dependencies
-
-[compare prettierx-0.13.1...prettierx-0.14.0](https://github.com/brodybits/prettierx/compare/prettierx-0.13.1...prettierx-0.14.0)
-
-# prettier changelog
-
-# 2.3.0
+### prettier 2.3.0
 
 [diff](https://github.com/prettier/prettier/compare/2.2.1...2.3.0)
 
 🔗 [Release Notes](https://prettier.io/blog/2021/05/09/2.3.0.html)
 
-# 2.2.1
+### prettier 2.2.1
 
 [diff](https://github.com/prettier/prettier/compare/2.2.0...2.2.1)
 
@@ -145,13 +50,13 @@ module.exports = class A extends B {
 };
 ```
 
-# 2.2.0
+### prettier 2.2.0
 
 [diff](https://github.com/prettier/prettier/compare/2.1.2...2.2.0)
 
 🔗 [Release Notes](https://prettier.io/blog/2020/11/20/2.2.0.html)
 
-# 2.1.2
+### prettier 2.1.2
 
 [diff](https://github.com/prettier/prettier/compare/2.1.1...2.1.2)
 
@@ -273,7 +178,7 @@ styled.div`
 - another
 ```
 
-# 2.1.1
+### prettier 2.1.1
 
 [diff](https://github.com/prettier/prettier/compare/2.1.0...2.1.1)
 
@@ -363,13 +268,106 @@ type Tail<T extends any[]> = T extends [infer U, ...infer R] ? R : never;
 <custom lang="markdown" />
 ```
 
-# 2.1.0
+### prettier 2.1.0
 
 [diff](https://github.com/prettier/prettier/compare/2.0.5...2.1.0)
 
 🔗 [Release Notes](https://prettier.io/blog/2020/08/24/2.1.0.html)
 
-# 2.0.5
+## prettierx 0.18.0
+
+[compare prettierx-0.17.0...prettierx-0.18.0](https://github.com/brodybits/prettierx/compare/prettierx-0.17.0...prettierx-0.18.0)
+
+- Update some dependencies
+  - @babel/code-frame -> 7.12.13
+  - ci-info -> 3.1.1
+  - diff -> 5.0.0
+  - globby -> 11.0.3
+  - lodash -> 4.17.21
+  - mem -> 8.1.0
+  - postcss-less -> 4.0.1
+  - resolve -> 1.20.0
+  - semver -> 7.3.5
+  - string-width -> 4.2.2
+  - unified -> 9.2.1
+
+## prettierx 0.17.0
+
+- replace --no-align-ternary-lines with --offset-ternary-expressions (with updated formatting)
+- replace --no-bracket-spacing with finer-grained options
+- replace --paren-spacing with finer-grained options
+- update graphql -> 15.5.0
+- update some descriptions & update some documentation
+
+[compare prettierx-0.16.1...prettierx-0.17.0](https://github.com/brodybits/prettierx/compare/prettierx-0.16.1...prettierx-0.17.0)
+
+## prettierx 0.16.1
+
+- fix some descriptions
+- update some documentation
+
+[compare prettierx-0.16.0...prettierx-0.16.1](https://github.com/brodybits/prettierx/compare/prettierx-0.16.0...prettierx-0.16.1)
+
+## prettierx 0.16.0
+
+- add & implement --break-long-method-chains option
+- Update fast-glob -> 3.2.5 in dependencies
+- cleanup: remove extra parent.object conditions not needed
+
+[compare prettierx-0.15.0...prettierx-0.16.0](https://github.com/brodybits/prettierx/compare/prettierx-0.15.0...prettierx-0.16.0)
+
+## prettierx 0.15.0
+
+- add --html-void-tags option
+- update some dependencies
+  - @babel/parser -> 7.12.11
+  - cjk-regex -> 2.0.1
+  - globby -> 11.0.2
+  - graphql -> 15.4.0
+  - html-element-attributes -> 2.3.0
+- fix & update some documentation
+
+[compare prettierx-0.14.3...prettierx-0.15.0](https://github.com/brodybits/prettierx/compare/prettierx-0.14.3...prettierx-0.15.0)
+
+## prettierx 0.14.3
+
+- Update some dependencies
+  - mem -> 6.1.1
+  - n-readlines -> 1.0.1
+  - resolve -> 1.19.0
+  - semver -> 7.3.4
+  - yaml-unist-parser -> 1.3.1
+
+[compare prettierx-0.14.2...prettierx-0.14.3](https://github.com/brodybits/prettierx/compare/prettierx-0.14.2...prettierx-0.14.3)
+
+## prettierx 0.14.2
+
+- Add tslib to avoid a peerDependencies warning
+- Update some dependencies
+  - @babel/code-frame -> 7.12.11
+  - @babel/parser -> 7.12.0
+  - camelcase -> 6.2.0
+  - lodash -> 4.17.20
+  - unified -> 9.2.0
+
+[compare prettierx-0.14.0...prettierx-0.14.2](https://github.com/brodybits/prettierx/compare/prettierx-0.14.0...prettierx-0.14.2)
+
+NOTE: prettierx release 0.14.1 was inadvertently skipped in package.json.
+
+## prettierx 0.14.0
+
+- merge updates from Prettier 2.0.0 ... 2.0.5, with some workarounds
+- parse TypeScript using Babel by default
+- move the `flow-parser` parser to `peerDependenciesMeta`, as an optional dependency (note that Prettier and `prettierx` use Babel to parse Flow by default)
+- update documentation of `--space-before-function-paren` and `--generator-star-spacing` features
+- apply some updates for `--paren-spacing` feature from `wp-prettier-2.0.5` branch of the `wp-prettier` fork
+- resolve a limited number of issues related to the `--paren-spacing` feature
+- apply some additional source code cleanup
+- update some dependencies
+
+[compare prettierx-0.13.1...prettierx-0.14.0](https://github.com/brodybits/prettierx/compare/prettierx-0.13.1...prettierx-0.14.0)
+
+### prettier 2.0.5
 
 [diff](https://github.com/prettier/prettier/compare/2.0.4...2.0.5)
 
