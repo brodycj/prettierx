@@ -167,12 +167,7 @@ function printDocToDebug(doc) {
           .join(",")}]${options})`;
       }
 
-      return (
-        (doc.break ? "wrappedGroup" : "group") +
-        // [prettierx] --paren-spacing option (...)
-        (doc.addedLine ? "WithTrailingLine" : "") +
-        `(${printDoc(doc.contents)}${options})`
-      );
+      return `group(${printDoc(doc.contents)}${options})`;
     }
 
     if (doc.type === "fill") {
