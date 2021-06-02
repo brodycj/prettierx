@@ -53,8 +53,8 @@ const unstableTests = new Map(
 
 const unstableAstTests = new Map();
 
-// [prettierx]: disable test files by parser/options
-const disabledTests = new Map(
+// [prettierx]: skip round-trip with some test files by parser/options
+const roundTripErrorTests = new Map(
   [
     // [prettierx]: babel-ts parser bugs
     [
@@ -67,14 +67,14 @@ const disabledTests = new Map(
       "babel-ts",
       (options) => options.arrowParens === "avoid",
     ],
-  ].map(([file, parsers, isDisabled]) => {
+  ].map(([file, parsers, func]) => {
     const parserSet = new Set(Array.isArray(parsers) ? parsers : [parsers]);
 
-    const isDisabledFunc = isDisabled
-      ? (parser, options) => parserSet.has(parser) && isDisabled(options)
+    const skipFunc = func
+      ? (parser, options) => parserSet.has(parser) && func(options)
       : (parser) => parserSet.has(parser);
 
-    return [path.join(__dirname, "../format/", file), isDisabledFunc];
+    return [path.join(__dirname, "../format/", file), skipFunc];
   })
 );
 
@@ -88,9 +88,9 @@ const espreeDisabledTests = new Set(
 );
 const meriyahDisabledTests = espreeDisabledTests;
 
-// [prettierx]: disable test files by parser/options
-const isDisabled = (filename, parser, options) => {
-  const testFunction = disabledTests.get(filename);
+// [prettierx]: skip round-trip with some test files by parser/options
+const skipRoundTripErrorTest = (filename, parser, options) => {
+  const testFunction = roundTripErrorTests.get(filename);
 
   if (!testFunction) {
     return false;
@@ -327,8 +327,8 @@ function runTest({
     return;
   }
 
-  // [prettierx]: disable test files by parser/options
-  if (isDisabled(filename, parser, formatOptions)) {
+  // [prettierx]: skip round-trip with some test files by parser/options
+  if (skipRoundTripErrorTest(filename, parser, formatOptions)) {
     return;
   }
 
