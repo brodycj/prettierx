@@ -1,5 +1,6 @@
 "use strict";
 
+// [prettierx] not needed:
 // const path = require("path");
 
 // `node.comments`
@@ -46,7 +47,7 @@ module.exports = {
         }
         const { file, functions } = option;
         return [
-          // (...)
+          // [prettierx]
           file,
           functions ? new Set(functions) : true,
         ];
@@ -60,13 +61,16 @@ module.exports = {
           return;
         }
 
+        // [prettierx]
         const fn = "src" + fileName.split("src")[1];
 
+        // [prettierx]
         if (ignored && ignored.has(fn)) {
           const functionNames = ignored.get(fileName);
           if (functionNames === true) {
             return;
           }
+          // [prettierx]
           if (!functionNames) {
             return;
           }
