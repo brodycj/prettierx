@@ -59,15 +59,15 @@ const roundTripErrorTests = new Map(
     // [prettierx]: babel-ts parser bugs
     [
       "js/ternaries/nested.js",
-      "babel-ts",
       (options) => options.arrowParens === "avoid",
+      "babel-ts",
     ],
     [
       "js/standard/correct-ternaries.js",
-      "babel-ts",
       (options) => options.arrowParens === "avoid",
+      "babel-ts",
     ],
-  ].map(([file, parsers, func]) => {
+  ].map(([file, func, parsers]) => {
     const parserSet = new Set(Array.isArray(parsers) ? parsers : [parsers]);
 
     const skipFunc = func
