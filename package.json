@@ -22,6 +22,8 @@
   "// prettierx dependencies notes": [
     "* installing dependencies from GitHub is not desired in prettierx",
     "  due to a possible issue with firewalls in certain organizations",
+    "  TEMPORARY EXCEPTION: parse-srcset",
+    "  (as needed for a test to pass due to an update only available from GitHub)",
     "* flow-parser & typescript are moved to devDependencies, and",
     "  they are specified as optional in peerDependenciesMeta",
     "* codecov is removed from devDependencies",
