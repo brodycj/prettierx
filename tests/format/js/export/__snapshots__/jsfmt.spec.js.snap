@@ -1,10 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`bracket.js - {"bracketSpacing":false} format 1`] = `
+exports[`bracket.js - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
 ====================================options=====================================
-bracketSpacing: false
+exportCurlySpacing: false
+graphqlCurlySpacing: false
+importCurlySpacing: false
+objectCurlySpacing: false
 parsers: ["babel", "flow", "typescript"]
 printWidth: 80
+typeCurlySpacing: false
+yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 const {  runTaskForChanged,
@@ -109,11 +114,16 @@ export { fitsIn, oneLine };
 ================================================================================
 `;
 
-exports[`empty.js - {"bracketSpacing":false} format 1`] = `
+exports[`empty.js - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
 ====================================options=====================================
-bracketSpacing: false
+exportCurlySpacing: false
+graphqlCurlySpacing: false
+importCurlySpacing: false
+objectCurlySpacing: false
 parsers: ["babel", "flow", "typescript"]
 printWidth: 80
+typeCurlySpacing: false
+yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 export {};
@@ -142,11 +152,16 @@ export {} from ".";
 ================================================================================
 `;
 
-exports[`same-local-and-exported.js - {"bracketSpacing":false} format 1`] = `
+exports[`same-local-and-exported.js - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
 ====================================options=====================================
-bracketSpacing: false
+exportCurlySpacing: false
+graphqlCurlySpacing: false
+importCurlySpacing: false
+objectCurlySpacing: false
 parsers: ["babel", "flow", "typescript"]
 printWidth: 80
+typeCurlySpacing: false
+yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 export {a} from 'a';

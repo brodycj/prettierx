@@ -15,7 +15,8 @@ describe("plugin default options should work", () => {
   ).test({
     stdout: JSON.stringify({
       tabWidth: 8,
-      bracketSpacing: false,
+      // [prettierx]: broken-out bracket spacing options
+      objectCurlySpacing: false,
     }),
     stderr: "",
     status: 0,
@@ -31,7 +32,8 @@ describe("overriding plugin default options should work", () => {
   ).test({
     stdout: JSON.stringify({
       tabWidth: 4,
-      bracketSpacing: false,
+      // [prettierx]: broken-out bracket spacing options
+      objectCurlySpacing: false,
     }),
     stderr: "",
     status: 0,

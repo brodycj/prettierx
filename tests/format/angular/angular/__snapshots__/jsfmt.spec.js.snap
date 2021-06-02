@@ -1,10 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`angularjs.html - {"bracketSpacing":false} format 1`] = `
+exports[`angularjs.html - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
 ====================================options=====================================
-bracketSpacing: false
+exportCurlySpacing: false
+graphqlCurlySpacing: false
+importCurlySpacing: false
+objectCurlySpacing: false
 parsers: ["angular"]
 printWidth: 80
+typeCurlySpacing: false
+yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 <div ng-if="$ctrl .shouldShowWarning&&!$ctrl.loading">Warning!</div>
@@ -277,11 +282,16 @@ printWidth: 80
 ================================================================================
 `;
 
-exports[`attr-name.component.html - {"bracketSpacing":false} format 1`] = `
+exports[`attr-name.component.html - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
 ====================================options=====================================
-bracketSpacing: false
+exportCurlySpacing: false
+graphqlCurlySpacing: false
+importCurlySpacing: false
+objectCurlySpacing: false
 parsers: ["angular"]
 printWidth: 80
+typeCurlySpacing: false
+yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 <div someDirective itemType="x"></div>
@@ -368,11 +378,16 @@ printWidth: 80
 ================================================================================
 `;
 
-exports[`attributes.component.html - {"bracketSpacing":false} format 1`] = `
+exports[`attributes.component.html - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
 ====================================options=====================================
-bracketSpacing: false
+exportCurlySpacing: false
+graphqlCurlySpacing: false
+importCurlySpacing: false
+objectCurlySpacing: false
 parsers: ["angular"]
 printWidth: 80
+typeCurlySpacing: false
+yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 <div
@@ -2322,11 +2337,16 @@ printWidth: 80
 ================================================================================
 `;
 
-exports[`first-lf.component.html - {"bracketSpacing":false} format 1`] = `
+exports[`first-lf.component.html - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
 ====================================options=====================================
-bracketSpacing: false
+exportCurlySpacing: false
+graphqlCurlySpacing: false
+importCurlySpacing: false
+objectCurlySpacing: false
 parsers: ["angular"]
 printWidth: 80
+typeCurlySpacing: false
+yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 <textarea>{{ generatedDiscountCodes }}</textarea>
@@ -2958,11 +2978,16 @@ printWidth: 80
 ================================================================================
 `;
 
-exports[`ignore-attribute.component.html - {"bracketSpacing":false} format 1`] = `
+exports[`ignore-attribute.component.html - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
 ====================================options=====================================
-bracketSpacing: false
+exportCurlySpacing: false
+graphqlCurlySpacing: false
+importCurlySpacing: false
+objectCurlySpacing: false
 parsers: ["angular"]
 printWidth: 80
+typeCurlySpacing: false
+yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 <div
@@ -3334,11 +3359,16 @@ printWidth: 80
 ================================================================================
 `;
 
-exports[`interpolation.component.html - {"bracketSpacing":false} format 1`] = `
+exports[`interpolation.component.html - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
 ====================================options=====================================
-bracketSpacing: false
+exportCurlySpacing: false
+graphqlCurlySpacing: false
+importCurlySpacing: false
+objectCurlySpacing: false
 parsers: ["angular"]
 printWidth: 80
+typeCurlySpacing: false
+yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 <div>{{ a | b : c }}</div>
@@ -4554,11 +4584,16 @@ printWidth: 80
 ================================================================================
 `;
 
-exports[`real-world.component.html - {"bracketSpacing":false} format 1`] = `
+exports[`real-world.component.html - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
 ====================================options=====================================
-bracketSpacing: false
+exportCurlySpacing: false
+graphqlCurlySpacing: false
+importCurlySpacing: false
+objectCurlySpacing: false
 parsers: ["angular"]
 printWidth: 80
+typeCurlySpacing: false
+yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 <!-- copied from: https://stackblitz.com/angular/ymdjlgmlavo -->
@@ -15861,11 +15896,16 @@ can be found in the LICENSE file at http://angular.io/license
 ================================================================================
 `;
 
-exports[`tag-name.component.html - {"bracketSpacing":false} format 1`] = `
+exports[`tag-name.component.html - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
 ====================================options=====================================
-bracketSpacing: false
+exportCurlySpacing: false
+graphqlCurlySpacing: false
+importCurlySpacing: false
+objectCurlySpacing: false
 parsers: ["angular"]
 printWidth: 80
+typeCurlySpacing: false
+yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 <Table></Table>

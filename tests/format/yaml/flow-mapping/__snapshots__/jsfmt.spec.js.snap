@@ -1,10 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`alias-key.yml - {"bracketSpacing":false} format 1`] = `
+exports[`alias-key.yml - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
 ====================================options=====================================
-bracketSpacing: false
+exportCurlySpacing: false
+graphqlCurlySpacing: false
+importCurlySpacing: false
+objectCurlySpacing: false
 parsers: ["yaml"]
 printWidth: 80
+typeCurlySpacing: false
+yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 {&123 foo, *123 : 456}
@@ -59,11 +64,16 @@ printWidth: 80
 ================================================================================
 `;
 
-exports[`array-key.yml - {"bracketSpacing":false} format 1`] = `
+exports[`array-key.yml - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
 ====================================options=====================================
-bracketSpacing: false
+exportCurlySpacing: false
+graphqlCurlySpacing: false
+importCurlySpacing: false
+objectCurlySpacing: false
 parsers: ["yaml"]
 printWidth: 80
+typeCurlySpacing: false
+yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 {? [longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong],? [longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong],? [longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong]}
@@ -182,11 +192,16 @@ printWidth: 80
 ================================================================================
 `;
 
-exports[`array-key-array-value.yml - {"bracketSpacing":false} format 1`] = `
+exports[`array-key-array-value.yml - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
 ====================================options=====================================
-bracketSpacing: false
+exportCurlySpacing: false
+graphqlCurlySpacing: false
+importCurlySpacing: false
+objectCurlySpacing: false
 parsers: ["yaml"]
 printWidth: 80
+typeCurlySpacing: false
+yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 {[longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong]: [longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong],[longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong]: [longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong],[longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong]: [longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong]}
@@ -365,11 +380,16 @@ printWidth: 80
 ================================================================================
 `;
 
-exports[`array-plain.yml - {"bracketSpacing":false} format 1`] = `
+exports[`array-plain.yml - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
 ====================================options=====================================
-bracketSpacing: false
+exportCurlySpacing: false
+graphqlCurlySpacing: false
+importCurlySpacing: false
+objectCurlySpacing: false
 parsers: ["yaml"]
 printWidth: 80
+typeCurlySpacing: false
+yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 {[longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong],[longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong],[longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong]}
@@ -488,11 +508,16 @@ printWidth: 80
 ================================================================================
 `;
 
-exports[`array-value.yml - {"bracketSpacing":false} format 1`] = `
+exports[`array-value.yml - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
 ====================================options=====================================
-bracketSpacing: false
+exportCurlySpacing: false
+graphqlCurlySpacing: false
+importCurlySpacing: false
+objectCurlySpacing: false
 parsers: ["yaml"]
 printWidth: 80
+typeCurlySpacing: false
+yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 {a: [longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong],b: [longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong],c: [longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong]}
@@ -623,11 +648,16 @@ printWidth: 80
 ================================================================================
 `;
 
-exports[`comment-between.yml - {"bracketSpacing":false} format 1`] = `
+exports[`comment-between.yml - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
 ====================================options=====================================
-bracketSpacing: false
+exportCurlySpacing: false
+graphqlCurlySpacing: false
+importCurlySpacing: false
+objectCurlySpacing: false
 parsers: ["yaml"]
 printWidth: 80
+typeCurlySpacing: false
+yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 {
@@ -714,11 +744,16 @@ printWidth: 80
 ================================================================================
 `;
 
-exports[`comment-trailing.yml - {"bracketSpacing":false} format 1`] = `
+exports[`comment-trailing.yml - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
 ====================================options=====================================
-bracketSpacing: false
+exportCurlySpacing: false
+graphqlCurlySpacing: false
+importCurlySpacing: false
+objectCurlySpacing: false
 parsers: ["yaml"]
 printWidth: 80
+typeCurlySpacing: false
+yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 {123, # comment
@@ -785,11 +820,16 @@ printWidth: 80
 ================================================================================
 `;
 
-exports[`empty.yml - {"bracketSpacing":false} format 1`] = `
+exports[`empty.yml - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
 ====================================options=====================================
-bracketSpacing: false
+exportCurlySpacing: false
+graphqlCurlySpacing: false
+importCurlySpacing: false
+objectCurlySpacing: false
 parsers: ["yaml"]
 printWidth: 80
+typeCurlySpacing: false
+yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 {}
@@ -844,11 +884,16 @@ printWidth: 80
 ================================================================================
 `;
 
-exports[`empty-item-colon.yml - {"bracketSpacing":false} format 1`] = `
+exports[`empty-item-colon.yml - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
 ====================================options=====================================
-bracketSpacing: false
+exportCurlySpacing: false
+graphqlCurlySpacing: false
+importCurlySpacing: false
+objectCurlySpacing: false
 parsers: ["yaml"]
 printWidth: 80
+typeCurlySpacing: false
+yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 { : }
@@ -903,11 +948,16 @@ printWidth: 80
 ================================================================================
 `;
 
-exports[`empty-line.yml - {"bracketSpacing":false} format 1`] = `
+exports[`empty-line.yml - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
 ====================================options=====================================
-bracketSpacing: false
+exportCurlySpacing: false
+graphqlCurlySpacing: false
+importCurlySpacing: false
+objectCurlySpacing: false
 parsers: ["yaml"]
 printWidth: 80
+typeCurlySpacing: false
+yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 { aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa, 
@@ -986,11 +1036,16 @@ bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb }
 ================================================================================
 `;
 
-exports[`empty-line-collapse.yml - {"bracketSpacing":false} format 1`] = `
+exports[`empty-line-collapse.yml - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
 ====================================options=====================================
-bracketSpacing: false
+exportCurlySpacing: false
+graphqlCurlySpacing: false
+importCurlySpacing: false
+objectCurlySpacing: false
 parsers: ["yaml"]
 printWidth: 80
+typeCurlySpacing: false
+yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 { aaa, 
@@ -1053,11 +1108,16 @@ bbb }
 ================================================================================
 `;
 
-exports[`long-key.yml - {"bracketSpacing":false} format 1`] = `
+exports[`long-key.yml - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
 ====================================options=====================================
-bracketSpacing: false
+exportCurlySpacing: false
+graphqlCurlySpacing: false
+importCurlySpacing: false
+objectCurlySpacing: false
 parsers: ["yaml"]
 printWidth: 80
+typeCurlySpacing: false
+yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 {? longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong1,? longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong2,? longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong3}
@@ -1128,11 +1188,16 @@ printWidth: 80
 ================================================================================
 `;
 
-exports[`long-key-long-value.yml - {"bracketSpacing":false} format 1`] = `
+exports[`long-key-long-value.yml - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
 ====================================options=====================================
-bracketSpacing: false
+exportCurlySpacing: false
+graphqlCurlySpacing: false
+importCurlySpacing: false
+objectCurlySpacing: false
 parsers: ["yaml"]
 printWidth: 80
+typeCurlySpacing: false
+yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 {longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong1: longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong,longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong2: longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong,longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong3: longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong}
@@ -1203,11 +1268,16 @@ printWidth: 80
 ================================================================================
 `;
 
-exports[`long-plain.yml - {"bracketSpacing":false} format 1`] = `
+exports[`long-plain.yml - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
 ====================================options=====================================
-bracketSpacing: false
+exportCurlySpacing: false
+graphqlCurlySpacing: false
+importCurlySpacing: false
+objectCurlySpacing: false
 parsers: ["yaml"]
 printWidth: 80
+typeCurlySpacing: false
+yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 {longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong1,longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong2,longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong3}
@@ -1278,11 +1348,16 @@ printWidth: 80
 ================================================================================
 `;
 
-exports[`long-value.yml - {"bracketSpacing":false} format 1`] = `
+exports[`long-value.yml - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
 ====================================options=====================================
-bracketSpacing: false
+exportCurlySpacing: false
+graphqlCurlySpacing: false
+importCurlySpacing: false
+objectCurlySpacing: false
 parsers: ["yaml"]
 printWidth: 80
+typeCurlySpacing: false
+yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 {1: longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong,2: longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong,3: longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong}
@@ -1353,11 +1428,16 @@ printWidth: 80
 ================================================================================
 `;
 
-exports[`middle-comment.yml - {"bracketSpacing":false} format 1`] = `
+exports[`middle-comment.yml - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
 ====================================options=====================================
-bracketSpacing: false
+exportCurlySpacing: false
+graphqlCurlySpacing: false
+importCurlySpacing: false
+objectCurlySpacing: false
 parsers: ["yaml"]
 printWidth: 80
+typeCurlySpacing: false
+yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 !!map #comment
@@ -1420,11 +1500,16 @@ printWidth: 80
 ================================================================================
 `;
 
-exports[`middle-comments.yml - {"bracketSpacing":false} format 1`] = `
+exports[`middle-comments.yml - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
 ====================================options=====================================
-bracketSpacing: false
+exportCurlySpacing: false
+graphqlCurlySpacing: false
+importCurlySpacing: false
+objectCurlySpacing: false
 parsers: ["yaml"]
 printWidth: 80
+typeCurlySpacing: false
+yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 !!map # comment 1
@@ -1499,11 +1584,16 @@ printWidth: 80
 ================================================================================
 `;
 
-exports[`next-empty-line.yml - {"bracketSpacing":false} format 1`] = `
+exports[`next-empty-line.yml - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
 ====================================options=====================================
-bracketSpacing: false
+exportCurlySpacing: false
+graphqlCurlySpacing: false
+importCurlySpacing: false
+objectCurlySpacing: false
 parsers: ["yaml"]
 printWidth: 80
+typeCurlySpacing: false
+yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 {
@@ -1594,11 +1684,16 @@ c: 123
 ================================================================================
 `;
 
-exports[`props.yml - {"bracketSpacing":false} format 1`] = `
+exports[`props.yml - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
 ====================================options=====================================
-bracketSpacing: false
+exportCurlySpacing: false
+graphqlCurlySpacing: false
+importCurlySpacing: false
+objectCurlySpacing: false
 parsers: ["yaml"]
 printWidth: 80
+typeCurlySpacing: false
+yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 !!map &anchor {a: 1}
@@ -1653,11 +1748,16 @@ printWidth: 80
 ================================================================================
 `;
 
-exports[`props-in-map.yml - {"bracketSpacing":false} format 1`] = `
+exports[`props-in-map.yml - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
 ====================================options=====================================
-bracketSpacing: false
+exportCurlySpacing: false
+graphqlCurlySpacing: false
+importCurlySpacing: false
+objectCurlySpacing: false
 parsers: ["yaml"]
 printWidth: 80
+typeCurlySpacing: false
+yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 a: !!map &anchor {a: 1}
@@ -1712,11 +1812,16 @@ a: !!map &anchor { a: 1 }
 ================================================================================
 `;
 
-exports[`short-key.yml - {"bracketSpacing":false} format 1`] = `
+exports[`short-key.yml - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
 ====================================options=====================================
-bracketSpacing: false
+exportCurlySpacing: false
+graphqlCurlySpacing: false
+importCurlySpacing: false
+objectCurlySpacing: false
 parsers: ["yaml"]
 printWidth: 80
+typeCurlySpacing: false
+yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 {? 1,? 2,? 3}
@@ -1771,11 +1876,16 @@ printWidth: 80
 ================================================================================
 `;
 
-exports[`short-key-short-value.yml - {"bracketSpacing":false} format 1`] = `
+exports[`short-key-short-value.yml - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
 ====================================options=====================================
-bracketSpacing: false
+exportCurlySpacing: false
+graphqlCurlySpacing: false
+importCurlySpacing: false
+objectCurlySpacing: false
 parsers: ["yaml"]
 printWidth: 80
+typeCurlySpacing: false
+yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 {1: a,2: b,3: c}
@@ -1830,11 +1940,16 @@ printWidth: 80
 ================================================================================
 `;
 
-exports[`short-plain.yml - {"bracketSpacing":false} format 1`] = `
+exports[`short-plain.yml - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
 ====================================options=====================================
-bracketSpacing: false
+exportCurlySpacing: false
+graphqlCurlySpacing: false
+importCurlySpacing: false
+objectCurlySpacing: false
 parsers: ["yaml"]
 printWidth: 80
+typeCurlySpacing: false
+yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 {1,2,3}
@@ -1889,11 +2004,16 @@ printWidth: 80
 ================================================================================
 `;
 
-exports[`short-value.yml - {"bracketSpacing":false} format 1`] = `
+exports[`short-value.yml - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
 ====================================options=====================================
-bracketSpacing: false
+exportCurlySpacing: false
+graphqlCurlySpacing: false
+importCurlySpacing: false
+objectCurlySpacing: false
 parsers: ["yaml"]
 printWidth: 80
+typeCurlySpacing: false
+yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 {1: 1,2: 2,3: 3}
@@ -1948,11 +2068,16 @@ printWidth: 80
 ================================================================================
 `;
 
-exports[`very-long-value.yml - {"bracketSpacing":false} format 1`] = `
+exports[`very-long-value.yml - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
 ====================================options=====================================
-bracketSpacing: false
+exportCurlySpacing: false
+graphqlCurlySpacing: false
+importCurlySpacing: false
+objectCurlySpacing: false
 parsers: ["yaml"]
 printWidth: 80
+typeCurlySpacing: false
+yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 {

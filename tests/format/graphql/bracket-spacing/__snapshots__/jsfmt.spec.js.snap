@@ -1,10 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`bracket_spacing.graphql - {"bracketSpacing":false} format 1`] = `
+exports[`bracket_spacing.graphql - {"graphqlCurlySpacing":false,"exportCurlySpacing":false,"importCurlySpacing":false,"objectCurlySpacing":false,"typeCurlySpacing":false,"yamlBracketSpacing":false} format 1`] = `
 ====================================options=====================================
-bracketSpacing: false
+exportCurlySpacing: false
+graphqlCurlySpacing: false
+importCurlySpacing: false
+objectCurlySpacing: false
 parsers: ["graphql"]
 printWidth: 80
+typeCurlySpacing: false
+yamlBracketSpacing: false
                                                                                 | printWidth
 =====================================input======================================
 fragment Visit on HighlightedVisit

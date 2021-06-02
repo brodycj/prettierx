@@ -10,7 +10,8 @@ module.exports = {
   ],
   defaultOptions: {
     tabWidth: 8,
-    bracketSpacing: false
+    // [prettierx]: broken-out bracket spacing options
+    objectCurlySpacing: false
   },
   parsers: {
     "foo-parser": {
@@ -23,7 +24,8 @@ module.exports = {
       print: (path, options) =>
         JSON.stringify({
           tabWidth: options.tabWidth,
-          bracketSpacing: options.bracketSpacing
+          // [prettierx]: broken-out bracket spacing options
+          objectCurlySpacing: options.objectCurlySpacing
         })
     }
   }
