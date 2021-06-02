@@ -1,7 +1,10 @@
 /* eslint-disable import/no-extraneous-dependencies */
 "use strict";
 
-// const path = require("path");
+/* ** [prettierx] SKIP FOR NOW:
+const path = require("path");
+// ** */
+
 const { outdent } = require("outdent");
 const { RuleTester } = require("eslint");
 const { rules } = require(".");
@@ -308,7 +311,7 @@ test("no-identifier-n", {
   ],
 });
 
-/* **
+/* ** [prettierx] SKIP FOR NOW - TBD ???:
 test("no-node-comments", {
   valid: [
     "const comments = node.notComments",
