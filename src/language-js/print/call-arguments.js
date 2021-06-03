@@ -54,14 +54,13 @@ function printCallArguments(path, options, print) {
 
   // useEffect(() => { ... }, [foo, bar, baz])
   if (isReactHookCallWithDepsArray(args)) {
+    // [prettierx] with spaceInParens option support (...)
     return [
       "(",
-      // [prettierx] spaceInParens option support (...)
       parenSpace,
       print(["arguments", 0]),
       ", ",
       print(["arguments", 1]),
-      // [prettierx] spaceInParens option support (...)
       parenSpace,
       ")",
     ];
