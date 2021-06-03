@@ -1,6 +1,5 @@
 "use strict";
-
-// const path = require("path");
+const path = require("path");
 
 // `node.comments`
 const memberExpressionSelector = [
@@ -31,7 +30,7 @@ module.exports = {
     type: "suggestion",
     docs: {
       url:
-        "https://github.com/prettier/prettier/blob/main/scripts/eslint-plugin-prettier-internal-rules/no-node-comments.js",
+        "https://github.com/prettier/prettier/blob/main/scripts/tools/eslint-plugin-prettier-internal-rules/no-node-comments.js",
     },
     messages: {
       [messageId]: "Do not access node.comments.",
@@ -39,6 +38,11 @@ module.exports = {
   },
   create(context) {
     const fileName = context.getFilename();
+    // [prettierx]: support npm for dev install
+    const parentDir = path.basename(path.resolve(__dirname, ".."));
+    const isLinked = parentDir !== "node_modules";
+    const projectRoot = isLinked ? "../../.." : "../..";
+
     const ignored = new Map(
       context.options.map((option) => {
         if (typeof option === "string") {
@@ -46,8 +50,8 @@ module.exports = {
         }
         const { file, functions } = option;
         return [
-          // (...)
-          file,
+          // [prettierx]: support npm for dev install
+          path.join(__dirname, projectRoot, file),
           functions ? new Set(functions) : true,
         ];
       })
@@ -60,14 +64,9 @@ module.exports = {
           return;
         }
 
-        const fn = "src" + fileName.split("src")[1];
-
-        if (ignored && ignored.has(fn)) {
+        if (ignored.has(fileName)) {
           const functionNames = ignored.get(fileName);
           if (functionNames === true) {
-            return;
-          }
-          if (!functionNames) {
             return;
           }
           let isIgnored;

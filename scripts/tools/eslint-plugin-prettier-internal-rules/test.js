@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 "use strict";
 
-// const path = require("path");
+const path = require("path");
 const { outdent } = require("outdent");
 const { RuleTester } = require("eslint");
 const { rules } = require(".");
@@ -308,7 +308,6 @@ test("no-identifier-n", {
   ],
 });
 
-/* **
 test("no-node-comments", {
   valid: [
     "const comments = node.notComments",
@@ -342,7 +341,6 @@ test("no-node-comments", {
     },
   ],
 });
-// ** */
 
 test("prefer-ast-path-each", {
   valid: ["const foo = path.map()"],
