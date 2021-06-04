@@ -12,16 +12,6 @@ $ git log --pretty=format:"- %s" rev1..rev2 | sed 's/#\([0-9]*\)/\[prettier\/pre
 
 [compare prettierx-0.18.1...dev](https://github.com/brodybits/prettierx/compare/prettierx-0.18.1...dev)
 
-## prettierx 0.18.1
-
-[compare prettierx-0.18.0...prettierx-0.18.1](https://github.com/brodybits/prettierx/compare/prettierx-0.18.0...prettierx-0.18.1)
-
-- cleanup(src): add another objectCurlySpacing option comment
-- Update some dependencies
-  - chalk -> 4.1.1
-  - get-stream -> 6.0.1
-  - mem -> 8.1.1
-
 ### prettier 2.3.0
 
 [diff](https://github.com/prettier/prettier/compare/2.2.1...2.3.0)
@@ -283,6 +273,16 @@ type Tail<T extends any[]> = T extends [infer U, ...infer R] ? R : never;
 [diff](https://github.com/prettier/prettier/compare/2.0.5...2.1.0)
 
 🔗 [Release Notes](https://prettier.io/blog/2020/08/24/2.1.0.html)
+
+## prettierx 0.18.1
+
+[compare prettierx-0.18.0...prettierx-0.18.1](https://github.com/brodybits/prettierx/compare/prettierx-0.18.0...prettierx-0.18.1)
+
+- cleanup(src): add another objectCurlySpacing option comment
+- Update some dependencies
+  - chalk -> 4.1.1
+  - get-stream -> 6.0.1
+  - mem -> 8.1.1
 
 ## prettierx 0.18.0
 
