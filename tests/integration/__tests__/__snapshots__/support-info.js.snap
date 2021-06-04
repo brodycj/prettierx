@@ -10,8 +10,8 @@ Object {
       "css",
     ],
     "Flow": Array [
-      "flow",
       "babel-flow",
+      "flow",
     ],
     "GraphQL": Array [
       "graphql",
@@ -455,7 +455,7 @@ exports[`CLI --support-info (stdout) 1`] = `
       ],
       \\"linguistLanguageId\\": 183,
       \\"name\\": \\"Flow\\",
-      \\"parsers\\": [\\"flow\\", \\"babel-flow\\"],
+      \\"parsers\\": [\\"babel-flow\\", \\"flow\\"],
       \\"since\\": \\"0.0.0\\",
       \\"tmScope\\": \\"source.js\\",
       \\"type\\": \\"programming\\",
