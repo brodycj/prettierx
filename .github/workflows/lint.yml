@@ -4,11 +4,12 @@ on:
   # [prettierx ...]
   push:
     branches:
+      - main
       # [prettierx ...]
+      # - master
+      # - patch-release
       - dev
       - dev-*
-      - main
-      - patch-release
       - prettierx-*
   pull_request:
 
