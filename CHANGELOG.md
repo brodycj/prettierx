@@ -10,7 +10,17 @@ $ git log --pretty=format:"- %s" rev1..rev2 | sed 's/#\([0-9]*\)/\[prettier\/pre
 
 ## prettierx 0.19.0-dev
 
-[compare prettierx-0.18.0...dev](https://github.com/brodybits/prettierx/compare/prettierx-0.18.0...dev)
+[compare prettierx-0.18.1...dev](https://github.com/brodybits/prettierx/compare/prettierx-0.18.1...dev)
+
+## prettierx 0.18.1
+
+[compare prettierx-0.18.0...prettierx-0.18.1](https://github.com/brodybits/prettierx/compare/prettierx-0.18.0...prettierx-0.18.1)
+
+- cleanup(src): add another objectCurlySpacing option comment
+- Update some dependencies
+  - chalk -> 4.1.1
+  - get-stream -> 6.0.1
+  - mem -> 8.1.1
 
 ### prettier 2.3.0
 
