@@ -9,11 +9,11 @@ yarn test
 
 ## Tests
 
-**quick summary:**
+### Quick summary
 
 The tests use [Jest snapshots](https://facebook.github.io/jest/docs/en/snapshot-testing.html). You can make changes and run `jest -u` (or `yarn test -u`) to update the snapshots. Then run `git diff` to take a look at what changed. Always update the snapshots when opening a PR.
 
-**details:**
+### Details
 
 - The tests use [Jest snapshots](https://facebook.github.io/jest/docs/en/snapshot-testing.html).
 - You can make changes and run `jest -u` (or `yarn test -u`) to update the snapshots. Then run `git diff` to take a look at what changed. Always update the snapshots when opening a PR.
@@ -24,7 +24,7 @@ The tests use [Jest snapshots](https://facebook.github.io/jest/docs/en/snapshot-
 - `tests/flow/` contains the Flow test suite, and is not supposed to be edited by hand. To update it, clone the Flow repo next to the prettierX repo and run: `node scripts/sync-flow-tests.js ../flow/tests/`.
 - If you would like to debug prettierX locally, you can ~~either~~ debug it in node ~~or the browser~~. ~~The easiest way to debug it in the browser is to run the interactive `docs` REPL locally.~~ The easiest way to debug it in node, is to create a local test file with some example code you want formatted and either run it in an editor like VS Code or run it directly via `./bin/prettierx.js <your_test_file>`.
 
-**more details:**
+### Further details
 
 Each test directory in `tests` has a `jsfmt.spec.js` file that controls how exactly the rest of the files in the directory are used for tests. This file must contain one or more calls to the `run_spec` global function. For example, in directories with JavaScript formatting tests, `jsfmt.spec.js` generally looks like this:
 
