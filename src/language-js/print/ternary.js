@@ -342,6 +342,9 @@ function printTernary(path, options, print) {
         locEnd(comment)
       )
   );
+  // [prettierx] moved & updated for --space-in-parens option support (...)
+  // const maybeGroup = (doc) =>
+  //   ...
 
   // Break the closing paren to keep the chain right after it:
   // (a
