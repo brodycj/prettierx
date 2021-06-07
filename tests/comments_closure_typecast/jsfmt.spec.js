@@ -1,1 +1,1 @@
-run_spec(__dirname, ["babel", "babel-flow"]);
+run_spec(__dirname, ["babel"]);
