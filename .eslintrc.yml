@@ -6,9 +6,10 @@ extends:
   - eslint:recommended
   - prettier
 plugins:
-  - import
-  - unicorn
   - prettier-internal-rules
+  - import
+  - regexp
+  - unicorn
 settings:
   import/internal-regex: ^linguist-languages/
 rules:
@@ -69,12 +70,23 @@ rules:
     - error
     - never
     - exceptRange: true
+  regexp/match-any:
+    - error
+    - allows:
+        - dotAll
+  regexp/no-useless-flag: error
   unicorn/better-regex: error
   unicorn/explicit-length-check: error
   unicorn/new-for-builtins: error
   unicorn/no-array-for-each: error
   unicorn/no-array-push-push: error
   unicorn/no-useless-undefined: error
+  unicorn/prefer-array-flat:
+    - error
+    - functions:
+        - flat
+        - flatten
+  unicorn/prefer-array-flat-map: error
   unicorn/prefer-includes: error
   unicorn/prefer-number-properties: error
   unicorn/prefer-optional-catch-binding: error
@@ -90,6 +102,9 @@ overrides:
       - "**/*.mjs"
     parserOptions:
       sourceType: module
+    rules:
+      unicorn/prefer-module: error
+      unicorn/prefer-node-protocol: error
   - files:
       - "tests/format/**/jsfmt.spec.js"
       - "tests/config/**/*.js"
@@ -106,6 +121,8 @@ overrides:
       - tests/**/*.js
     rules:
       strict: off
+      unicorn/prefer-array-flat: off
+      unicorn/prefer-array-flat-map: off
     globals:
       run_spec: false
   - files:

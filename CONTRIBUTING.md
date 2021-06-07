@@ -9,24 +9,9 @@ yarn test
 
 ## Tests
 
-### Quick summary
-
 The tests use [Jest snapshots](https://facebook.github.io/jest/docs/en/snapshot-testing.html). You can make changes and run `jest -u` (or `yarn test -u`) to update the snapshots. Then run `git diff` to take a look at what changed. Always update the snapshots when opening a PR.
 
-### Details
-
-- The tests use [Jest snapshots](https://facebook.github.io/jest/docs/en/snapshot-testing.html).
-- You can make changes and run `jest -u` (or `yarn test -u`) to update the snapshots. Then run `git diff` to take a look at what changed. Always update the snapshots when opening a PR.
-- You can run `AST_COMPARE=1 DEEP_COMPARE=1 jest` for a more robust test run.
-  - `AST_COMPARE` That formats each file, re-parses it, and compares the new AST with the original one and makes sure they are semantically equivalent.
-  - `DEEP_COMPARE` That formats each file, then formats the output again, and checks that the second output is the same as the first.
-- Each test folder has a `jsfmt.spec.js` that runs the tests. For JavaScript files, generally you can just put `run_spec(__dirname, ["babel", "flow", "typescript"]);` there. This will verify that the output using each parser is the same. You can also pass options as the third argument, like this: `run_spec(__dirname, ["babel"], { trailingComma: "es5" });`
-- `tests/flow/` contains the Flow test suite, and is not supposed to be edited by hand. To update it, clone the Flow repo next to the prettierX repo and run: `node scripts/sync-flow-tests.js ../flow/tests/`.
-- If you would like to debug prettierX locally, you can ~~either~~ debug it in node ~~or the browser~~. ~~The easiest way to debug it in the browser is to run the interactive `docs` REPL locally.~~ The easiest way to debug it in node, is to create a local test file with some example code you want formatted and either run it in an editor like VS Code or run it directly via `./bin/prettierx.js <your_test_file>`.
-
-### Further details
-
-Each test directory in `tests` has a `jsfmt.spec.js` file that controls how exactly the rest of the files in the directory are used for tests. This file must contain one or more calls to the `run_spec` global function. For example, in directories with JavaScript formatting tests, `jsfmt.spec.js` generally looks like this:
+Each test directory in `tests/format` has a `jsfmt.spec.js` file that controls how exactly the rest of the files in the directory are used for tests. This file must contain one or more calls to the `run_spec` global function. For example, in directories with JavaScript formatting tests, `jsfmt.spec.js` generally looks like this:
 
 ```js
 run_spec(__dirname, ["babel", "flow", "typescript"]);
@@ -63,18 +48,18 @@ function run_spec(
 Parameters:
 
 - **`fixtures`**: Must be set to `__dirname` or to an object of the shape `{ dirname: __dirname, ... }`. The object may have the `snippets` property to specify an array of extra input entries in addition to the files in the current directory. For each input entry (a file or a snippet), `run_spec` configures and runs a number of tests. The main check is that for a given input the output should match the snapshot (for snippets, the expected output can also be specified directly). [Additional checks](#deeper-testing) are controlled by options and environment variables.
-- **`parsers`**: A list of parser names. The tests verify that the parsers in this list produce the same output. If the list includes `typescript`, then `babel-ts` is included implicitly. If the list includes `babel`, and the current directory is inside `tests/js`, then `espree` and `meriyah` are included implicitly.
-- **`options`**: In addition to Prettier's formatting option, can contain the `errors` property to specify that it's expected that the formatting shouldn't be successful and an error should be thrown for all (`errors: true`) or some combinations of input entries and parsers.
+- **`parsers`**: A list of parser names. The tests verify that the parsers in this list produce the same output. If the list includes `typescript`, then `babel-ts` is included implicitly. If the list includes `babel`, and the current directory is inside `tests/format/js`, then `espree` and `meriyah` are included implicitly.
+- **`options`**: In addition to Prettier's formatting options, can contain the `errors` property to specify that it's expected that the formatting shouldn't be successful and an error should be thrown for all (`errors: true`) or some combinations of input entries and parsers.
 
 The implementation of `run_spec` can be found in [`tests/config/format-test.js`](tests/config/format-test.js).
 
-`tests/flow-repo/` contains the Flow test suite and is not supposed to be edited by hand. To update it, clone the Flow repo next to the Prettier repo and run: `node scripts/sync-flow-tests.js ../flow/tests/`.
+`tests/format/flow-repo/` contains the Flow test suite and is not supposed to be edited by hand. To update it, clone the Flow repo next to the Prettier repo and run: `node scripts/sync-flow-tests.js ../flow/tests/`.
 
 ## Debugging
 
-To debug Prettier locally, you can either debug it in Node (recommended) or the browser.
+To debug prettierX locally, you can either debug it in Node (recommended) or the browser.
 
-- The easiest way to debug it in Node is to create a local test file with some example code you want formatted and either run it in an editor like VS Code or run it directly via `./bin/prettier.js <your_test_file>`.
+- The easiest way to debug it in Node is to create a local test file with some example code you want formatted and either run it in an editor like VS Code or run it directly via `./bin/prettierx.js <your_test_file>`.
 - The easiest way to debug it in the browser is to build Prettier's website locally (see [`website/README.md`](website/README.md)).
 
 ## Other

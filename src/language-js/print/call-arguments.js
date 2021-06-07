@@ -16,6 +16,8 @@ const {
   iterateCallArgumentsPath,
   isNextLineEmpty,
   isCallExpression,
+  isStringLiteral,
+  isObjectProperty,
 } = require("../utils");
 
 const {
@@ -349,10 +351,10 @@ function isTypeModuleObjectExpression(node) {
   return (
     node.type === "ObjectExpression" &&
     node.properties.length === 1 &&
-    node.properties[0].type === "ObjectProperty" &&
+    isObjectProperty(node.properties[0]) &&
     node.properties[0].key.type === "Identifier" &&
     node.properties[0].key.name === "type" &&
-    node.properties[0].value.type === "StringLiteral" &&
+    isStringLiteral(node.properties[0].value) &&
     node.properties[0].value.value === "module"
   );
 }

@@ -1,7 +1,5 @@
 "use strict";
 
-const flat = require("lodash/flatten");
-
 const { printComments } = require("../../main/comments");
 const {
   getLast,
@@ -329,7 +327,7 @@ function printMemberChain(path, options, print) {
   const oneLine = printedGroups;
 
   const cutoff = shouldMerge ? 3 : 2;
-  const flatGroups = flat(groups);
+  const flatGroups = groups.flat();
 
   const nodeHasComment =
     flatGroups

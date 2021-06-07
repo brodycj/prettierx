@@ -24,6 +24,7 @@ const {
   getCallArguments,
   isCallExpression,
   isMemberExpression,
+  isObjectProperty,
 } = require("./utils");
 const { locStart, locEnd } = require("./loc");
 
@@ -363,9 +364,7 @@ function handleObjectPropertyAssignment({
   enclosingNode,
 }) {
   if (
-    enclosingNode &&
-    (enclosingNode.type === "ObjectProperty" ||
-      enclosingNode.type === "Property") &&
+    isObjectProperty(enclosingNode) &&
     enclosingNode.shorthand &&
     enclosingNode.key === precedingNode &&
     enclosingNode.value.type === "AssignmentPattern"
@@ -588,10 +587,11 @@ function handleLastFunctionArgComments({
           locEnd(getLast(parameters))
         );
       }
-      const functionParamLeftParenIndex = getNextNonSpaceNonCommentCharacterIndexWithStartIndex(
-        text,
-        locEnd(enclosingNode.id)
-      );
+      const functionParamLeftParenIndex =
+        getNextNonSpaceNonCommentCharacterIndexWithStartIndex(
+          text,
+          locEnd(enclosingNode.id)
+        );
       return (
         functionParamLeftParenIndex !== false &&
         getNextNonSpaceNonCommentCharacterIndexWithStartIndex(
@@ -691,11 +691,7 @@ function handleUnionTypeComments({
 }
 
 function handlePropertyComments({ comment, enclosingNode }) {
-  if (
-    enclosingNode &&
-    (enclosingNode.type === "Property" ||
-      enclosingNode.type === "ObjectProperty")
-  ) {
+  if (isObjectProperty(enclosingNode)) {
     addLeadingComment(enclosingNode, comment);
     return true;
   }
@@ -723,8 +719,7 @@ function handleOnlyComments({
     enclosingNode &&
     enclosingNode.type === "Program" &&
     enclosingNode.body.length === 0 &&
-    enclosingNode.directives &&
-    enclosingNode.directives.length === 0
+    !isNonEmptyArray(enclosingNode.directives)
   ) {
     if (isLastComment) {
       addDanglingComment(enclosingNode, comment);
@@ -920,7 +915,8 @@ function getCommentChildNodes(node, options) {
     (options.parser === "typescript" ||
       options.parser === "flow" ||
       options.parser === "espree" ||
-      options.parser === "meriyah") &&
+      options.parser === "meriyah" ||
+      options.parser === "__babel_estree") &&
     node.type === "MethodDefinition" &&
     node.value &&
     node.value.type === "FunctionExpression" &&

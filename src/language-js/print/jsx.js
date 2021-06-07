@@ -725,6 +725,12 @@ function printJsxSpreadAttribute(path, options, print) {
 
 function printJsx(path, options, print) {
   const node = path.getValue();
+
+  // JSX nodes always starts with `JSX`
+  if (!node.type.startsWith("JSX")) {
+    return;
+  }
+
   switch (node.type) {
     case "JSXAttribute":
       return printJsxAttribute(path, options, print);
@@ -758,6 +764,9 @@ function printJsx(path, options, print) {
     case "JSXText":
       /* istanbul ignore next */
       throw new Error("JSXTest should be handled by JSXElement");
+    default:
+      /* istanbul ignore next */
+      throw new Error(`Unknown JSX node type: ${JSON.stringify(node.type)}.`);
   }
 }
 

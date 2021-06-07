@@ -2021,10 +2021,10 @@ coa@^2.0.2:
     chalk "^2.4.1"
     q "^1.1.2"
 
-codemirror-graphql@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/codemirror-graphql/-/codemirror-graphql-1.0.1.tgz#858fd43b0c5d48fd2f6e90a0efe72ee95033b139"
-  integrity sha512-5ttMpv2kMn99Rmf2aZ5P6/hMd3y11cN8LP/x5MUeF0ipcalZA/GE/OxxXkhV0YJE/uW5QIcPyZDkvtSsGZa23A==
+codemirror-graphql@1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/codemirror-graphql/-/codemirror-graphql-1.0.2.tgz#cfbfb4ab9ed81467dc606848c5eb84e1f5d82766"
+  integrity sha512-D4+BdYa6iQnDlio4mBk1Yap5ROCqEWapSFLkiKGatx/I0dF6euzdwd0um3Ndudw6rFQbNuT7hpcH8tnBO6VOfQ==
   dependencies:
     graphql-language-service-interface "^2.8.2"
     graphql-language-service-parser "^1.9.0"
@@ -2134,10 +2134,10 @@ concat-with-sourcemaps@*:
   dependencies:
     source-map "^0.6.1"
 
-concurrently@6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/concurrently/-/concurrently-6.1.0.tgz#00d22525d3fcdce7f34cc7f3c9753f90a57d6208"
-  integrity sha512-jy+xj49pvqeKjc2TAVXRIhrgPG51eBKDZti0kZ41kaWk9iLbyWBjH6KMFpW7peOLkEymD+ZM83Lx6UEy3N/M9g==
+concurrently@6.2.0:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/concurrently/-/concurrently-6.2.0.tgz#587e2cb8afca7234172d8ea55176088632c4c56d"
+  integrity sha512-v9I4Y3wFoXCSY2L73yYgwA9ESrQMpRn80jMcqMgHx720Hecz2GZAvTI6bREVST6lkddNypDKRN22qhK0X8Y00g==
   dependencies:
     chalk "^4.1.0"
     date-fns "^2.16.1"
@@ -3007,7 +3007,7 @@ escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
 
-eslint-scope@^5.1.1:
+eslint-scope@5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/eslint-scope/-/eslint-scope-5.1.1.tgz#e786e59a66cb92b3f6c1fb0d508aab174848f48c"
   integrity sha512-2NxwbF/hZ0KpepYN0cNbo+FN6XoK7GaHlQhgx/hIZl6Va0bF45RQOOwhLIy8lQDbuCiadSLCBnH2CFYquit5bw==
@@ -7603,10 +7603,10 @@ vscode-languageserver-types@^3.15.1:
   resolved "https://registry.yarnpkg.com/vscode-languageserver-types/-/vscode-languageserver-types-3.15.1.tgz#17be71d78d2f6236d414f0001ce1ef4d23e6b6de"
   integrity sha512-+a9MPUQrNGRrGU630OGbYVQ+11iOIovjCkqxajPa9w57Sd5ruK8WQNsslzpa0x/QJqC8kRc2DUxWjIFwoNm4ZQ==
 
-watchpack@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/watchpack/-/watchpack-2.0.0.tgz#b12248f32f0fd4799b7be0802ad1f6573a45955c"
-  integrity sha512-xSdCxxYZWNk3VK13bZRYhsQpfa8Vg63zXG+3pyU8ouqSLRCv4IGXIp9Kr226q6GBkGRlZrST2wwKtjfKz2m7Cg==
+watchpack@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/watchpack/-/watchpack-2.2.0.tgz#47d78f5415fe550ecd740f99fe2882323a58b1ce"
+  integrity sha512-up4YAn/XHgZHIxFBVCdlMiWDj6WaLKpwVeGQk2I5thdYxF/KmF0aaz6TfJZ/hfl1h/XlcDr7k1KH7ThDagpFaA==
   dependencies:
     glob-to-regexp "^0.4.1"
     graceful-fs "^4.1.2"
@@ -7643,18 +7643,18 @@ webpack-merge@^5.7.3:
     clone-deep "^4.0.1"
     wildcard "^2.0.0"
 
-webpack-sources@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-2.1.1.tgz#6922dc1bf7f7f95aab56675535b6e20f87b9147f"
-  integrity sha512-hraq9n99K564zuZUsE61iATO3jvzxOmGo20UlOe3zgdHOBp8inTJgv7EY4RgvCv7Ywx0/vpQTyYSjnFpv4gNtQ==
+webpack-sources@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-2.3.0.tgz#9ed2de69b25143a4c18847586ad9eccb19278cfa"
+  integrity sha512-WyOdtwSvOML1kbgtXbTDnEW0jkJ7hZr/bDByIwszhWd/4XX1A3XMkrbFMsuH4+/MfLlZCUzlAdg4r7jaGKEIgQ==
   dependencies:
     source-list-map "^2.0.1"
     source-map "^0.6.1"
 
-webpack@5.36.2:
-  version "5.36.2"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.36.2.tgz#6ef1fb2453ad52faa61e78d486d353d07cca8a0f"
-  integrity sha512-XJumVnnGoH2dV+Pk1VwgY4YT6AiMKpVoudUFCNOXMIVrEKPUgEwdIfWPjIuGLESAiS8EdIHX5+TiJz/5JccmRg==
+webpack@5.38.1:
+  version "5.38.1"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.38.1.tgz#5224c7f24c18e729268d3e3bc97240d6e880258e"
+  integrity sha512-OqRmYD1OJbHZph6RUMD93GcCZy4Z4wC0ele4FXyYF0J6AxO1vOSuIlU1hkS/lDlR9CDYBz64MZRmdbdnFFoT2g==
   dependencies:
     "@types/eslint-scope" "^3.7.0"
     "@types/estree" "^0.0.47"
@@ -7666,7 +7666,7 @@ webpack@5.36.2:
     chrome-trace-event "^1.0.2"
     enhanced-resolve "^5.8.0"
     es-module-lexer "^0.4.0"
-    eslint-scope "^5.1.1"
+    eslint-scope "5.1.1"
     events "^3.2.0"
     glob-to-regexp "^0.4.1"
     graceful-fs "^4.2.4"
@@ -7677,8 +7677,8 @@ webpack@5.36.2:
     schema-utils "^3.0.0"
     tapable "^2.1.1"
     terser-webpack-plugin "^5.1.1"
-    watchpack "^2.0.0"
-    webpack-sources "^2.1.1"
+    watchpack "^2.2.0"
+    webpack-sources "^2.3.0"
 
 websocket-driver@>=0.5.1:
   version "0.7.0"
