@@ -3,7 +3,9 @@
 const path = require("path");
 const { outdent } = require("outdent");
 
-const TESTS_ROOT = path.join(__dirname, "../../format");
+// [prettierx] TBD ???:
+// const TESTS_ROOT = path.join(__dirname, "../../format");
+const TESTS_ROOT = path.join(__dirname, "../../tests");
 
 const getCategory = (dirname) =>
   path.relative(TESTS_ROOT, dirname).split(path.sep).shift();
