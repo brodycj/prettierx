@@ -62,37 +62,37 @@ const sel = this.connections
 
 =====================================output=====================================
 foo
-  .doSomething( "Hello World" )
-  .doAnotherThing( "Foo", { foo: bar } )
-  // App configuration.
-  .doOneMoreThing( config )
-  .run( () => console.log( "Bar" ) );
+.doSomething( "Hello World" )
+.doAnotherThing( "Foo", { foo: bar } )
+// App configuration.
+.doOneMoreThing( config )
+.run( () => console.log( "Bar" ) );
 
 bigDeal
-  .doSomething( "Hello World" )
+.doSomething( "Hello World" )
 
-  // Hello world
-  .doAnotherThing( "Foo", { foo: bar } )
+// Hello world
+.doAnotherThing( "Foo", { foo: bar } )
 
-  // App configuration.
-  .doOneMoreThing( config )
+// App configuration.
+.doOneMoreThing( config )
 
-  .run( () => console.log( "Bar" ) );
+.run( () => console.log( "Bar" ) );
 
 bar.baz
-  .doSomething( "Hello World" )
+.doSomething( "Hello World" )
 
-  // Hello world
-  .foo.bar.doAnotherThing( "Foo", { foo: bar } )
+// Hello world
+.foo.bar.doAnotherThing( "Foo", { foo: bar } )
 
-  .doOneMoreThing( config )
-  .bar.run( () => console.log( "Bar" ) );
+.doOneMoreThing( config )
+.bar.run( () => console.log( "Bar" ) );
 
 ( somethingGood ? thisIsIt : maybeNot )
-  // Hello world
-  .doSomething( "Hello World" )
-  .doAnotherThing( "Foo", { foo: bar } ) // Run this
-  .run( () => console.log( "Bar" ) ); // Do this
+// Hello world
+.doSomething( "Hello World" )
+.doAnotherThing( "Foo", { foo: bar } ) // Run this
+.run( () => console.log( "Bar" ) ); // Do this
 
 helloWorld.text().then( t => t );
 
@@ -101,13 +101,13 @@ helloWorld.text().then( t => t );
   anotherVeryLongVeryLongVeryLong ||
   veryVeryVeryLongError
 )
-  .map( tickets => TicketRecord.createFromSomeLongString() )
+.map( tickets => TicketRecord.createFromSomeLongString() )
 
-  .filter( obj => Boolean( obj ) );
+.filter( obj => Boolean( obj ) );
 
 const sel = this.connections
-  .concat( this.activities.concat( this.operators ) )
-  .filter( x => x.selected );
+.concat( this.activities.concat( this.operators ) )
+.filter( x => x.selected );
 
 ================================================================================
 `;
