@@ -8,14 +8,10 @@ const semver = {
 
 const arrayify = require("../utils/arrayify");
 
-/* ** [prettierx] not needed from package.json:
-const currentVersion = require("../../package.json").version;
-// */
+// [prettierx] quick workaround:
+const currentVersion = require("../../package.json")["prettier-version"];
 
 const coreOptions = require("./core-options").options;
-
-// [prettierx] quick workaround:
-const currentVersion = "2.3.1";
 
 /**
  * Strings in `plugins` and `pluginSearchDirs` are handled by a wrapped version
