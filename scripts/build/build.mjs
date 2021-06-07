@@ -132,7 +132,7 @@ async function cacheFiles(cache) {
 }
 
 async function preparePackage() {
-  const pkg = await util.readJson("package.json");
+  const pkg = await utils.readJson("package.json");
   // [prettierx merge ...]
   // pkg.bin = "./bin-prettier.js";
   // [prettierx]
