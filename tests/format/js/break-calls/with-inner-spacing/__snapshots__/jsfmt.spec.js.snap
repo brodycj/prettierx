@@ -4,7 +4,7 @@ exports[`break.js - {"spaceInParens":true,"arrayBracketSpacing":true,"computedPr
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parsers: ["babel-flow", "flow", "typescript"]
+parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 spaceInParens: true
 trailingComma: "none"
@@ -113,7 +113,7 @@ exports[`parent.js - {"spaceInParens":true,"arrayBracketSpacing":true,"computedP
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parsers: ["babel-flow", "flow", "typescript"]
+parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 spaceInParens: true
 trailingComma: "none"
@@ -148,7 +148,7 @@ exports[`react.js - {"spaceInParens":true,"arrayBracketSpacing":true,"computedPr
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parsers: ["babel-flow", "flow", "typescript"]
+parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 spaceInParens: true
 trailingComma: "none"
@@ -335,7 +335,7 @@ exports[`reduce.js - {"spaceInParens":true,"arrayBracketSpacing":true,"computedP
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parsers: ["babel-flow", "flow", "typescript"]
+parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
 spaceInParens: true
 trailingComma: "none"

@@ -4,7 +4,7 @@
 
 const dirPath = `${__dirname}/..`;
 
-run_spec(dirPath, ["babel-flow", "flow", "typescript"], {
+run_spec(dirPath, ["babel", "babel-flow", "flow", "typescript"], {
   // [prettierx] test with --paren-spacing
   spaceInParens: true,
   arrayBracketSpacing: true,

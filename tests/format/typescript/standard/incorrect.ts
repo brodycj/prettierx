@@ -1,3 +1,7 @@
+type IdentityWrapper = {
+  func <T>(T) :T
+}
+
 function identity <T>(value :T) :T {
   return value
 }

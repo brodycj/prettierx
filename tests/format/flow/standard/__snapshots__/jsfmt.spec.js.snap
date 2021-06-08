@@ -4,7 +4,7 @@ exports[`correct.js - {"yieldStarSpacing":true,"generatorStarSpacing":true,"spac
 ====================================options=====================================
 generatorStarSpacing: true
 jsxSingleQuote: true
-parsers: ["babel", "babel-flow", "flow"]
+parsers: ["babel-flow", "babel", "flow"]
 printWidth: 80
 semi: false
 singleQuote: true
@@ -54,74 +54,6 @@ function identity<T> (value: T): T {
 
 interface Foo<T> {
   getter(value: T): T;
-}
-
-class Example<T> implements Foo<T> {
-  value: T
-  getter (value: T): T {
-    return this.value
-  }
-  set setter (value: T) {
-    this.value = value
-  }
-}
-
-================================================================================
-`;
-
-exports[`correct.js - {"yieldStarSpacing":true,"generatorStarSpacing":true,"spaceBeforeFunctionParen":true,"singleQuote":true,"jsxSingleQuote":true,"semi":false} format 1`] = `
-====================================options=====================================
-generatorStarSpacing: true
-jsxSingleQuote: true
-parsers: ["typescript"]
-printWidth: 80
-semi: false
-singleQuote: true
-spaceBeforeFunctionParen: true
-yieldStarSpacing: true
-                                                                                | printWidth
-=====================================input======================================
-type IdentityWrapper = {
-  func<T>(T): T
-}
-
-const identity2 = <T>(t: T): T => t
-
-const a = 1
-
-function identity<T> (value: T): T {
-  return value
-}
-
-interface Foo<T> {
-  getter(value: T): T;
-}
-
-class Example<T> implements Foo<T> {
-  value: T
-  getter (value: T): T {
-    return this.value
-  }
-  set setter (value: T) {
-    this.value = value
-  }
-}
-
-=====================================output=====================================
-type IdentityWrapper = {
-  func<T>(T): T
-}
-
-const identity2 = <T>(t: T): T => t
-
-const a = 1
-
-function identity<T> (value: T): T {
-  return value
-}
-
-interface Foo<T> {
-  getter(value: T): T
 }
 
 class Example<T> implements Foo<T> {
@@ -141,7 +73,7 @@ exports[`incorrect.js - {"yieldStarSpacing":true,"generatorStarSpacing":true,"sp
 ====================================options=====================================
 generatorStarSpacing: true
 jsxSingleQuote: true
-parsers: ["babel", "babel-flow", "flow"]
+parsers: ["babel-flow", "babel", "flow"]
 printWidth: 80
 semi: false
 singleQuote: true
@@ -183,66 +115,6 @@ function identity<T> (value: T): T {
 
 interface Foo<T> {
   getter(value: T): T;
-}
-
-class Example<T> implements Foo<T> {
-  value: T
-  getter (value: T): T {
-    return this.value
-  }
-  set setter (value: T) {
-    this.value = value
-  }
-}
-
-================================================================================
-`;
-
-exports[`incorrect.js - {"yieldStarSpacing":true,"generatorStarSpacing":true,"spaceBeforeFunctionParen":true,"singleQuote":true,"jsxSingleQuote":true,"semi":false} format 1`] = `
-====================================options=====================================
-generatorStarSpacing: true
-jsxSingleQuote: true
-parsers: ["typescript"]
-printWidth: 80
-semi: false
-singleQuote: true
-spaceBeforeFunctionParen: true
-yieldStarSpacing: true
-                                                                                | printWidth
-=====================================input======================================
-type IdentityWrapper = {
-  func <T>(T) :T
-}
-
-function identity <T>(value :T) :T {
-  return value
-}
-
-interface Foo <T>{
-  getter(value:T):T
-}
-
-class Example<T> implements Foo <T>{
-  value:T;
-  getter(value :T) :T {
-    return this.value
-  }
-  set setter(value :T) {
-    this.value = value
-  }
-}
-
-=====================================output=====================================
-type IdentityWrapper = {
-  func<T>(T): T
-}
-
-function identity<T> (value: T): T {
-  return value
-}
-
-interface Foo<T> {
-  getter(value: T): T
 }
 
 class Example<T> implements Foo<T> {
