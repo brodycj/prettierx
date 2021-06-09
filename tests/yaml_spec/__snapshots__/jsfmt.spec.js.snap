@@ -826,7 +826,7 @@ proseWrap: "always"
 ================================================================================
 `;
 
-exports[`block-scalar-with-spaces-only.yml 1`] = `
+exports[`block-scalar-with-spaces-and-comments.yml 1`] = `
 ====================================options=====================================
 parsers: ["yaml"]
 printWidth: 80
@@ -851,7 +851,7 @@ empty block scalar: >
 ================================================================================
 `;
 
-exports[`block-scalar-with-spaces-only.yml 2`] = `
+exports[`block-scalar-with-spaces-and-comments.yml 2`] = `
 ====================================options=====================================
 parsers: ["yaml"]
 printWidth: 80
