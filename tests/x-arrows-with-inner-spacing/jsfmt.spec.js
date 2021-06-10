@@ -2,7 +2,8 @@
 // This test script runs for test files in parent directory,
 // **not** on any files in *this* directory.
 
-const dirpath = `${__dirname}/../arrows`;
+// [prettierx merge update(s) from prettier@2.3.1 ...]
+const dirpath = `${__dirname}/../format/js/arrows`;
 
 run_spec(dirpath, ["babel", "babel-flow", "flow", "typescript"], {
   // [prettierx] recommended option, especially in combo with --paren-spacing

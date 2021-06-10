@@ -5,6 +5,9 @@
 const dirpath = `${__dirname}/..`;
 
 run_spec(dirpath, ["babel", "babel-flow", "flow", "typescript"], {
+  // [prettierx merge update(s) from prettier@2.3.1 ...]
+  // using bogus option to avoid snapshot churn during merge
+  bogus: true,
   // [prettierx] balanced ternary formatting option,
   // for consistency with "Standard JS":
   offsetTernaryExpressions: true,

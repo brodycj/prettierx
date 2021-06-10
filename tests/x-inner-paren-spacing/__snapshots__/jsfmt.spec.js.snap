@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`arrays.js 1`] = `
+exports[`arrays.js - {"spaceInParens":true,"arrayBracketSpacing":true,"computedPropertySpacing":true,"spaceUnaryOps":true,"templateCurlySpacing":true} format 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parsers: ["babel", "babel-flow", "babel-ts"]
+parsers: ["babel-ts"]
 printWidth: 80
 spaceInParens: true
 spaceUnaryOps: true
@@ -35,11 +35,11 @@ templateCurlySpacing: true
 ================================================================================
 `;
 
-exports[`bind.js 1`] = `
+exports[`bind.js - {"spaceInParens":true,"arrayBracketSpacing":true,"computedPropertySpacing":true,"spaceUnaryOps":true,"templateCurlySpacing":true} format 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parsers: ["babel", "babel-flow", "babel-ts"]
+parsers: ["babel-ts"]
 printWidth: 80
 spaceInParens: true
 spaceUnaryOps: true
@@ -128,11 +128,11 @@ a::( ( b ) => c );
 ================================================================================
 `;
 
-exports[`class.js 1`] = `
+exports[`class.js - {"spaceInParens":true,"arrayBracketSpacing":true,"computedPropertySpacing":true,"spaceUnaryOps":true,"templateCurlySpacing":true} format 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parsers: ["babel", "babel-flow", "babel-ts"]
+parsers: ["babel-ts"]
 printWidth: 80
 spaceInParens: true
 spaceUnaryOps: true
@@ -173,11 +173,11 @@ class X {
 ================================================================================
 `;
 
-exports[`conditionals.js 1`] = `
+exports[`conditionals.js - {"spaceInParens":true,"arrayBracketSpacing":true,"computedPropertySpacing":true,"spaceUnaryOps":true,"templateCurlySpacing":true} format 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parsers: ["babel", "babel-flow", "babel-ts"]
+parsers: ["babel-ts"]
 printWidth: 80
 spaceInParens: true
 spaceUnaryOps: true
@@ -245,11 +245,11 @@ foo || bar || baz || qux || xyz;
 ================================================================================
 `;
 
-exports[`destructuring.js 1`] = `
+exports[`destructuring.js - {"spaceInParens":true,"arrayBracketSpacing":true,"computedPropertySpacing":true,"spaceUnaryOps":true,"templateCurlySpacing":true} format 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parsers: ["babel", "babel-flow", "babel-ts"]
+parsers: ["babel-ts"]
 printWidth: 80
 spaceInParens: true
 spaceUnaryOps: true
@@ -268,11 +268,11 @@ const { children, ...props } = this.props;
 ================================================================================
 `;
 
-exports[`expressions.js 1`] = `
+exports[`expressions.js - {"spaceInParens":true,"arrayBracketSpacing":true,"computedPropertySpacing":true,"spaceUnaryOps":true,"templateCurlySpacing":true} format 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parsers: ["babel", "babel-flow", "babel-ts"]
+parsers: ["babel-ts"]
 printWidth: 80
 spaceInParens: true
 spaceUnaryOps: true
@@ -315,11 +315,11 @@ object.foo().bar().baz();
 ================================================================================
 `;
 
-exports[`functions.js 1`] = `
+exports[`functions.js - {"spaceInParens":true,"arrayBracketSpacing":true,"computedPropertySpacing":true,"spaceUnaryOps":true,"templateCurlySpacing":true} format 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parsers: ["babel", "babel-flow", "babel-ts"]
+parsers: ["babel-ts"]
 printWidth: 80
 spaceInParens: true
 spaceUnaryOps: true
@@ -370,11 +370,11 @@ new ( function () {} )();
 ================================================================================
 `;
 
-exports[`html-template-literals.js 1`] = `
+exports[`html-template-literals.js - {"spaceInParens":true,"arrayBracketSpacing":true,"computedPropertySpacing":true,"spaceUnaryOps":true,"templateCurlySpacing":true} format 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parsers: ["babel", "babel-flow", "babel-ts"]
+parsers: ["babel-ts"]
 printWidth: 80
 spaceInParens: true
 spaceUnaryOps: true
@@ -451,11 +451,11 @@ setFoo(
 ================================================================================
 `;
 
-exports[`import-export.js 1`] = `
+exports[`import-export.js - {"spaceInParens":true,"arrayBracketSpacing":true,"computedPropertySpacing":true,"spaceUnaryOps":true,"templateCurlySpacing":true} format 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parsers: ["babel", "babel-flow", "babel-ts"]
+parsers: ["babel-ts"]
 printWidth: 80
 spaceInParens: true
 spaceUnaryOps: true
@@ -486,11 +486,11 @@ export default ( function f() {} );
 ================================================================================
 `;
 
-exports[`jest-test-each.js 1`] = `
+exports[`jest-test-each.js - {"spaceInParens":true,"arrayBracketSpacing":true,"computedPropertySpacing":true,"spaceUnaryOps":true,"templateCurlySpacing":true} format 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parsers: ["babel", "babel-flow", "babel-ts"]
+parsers: ["babel-ts"]
 printWidth: 80
 spaceInParens: true
 spaceUnaryOps: true
@@ -519,11 +519,11 @@ test.each\`
 ================================================================================
 `;
 
-exports[`loops.js 1`] = `
+exports[`loops.js - {"spaceInParens":true,"arrayBracketSpacing":true,"computedPropertySpacing":true,"spaceUnaryOps":true,"templateCurlySpacing":true} format 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parsers: ["babel", "babel-flow", "babel-ts"]
+parsers: ["babel-ts"]
 printWidth: 80
 spaceInParens: true
 spaceUnaryOps: true
@@ -579,11 +579,11 @@ for ( var i = 0, len = arr.length; i < len; i++ ) {}
 ================================================================================
 `;
 
-exports[`nullish.js 1`] = `
+exports[`nullish.js - {"spaceInParens":true,"arrayBracketSpacing":true,"computedPropertySpacing":true,"spaceUnaryOps":true,"templateCurlySpacing":true} format 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parsers: ["babel", "babel-flow", "babel-ts"]
+parsers: ["babel-ts"]
 printWidth: 80
 spaceInParens: true
 spaceUnaryOps: true
@@ -608,11 +608,11 @@ foo ?? bar ?? baz;
 ================================================================================
 `;
 
-exports[`objects.js 1`] = `
+exports[`objects.js - {"spaceInParens":true,"arrayBracketSpacing":true,"computedPropertySpacing":true,"spaceUnaryOps":true,"templateCurlySpacing":true} format 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parsers: ["babel", "babel-flow", "babel-ts"]
+parsers: ["babel-ts"]
 printWidth: 80
 spaceInParens: true
 spaceUnaryOps: true
@@ -643,11 +643,11 @@ a = () => ( {}.x );
 ================================================================================
 `;
 
-exports[`return.js 1`] = `
+exports[`return.js - {"spaceInParens":true,"arrayBracketSpacing":true,"computedPropertySpacing":true,"spaceUnaryOps":true,"templateCurlySpacing":true} format 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parsers: ["babel", "babel-flow", "babel-ts"]
+parsers: ["babel-ts"]
 printWidth: 80
 spaceInParens: true
 spaceUnaryOps: true
@@ -674,11 +674,11 @@ function f() {
 ================================================================================
 `;
 
-exports[`sequence.js 1`] = `
+exports[`sequence.js - {"spaceInParens":true,"arrayBracketSpacing":true,"computedPropertySpacing":true,"spaceUnaryOps":true,"templateCurlySpacing":true} format 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parsers: ["babel", "babel-flow", "babel-ts"]
+parsers: ["babel-ts"]
 printWidth: 80
 spaceInParens: true
 spaceUnaryOps: true
@@ -721,11 +721,11 @@ templateCurlySpacing: true
 ================================================================================
 `;
 
-exports[`spread.js 1`] = `
+exports[`spread.js - {"spaceInParens":true,"arrayBracketSpacing":true,"computedPropertySpacing":true,"spaceUnaryOps":true,"templateCurlySpacing":true} format 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parsers: ["babel", "babel-flow", "babel-ts"]
+parsers: ["babel-ts"]
 printWidth: 80
 spaceInParens: true
 spaceUnaryOps: true
@@ -754,11 +754,11 @@ declare class C {
 ================================================================================
 `;
 
-exports[`switch.js 1`] = `
+exports[`switch.js - {"spaceInParens":true,"arrayBracketSpacing":true,"computedPropertySpacing":true,"spaceUnaryOps":true,"templateCurlySpacing":true} format 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parsers: ["babel", "babel-flow", "babel-ts"]
+parsers: ["babel-ts"]
 printWidth: 80
 spaceInParens: true
 spaceUnaryOps: true
@@ -797,11 +797,11 @@ switch ( a ) {
 ================================================================================
 `;
 
-exports[`template-literals.js 1`] = `
+exports[`template-literals.js - {"spaceInParens":true,"arrayBracketSpacing":true,"computedPropertySpacing":true,"spaceUnaryOps":true,"templateCurlySpacing":true} format 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parsers: ["babel", "babel-flow", "babel-ts"]
+parsers: ["babel-ts"]
 printWidth: 80
 spaceInParens: true
 spaceUnaryOps: true
@@ -923,11 +923,11 @@ return (
 ================================================================================
 `;
 
-exports[`ternaries.js 1`] = `
+exports[`ternaries.js - {"spaceInParens":true,"arrayBracketSpacing":true,"computedPropertySpacing":true,"spaceUnaryOps":true,"templateCurlySpacing":true} format 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parsers: ["babel", "babel-flow", "babel-ts"]
+parsers: ["babel-ts"]
 printWidth: 80
 spaceInParens: true
 spaceUnaryOps: true
@@ -969,11 +969,11 @@ const obj = {
 ================================================================================
 `;
 
-exports[`throw.js 1`] = `
+exports[`throw.js - {"spaceInParens":true,"arrayBracketSpacing":true,"computedPropertySpacing":true,"spaceUnaryOps":true,"templateCurlySpacing":true} format 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parsers: ["babel", "babel-flow", "babel-ts"]
+parsers: ["babel-ts"]
 printWidth: 80
 spaceInParens: true
 spaceUnaryOps: true
@@ -1000,11 +1000,11 @@ lint( ast, {
 ================================================================================
 `;
 
-exports[`try-catch.js 1`] = `
+exports[`try-catch.js - {"spaceInParens":true,"arrayBracketSpacing":true,"computedPropertySpacing":true,"spaceUnaryOps":true,"templateCurlySpacing":true} format 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parsers: ["babel", "babel-flow", "babel-ts"]
+parsers: ["babel-ts"]
 printWidth: 80
 spaceInParens: true
 spaceUnaryOps: true
@@ -1027,11 +1027,11 @@ try {
 ================================================================================
 `;
 
-exports[`with.js 1`] = `
+exports[`with.js - {"spaceInParens":true,"arrayBracketSpacing":true,"computedPropertySpacing":true,"spaceUnaryOps":true,"templateCurlySpacing":true} format 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
 computedPropertySpacing: true
-parsers: ["babel", "babel-flow", "babel-ts"]
+parsers: ["babel-ts"]
 printWidth: 80
 spaceInParens: true
 spaceUnaryOps: true

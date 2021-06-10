@@ -8,14 +8,11 @@ const semver = {
 
 const arrayify = require("../utils/arrayify");
 
-/* ** [prettierx] not needed from package.json:
-const currentVersion = require("../../package.json").version;
-// */
-
 const coreOptions = require("./core-options").options;
 
+// [prettierx merge update(s) from prettier@2.3.1 ...]
 // [prettierx] quick workaround:
-const currentVersion = "2.0.0";
+const currentVersion = "2.3.0";
 
 /**
  * Strings in `plugins` and `pluginSearchDirs` are handled by a wrapped version
@@ -37,6 +34,10 @@ function getSupportInfo({
   // pre-release version is smaller than the normal version in semver,
   // we need to treat it as the normal one so as to test new features.
   const version = currentVersion.split("-", 1)[0];
+
+  const languages = plugins
+    .flatMap((plugin) => plugin.languages || [])
+    .filter(filterSince);
 
   const options = arrayify(
     Object.assign({}, ...plugins.map(({ options }) => options), coreOptions),
@@ -63,25 +64,24 @@ function getSupportInfo({
         option.choices = option.choices.filter(
           (option) => filterSince(option) && filterDeprecated(option)
         );
+
+        if (option.name === "parser") {
+          collectParsersFromLanguages(option, languages, plugins);
+        }
       }
 
-      const filteredPlugins = plugins.filter(
-        (plugin) =>
-          plugin.defaultOptions &&
-          plugin.defaultOptions[option.name] !== undefined
+      const pluginDefaults = Object.fromEntries(
+        plugins
+          .filter(
+            (plugin) =>
+              plugin.defaultOptions &&
+              plugin.defaultOptions[option.name] !== undefined
+          )
+          .map((plugin) => [plugin.name, plugin.defaultOptions[option.name]])
       );
-
-      const pluginDefaults = filteredPlugins.reduce((reduced, plugin) => {
-        reduced[plugin.name] = plugin.defaultOptions[option.name];
-        return reduced;
-      }, {});
 
       return { ...option, pluginDefaults };
     });
-
-  const languages = plugins
-    .reduce((all, plugin) => all.concat(plugin.languages || []), [])
-    .filter(filterSince);
 
   return { languages, options };
 
@@ -108,6 +108,27 @@ function getSupportInfo({
     }
     const { cliName, cliCategory, cliDescription, ...newObject } = object;
     return newObject;
+  }
+}
+
+function collectParsersFromLanguages(option, languages, plugins) {
+  const existingValues = new Set(option.choices.map((choice) => choice.value));
+  for (const language of languages) {
+    if (language.parsers) {
+      for (const value of language.parsers) {
+        if (!existingValues.has(value)) {
+          existingValues.add(value);
+          const plugin = plugins.find(
+            (plugin) => plugin.parsers && plugin.parsers[value]
+          );
+          let description = language.name;
+          if (plugin && plugin.name) {
+            description += ` (plugin: ${plugin.name})`;
+          }
+          option.choices.push({ value, description });
+        }
+      }
+    }
   }
 }
 

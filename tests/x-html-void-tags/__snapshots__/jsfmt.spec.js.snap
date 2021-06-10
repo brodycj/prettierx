@@ -1,8 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`input.html 1`] = `
+exports[`input.html - {"bogus1":true} format 1`] = `
 ====================================options=====================================
-parsers: ["html", "angular", "vue"]
+bogus1: true
+parsers: ["html", "angular"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
@@ -14,8 +15,9 @@ printWidth: 80
 ================================================================================
 `;
 
-exports[`input.html 2`] = `
+exports[`input.html - {"bogus2":true,"htmlVoidTags":true} format 1`] = `
 ====================================options=====================================
+bogus2: true
 htmlVoidTags: true
 parsers: ["html"]
 printWidth: 80
@@ -29,10 +31,11 @@ printWidth: 80
 ================================================================================
 `;
 
-exports[`input.html 3`] = `
+exports[`input.html - {"bogus3":true,"htmlVoidTags":true} format 1`] = `
 ====================================options=====================================
+bogus3: true
 htmlVoidTags: true
-parsers: ["angular", "vue"]
+parsers: ["angular"]
 printWidth: 80
                                                                                 | printWidth
 =====================================input======================================
