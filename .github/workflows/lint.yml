@@ -5,6 +5,8 @@ on:
     branches:
       - main
       - patch-release
+      - prettierx-update-*
+
   pull_request:
 
 jobs:

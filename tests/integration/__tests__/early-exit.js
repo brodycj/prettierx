@@ -102,7 +102,7 @@ test("node version error", async () => {
     const result = runPrettier("cli", ["--help"]);
     expect(await result.status).toBe(1);
     expect(await result.stderr).toBe(
-      `prettier requires at least version ${
+      `prettierx-update-01 requires at least version ${
         isProduction ? "10.13.0" : "12.17.0"
       } of Node, please upgrade\n`
     );

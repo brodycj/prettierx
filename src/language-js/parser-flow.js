@@ -46,7 +46,9 @@ function createParseError(error) {
 }
 
 function parse(text, parsers, opts) {
+  // [prettierx] optional dependency here:
   // Inline the require to avoid loading all the JS if we don't use it
+  // eslint-disable-next-line import/no-extraneous-dependencies
   const { parse } = require("flow-parser");
   const ast = parse(replaceHashbang(text), parseOptions);
   const [error] = ast.errors;

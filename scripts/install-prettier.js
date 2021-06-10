@@ -32,5 +32,5 @@ module.exports = (packageDir) => {
 
   shell.exec(installCommand, { cwd: tmpDir });
 
-  return path.join(tmpDir, "node_modules/prettier");
+  return path.join(tmpDir, "node_modules/prettierx-update-01");
 };

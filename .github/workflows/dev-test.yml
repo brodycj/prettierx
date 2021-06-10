@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - patch-release
+      - prettierx-update-*
   pull_request:
 
 jobs:
@@ -25,7 +26,8 @@ jobs:
           # only enable coverage on the fastest job
           - os: "ubuntu-latest"
             node: "16"
-            ENABLE_CODE_COVERAGE: true
+            # [prettierx] NOT ENABLED:
+            # ENABLE_CODE_COVERAGE: true
             FULL_TEST: true
             CHECK_TEST_PARSERS: true
         exclude:

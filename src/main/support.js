@@ -5,8 +5,13 @@ const semver = {
   lt: require("semver/functions/lt"),
   gte: require("semver/functions/gte"),
 };
+
 const arrayify = require("../utils/arrayify");
-const currentVersion = require("../../package.json").version;
+
+// prettierx quick workaround:
+// const currentVersion = require("../../package.json").version;
+const currentVersion = "2.3.0";
+
 const coreOptions = require("./core-options").options;
 
 /**
