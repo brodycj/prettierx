@@ -22,6 +22,8 @@ jobs:
         NPM_CLIENT:
           - "yarn"
           - "npm"
+        # [prettierx] skip on pnpm for now (...)
+        SKIP_NPM_CLIENT:
           - "pnpm"
     env:
       INSTALL_PACKAGE: true
@@ -40,6 +42,7 @@ jobs:
       - name: Install Dependencies
         run: yarn install --frozen-lockfile
 
+      # [prettierx] skip on pnpm for now (...)
       - name: Install Client Package
         if: matrix.NPM_CLIENT == 'pnpm'
         run: npm install --global ${{ matrix.NPM_CLIENT }}

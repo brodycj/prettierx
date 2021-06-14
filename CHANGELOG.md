@@ -1,3 +1,11 @@
+# prettierx-update-branch-001
+
+intended to help rebase some prettierX JavaScript features on Prettier 2.2.0 / 2.3.0
+
+includes an update from Prettier `next` branch to use PostCSS 8
+
+as well as some updates from Prettier 2.2.0
+
 # 2.1.2
 
 [diff](https://github.com/prettier/prettier/compare/2.1.1...2.1.2)
