@@ -161,6 +161,10 @@
       "optional": true
     }
   },
+  "resolutions": {
+    "postcss-scss/postcss": "7.0.36",
+    "**/fast-glob/glob-parent": "5.1.2"
+  },
   "// prettierx release scripts notes": [
     "* prepublishOnly is changed to just log some info",
     "* prepare-release script is normally not run on prettierx,",
