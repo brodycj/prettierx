@@ -1,10 +1,7 @@
 {
   "name": "prettierx-update-branch-001",
   "version": "0.1.0-dev",
-  "description": "Prettier is an opinionated code formatter",
   "bin": "./bin/prettier.js",
-  "repository": "prettier/prettier",
-  "homepage": "https://prettier.io",
   "author": "James Long",
   "license": "MIT",
   "main": "./index.js",
