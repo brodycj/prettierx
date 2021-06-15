@@ -298,7 +298,8 @@ function printTypescript(path, options, print) {
         [
           "{",
           indent([
-            options.bracketSpacing ? line : softline,
+            // [prettierx] typeCurlySpacing option support:
+            options.typeCurlySpacing ? line : softline,
             node.readonly
               ? [
                   getTypeScriptMappedTypeModifier(node.readonly, "readonly"),
@@ -315,7 +316,8 @@ function printTypescript(path, options, print) {
             ifBreak(semi),
           ]),
           printDanglingComments(path, options, /* sameIndent */ true),
-          options.bracketSpacing ? line : softline,
+          // [prettierx] typeCurlySpacing option support:
+          options.typeCurlySpacing ? line : softline,
           "}",
         ],
         { shouldBreak }
