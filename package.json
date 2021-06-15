@@ -22,6 +22,9 @@
   "// prettierx dependencies notes": [
     "* installing dependencies from GitHub is not desired in prettierx",
     "  due to a possible issue with firewalls in certain organizations",
+    "* using @brodybits/remark-parse fork of remark-parse with",
+    "  updated trim sub-dependency as recommended by:",
+    "  https://www.npmjs.com/advisories/1700",
     "* flow-parser & typescript are moved to devDependencies, and",
     "  they are specified as optional in peerDependenciesMeta",
     "* tslib@1 is added to dependencies to avoid a peerDependencies warning",
