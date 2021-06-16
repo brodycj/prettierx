@@ -30,7 +30,8 @@ if (isPullRequest) {
   const pkg = require("../package.json");
   const newPkg = { ...pkg, version: `999.999.999-pr.${process.env.REVIEW_ID}` };
   pipe(JSON.stringify(newPkg, null, 2)).to("package.json");
-  shell.exec("yarn build --playground");
+  // [prettierx]
+  shell.exec("yarn build-extra-dist --playground");
   pipe(JSON.stringify(pkg, null, 2) + "\n").to("package.json"); // restore
 }
 
@@ -61,10 +62,12 @@ fs.writeFileSync(
 );
 
 // --- Site ---
+// [prettierx]
 shell.cd("extra/website");
 shell.echo("Building extra/website...");
 shell.exec("yarn install");
 
-shell.exec("yarn build");
+// [prettierx]
+shell.exec("yarn build-extra-dist");
 
 shell.echo();
