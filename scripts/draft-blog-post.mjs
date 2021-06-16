@@ -8,7 +8,7 @@ import createEsmUtils from "esm-utils";
 
 const { __dirname, require } = createEsmUtils(import.meta);
 const changelogUnreleasedDir = path.join(__dirname, "../changelog_unreleased");
-const blogDir = path.join(__dirname, "../website/blog");
+const blogDir = path.join(__dirname, "../extra/website/blog");
 const introTemplateFile = path.join(
   changelogUnreleasedDir,
   "BLOG_POST_INTRO_TEMPLATE.md"
