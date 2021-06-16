@@ -8,6 +8,6 @@
 /coverage/
 /dist/
 **/node_modules/**
-/website/build/
-/website/static/playground.js
-/website/static/lib/
+/extra/website/build/
+/extra/website/static/playground.js
+/extra/website/static/lib/

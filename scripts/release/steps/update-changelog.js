@@ -13,7 +13,8 @@ function getBlogPostInfo(version) {
   const day = String(date.getDate()).padStart(2, "0");
 
   return {
-    file: `website/blog/${year}-${month}-${day}-${version}.md`,
+    // [prettierx] website is now in extra subdirectory
+    file: `extra/website/blog/${year}-${month}-${day}-${version}.md`,
     path: `blog/${year}/${month}/${day}/${version}.html`,
   };
 }
