@@ -5,7 +5,7 @@
 // [prettierx merge update from prettier@2.3.1 ...]
 const dirpath = `${__dirname}/../js/break-calls`;
 
-run_spec(dirpath, ["babel-flow", "flow", "typescript"], {
+run_spec(dirpath, ["babel", "babel-flow", "flow", "typescript"], {
   // [prettierx] test with --paren-spacing
   spaceInParens: true,
   arrayBracketSpacing: true,
