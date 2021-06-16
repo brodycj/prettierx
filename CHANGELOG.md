@@ -615,7 +615,6 @@ NOTE: prettierx release 0.14.1 was inadvertently skipped in package.json.
 [compare prettierx-0.13.1...prettierx-0.14.0](https://github.com/brodybits/prettierx/compare/prettierx-0.13.1...prettierx-0.14.0)
 
 ### prettier 2.0.5
-=======
 
 [diff](https://github.com/prettier/prettier/compare/2.0.4...2.0.5)
 
