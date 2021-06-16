@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`crewdress.js 1`] = `
+exports[`crewdress.js - {"offsetTernaryExpressions":true,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 offsetTernaryExpressions: true
@@ -35,7 +35,7 @@ const dress = isSpace
 ================================================================================
 `;
 
-exports[`crewdress.js 2`] = `
+exports[`crewdress.js - {"tabWidth":4,"offsetTernaryExpressions":true,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 offsetTernaryExpressions: true
@@ -71,7 +71,7 @@ const dress = isSpace
 ================================================================================
 `;
 
-exports[`crewdress.js 3`] = `
+exports[`crewdress.js - {"useTabs":true,"offsetTernaryExpressions":true,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 offsetTernaryExpressions: true
@@ -107,7 +107,7 @@ const dress = isSpace
 ================================================================================
 `;
 
-exports[`crewdress.js 4`] = `
+exports[`crewdress.js - {"useTabs":true,"tabWidth":4,"offsetTernaryExpressions":true,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 offsetTernaryExpressions: true
@@ -144,7 +144,7 @@ const dress = isSpace
 ================================================================================
 `;
 
-exports[`nested-ternary-promises.js 1`] = `
+exports[`nested-ternary-promises.js - {"offsetTernaryExpressions":true,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 offsetTernaryExpressions: true
@@ -187,7 +187,7 @@ function test1() {
 ================================================================================
 `;
 
-exports[`nested-ternary-promises.js 2`] = `
+exports[`nested-ternary-promises.js - {"tabWidth":4,"offsetTernaryExpressions":true,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 offsetTernaryExpressions: true
@@ -231,7 +231,7 @@ function test1() {
 ================================================================================
 `;
 
-exports[`nested-ternary-promises.js 3`] = `
+exports[`nested-ternary-promises.js - {"useTabs":true,"offsetTernaryExpressions":true,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 offsetTernaryExpressions: true
@@ -275,7 +275,7 @@ function test1() {
 ================================================================================
 `;
 
-exports[`nested-ternary-promises.js 4`] = `
+exports[`nested-ternary-promises.js - {"useTabs":true,"tabWidth":4,"offsetTernaryExpressions":true,"arrowParens":"avoid","trailingComma":"none"} format 1`] = `
 ====================================options=====================================
 arrowParens: "avoid"
 offsetTernaryExpressions: true
