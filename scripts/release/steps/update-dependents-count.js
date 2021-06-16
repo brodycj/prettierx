@@ -35,7 +35,7 @@ async function update() {
     );
   }
 
-  processFile("website/pages/en/index.js", (content) =>
+  processFile("extra/website/pages/en/index.js", (content) =>
     content
       .replace(
         /(<strong data-placeholder="dependent-npm">)(.*?)(<\/strong>)/,
@@ -51,7 +51,7 @@ async function update() {
     "Checking if dependents count has been updated",
     async () =>
       (await runGit(["diff", "--name-only"])).stdout ===
-      "website/pages/en/index.js"
+      "extra/website/pages/en/index.js"
   );
 
   if (isUpdated) {

@@ -470,11 +470,11 @@
         "!tests/**/jsfmt.spec.js",
         "*.{log,svg,snap,png}",
         "test*.*",
-        "website/data/users.yml",
-        "website/build/**",
-        "website/playground/codeSamples.js",
-        "website/pages/googlefe164a33bda4034b.html",
-        "website/static/lib/**",
-        "website/static/playground.js"
+        "extra/website/data/users.yml",
+        "extra/website/build/**",
+        "extra/website/playground/codeSamples.js",
+        "extra/website/pages/googlefe164a33bda4034b.html",
+        "extra/website/static/lib/**",
+        "extra/website/static/playground.js"
     ]
 }
