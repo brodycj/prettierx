@@ -2,7 +2,8 @@
 // This test script runs for test files in parent directory,
 // **not** on any files in *this* directory.
 
-const dirpath = `${__dirname}/../../empty_paren_comment`;
+// [prettierx merge update from prettier@2.3.1 ...]
+const dirpath = `${__dirname}/../js/empty-paren-comment`;
 
 run_spec(dirpath, ["babel", "babel-flow", "flow", "typescript"], {
   spaceInParens: true,

@@ -2,7 +2,8 @@
 // This test script runs for test files in parent directory,
 // **not** on any files in *this* directory.
 
-const dirpath = `${__dirname}/../../ternaries`;
+// [prettierx merge update from prettier@2.3.1 ...]
+const dirpath = `${__dirname}/../js/ternaries`;
 
 run_spec(dirpath, ["babel", "babel-flow", "flow", "typescript"], {
   // [prettierx] balanced ternary formatting option
