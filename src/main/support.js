@@ -8,9 +8,9 @@ const semver = {
 const arrayify = require("../utils/arrayify");
 const coreOptions = require("./core-options").options;
 
-// [prettierx merge update from prettier@2.3.1 ...]
-// [prettierx] quick workaround:
-const currentVersion = "2.4.0";
+// [prettierx] read info from package.json:
+const pkg = require("../../package.json");
+const currentVersion = pkg["prettier-version"];
 
 /**
  * Strings in `plugins` and `pluginSearchDirs` are handled by a wrapped version
