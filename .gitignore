@@ -6,11 +6,11 @@
 /test*.*
 /.vscode
 /dist
-/website/node_modules
-/website/build
-/website/i18n
-/website/static/playground.js
-/website/static/lib
+/extra/website/node_modules
+/extra/website/build
+/extra/website/i18n
+/extra/website/static/playground.js
+/extra/website/static/lib
 .DS_Store
 /coverage
 .idea
@@ -21,3 +21,6 @@ package-lock.json
 !.yarn/sdks
 !.yarn/versions
 .pnp.*
+.nyc_output
+/scripts/tools/eslint-plugin-prettier-internal-rules/node_modules
+.devcontainer

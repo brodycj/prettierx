@@ -6,8 +6,12 @@ const semver = {
   gte: require("semver/functions/gte"),
 };
 const arrayify = require("../utils/arrayify");
-const currentVersion = require("../../package.json").version;
+// [prettierx] read info from package.json:
+const pkg = require("../../package.json");
 const coreOptions = require("./core-options").options;
+
+// [prettierx] get info from package.json:
+const currentVersion = pkg["prettier-version"];
 
 /**
  * Strings in `plugins` and `pluginSearchDirs` are handled by a wrapped version
@@ -30,7 +34,7 @@ function getSupportInfo({
   const version = currentVersion.split("-", 1)[0];
 
   const languages = plugins
-    .reduce((all, plugin) => all.concat(plugin.languages || []), [])
+    .flatMap((plugin) => plugin.languages || [])
     .filter(filterSince);
 
   const options = arrayify(
@@ -64,16 +68,15 @@ function getSupportInfo({
         }
       }
 
-      const pluginDefaults = plugins
-        .filter(
-          (plugin) =>
-            plugin.defaultOptions &&
-            plugin.defaultOptions[option.name] !== undefined
-        )
-        .reduce((reduced, plugin) => {
-          reduced[plugin.name] = plugin.defaultOptions[option.name];
-          return reduced;
-        }, {});
+      const pluginDefaults = Object.fromEntries(
+        plugins
+          .filter(
+            (plugin) =>
+              plugin.defaultOptions &&
+              plugin.defaultOptions[option.name] !== undefined
+          )
+          .map((plugin) => [plugin.name, plugin.defaultOptions[option.name]])
+      );
 
       return { ...option, pluginDefaults };
     });
