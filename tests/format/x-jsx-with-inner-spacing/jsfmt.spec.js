@@ -2,9 +2,9 @@
 // This test script runs for test files in another directory,
 // **not** on any files in *this* directory.
 
-const dirpath = `${__dirname}/../../jsx`;
+const dirPath = `${__dirname}/../../jsx`;
 
-run_spec(dirpath, ["babel", "babel-flow", "flow", "typescript"], {
+run_spec(dirPath, ["babel", "babel-flow", "flow", "typescript"], {
   singleQuote: false,
   jsxSingleQuote: false,
   // [prettierx] test with --paren-spacing
