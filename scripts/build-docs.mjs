@@ -11,7 +11,8 @@ shell.config.fatal = true;
 
 const { __dirname, require } = createEsmUtils(import.meta);
 const rootDir = path.join(__dirname, "..");
-const docs = path.join(rootDir, "website/static/lib");
+// [prettierx] website is now in extra subdirectory
+const docs = path.join(rootDir, "extra/website/static/lib");
 
 function pipe(string) {
   return new shell.ShellString(string);
@@ -61,8 +62,9 @@ fs.writeFileSync(
 );
 
 // --- Site ---
-shell.cd("website");
-shell.echo("Building website...");
+// [prettierx] website is now in extra subdirectory
+shell.cd("extra/website");
+shell.echo("Building extra/website...");
 shell.exec("yarn install");
 
 shell.exec("yarn build");
