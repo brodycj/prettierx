@@ -141,6 +141,8 @@ module.exports = {
     {
       files: [
         "tests/format/**/jsfmt.spec.js",
+        // [prettierx]
+        "tests/x-format/**/jsfmt.spec.js",
         "tests/config/**/*.js",
         "tests/integration/**/*.js",
       ],
@@ -165,6 +167,8 @@ module.exports = {
         "unicorn/prefer-array-flat-map": "off",
       },
       globals: {
+        // [prettierx]
+        formatRoot: false,
         run_spec: false,
       },
     },

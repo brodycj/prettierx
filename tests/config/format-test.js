@@ -143,10 +143,14 @@ const shouldThrowOnFormat = (filename, options) => {
   return false;
 };
 
-const isTestDirectory = (dirname, name) =>
-  (dirname + path.sep).startsWith(
-    path.join(__dirname, "../format", name) + path.sep
+// [prettierx]
+const isTestDirectory = (dirname, name) => {
+  const testDir = dirname + path.sep;
+  return (
+    testDir.startsWith(path.join(__dirname, "../format", name) + path.sep) ||
+    testDir.startsWith(path.join(__dirname, "../x-format", name) + path.sep)
   );
+};
 
 function runSpec(fixtures, parsers, options) {
   let { dirname, snippets = [] } =

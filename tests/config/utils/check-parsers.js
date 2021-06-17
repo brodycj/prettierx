@@ -4,9 +4,26 @@ const path = require("path");
 const { outdent } = require("outdent");
 
 const TESTS_ROOT = path.join(__dirname, "../../format");
+// [prettierx]
+const X_TESTS_ROOT = path.join(__dirname, "../../x-format");
 
+// [prettierx]
+const isInside = (parentPath, childPath) => {
+  const relative = path.relative(parentPath, childPath);
+  return (
+    Boolean(relative) &&
+    !/^\.\.(\/|$)/.test(relative) &&
+    !path.isAbsolute(relative)
+  );
+};
+
+// [prettierx]
+const getRoot = (dirname) =>
+  isInside(X_TESTS_ROOT, dirname) ? X_TESTS_ROOT : TESTS_ROOT;
+
+// [prettierx]
 const getCategory = (dirname) =>
-  path.relative(TESTS_ROOT, dirname).split(path.sep).shift();
+  path.relative(getRoot(dirname), dirname).split(path.sep).shift();
 
 const categoryParsers = new Map([
   [

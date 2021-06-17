@@ -1,7 +1,11 @@
 !/*.js
 /tests/format/**/*.js
+# prettierx
+/tests/x-format/**/*.js
 /tests/integration/cli/
 !/tests/format/**/jsfmt.spec.js
+# prettierx
+!/tests/x-format/**/jsfmt.spec.js
 !/**/.eslintrc.js
 /test*.*
 /scripts/release/node_modules

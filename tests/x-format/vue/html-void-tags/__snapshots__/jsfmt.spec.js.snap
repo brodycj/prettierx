@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`input.html [vue] format 1`] = `
+"Unexpected character \\"EOF\\" (2:1)
+  1 | <input type='text'>
+> 2 |
+    | ^"
+`;
+
+exports[`input.html - {"htmlVoidTags":true} [vue] format 1`] = `
+"Unexpected character \\"EOF\\" (2:1)
+  1 | <input type='text'>
+> 2 |
+    | ^"
+`;
