@@ -1,8 +1,8 @@
 "use strict";
 
-const chalk = require("chalk");
-const dedent = require("dedent");
 const fs = require("fs");
+const chalk = require("chalk");
+const { outdent, string: outdentString } = require("outdent");
 const semver = require("semver");
 const { waitForEnter, runYarn, logPromise } = require("../utils");
 
@@ -13,14 +13,15 @@ function getBlogPostInfo(version) {
   const day = String(date.getDate()).padStart(2, "0");
 
   return {
-    file: `website/blog/${year}-${month}-${day}-${version}.md`,
+    // [prettierx] website is now in extra subdirectory
+    file: `extra/website/blog/${year}-${month}-${day}-${version}.md`,
     path: `blog/${year}/${month}/${day}/${version}.html`,
   };
 }
 
 function writeChangelog({ version, previousVersion, releaseNotes }) {
   const changelog = fs.readFileSync("CHANGELOG.md", "utf-8");
-  const newEntry = dedent`
+  const newEntry = outdent`
     # ${version}
 
     [diff](https://github.com/prettier/prettier/compare/${previousVersion}...${version})
@@ -45,7 +46,7 @@ module.exports = async function ({ version, previousVersion }) {
       return;
     }
     console.warn(
-      dedent(chalk`
+      outdentString(chalk`
         {yellow warning} The file {bold ${blogPost.file}} doesn't exist, but it will be referenced in {bold CHANGELOG.md}. Make sure to create it later.
 
         Press ENTER to continue.
@@ -53,10 +54,10 @@ module.exports = async function ({ version, previousVersion }) {
     );
   } else {
     console.log(
-      dedent(chalk`
+      outdentString(chalk`
         {yellow.bold A manual step is necessary.}
 
-        You can copy the entries from {bold changelog_unreleased/*/pr-*.md} to {bold CHANGELOG.md}
+        You can copy the entries from {bold changelog_unreleased/*/*.md} to {bold CHANGELOG.md}
         and update it accordingly.
 
         You don't need to commit the file, the script will take care of that.
