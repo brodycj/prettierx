@@ -96,6 +96,8 @@ function group(contents, opts = {}) {
     id: opts.id,
     contents,
     break: Boolean(opts.shouldBreak),
+    // [prettierx] for --paren-spacing option support (...)
+    addedLine: Boolean(opts.addedLine),
     expandedStates: opts.expandedStates,
   };
 }

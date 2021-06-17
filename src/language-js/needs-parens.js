@@ -28,7 +28,8 @@ function needsParens(path, options) {
   // to avoid unexpected `}}` in HTML interpolations
   if (
     options.__isInHtmlInterpolation &&
-    !options.bracketSpacing &&
+    // [prettierx]: objectCurlySpacing option support
+    !options.objectCurlySpacing &&
     endsWithRightBracket(node) &&
     isFollowedByRightBracket(path)
   ) {
