@@ -87,7 +87,6 @@ jobs:
         node:
           - "14"
           - "12"
-          - "10"
         include:
           - os: "ubuntu-latest"
             node: "14"

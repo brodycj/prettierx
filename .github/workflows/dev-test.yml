@@ -21,7 +21,6 @@ jobs:
         node:
           - "14"
           - "12"
-          - "10"
         include:
           # only enable coverage on the fastest job
           - os: "ubuntu-latest"
