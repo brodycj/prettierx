@@ -2,9 +2,9 @@
 // This test script runs for test files in another directory,
 // **not** on any files in *this* directory.
 
-const dirpath = `${__dirname}/../../comments_closure_typecast`;
+const dirPath = `${__dirname}/../../comments_closure_typecast`;
 
-run_spec(dirpath, ["babel", "babel-flow"], {
+run_spec(dirPath, ["babel", "babel-flow"], {
   // [prettierx] test with --paren-spacing
   spaceInParens: true,
   arrayBracketSpacing: true,

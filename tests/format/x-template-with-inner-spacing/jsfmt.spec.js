@@ -2,9 +2,9 @@
 // This test script runs for test files in another directory,
 // **not** on any files in *this* directory.
 
-const dirpath = `${__dirname}/../../template`;
+const dirPath = `${__dirname}/../../template`;
 
-run_spec(dirpath, ["babel", "babel-flow"], {
+run_spec(dirPath, ["babel", "babel-flow"], {
   // [prettierx] test with --paren-spacing
   spaceInParens: true,
   arrayBracketSpacing: true,

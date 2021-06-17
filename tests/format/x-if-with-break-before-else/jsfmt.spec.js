@@ -2,9 +2,9 @@
 // This test script runs for test files in another directory,
 // **not** on any files in *this* directory.
 
-const dirpath = `${__dirname}/../../if`;
+const dirPath = `${__dirname}/../../if`;
 
-run_spec(dirpath, ["babel", "babel-flow", "flow", "typescript"], {
+run_spec(dirPath, ["babel", "babel-flow", "flow", "typescript"], {
   // [prettierx] test with --break-before-else
   breakBeforeElse: true,
   // recommended:
