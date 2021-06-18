@@ -15,6 +15,8 @@ describe("plugin default options should work", () => {
   ).test({
     stdout: JSON.stringify({
       tabWidth: 8,
+      // [prettierx]
+      spaceInParens: false,
     }),
     stderr: "",
     status: 0,
@@ -30,6 +32,8 @@ describe("overriding plugin default options should work", () => {
   ).test({
     stdout: JSON.stringify({
       tabWidth: 4,
+      // [prettierx]
+      spaceInParens: false,
     }),
     stderr: "",
     status: 0,
