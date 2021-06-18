@@ -2,9 +2,9 @@
 // This test script runs for test files in parent directory,
 // **not** on any files in *this* directory.
 
-const dirpath = `${__dirname}/..`;
+const dirPath = `${__dirname}/..`;
 
-run_spec(dirpath, ["babel", "babel-flow", "flow", "typescript"], {
+run_spec(dirPath, ["babel", "babel-flow", "flow", "typescript"], {
   // [prettierx] balanced ternary formatting option,
   // for consistency with "Standard JS":
   offsetTernaryExpressions: true,
@@ -13,7 +13,7 @@ run_spec(dirpath, ["babel", "babel-flow", "flow", "typescript"], {
   trailingComma: "none",
 });
 
-run_spec(dirpath, ["babel", "babel-flow", "flow", "typescript"], {
+run_spec(dirPath, ["babel", "babel-flow", "flow", "typescript"], {
   // variation from ../jsfmt.spec.js:
   tabWidth: 4,
   // [prettierx] balanced ternary formatting option,
@@ -24,7 +24,7 @@ run_spec(dirpath, ["babel", "babel-flow", "flow", "typescript"], {
   trailingComma: "none",
 });
 
-run_spec(dirpath, ["babel", "babel-flow", "flow", "typescript"], {
+run_spec(dirPath, ["babel", "babel-flow", "flow", "typescript"], {
   // variation from ../jsfmt.spec.js:
   useTabs: true,
   // [prettierx] balanced ternary formatting option,
@@ -35,7 +35,7 @@ run_spec(dirpath, ["babel", "babel-flow", "flow", "typescript"], {
   trailingComma: "none",
 });
 
-run_spec(dirpath, ["babel", "babel-flow", "flow", "typescript"], {
+run_spec(dirPath, ["babel", "babel-flow", "flow", "typescript"], {
   // variation from ../jsfmt.spec.js:
   useTabs: true,
   tabWidth: 4,
