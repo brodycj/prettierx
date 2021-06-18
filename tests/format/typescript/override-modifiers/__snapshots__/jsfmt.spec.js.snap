@@ -42,7 +42,7 @@ class D extends B {
 
 =====================================output=====================================
 class D extends B {
-  constructor(foo: string) {
+  constructor(override foo: string) {
     super();
   }
 }
