@@ -49,6 +49,36 @@ const unstableTests = new Map(
 
 const unstableAstTests = new Map();
 
+// [prettierx]: skip round-trip with some test files by parser/options
+const roundTripErrorTests = new Map(
+  [
+    // [prettierx]: babel-ts parser bugs
+    [
+      "js/ternaries/nested.js",
+      (options) => options.arrowParens === "avoid",
+      "babel-ts",
+    ],
+    [
+      "js/standard/correct-ternaries.js",
+      (options) => options.arrowParens === "avoid",
+      "babel-ts",
+    ],
+  ].map(([file, func, parsers]) => {
+    // Allow parsers to be set either by "parser" or ["parser", "parser"]
+    const parserSet = new Set(Array.isArray(parsers) ? parsers : [parsers]);
+
+    const skipFunc = func
+      ? // If a callback is provided, after confirming the parser matches,
+        // use its return value to determine whether or not
+        // the test should be skipped.
+        (parser, options) => parserSet.has(parser) && func(options)
+      : // Otherwise, simply rely on whether or not the parser matches.
+        (parser) => parserSet.has(parser);
+
+    return [path.join(__dirname, "../format/", file), skipFunc];
+  })
+);
+
 const espreeDisabledTests = new Set(
   [
     // These tests only work for `babel`
@@ -56,6 +86,27 @@ const espreeDisabledTests = new Set(
   ].map((directory) => path.join(__dirname, "../format/js", directory))
 );
 const meriyahDisabledTests = espreeDisabledTests;
+
+/**
+ * [prettierx]: skip round-trip with some test files by parser/options
+ *
+ * Checks whether or not the test should be skipped.
+ *
+ * @param {string} filename The path to the test file.
+ * @param {{[key: string]: any}} options The options set for the test.
+ * @param {string} parser The parser being used in the test.
+ *
+ * @returns `true` if the test should be skipped, `false` if it shouldn't.
+ */
+const skipRoundTripErrorTest = (filename, options, parser) => {
+  const testFunction = roundTripErrorTests.get(filename);
+
+  if (!testFunction) {
+    return false;
+  }
+
+  return testFunction(parser, options);
+};
 
 const isUnstable = (filename, options) => {
   const testFunction = unstableTests.get(filename);
@@ -286,6 +337,11 @@ function runTest({
   });
 
   if (!FULL_TEST) {
+    return;
+  }
+
+  // [prettierx]: skip round-trip with some test files by parser/options
+  if (skipRoundTripErrorTest(filename, formatOptions, parser)) {
     return;
   }
 
