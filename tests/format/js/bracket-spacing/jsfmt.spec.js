@@ -1,2 +1,5 @@
 run_spec(__dirname, ["babel", "flow", "typescript"]);
-run_spec(__dirname, ["babel", "flow", "typescript"], { bracketSpacing: false });
+// [prettierx]: broken-out bracket spacing options
+run_spec(__dirname, ["babel", "flow", "typescript"], {
+  objectCurlySpacing: false,
+});

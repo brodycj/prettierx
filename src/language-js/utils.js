@@ -668,6 +668,57 @@ function hasLeadingOwnLineComment(text, node) {
   );
 }
 
+// [prettierx] for --paren-spacing option support (...)
+function startsWithSpace(arg) {
+  const getFirstItem = (item) => {
+    if (!item) {
+      return;
+    }
+
+    if (Array.isArray(item)) {
+      if (item.length > 0) {
+        return getFirstItem(item[0]);
+      }
+      return;
+    }
+
+    if (item.type === "group" || item.type === "indent") {
+      return getFirstItem(item.contents);
+    }
+
+    return item;
+  };
+
+  const firstItem = getFirstItem(arg);
+
+  return (
+    firstItem &&
+    (firstItem === " " || (firstItem.type === "line" && !firstItem.soft))
+  );
+}
+
+// [prettierx] for --paren-spacing option support (...)
+function hasAddedLine(arg) {
+  if (Array.isArray(arg)) {
+    if (arg.length > 0) {
+      return hasAddedLine(arg[0]);
+    }
+    return false;
+  }
+
+  switch (arg.type) {
+    case "concat":
+      if (arg.parts.length > 0) {
+        return hasAddedLine(getLast(arg.parts));
+      }
+      return false;
+    case "group":
+      return arg.addedLine;
+    default:
+      return false;
+  }
+}
+
 // Note: Quoting/unquoting numbers in TypeScript is not safe.
 //
 // let a = { 1: 1, 2: 2 }
@@ -1315,6 +1366,8 @@ module.exports = {
   getLeftSidePathName,
   getParentExportDeclaration,
   getTypeScriptMappedTypeModifier,
+  // [prettierx]: for --paren-spacing support
+  hasAddedLine,
   hasFlowAnnotationComment,
   hasFlowShorthandAnnotationComment,
   hasLeadingOwnLineComment,
@@ -1364,6 +1417,8 @@ module.exports = {
   isBitwiseOperator,
   shouldFlatten,
   startsWithNoLookaheadToken,
+  // [prettierx]: for --paren-spacing support
+  startsWithSpace,
   getPrecedence,
   hasComment,
   getComments,
