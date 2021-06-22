@@ -5,7 +5,7 @@ title: Browser
 
 ## browser status for prettierX
 
-This documentation does **not** apply for prettierX. The recommended solution is to use a bundler such as Rollup or Webpack. This is tracked with some more information in this issue: [`brodybits/prettierx#95`](https://github.com/brodybits/prettierx/issues/95)
+This documentation does **not** apply for prettierX. The recommended solution is to use a bundler such as Rollup or Webpack. This is tracked with some more information in: [`brodybits/prettierx#95`](https://github.com/brodybits/prettierx/issues/95)
 
 ---
 
