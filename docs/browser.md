@@ -9,7 +9,6 @@ This documentation does **not** apply for prettierX. The recommended solution is
 
 ---
 
-
 Run Prettier in the browser with the `standalone.js` UMD bundle shipped in the NPM package (starting in version 1.13). The UMD bundle only formats the code and has no support for config files, ignore files, CLI usage, or automatic loading of plugins.
 
 ### `prettier.format(code, options)`
