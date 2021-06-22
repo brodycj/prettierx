@@ -21,8 +21,6 @@ jobs:
           - "12"
         NPM_CLIENT:
           - "yarn"
-        # [prettierx merge update from prettier@2.3.1 ...] skip on npm for now
-        SKIP1:
           - "npm"
         # [prettierx] skip on pnpm for now (...)
         SKIP_NPM_CLIENT_TEST:
