@@ -1,6 +1,7 @@
 {
   "name": "prettierx-update-branch-0010",
   "version": "0.1.0-dev",
+  "prettier-version": "2.4.0",
   "description": "prettierx-update-branch-0010 version branch",
   "bin": "./bin/prettier.js",
   "author": "James Long",
