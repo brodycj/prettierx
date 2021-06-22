@@ -4,6 +4,9 @@ const prettier = require("prettier-local");
 const runPrettier = require("../runPrettier");
 const { isProduction } = require("../env");
 
+// [prettierx] fork name from package.json
+const { name } = require("../../../package.json");
+
 describe("show version with --version", () => {
   runPrettier("cli/with-shebang", ["--version"]).test({
     stdout: prettier.version + "\n",
@@ -102,8 +105,8 @@ test("node version error", async () => {
     const result = runPrettier("cli", ["--help"]);
     expect(await result.status).toBe(1);
     expect(await result.stderr).toBe(
-      // [prettierx-update-branch-001 merge update from prettier@2.3.1 ...]
-      `prettierx-update-branch-001 requires at least version ${
+      // [prettierx] fork name from package.json
+      `${name} requires at least version ${
         isProduction ? "10.13.0" : "12.17.0"
       } of Node, please upgrade\n`
     );
