@@ -5,7 +5,6 @@
   "bin": "./bin/prettierx.js",
   "repository": "brodybits/prettierx",
   "homepage": "https://github.com/brodybits/prettierx",
-  "author": "James Long",
   "license": "MIT",
   "main": "./index.js",
   "engines": {
