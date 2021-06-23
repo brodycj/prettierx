@@ -20,7 +20,7 @@ prettierx <options> <file(s)>
 ## Additional prettierX options
 
 - `--align-object-properties` (`alignObjectProperties: true`): Align colons in multiline object literals (not applied with any of the JSON parsers).
-- `--offset-ternary-expressions` (`offsetTernaryExpressions: true`): Indent and align ternary expression branches more consistently with "Standard JS" (similar to the corresponding eslint option).
+- `--offset-ternary-expressions` (`offsetTernaryExpressions: true`): Indent and align ternary expression branches more consistently with "Standard JS" (similar to the corresponding eslint option). NOT recommended together with `--use-tabs` due to KNOWN ISSUE: [`brodybits/prettierx#552`](https://github.com/brodybits/prettierx/issues/552)
 - `--space-before-function-paren` (`spaceBeforeFunctionParen: true`): Put a space before function parenthesis in all declarations (similar to the corresponding eslint option). (Default is to put a space before function parenthesis for untyped anonymous functions only.)
 - `--generator-star-spacing` (`generatorStarSpacing: true`): Put spaces around the star (`*`) in generator functions (before and after - similar to the corresponding eslint option). (Default is after only.)
 - `--yield-star-spacing` (`yieldStarSpacing: true`): Put spaces around the star (`*`) in `yield*` expressions (before and after - similar to the corresponding eslint option). (Default is after only.)
