@@ -2,6 +2,9 @@
 
 const { version } = require("../package.json");
 
+// [@prettier-x/formatter-2021-0x]
+const cli = require("./cli");
+
 const core = require("./main/core");
 const { getSupportInfo } = require("./main/support");
 const getFileInfo = require("./common/get-file-info");
@@ -9,6 +12,19 @@ const sharedUtil = require("./common/util-shared");
 const plugins = require("./common/load-plugins");
 const config = require("./config/resolve-config");
 const doc = require("./document");
+
+// [@prettier-x/formatter-2021-0x]
+// quick & ugly solution to help support prettier-plugin-x
+// (with Babel parser *only* at this point):
+const languages = [
+  {
+    ...require("./language-js"),
+    parsers: require("./language-js/parser-babel").parsers,
+  },
+];
+// TODO: support more languages such as CSS, HTML, etc.
+// FUTURE SOLUTION once updates from Prettier 2.3.1 are included in prettierX:
+// const languages = require("./languages");
 
 function _withPlugins(
   fn,
@@ -47,7 +63,13 @@ module.exports = {
     return formatted === text;
   },
 
+  // [@prettier-x/formatter-2021-0x]
+  cli,
+
   doc,
+
+  // [@prettier-x/formatter-2021-0x]
+  languages,
 
   resolveConfig: config.resolveConfig,
   resolveConfigFile: config.resolveConfigFile,

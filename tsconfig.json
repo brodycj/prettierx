@@ -49,6 +49,8 @@
     "tests/",
     "tests_config/",
     "tests_integration/",
+    // [@prettier-x/formatter-2021-0x]
+    "tests_bin_fixture/",
     "website/"
   ]
 }

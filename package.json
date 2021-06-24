@@ -1,11 +1,9 @@
 {
-  "name": "prettierx",
-  "version": "0.18.3-dev",
-  "description": "prettierx - less opinionated code formatter fork of prettier",
-  "bin": "./bin/prettierx.js",
+  "name": "@prettier-x/formatter-2021-01",
+  "version": "0.0.1-rc01",
+  "description": "Top-level library exports from prettierX 0.1x - an unofficial, less-opinionated fork of the Prettier code formatter",
   "repository": "brodybits/prettierx",
   "homepage": "https://github.com/brodybits/prettierx",
-  "author": "James Long",
   "license": "MIT",
   "main": "./index.js",
   "engines": {
@@ -15,7 +13,6 @@
     "CHANGELOG.md",
     "LICENSE",
     "README.md",
-    "bin",
     "index.js",
     "src"
   ],

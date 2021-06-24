@@ -1,20 +1,21 @@
-# prettierX - a less opinionated fork of Prettier
+# @prettier-x/formatter-2021-01
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
-[![npm](https://img.shields.io/npm/v/prettierx.svg)](https://www.npmjs.com/package/prettierx)
 
-An unofficial fork of the Prettier code formatter, intended to provide some additional options to help improve consistency with ["Standard JS"](https://standardjs.com/) ([`feross/standard`](https://github.com/standard/standard)) and [`Flet/semistandard`](https://github.com/Flet/semistandard). This fork is an attempt to pick up where [`arijs/prettier-miscellaneous`](https://github.com/arijs/prettier-miscellaneous) left off.
+Top-level library exports from prettierX 0.1x, an unofficial fork of the Prettier code formatter, intended to provide some additional options to help improve consistency with ["Standard JS"](https://standardjs.com/) ([`feross/standard`](https://github.com/standard/standard)) and [`Flet/semistandard`](https://github.com/Flet/semistandard). This fork is an attempt to pick up where [`arijs/prettier-miscellaneous`](https://github.com/arijs/prettier-miscellaneous) left off.
 
 ## prettierX as a Prettier plugin
 
 [`prettier-plugin-x`](https://www.npmjs.com/package/prettier-plugin-x) - provides the additional formatting options in a prettier plugin
 
-## CLI Usage
+## CLI API Usage
 
-**Quick CLI usage:**
+**Quick CLI API usage:**
 
 ```sh
-prettierx <options> <file(s)>
+const { cli } = require("@prettier-x/formatter-2021-01");
+
+cli.run(["--check"].concat(files));
 ```
 
 ## Additional prettierX options
