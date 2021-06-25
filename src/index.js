@@ -2,9 +2,6 @@
 
 const { version } = require("../package.json");
 
-// [@prettier-x/formatter-2021-0x]
-const cli = require("./cli");
-
 const core = require("./main/core");
 const { getSupportInfo } = require("./main/support");
 const getFileInfo = require("./common/get-file-info");
@@ -12,6 +9,14 @@ const sharedUtil = require("./common/util-shared");
 const plugins = require("./common/load-plugins");
 const config = require("./config/resolve-config");
 const doc = require("./document");
+
+// [@prettier-x/formatter-2021-0x]
+const cli = {
+  // using property function to avoid an issue with circular imports
+  get run() {
+    return require("./cli").run;
+  },
+};
 
 // [@prettier-x/formatter-2021-0x]
 // quick & ugly solution to help support prettier-plugin-x
