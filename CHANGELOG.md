@@ -8,9 +8,11 @@ To get recent changes on prettier (TBD prettier/prettier) in a nice format:
 $ git log --pretty=format:"- %s" rev1..rev2 | sed 's/#\([0-9]*\)/\[prettier\/prettier#\1\]\(https:\/\/github.com\/prettier\/prettier\/pull\/\1\)/'
 -- -->
 
-# @prettier-x/formatter-2021-01 0.0.2-dev
+# @prettier-x/formatter-2021-01 0.0.2
 
-[compare prettier-x-formatter-2021-01-0.0.1-rc01...prettierx-formatter-2021-01-dev](https://github.com/brodybits/prettierx/compare/prettier-x-formatter-2021-01-0.0.1-rc01...prettierx-formatter-2021-01-dev)
+[compare prettier-x-formatter-2021-01-0.0.1-rc01...@prettier-x/formatter-2021-01@0.0.2](https://github.com/brodybits/prettierx/compare/prettier-x-formatter-2021-01-0.0.1-rc01...@prettier-x/formatter-2021-01@0.0.2)
+
+- fix & test exported CLI object
 
 # @prettier-x/formatter-2021-01 0.0.1-rc01
 
