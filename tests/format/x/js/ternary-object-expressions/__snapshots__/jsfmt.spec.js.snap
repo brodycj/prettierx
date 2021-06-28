@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`crewdress.js 1`] = `
+exports[`crewdress.js - {"bogus":true} format 1`] = `
 ====================================options=====================================
+bogus: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
                                                                                 | printWidth
@@ -32,7 +33,7 @@ const dress = isSpace
 ================================================================================
 `;
 
-exports[`crewdress.js 2`] = `
+exports[`crewdress.js - {"tabWidth":4} format 1`] = `
 ====================================options=====================================
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
@@ -65,40 +66,7 @@ const dress = isSpace
 ================================================================================
 `;
 
-exports[`crewdress.js 3`] = `
-====================================options=====================================
-parsers: ["babel", "babel-flow", "flow", "typescript"]
-printWidth: 80
-useTabs: true
-                                                                                | printWidth
-=====================================input======================================
-let isSpace = false
-
-const dress = isSpace ? {
-      spaceSuit: 3,
-      oxygenCylinders: 6
-    } : {
-      shirts: 3,
-      paints: 3
-    }
-
-=====================================output=====================================
-let isSpace = false;
-
-const dress = isSpace
-	? {
-			spaceSuit: 3,
-			oxygenCylinders: 6,
-	  }
-	: {
-			shirts: 3,
-			paints: 3,
-	  };
-
-================================================================================
-`;
-
-exports[`crewdress.js 4`] = `
+exports[`crewdress.js - {"useTabs":true,"tabWidth":4} format 1`] = `
 ====================================options=====================================
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
@@ -132,8 +100,42 @@ const dress = isSpace
 ================================================================================
 `;
 
-exports[`nested-ternary-promises.js 1`] = `
+exports[`crewdress.js - {"useTabs":true} format 1`] = `
 ====================================options=====================================
+parsers: ["babel", "babel-flow", "flow", "typescript"]
+printWidth: 80
+useTabs: true
+                                                                                | printWidth
+=====================================input======================================
+let isSpace = false
+
+const dress = isSpace ? {
+      spaceSuit: 3,
+      oxygenCylinders: 6
+    } : {
+      shirts: 3,
+      paints: 3
+    }
+
+=====================================output=====================================
+let isSpace = false;
+
+const dress = isSpace
+	? {
+			spaceSuit: 3,
+			oxygenCylinders: 6,
+	  }
+	: {
+			shirts: 3,
+			paints: 3,
+	  };
+
+================================================================================
+`;
+
+exports[`nested-ternary-promises.js - {"bogus":true} format 1`] = `
+====================================options=====================================
+bogus: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
                                                                                 | printWidth
@@ -172,7 +174,7 @@ function test1() {
 ================================================================================
 `;
 
-exports[`nested-ternary-promises.js 2`] = `
+exports[`nested-ternary-promises.js - {"tabWidth":4} format 1`] = `
 ====================================options=====================================
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
@@ -213,48 +215,7 @@ function test1() {
 ================================================================================
 `;
 
-exports[`nested-ternary-promises.js 3`] = `
-====================================options=====================================
-parsers: ["babel", "babel-flow", "flow", "typescript"]
-printWidth: 80
-useTabs: true
-                                                                                | printWidth
-=====================================input======================================
-// check for consistent formatting as discussed in:
-// - https://github.com/eslint/eslint/issues/13971
-// - https://github.com/standard/standard/issues/1624
-// - https://github.com/brodybits/prettierx/issues/41
-
-function test1() {
-  return condition1
-  ? condition2
-    ? Promise(1)
-    : Promise(2)
-  : condition3
-    ? Promise(3)
-    : Promise(4)
-}
-
-=====================================output=====================================
-// check for consistent formatting as discussed in:
-// - https://github.com/eslint/eslint/issues/13971
-// - https://github.com/standard/standard/issues/1624
-// - https://github.com/brodybits/prettierx/issues/41
-
-function test1() {
-	return condition1
-		? condition2
-			? Promise(1)
-			: Promise(2)
-		: condition3
-		? Promise(3)
-		: Promise(4);
-}
-
-================================================================================
-`;
-
-exports[`nested-ternary-promises.js 4`] = `
+exports[`nested-ternary-promises.js - {"useTabs":true,"tabWidth":4} format 1`] = `
 ====================================options=====================================
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
@@ -296,8 +257,50 @@ function test1() {
 ================================================================================
 `;
 
-exports[`nesting-object-ternary-expression.js 1`] = `
+exports[`nested-ternary-promises.js - {"useTabs":true} format 1`] = `
 ====================================options=====================================
+parsers: ["babel", "babel-flow", "flow", "typescript"]
+printWidth: 80
+useTabs: true
+                                                                                | printWidth
+=====================================input======================================
+// check for consistent formatting as discussed in:
+// - https://github.com/eslint/eslint/issues/13971
+// - https://github.com/standard/standard/issues/1624
+// - https://github.com/brodybits/prettierx/issues/41
+
+function test1() {
+  return condition1
+  ? condition2
+    ? Promise(1)
+    : Promise(2)
+  : condition3
+    ? Promise(3)
+    : Promise(4)
+}
+
+=====================================output=====================================
+// check for consistent formatting as discussed in:
+// - https://github.com/eslint/eslint/issues/13971
+// - https://github.com/standard/standard/issues/1624
+// - https://github.com/brodybits/prettierx/issues/41
+
+function test1() {
+	return condition1
+		? condition2
+			? Promise(1)
+			: Promise(2)
+		: condition3
+		? Promise(3)
+		: Promise(4);
+}
+
+================================================================================
+`;
+
+exports[`nesting-object-ternary-expression.js - {"bogus":true} format 1`] = `
+====================================options=====================================
+bogus: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
                                                                                 | printWidth
@@ -342,7 +345,7 @@ alice
 ================================================================================
 `;
 
-exports[`nesting-object-ternary-expression.js 2`] = `
+exports[`nesting-object-ternary-expression.js - {"tabWidth":4} format 1`] = `
 ====================================options=====================================
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
@@ -389,54 +392,7 @@ alice
 ================================================================================
 `;
 
-exports[`nesting-object-ternary-expression.js 3`] = `
-====================================options=====================================
-parsers: ["babel", "babel-flow", "flow", "typescript"]
-printWidth: 80
-useTabs: true
-                                                                                | printWidth
-=====================================input======================================
-alice
-  ? {
-      beth: {
-          carol: 101
-        }
-        ? {
-            debbie: 202
-          }
-          ? {
-              ellen: 303
-            }
-          : 404
-        : 505
-    }
-    ? loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong0101
-    : loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong0102
-  : loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong0201
-
-=====================================output=====================================
-alice
-	? {
-			beth: {
-				carol: 101,
-			}
-				? {
-						debbie: 202,
-				  }
-					? {
-							ellen: 303,
-					  }
-					: 404
-				: 505,
-	  }
-		? loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong0101
-		: loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong0102
-	: loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong0201;
-
-================================================================================
-`;
-
-exports[`nesting-object-ternary-expression.js 4`] = `
+exports[`nesting-object-ternary-expression.js - {"useTabs":true,"tabWidth":4} format 1`] = `
 ====================================options=====================================
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
@@ -484,8 +440,56 @@ alice
 ================================================================================
 `;
 
-exports[`nesting-ternary-arrays.js 1`] = `
+exports[`nesting-object-ternary-expression.js - {"useTabs":true} format 1`] = `
 ====================================options=====================================
+parsers: ["babel", "babel-flow", "flow", "typescript"]
+printWidth: 80
+useTabs: true
+                                                                                | printWidth
+=====================================input======================================
+alice
+  ? {
+      beth: {
+          carol: 101
+        }
+        ? {
+            debbie: 202
+          }
+          ? {
+              ellen: 303
+            }
+          : 404
+        : 505
+    }
+    ? loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong0101
+    : loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong0102
+  : loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong0201
+
+=====================================output=====================================
+alice
+	? {
+			beth: {
+				carol: 101,
+			}
+				? {
+						debbie: 202,
+				  }
+					? {
+							ellen: 303,
+					  }
+					: 404
+				: 505,
+	  }
+		? loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong0101
+		: loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong0102
+	: loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong0201;
+
+================================================================================
+`;
+
+exports[`nesting-ternary-arrays.js - {"bogus":true} format 1`] = `
+====================================options=====================================
+bogus: true
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
                                                                                 | printWidth
@@ -536,7 +540,7 @@ alice
 ================================================================================
 `;
 
-exports[`nesting-ternary-arrays.js 2`] = `
+exports[`nesting-ternary-arrays.js - {"tabWidth":4} format 1`] = `
 ====================================options=====================================
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
@@ -589,10 +593,11 @@ alice
 ================================================================================
 `;
 
-exports[`nesting-ternary-arrays.js 3`] = `
+exports[`nesting-ternary-arrays.js - {"useTabs":true,"tabWidth":4} format 1`] = `
 ====================================options=====================================
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
+tabWidth: 4
 useTabs: true
                                                                                 | printWidth
 =====================================input======================================
@@ -642,11 +647,10 @@ alice
 ================================================================================
 `;
 
-exports[`nesting-ternary-arrays.js 4`] = `
+exports[`nesting-ternary-arrays.js - {"useTabs":true} format 1`] = `
 ====================================options=====================================
 parsers: ["babel", "babel-flow", "flow", "typescript"]
 printWidth: 80
-tabWidth: 4
 useTabs: true
                                                                                 | printWidth
 =====================================input======================================
