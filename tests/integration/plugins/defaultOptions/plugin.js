@@ -9,8 +9,7 @@ module.exports = {
     }
   ],
   defaultOptions: {
-    tabWidth: 8,
-    bracketSpacing: false
+    tabWidth: 8
   },
   parsers: {
     "foo-parser": {
@@ -22,8 +21,7 @@ module.exports = {
     "foo-ast": {
       print: (path, options) =>
         JSON.stringify({
-          tabWidth: options.tabWidth,
-          bracketSpacing: options.bracketSpacing
+          tabWidth: options.tabWidth
         })
     }
   }
