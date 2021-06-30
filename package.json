@@ -35,7 +35,7 @@
     "<!-- -->"
   ],
   "dependencies": {
-    "@angular/compiler": "9.0.5",
+    "@angular/compiler": "12.1.1",
     "@babel/code-frame": "7.12.13",
     "@babel/parser": "7.12.11",
     "@brodybits/remark-parse": "5.0.1",
