@@ -298,7 +298,7 @@ Put spaces between computed property brackets (similar to the corresponding esli
 
 ## Offset ternary expressions
 
-Indent and align ternary expression branches more consistently with "Standard JS" (similar to the corresponding eslint option).
+Indent and align ternary expression branches more consistently with "Standard JS" (similar to the corresponding eslint option). NOT recommended together with `--use-tabs` due to KNOWN ISSUE: [`brodybits/prettierx#552`](https://github.com/brodybits/prettierx/issues/552)
 
 | Default | CLI Override                   | API Override                       |
 | ------- | ------------------------------ | ---------------------------------- |
