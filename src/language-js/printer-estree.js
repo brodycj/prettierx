@@ -6394,7 +6394,6 @@ function exprNeedsASIProtection(path, options) {
     // [prettierx] spaceInParens option support (...)
     // needsParens is false for binaryish expr inside memberexpr, but is parenthesized nevertheless
     (node.type === "MemberExpression" &&
-      !node.computed &&
       (node.object.type === "LogicalExpression" ||
         node.object.type === "BinaryExpression"));
 
