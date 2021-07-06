@@ -3466,10 +3466,10 @@ hosted-git-info@^2.1.4:
   resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.9.tgz#dffc0bf9a21c02209090f2aa69429e1414daf3f9"
   integrity sha512-mxIDAb9Lsm6DoOJ7xH+5+X4y1LU/4Hi50L9C5sIswK3JzULS4bwk1FvjdBgvYR4bzT4tuUQiC15FE2f5HbLvYw==
 
-html-element-attributes@2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/html-element-attributes/-/html-element-attributes-2.3.0.tgz#a192ac90a457be9f1e2cc9ab69000ee89be74aa6"
-  integrity sha512-RJv2v3BBaYSc0ODHwT0sqWI+2lFs6DATBvCRnW20BDmULxoAWvfT6r28uL8LcW1a9/eqUl+1DccUOJzw00qVXQ==
+html-element-attributes@3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/html-element-attributes/-/html-element-attributes-3.0.0.tgz#74c5a7c22f35dbab927ffa51dd32a223b30040d5"
+  integrity sha512-pNpX5J0GU7QPbDQbRsRPOj4896nTBXQ8zmjjM+I7nq3d+PtkBWqNlwrA1ijmPphXv4taconFR8UnLT4D1nH6ig==
 
 html-encoding-sniffer@^2.0.1:
   version "2.0.1"
