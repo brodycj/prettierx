@@ -2,7 +2,7 @@
 
 const path = require("path");
 const minimatch = require("minimatch");
-const mem = require("mem");
+const memoize = require("fast-memoize");
 const thirdParty = require("../common/third-party");
 
 const loadToml = require("../utils/load-toml");
@@ -10,7 +10,19 @@ const loadJson5 = require("../utils/load-json5");
 const resolve = require("../common/resolve");
 const resolveEditorConfig = require("./resolve-config-editorconfig");
 
-const getExplorerMemoized = mem(
+const memoizeCache = new Map();
+const memoizeOptions = {
+  cache: {
+    create() {
+      return {
+        has: (key) => memoizeCache.has(key),
+        get: (key) => memoizeCache.get(key),
+        set: (key, value) => memoizeCache.set(key, value)
+      };
+    }
+  }
+};
+const getExplorerMemoized = memoize(
   (opts) => {
     const cosmiconfig = thirdParty["cosmiconfig" + (opts.sync ? "Sync" : "")];
     const explorer = cosmiconfig("prettier", {
@@ -55,7 +67,7 @@ const getExplorerMemoized = mem(
 
     return explorer;
   },
-  { cacheKey: JSON.stringify }
+  memoizeOptions
 );
 
 /** @param {{ cache: boolean, sync: boolean }} opts */
@@ -116,7 +128,7 @@ const resolveConfig = (filePath, opts) => _resolveConfig(filePath, opts, false);
 resolveConfig.sync = (filePath, opts) => _resolveConfig(filePath, opts, true);
 
 function clearCache() {
-  mem.clear(getExplorerMemoized);
+  memoizeCache.clear();
   resolveEditorConfig.clearCache();
 }
 

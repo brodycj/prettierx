@@ -3,11 +3,23 @@
 const path = require("path");
 
 const editorconfig = require("editorconfig");
-const mem = require("mem");
+const memoize = require("fast-memoize");
 const editorConfigToPrettier = require("editorconfig-to-prettier");
 const findProjectRoot = require("./find-project-root");
 
-const jsonStringifyMem = (fn) => mem(fn, { cacheKey: JSON.stringify });
+const memoizeCache = new Map();
+const memoizeOptions = {
+  cache: {
+    create() {
+      return {
+        has: (key) => memoizeCache.has(key),
+        get: (key) => memoizeCache.get(key),
+        set: (key, value) => memoizeCache.set(key, value)
+      };
+    }
+  }
+};
+const jsonStringifyMem = (fn) => memoize(fn, memoizeOptions);
 
 const maybeParse = (filePath, parse) =>
   filePath &&
@@ -36,8 +48,7 @@ function getLoadFunction(opts) {
 }
 
 function clearCache() {
-  mem.clear(editorconfigSyncWithCache);
-  mem.clear(editorconfigAsyncWithCache);
+  memoizeCache.clear();
 }
 
 module.exports = {
