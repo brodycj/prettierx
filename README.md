@@ -46,7 +46,7 @@ prettierx <options> <file(s)>
 - `--no-object-curly-spacing` (`objectCurlySpacing: false`): Disable spaces between object curly braces (similar to the corresponding eslint option).
 - `--no-graphql-curly-spacing` (`graphqlCurlySpacing: false`): Disable spaces between curly braces for GraphQL.
 - `--no-yaml-bracket-spacing` (`yamlBracketSpacing: false`): Disable spaces between brackets / curly braces for YAML.
-- `--no-yaml-do-sequence-indent` (`yamlDoSequenceIndent: true`): Do the indent on sequence item.
+- `--no-yaml-sequence-indent` (`yamlSequenceIndent: true`): Do the indent on sequence item.
 - `--no-type-curly-spacing` (`typeCurlySpacing: false`): Disable spaces between type curly braces.
 
 (See [`docs/options.md`](docs/options.md) for more information.)

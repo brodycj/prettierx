@@ -397,7 +397,7 @@ Put or disable spaces between brackets / curly braces for YAML.
 
 | Default | CLI Override                | API Override                 |
 | ------- | --------------------------- | ---------------------------- |
-| `true`  | `--no-yaml-do-sequence-indent` | `yamlDoSequenceIndent: <bool>` |
+| `true`  | `--no-yaml-sequence-indent` | `yamlSequenceIndent: <bool>` |
 ## Type curly spacing
 
 Put or disable spaces between type curly braces.
