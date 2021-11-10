@@ -3,7 +3,7 @@
 const {
   builders: { ifBreak, line, softline, hardline, join },
 } = require("../../document");
-const { isEmptyNode, getLast, hasEndComments } = require("../utils");
+const { isEmptyNode, getLast, hasComments, hasEndComments, isNode } = require("../utils");
 const { printNextEmptyLine, alignWithSpaces } = require("./misc");
 
 function printFlowMapping(path, print, options) {
@@ -16,7 +16,7 @@ function printFlowMapping(path, print, options) {
   let bracketSpacing = softline;
   // [prettierx merge update from prettier@2.3.2] yamlBracketSpacing option
   if (isMapping && node.children.length > 0 && options.yamlBracketSpacing) {
-    bracketSpacing = line;
+    bracketSpacing = !hasCommentOnAnyChildren(node) ? line : hardline;
   }
   const lastItem = getLast(node.children);
   const isLastItemEmptyMappingItem =
@@ -40,6 +40,20 @@ function printFlowMapping(path, print, options) {
   ];
 }
 
+function hasCommentOnAnyChildren(node) {
+  let hasComment = false;
+  node.children.each(child => {
+    if (isNode(child, ["flowMappingItem"])) {
+      const { value } = child;
+      const isEmptyMappingValue = isEmptyNode(value);
+      if (!isEmptyMappingValue && hasComments(value.content)) {
+        hasComment = true;
+      }
+    }
+  });
+  return hasComment;
+}
+
 function printChildren(path, print, options) {
   const node = path.getValue();
   const parts = path.map(
@@ -48,13 +62,13 @@ function printChildren(path, print, options) {
       index === node.children.length - 1
         ? ""
         : [
-            ",",
-            line,
-            node.children[index].position.start.line !==
+          ",",
+          line,
+          node.children[index].position.start.line !==
             node.children[index + 1].position.start.line
-              ? printNextEmptyLine(childPath, options.originalText)
-              : "",
-          ],
+            ? printNextEmptyLine(childPath, options.originalText)
+            : "",
+        ],
     ],
     "children"
   );

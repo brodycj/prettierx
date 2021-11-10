@@ -371,4 +371,5 @@ module.exports = {
   hasIndicatorComment,
   hasTrailingComment,
   hasEndComments,
+  hasComments,
 };
