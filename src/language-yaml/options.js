@@ -15,4 +15,12 @@ module.exports = {
     oppositeDescription:
       "Do not put spaces between brackets / curly braces for YAML.",
   },
+  yamlSequenceIndent: {
+    category: "Other",
+    type: "boolean",
+    default: true,
+    description: "Do the indent on sequence item for YAML.",
+    oppositeDescription:
+      "Do not indent on sequence item based for YAML.",
+  },
 };

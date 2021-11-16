@@ -148,6 +148,8 @@ Format options:
                            Defaults to false.
   --no-yaml-bracket-spacing
                            Do not put spaces between brackets / curly braces for YAML.
+  --no-yaml-sequence-indent
+                           Do not indent on sequence item based for YAML.
   --yield-star-spacing     Put spaces around the star (\`*\`) in \`yield*\` expressions (before and after - similar to the corresponding eslint option). (Default is after only.)
                            Defaults to false.
 
@@ -365,6 +367,8 @@ Format options:
                            Defaults to false.
   --no-yaml-bracket-spacing
                            Do not put spaces between brackets / curly braces for YAML.
+  --no-yaml-sequence-indent
+                           Do not indent on sequence item based for YAML.
   --yield-star-spacing     Put spaces around the star (\`*\`) in \`yield*\` expressions (before and after - similar to the corresponding eslint option). (Default is after only.)
                            Defaults to false.
 

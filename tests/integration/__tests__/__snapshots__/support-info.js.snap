@@ -361,6 +361,10 @@ Object {
       "default": true,
       "type": "boolean",
     },
+    "yamlSequenceIndent": Object {
+      "default": true,
+      "type": "boolean",
+    },
     "yieldStarSpacing": Object {
       "default": false,
       "type": "boolean",
@@ -1403,6 +1407,15 @@ exports[`CLI --support-info (stdout) 1`] = `
       \\"description\\": \\"Put spaces between brackets / curly braces for YAML.\\",
       \\"name\\": \\"yamlBracketSpacing\\",
       \\"oppositeDescription\\": \\"Do not put spaces between brackets / curly braces for YAML.\\",
+      \\"pluginDefaults\\": {},
+      \\"type\\": \\"boolean\\"
+    },
+    {
+      \\"category\\": \\"Other\\",
+      \\"default\\": true,
+      \\"description\\": \\"Do the indent on sequence item for YAML.\\",
+      \\"name\\": \\"yamlSequenceIndent\\",
+      \\"oppositeDescription\\": \\"Do not indent on sequence item based for YAML.\\",
       \\"pluginDefaults\\": {},
       \\"type\\": \\"boolean\\"
     },
