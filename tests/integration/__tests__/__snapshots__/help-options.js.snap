@@ -601,7 +601,7 @@ exports[`show detailed usage with --help no-yaml-do-sequence-indent (stderr) 1`]
 exports[`show detailed usage with --help no-yaml-do-sequence-indent (stdout) 1`] = `
 "--no-yaml-do-sequence-indent
 
-  Do not indent on sequence item based
+  Do not indent on sequence item based for YAML.
 "
 `;
 
@@ -612,7 +612,7 @@ exports[`show detailed usage with --help no-yaml-sequence-indent (stderr) 1`] = 
 exports[`show detailed usage with --help no-yaml-sequence-indent (stdout) 1`] = `
 "--no-yaml-sequence-indent
 
-  Do not indent on sequence item based
+  Do not indent on sequence item based for YAML.
 "
 `;
 
@@ -1051,7 +1051,7 @@ exports[`show detailed usage with --help yaml-do-sequence-indent (stderr) 1`] = 
 exports[`show detailed usage with --help yaml-do-sequence-indent (stdout) 1`] = `
 "--yaml-do-sequence-indent
 
-  Do the indent on sequence item
+  Do the indent on sequence item for YAML.
 
 Default: true
 "
@@ -1064,7 +1064,7 @@ exports[`show detailed usage with --help yaml-sequence-indent (stderr) 1`] = `""
 exports[`show detailed usage with --help yaml-sequence-indent (stdout) 1`] = `
 "--yaml-sequence-indent
 
-  Do the indent on sequence item
+  Do the indent on sequence item for YAML.
 
 Default: true
 "

@@ -19,8 +19,8 @@ module.exports = {
     category: "Other",
     type: "boolean",
     default: true,
-    description: "Do the indent on sequence item",
+    description: "Do the indent on sequence item for YAML.",
     oppositeDescription:
-      "Do not indent on sequence item based",
+      "Do not indent on sequence item based for YAML.",
   },
 };
