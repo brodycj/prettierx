@@ -361,6 +361,10 @@ Object {
       "default": true,
       "type": "boolean",
     },
+    "yamlBreakBeforeComment": Object {
+      "default": false,
+      "type": "boolean",
+    },
     "yieldStarSpacing": Object {
       "default": false,
       "type": "boolean",
@@ -1403,6 +1407,15 @@ exports[`CLI --support-info (stdout) 1`] = `
       \\"description\\": \\"Put spaces between brackets / curly braces for YAML.\\",
       \\"name\\": \\"yamlBracketSpacing\\",
       \\"oppositeDescription\\": \\"Do not put spaces between brackets / curly braces for YAML.\\",
+      \\"pluginDefaults\\": {},
+      \\"type\\": \\"boolean\\"
+    },
+    {
+      \\"category\\": \\"Other\\",
+      \\"default\\": false,
+      \\"description\\": \\"Put or remove line breaked before comment section for YAML.\\",
+      \\"name\\": \\"yamlBreakBeforeComment\\",
+      \\"oppositeDescription\\": \\"Do not put line break before comment section for YAML.\\",
       \\"pluginDefaults\\": {},
       \\"type\\": \\"boolean\\"
     },

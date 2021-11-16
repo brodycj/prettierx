@@ -15,4 +15,12 @@ module.exports = {
     oppositeDescription:
       "Do not put spaces between brackets / curly braces for YAML.",
   },
+  yamlBreakBeforeComment: {
+    category: "Other",
+    type: "boolean",
+    default: false,
+    description: "Put or remove line breaked before comment section for YAML.",
+    oppositeDescription:
+      "Do not put line break before comment section for YAML.",
+  },
 };

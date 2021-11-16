@@ -596,6 +596,17 @@ exports[`show detailed usage with --help no-yaml-bracket-spacing (stdout) 1`] = 
 
 exports[`show detailed usage with --help no-yaml-bracket-spacing (write) 1`] = `Array []`;
 
+exports[`show detailed usage with --help no-yaml-break-before-comment (stderr) 1`] = `""`;
+
+exports[`show detailed usage with --help no-yaml-break-before-comment (stdout) 1`] = `
+"--no-yaml-break-before-comment
+
+  Do not put line break before comment section for YAML.
+"
+`;
+
+exports[`show detailed usage with --help no-yaml-break-before-comment (write) 1`] = `Array []`;
+
 exports[`show detailed usage with --help object-curly-spacing (stderr) 1`] = `""`;
 
 exports[`show detailed usage with --help object-curly-spacing (stdout) 1`] = `
@@ -1023,6 +1034,19 @@ Default: true
 `;
 
 exports[`show detailed usage with --help yaml-bracket-spacing (write) 1`] = `Array []`;
+
+exports[`show detailed usage with --help yaml-break-before-comment (stderr) 1`] = `""`;
+
+exports[`show detailed usage with --help yaml-break-before-comment (stdout) 1`] = `
+"--yaml-break-before-comment
+
+  Put or remove line breaked before comment section for YAML.
+
+Default: false
+"
+`;
+
+exports[`show detailed usage with --help yaml-break-before-comment (write) 1`] = `Array []`;
 
 exports[`show detailed usage with --help yield-star-spacing (stderr) 1`] = `""`;
 
