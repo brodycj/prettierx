@@ -42,7 +42,7 @@ function printFlowMapping(path, print, options) {
 
 function hasCommentOnAnyChildren(node) {
   let hasComment = false;
-  node.children.each(child => {
+  for (const child of node.children) {
     if (isNode(child, ["flowMappingItem"])) {
       const { value } = child;
       const isEmptyMappingValue = isEmptyNode(value);
@@ -50,7 +50,7 @@ function hasCommentOnAnyChildren(node) {
         hasComment = true;
       }
     }
-  });
+  }
   return hasComment;
 }
 
