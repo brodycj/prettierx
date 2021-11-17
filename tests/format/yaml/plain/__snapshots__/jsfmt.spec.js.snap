@@ -68,6 +68,39 @@ newline: longlonglonglonglonglonglonglonglonglonglong
 ================================================================================
 `;
 
+exports[`force-singleline-in-mapping-value.yml - {"yamlBreakBeforeComment":false} format 1`] = `
+====================================options=====================================
+parsers: ["yaml"]
+printWidth: 80
+yamlBreakBeforeComment: false
+                                                                                | printWidth
+=====================================input======================================
+no-whitesapce: longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglong
+
+whitespace: longlonglonglonglonglonglonglonglonglonglong longlonglonglonglonglonglonglonglonglonglong
+
+literal-newline: longlonglonglonglonglonglonglonglonglonglong
+  longlonglonglonglonglonglonglonglonglonglong
+
+newline: longlonglonglonglonglonglonglonglonglonglong
+
+  longlonglonglonglonglonglonglonglonglonglong
+
+=====================================output=====================================
+no-whitesapce: longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglong
+
+whitespace: longlonglonglonglonglonglonglonglonglonglong longlonglonglonglonglonglonglonglonglonglong
+
+literal-newline: longlonglonglonglonglonglonglonglonglonglong
+  longlonglonglonglonglonglonglonglonglonglong
+
+newline: longlonglonglonglonglonglonglonglonglonglong
+
+  longlonglonglonglonglonglonglonglonglonglong
+
+================================================================================
+`;
+
 exports[`force-singleline-in-mapping-value.yml format 1`] = `
 ====================================options=====================================
 parsers: ["yaml"]
@@ -111,7 +144,8 @@ proseWrap: "always"
 hello
 
 =====================================output=====================================
-!!str # comment
+!!str
+# comment
 hello
 
 ================================================================================
@@ -128,7 +162,26 @@ proseWrap: "never"
 hello
 
 =====================================output=====================================
+!!str
+# comment
+hello
+
+================================================================================
+`;
+
+exports[`middle-comment.yml - {"yamlBreakBeforeComment":false} format 1`] = `
+====================================options=====================================
+parsers: ["yaml"]
+printWidth: 80
+yamlBreakBeforeComment: false
+                                                                                | printWidth
+=====================================input======================================
 !!str # comment
+hello
+
+=====================================output=====================================
+!!str
+# comment
 hello
 
 ================================================================================
@@ -144,7 +197,8 @@ printWidth: 80
 hello
 
 =====================================output=====================================
-!!str # comment
+!!str
+# comment
 hello
 
 ================================================================================
@@ -175,6 +229,26 @@ exports[`middle-comments.yml - {"proseWrap":"never"} format 1`] = `
 parsers: ["yaml"]
 printWidth: 80
 proseWrap: "never"
+                                                                                | printWidth
+=====================================input======================================
+!!str # comment 1
+# comment 2
+hello
+
+=====================================output=====================================
+!!str
+# comment 1
+# comment 2
+hello
+
+================================================================================
+`;
+
+exports[`middle-comments.yml - {"yamlBreakBeforeComment":false} format 1`] = `
+====================================options=====================================
+parsers: ["yaml"]
+printWidth: 80
+yamlBreakBeforeComment: false
                                                                                 | printWidth
 =====================================input======================================
 !!str # comment 1
@@ -299,6 +373,55 @@ b:
 ================================================================================
 `;
 
+exports[`multiline.yml - {"yamlBreakBeforeComment":false} format 1`] = `
+====================================options=====================================
+parsers: ["yaml"]
+printWidth: 80
+yamlBreakBeforeComment: false
+                                                                                | printWidth
+=====================================input======================================
+b:    
+  123123123123123123123123123   
+       123123123123123123123123123   
+         123123123123123123123123123				
+    123123123123123123123123123   
+      123123123123123123123123123   
+  123123123123123123123123123   
+            123123123123123123123123123				
+         
+         123123123123123123123123123   
+         
+         
+         123123123123123123123123123      
+         
+         
+         
+         
+         123123123123123123123123123  
+    
+
+=====================================output=====================================
+b: 123123123123123123123123123
+  123123123123123123123123123
+  123123123123123123123123123
+  123123123123123123123123123
+  123123123123123123123123123
+  123123123123123123123123123
+  123123123123123123123123123
+
+  123123123123123123123123123
+
+
+  123123123123123123123123123
+
+
+
+
+  123123123123123123123123123
+
+================================================================================
+`;
+
 exports[`multiline.yml format 1`] = `
 ====================================options=====================================
 parsers: ["yaml"]
@@ -377,6 +500,21 @@ hello
 ================================================================================
 `;
 
+exports[`true.yml - {"yamlBreakBeforeComment":false} format 1`] = `
+====================================options=====================================
+parsers: ["yaml"]
+printWidth: 80
+yamlBreakBeforeComment: false
+                                                                                | printWidth
+=====================================input======================================
+hello
+
+=====================================output=====================================
+hello
+
+================================================================================
+`;
+
 exports[`true.yml format 1`] = `
 ====================================options=====================================
 parsers: ["yaml"]
@@ -411,6 +549,21 @@ exports[`verbatim.yml - {"proseWrap":"never"} format 1`] = `
 parsers: ["yaml"]
 printWidth: 80
 proseWrap: "never"
+                                                                                | printWidth
+=====================================input======================================
+!<hello> hello
+
+=====================================output=====================================
+!<hello> hello
+
+================================================================================
+`;
+
+exports[`verbatim.yml - {"yamlBreakBeforeComment":false} format 1`] = `
+====================================options=====================================
+parsers: ["yaml"]
+printWidth: 80
+yamlBreakBeforeComment: false
                                                                                 | printWidth
 =====================================input======================================
 !<hello> hello

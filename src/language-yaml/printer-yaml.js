@@ -43,6 +43,7 @@ const {
 } = require("./print/flow-mapping-sequence");
 const printMappingItem = require("./print/mapping-item");
 const printBlock = require("./print/block");
+const { yamlBreakBeforeComment } = require("./options");
 
 function genericPrint(path, options, print) {
   const node = path.getValue();
@@ -91,7 +92,7 @@ function genericPrint(path, options, print) {
 
   if (hasMiddleComments(node)) {
     parts.push([
-      node.middleComments.length === 1 ? "" : hardline,
+      node.middleComments.length === 1 && !yamlBreakBeforeComment ? "" : hardline,
       join(hardline, path.map(print, "middleComments")),
       hardline,
     ]);

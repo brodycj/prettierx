@@ -1,5 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`document.yml - {"yamlBreakBeforeComment":false} format 1`] = `
+====================================options=====================================
+parsers: ["yaml"]
+printWidth: 80
+yamlBreakBeforeComment: false
+                                                                                | printWidth
+=====================================input======================================
+# prettier-ignore
+---
+aaaaa:
+           bbbbb
+...
+aaaaa:
+           bbbbb
+
+=====================================output=====================================
+# prettier-ignore
+---
+aaaaa:
+           bbbbb
+---
+aaaaa: bbbbb
+
+================================================================================
+`;
+
 exports[`document.yml format 1`] = `
 ====================================options=====================================
 parsers: ["yaml"]
@@ -25,6 +51,25 @@ aaaaa: bbbbb
 ================================================================================
 `;
 
+exports[`leading-comment.yml - {"yamlBreakBeforeComment":false} format 1`] = `
+====================================options=====================================
+parsers: ["yaml"]
+printWidth: 80
+yamlBreakBeforeComment: false
+                                                                                | printWidth
+=====================================input======================================
+abc:     123
+# prettier-ignore
+def:     456
+
+=====================================output=====================================
+abc: 123
+# prettier-ignore
+def:     456
+
+================================================================================
+`;
+
 exports[`leading-comment.yml format 1`] = `
 ====================================options=====================================
 parsers: ["yaml"]
@@ -43,6 +88,30 @@ def:     456
 ================================================================================
 `;
 
+exports[`middle-comment.yml - {"yamlBreakBeforeComment":false} format 1`] = `
+====================================options=====================================
+parsers: ["yaml"]
+printWidth: 80
+yamlBreakBeforeComment: false
+                                                                                | printWidth
+=====================================input======================================
+abc:  !!str #   hello
+   123
+# prettier-ignore
+def:  !!str #   hello
+   456
+
+=====================================output=====================================
+abc: !!str
+  #   hello
+  123
+# prettier-ignore
+def:  !!str #   hello
+   456
+
+================================================================================
+`;
+
 exports[`middle-comment.yml format 1`] = `
 ====================================options=====================================
 parsers: ["yaml"]
@@ -56,11 +125,43 @@ def:  !!str #   hello
    456
 
 =====================================output=====================================
-abc: !!str #   hello
+abc: !!str
+  #   hello
   123
 # prettier-ignore
 def:  !!str #   hello
    456
+
+================================================================================
+`;
+
+exports[`trailing-comma.yml - {"yamlBreakBeforeComment":false} format 1`] = `
+====================================options=====================================
+parsers: ["yaml"]
+printWidth: 80
+yamlBreakBeforeComment: false
+                                                                                | printWidth
+=====================================input======================================
+[
+  # prettier-ignore
+             {  sss  },       # 123
+    {  qqqq },
+  
+  # prettier-ignore
+          [ccc    ]       # 777
+  , [ddd    ]
+]
+
+=====================================output=====================================
+[
+  # prettier-ignore
+  {  sss  }, # 123
+  { qqqq },
+
+  # prettier-ignore
+  [ccc    ], # 777
+  [ddd],
+]
 
 ================================================================================
 `;
@@ -91,6 +192,25 @@ printWidth: 80
   [ccc    ], # 777
   [ddd],
 ]
+
+================================================================================
+`;
+
+exports[`trailing-comment.yml - {"yamlBreakBeforeComment":false} format 1`] = `
+====================================options=====================================
+parsers: ["yaml"]
+printWidth: 80
+yamlBreakBeforeComment: false
+                                                                                | printWidth
+=====================================input======================================
+abc:     123 # hello
+# prettier-ignore
+def:     456 # hello
+
+=====================================output=====================================
+abc: 123 # hello
+# prettier-ignore
+def:     456 # hello
 
 ================================================================================
 `;
