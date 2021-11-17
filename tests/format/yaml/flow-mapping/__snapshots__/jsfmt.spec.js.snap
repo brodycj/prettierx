@@ -31,6 +31,21 @@ tabWidth: 4
 ================================================================================
 `;
 
+exports[`alias-key.yml - {"yamlBreakBeforeComment":false} format 1`] = `
+====================================options=====================================
+parsers: ["yaml"]
+printWidth: 80
+yamlBreakBeforeComment: false
+                                                                                | printWidth
+=====================================input======================================
+{&123 foo, *123 : 456}
+
+=====================================output=====================================
+{ &123 foo, *123 : 456 }
+
+================================================================================
+`;
+
 exports[`alias-key.yml format 1`] = `
 ====================================options=====================================
 parsers: ["yaml"]
@@ -103,6 +118,37 @@ tabWidth: 4
         longlonglonglonglonglonglonglonglonglonglong,
         longlonglonglonglonglonglonglonglonglonglong,
     ],
+}
+
+================================================================================
+`;
+
+exports[`array-key.yml - {"yamlBreakBeforeComment":false} format 1`] = `
+====================================options=====================================
+parsers: ["yaml"]
+printWidth: 80
+yamlBreakBeforeComment: false
+                                                                                | printWidth
+=====================================input======================================
+{? [longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong],? [longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong],? [longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong]}
+
+=====================================output=====================================
+{
+  [
+    longlonglonglonglonglonglonglonglonglonglong,
+    longlonglonglonglonglonglonglonglonglonglong,
+    longlonglonglonglonglonglonglonglonglonglong,
+  ],
+  [
+    longlonglonglonglonglonglonglonglonglonglong,
+    longlonglonglonglonglonglonglonglonglonglong,
+    longlonglonglonglonglonglonglonglonglonglong,
+  ],
+  [
+    longlonglonglonglonglonglonglonglonglonglong,
+    longlonglonglonglonglonglonglonglonglonglong,
+    longlonglonglonglonglonglonglonglonglonglong,
+  ],
 }
 
 ================================================================================
@@ -231,6 +277,52 @@ tabWidth: 4
 ================================================================================
 `;
 
+exports[`array-key-array-value.yml - {"yamlBreakBeforeComment":false} format 1`] = `
+====================================options=====================================
+parsers: ["yaml"]
+printWidth: 80
+yamlBreakBeforeComment: false
+                                                                                | printWidth
+=====================================input======================================
+{[longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong]: [longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong],[longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong]: [longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong],[longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong]: [longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong]}
+
+=====================================output=====================================
+{
+  ? [
+      longlonglonglonglonglonglonglonglonglonglong,
+      longlonglonglonglonglonglonglonglonglonglong,
+      longlonglonglonglonglonglonglonglonglonglong,
+    ]
+  : [
+      longlonglonglonglonglonglonglonglonglonglong,
+      longlonglonglonglonglonglonglonglonglonglong,
+      longlonglonglonglonglonglonglonglonglonglong,
+    ],
+  ? [
+      longlonglonglonglonglonglonglonglonglonglong,
+      longlonglonglonglonglonglonglonglonglonglong,
+      longlonglonglonglonglonglonglonglonglonglong,
+    ]
+  : [
+      longlonglonglonglonglonglonglonglonglonglong,
+      longlonglonglonglonglonglonglonglonglonglong,
+      longlonglonglonglonglonglonglonglonglonglong,
+    ],
+  ? [
+      longlonglonglonglonglonglonglonglonglonglong,
+      longlonglonglonglonglonglonglonglonglonglong,
+      longlonglonglonglonglonglonglonglonglonglong,
+    ]
+  : [
+      longlonglonglonglonglonglonglonglonglonglong,
+      longlonglonglonglonglonglonglonglonglonglong,
+      longlonglonglonglonglonglonglonglonglonglong,
+    ],
+}
+
+================================================================================
+`;
+
 exports[`array-key-array-value.yml format 1`] = `
 ====================================options=====================================
 parsers: ["yaml"]
@@ -339,6 +431,37 @@ tabWidth: 4
 ================================================================================
 `;
 
+exports[`array-plain.yml - {"yamlBreakBeforeComment":false} format 1`] = `
+====================================options=====================================
+parsers: ["yaml"]
+printWidth: 80
+yamlBreakBeforeComment: false
+                                                                                | printWidth
+=====================================input======================================
+{[longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong],[longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong],[longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong]}
+
+=====================================output=====================================
+{
+  [
+    longlonglonglonglonglonglonglonglonglonglong,
+    longlonglonglonglonglonglonglonglonglonglong,
+    longlonglonglonglonglonglonglonglonglonglong,
+  ],
+  [
+    longlonglonglonglonglonglonglonglonglonglong,
+    longlonglonglonglonglonglonglonglonglonglong,
+    longlonglonglonglonglonglonglonglonglonglong,
+  ],
+  [
+    longlonglonglonglonglonglonglonglonglonglong,
+    longlonglonglonglonglonglonglonglonglonglong,
+    longlonglonglonglonglonglonglonglonglonglong,
+  ],
+}
+
+================================================================================
+`;
+
 exports[`array-plain.yml format 1`] = `
 ====================================options=====================================
 parsers: ["yaml"]
@@ -438,6 +561,40 @@ tabWidth: 4
 ================================================================================
 `;
 
+exports[`array-value.yml - {"yamlBreakBeforeComment":false} format 1`] = `
+====================================options=====================================
+parsers: ["yaml"]
+printWidth: 80
+yamlBreakBeforeComment: false
+                                                                                | printWidth
+=====================================input======================================
+{a: [longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong],b: [longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong],c: [longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong, longlonglonglonglonglonglonglonglonglonglong]}
+
+=====================================output=====================================
+{
+  a:
+    [
+      longlonglonglonglonglonglonglonglonglonglong,
+      longlonglonglonglonglonglonglonglonglonglong,
+      longlonglonglonglonglonglonglonglonglonglong,
+    ],
+  b:
+    [
+      longlonglonglonglonglonglonglonglonglonglong,
+      longlonglonglonglonglonglonglonglonglonglong,
+      longlonglonglonglonglonglonglonglonglonglong,
+    ],
+  c:
+    [
+      longlonglonglonglonglonglonglonglonglonglong,
+      longlonglonglonglonglonglonglonglonglonglong,
+      longlonglonglonglonglonglonglonglonglonglong,
+    ],
+}
+
+================================================================================
+`;
+
 exports[`array-value.yml format 1`] = `
 ====================================options=====================================
 parsers: ["yaml"]
@@ -518,6 +675,29 @@ tabWidth: 4
 ================================================================================
 `;
 
+exports[`comment-between.yml - {"yamlBreakBeforeComment":false} format 1`] = `
+====================================options=====================================
+parsers: ["yaml"]
+printWidth: 80
+yamlBreakBeforeComment: false
+                                                                                | printWidth
+=====================================input======================================
+{
+? 123
+# comment
+: 456
+}
+
+=====================================output=====================================
+{
+  ? 123
+  # comment
+  : 456,
+}
+
+================================================================================
+`;
+
 exports[`comment-between.yml format 1`] = `
 ====================================options=====================================
 parsers: ["yaml"]
@@ -577,6 +757,24 @@ tabWidth: 4
 ================================================================================
 `;
 
+exports[`comment-trailing.yml - {"yamlBreakBeforeComment":false} format 1`] = `
+====================================options=====================================
+parsers: ["yaml"]
+printWidth: 80
+yamlBreakBeforeComment: false
+                                                                                | printWidth
+=====================================input======================================
+{123, # comment
+}
+
+=====================================output=====================================
+{
+  123, # comment
+}
+
+================================================================================
+`;
+
 exports[`comment-trailing.yml format 1`] = `
 ====================================options=====================================
 parsers: ["yaml"]
@@ -625,6 +823,21 @@ tabWidth: 4
 ================================================================================
 `;
 
+exports[`empty.yml - {"yamlBreakBeforeComment":false} format 1`] = `
+====================================options=====================================
+parsers: ["yaml"]
+printWidth: 80
+yamlBreakBeforeComment: false
+                                                                                | printWidth
+=====================================input======================================
+{}
+
+=====================================output=====================================
+{}
+
+================================================================================
+`;
+
 exports[`empty.yml format 1`] = `
 ====================================options=====================================
 parsers: ["yaml"]
@@ -660,6 +873,21 @@ exports[`empty-item-colon.yml - {"tabWidth":4} format 1`] = `
 parsers: ["yaml"]
 printWidth: 80
 tabWidth: 4
+                                                                                | printWidth
+=====================================input======================================
+{ : }
+
+=====================================output=====================================
+{ : }
+
+================================================================================
+`;
+
+exports[`empty-item-colon.yml - {"yamlBreakBeforeComment":false} format 1`] = `
+====================================options=====================================
+parsers: ["yaml"]
+printWidth: 80
+yamlBreakBeforeComment: false
                                                                                 | printWidth
 =====================================input======================================
 { : }
@@ -727,6 +955,27 @@ bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb }
 ================================================================================
 `;
 
+exports[`empty-line.yml - {"yamlBreakBeforeComment":false} format 1`] = `
+====================================options=====================================
+parsers: ["yaml"]
+printWidth: 80
+yamlBreakBeforeComment: false
+                                                                                | printWidth
+=====================================input======================================
+{ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa, 
+
+bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb }
+
+=====================================output=====================================
+{
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,
+
+  bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb,
+}
+
+================================================================================
+`;
+
 exports[`empty-line.yml format 1`] = `
 ====================================options=====================================
 parsers: ["yaml"]
@@ -770,6 +1019,23 @@ exports[`empty-line-collapse.yml - {"tabWidth":4} format 1`] = `
 parsers: ["yaml"]
 printWidth: 80
 tabWidth: 4
+                                                                                | printWidth
+=====================================input======================================
+{ aaa, 
+
+bbb }
+
+=====================================output=====================================
+{ aaa, bbb }
+
+================================================================================
+`;
+
+exports[`empty-line-collapse.yml - {"yamlBreakBeforeComment":false} format 1`] = `
+====================================options=====================================
+parsers: ["yaml"]
+printWidth: 80
+yamlBreakBeforeComment: false
                                                                                 | printWidth
 =====================================input======================================
 { aaa, 
@@ -837,6 +1103,25 @@ tabWidth: 4
 ================================================================================
 `;
 
+exports[`long-key.yml - {"yamlBreakBeforeComment":false} format 1`] = `
+====================================options=====================================
+parsers: ["yaml"]
+printWidth: 80
+yamlBreakBeforeComment: false
+                                                                                | printWidth
+=====================================input======================================
+{? longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong1,? longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong2,? longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong3}
+
+=====================================output=====================================
+{
+  longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong1,
+  longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong2,
+  longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong3,
+}
+
+================================================================================
+`;
+
 exports[`long-key.yml format 1`] = `
 ====================================options=====================================
 parsers: ["yaml"]
@@ -889,6 +1174,25 @@ tabWidth: 4
     longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong1: longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong,
     longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong2: longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong,
     longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong3: longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong,
+}
+
+================================================================================
+`;
+
+exports[`long-key-long-value.yml - {"yamlBreakBeforeComment":false} format 1`] = `
+====================================options=====================================
+parsers: ["yaml"]
+printWidth: 80
+yamlBreakBeforeComment: false
+                                                                                | printWidth
+=====================================input======================================
+{longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong1: longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong,longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong2: longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong,longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong3: longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong}
+
+=====================================output=====================================
+{
+  longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong1: longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong,
+  longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong2: longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong,
+  longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong3: longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong,
 }
 
 ================================================================================
@@ -951,6 +1255,25 @@ tabWidth: 4
 ================================================================================
 `;
 
+exports[`long-plain.yml - {"yamlBreakBeforeComment":false} format 1`] = `
+====================================options=====================================
+parsers: ["yaml"]
+printWidth: 80
+yamlBreakBeforeComment: false
+                                                                                | printWidth
+=====================================input======================================
+{longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong1,longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong2,longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong3}
+
+=====================================output=====================================
+{
+  longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong1,
+  longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong2,
+  longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong3,
+}
+
+================================================================================
+`;
+
 exports[`long-plain.yml format 1`] = `
 ====================================options=====================================
 parsers: ["yaml"]
@@ -1008,6 +1331,25 @@ tabWidth: 4
 ================================================================================
 `;
 
+exports[`long-value.yml - {"yamlBreakBeforeComment":false} format 1`] = `
+====================================options=====================================
+parsers: ["yaml"]
+printWidth: 80
+yamlBreakBeforeComment: false
+                                                                                | printWidth
+=====================================input======================================
+{1: longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong,2: longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong,3: longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong}
+
+=====================================output=====================================
+{
+  1: longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong,
+  2: longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong,
+  3: longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong,
+}
+
+================================================================================
+`;
+
 exports[`long-value.yml format 1`] = `
 ====================================options=====================================
 parsers: ["yaml"]
@@ -1038,7 +1380,8 @@ yamlBracketSpacing: false
 {}
 
 =====================================output=====================================
-!!map #comment
+!!map
+#comment
 {}
 
 ================================================================================
@@ -1055,7 +1398,26 @@ tabWidth: 4
 {}
 
 =====================================output=====================================
+!!map
+#comment
+{}
+
+================================================================================
+`;
+
+exports[`middle-comment.yml - {"yamlBreakBeforeComment":false} format 1`] = `
+====================================options=====================================
+parsers: ["yaml"]
+printWidth: 80
+yamlBreakBeforeComment: false
+                                                                                | printWidth
+=====================================input======================================
 !!map #comment
+{}
+
+=====================================output=====================================
+!!map
+#comment
 {}
 
 ================================================================================
@@ -1071,7 +1433,8 @@ printWidth: 80
 {}
 
 =====================================output=====================================
-!!map #comment
+!!map
+#comment
 {}
 
 ================================================================================
@@ -1103,6 +1466,26 @@ exports[`middle-comments.yml - {"tabWidth":4} format 1`] = `
 parsers: ["yaml"]
 printWidth: 80
 tabWidth: 4
+                                                                                | printWidth
+=====================================input======================================
+!!map # comment 1
+# comment 2
+{}
+
+=====================================output=====================================
+!!map
+# comment 1
+# comment 2
+{}
+
+================================================================================
+`;
+
+exports[`middle-comments.yml - {"yamlBreakBeforeComment":false} format 1`] = `
+====================================options=====================================
+parsers: ["yaml"]
+printWidth: 80
+yamlBreakBeforeComment: false
                                                                                 | printWidth
 =====================================input======================================
 !!map # comment 1
@@ -1186,6 +1569,30 @@ c: 123
 ================================================================================
 `;
 
+exports[`next-empty-line.yml - {"yamlBreakBeforeComment":false} format 1`] = `
+====================================options=====================================
+parsers: ["yaml"]
+printWidth: 80
+yamlBreakBeforeComment: false
+                                                                                | printWidth
+=====================================input======================================
+{
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa: 123, bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb: 123, 
+
+c: 123
+}
+
+=====================================output=====================================
+{
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa: 123,
+  bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb: 123,
+
+  c: 123,
+}
+
+================================================================================
+`;
+
 exports[`next-empty-line.yml format 1`] = `
 ====================================options=====================================
 parsers: ["yaml"]
@@ -1230,6 +1637,21 @@ exports[`props.yml - {"tabWidth":4} format 1`] = `
 parsers: ["yaml"]
 printWidth: 80
 tabWidth: 4
+                                                                                | printWidth
+=====================================input======================================
+!!map &anchor {a: 1}
+
+=====================================output=====================================
+!!map &anchor { a: 1 }
+
+================================================================================
+`;
+
+exports[`props.yml - {"yamlBreakBeforeComment":false} format 1`] = `
+====================================options=====================================
+parsers: ["yaml"]
+printWidth: 80
+yamlBreakBeforeComment: false
                                                                                 | printWidth
 =====================================input======================================
 !!map &anchor {a: 1}
@@ -1285,6 +1707,21 @@ a: !!map &anchor { a: 1 }
 ================================================================================
 `;
 
+exports[`props-in-map.yml - {"yamlBreakBeforeComment":false} format 1`] = `
+====================================options=====================================
+parsers: ["yaml"]
+printWidth: 80
+yamlBreakBeforeComment: false
+                                                                                | printWidth
+=====================================input======================================
+a: !!map &anchor {a: 1}
+
+=====================================output=====================================
+a: !!map &anchor { a: 1 }
+
+================================================================================
+`;
+
 exports[`props-in-map.yml format 1`] = `
 ====================================options=====================================
 parsers: ["yaml"]
@@ -1320,6 +1757,21 @@ exports[`short-key.yml - {"tabWidth":4} format 1`] = `
 parsers: ["yaml"]
 printWidth: 80
 tabWidth: 4
+                                                                                | printWidth
+=====================================input======================================
+{? 1,? 2,? 3}
+
+=====================================output=====================================
+{ 1, 2, 3 }
+
+================================================================================
+`;
+
+exports[`short-key.yml - {"yamlBreakBeforeComment":false} format 1`] = `
+====================================options=====================================
+parsers: ["yaml"]
+printWidth: 80
+yamlBreakBeforeComment: false
                                                                                 | printWidth
 =====================================input======================================
 {? 1,? 2,? 3}
@@ -1375,6 +1827,21 @@ tabWidth: 4
 ================================================================================
 `;
 
+exports[`short-key-short-value.yml - {"yamlBreakBeforeComment":false} format 1`] = `
+====================================options=====================================
+parsers: ["yaml"]
+printWidth: 80
+yamlBreakBeforeComment: false
+                                                                                | printWidth
+=====================================input======================================
+{1: a,2: b,3: c}
+
+=====================================output=====================================
+{ 1: a, 2: b, 3: c }
+
+================================================================================
+`;
+
 exports[`short-key-short-value.yml format 1`] = `
 ====================================options=====================================
 parsers: ["yaml"]
@@ -1420,6 +1887,21 @@ tabWidth: 4
 ================================================================================
 `;
 
+exports[`short-plain.yml - {"yamlBreakBeforeComment":false} format 1`] = `
+====================================options=====================================
+parsers: ["yaml"]
+printWidth: 80
+yamlBreakBeforeComment: false
+                                                                                | printWidth
+=====================================input======================================
+{1,2,3}
+
+=====================================output=====================================
+{ 1, 2, 3 }
+
+================================================================================
+`;
+
 exports[`short-plain.yml format 1`] = `
 ====================================options=====================================
 parsers: ["yaml"]
@@ -1455,6 +1937,21 @@ exports[`short-value.yml - {"tabWidth":4} format 1`] = `
 parsers: ["yaml"]
 printWidth: 80
 tabWidth: 4
+                                                                                | printWidth
+=====================================input======================================
+{1: 1,2: 2,3: 3}
+
+=====================================output=====================================
+{ 1: 1, 2: 2, 3: 3 }
+
+================================================================================
+`;
+
+exports[`short-value.yml - {"yamlBreakBeforeComment":false} format 1`] = `
+====================================options=====================================
+parsers: ["yaml"]
+printWidth: 80
+yamlBreakBeforeComment: false
                                                                                 | printWidth
 =====================================input======================================
 {1: 1,2: 2,3: 3}
@@ -1513,6 +2010,25 @@ x: 12345678901234567890123456789012345678901234567890123456789012345678901234567
 =====================================output=====================================
 {
     x: 12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890,
+}
+
+================================================================================
+`;
+
+exports[`very-long-value.yml - {"yamlBreakBeforeComment":false} format 1`] = `
+====================================options=====================================
+parsers: ["yaml"]
+printWidth: 80
+yamlBreakBeforeComment: false
+                                                                                | printWidth
+=====================================input======================================
+{
+x: 12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890
+}
+
+=====================================output=====================================
+{
+  x: 12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890,
 }
 
 ================================================================================

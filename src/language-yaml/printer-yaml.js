@@ -92,7 +92,7 @@ function genericPrint(path, options, print) {
 
   if (hasMiddleComments(node)) {
     parts.push([
-      node.middleComments.length === 1 || !yamlBreakBeforeComment ? "" : hardline,
+      node.middleComments.length === 1 && !yamlBreakBeforeComment ? "" : hardline,
       join(hardline, path.map(print, "middleComments")),
       hardline,
     ]);
