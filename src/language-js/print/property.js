@@ -141,7 +141,7 @@ function getPropertyPadding(options, path) {
       ? node.name.length
       : node.raw
       ? node.raw.length
-      : node.extra.raw
+      : node.extra && node.extra.raw
       ? node.extra.raw.length
       : (() => {
           // STOP HERE with an internal error
