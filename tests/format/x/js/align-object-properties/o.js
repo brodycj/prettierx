@@ -87,3 +87,11 @@ o = {
     next:2},
   keyasdf:3
 }
+
+// computed property
+o = {
+  [name.id]: 'value',
+  2:3,
+  "k-2":2,
+  keyasdf:3
+}
