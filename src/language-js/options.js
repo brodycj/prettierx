@@ -248,4 +248,11 @@ module.exports = {
       },
     ],
   },
+  jsxSpaceBeforeSelfClosingTag: {
+    since: "0.20.0",
+    category: CATEGORY_JAVASCRIPT,
+    type: "boolean",
+    default: true,
+    description: "Put a space before /> in self-closing tags.",
+  },
 };
