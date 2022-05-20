@@ -386,17 +386,6 @@ console.log(Bork.staticFunction()); // > "babelIsCool"
 ================================================================================
 `;
 
-exports[`class-static-block.js [espree] format 1`] = `
-"Unexpected token { (4:10)
-  2 |   static #x = 42;
-  3 |   static y;
-> 4 |   static {
-    |          ^
-  5 |     try {
-  6 |       this.y = doSomethingWith(this.#x);
-  7 |     } catch {"
-`;
-
 exports[`class-static-block.js [meriyah] format 1`] = `
 "[4:10]: Unexpected token: '{' (4:10)
   2 |   static #x = 42;
@@ -1098,14 +1087,6 @@ let m = module {
 ================================================================================
 `;
 
-exports[`module-string-names.js [espree] format 1`] = `
-"Unexpected token \\"😄\\" (1:10)
-> 1 | import { \\"😄\\" as smile } from \\"./emojis.js\\";
-    |          ^
-  2 | export { smile as \\"😄\\" } from \\"./emojis.js\\";
-  3 |"
-`;
-
 exports[`module-string-names.js [meriyah] format 1`] = `
 "[1:13]: Expected '}' (1:13)
 > 1 | import { \\"😄\\" as smile } from \\"./emojis.js\\";
@@ -1725,17 +1706,6 @@ value
 // (The # token isn't final; it might instead be @ or ? or %.)
 
 ================================================================================
-`;
-
-exports[`private-fields-in-in.js [espree] format 1`] = `
-"Unexpected token #brand (44:12)
-  42 |
-  43 |   static isC(obj) {
-> 44 |     return #brand in obj && #method in obj && #getter in obj;
-     |            ^
-  45 |   }
-  46 | }
-  47 |"
 `;
 
 exports[`private-fields-in-in.js format 1`] = `
