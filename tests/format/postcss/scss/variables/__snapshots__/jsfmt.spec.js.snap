@@ -106,7 +106,7 @@ https://github.com/postcss/postcss/releases/tag/8.0.0
 */
 
 :root {
-  --empty: ;
+  --empty:;
   --JSON: [1, "2", {"three": {"a": 1}}, [4]];
   --javascript: function(rule) {console.log(rule)};
 }
