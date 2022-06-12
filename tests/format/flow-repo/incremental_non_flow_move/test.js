@@ -1,5 +1,0 @@
-/**
- * @flow
- */
-
-require('Foo');

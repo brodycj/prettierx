@@ -1,5 +1,0 @@
-# This file should be overridden by prettier.config.js
-root = true
-
-[*]
-tab_width = 1

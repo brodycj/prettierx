@@ -1,6 +1,0 @@
-const x = (foo, bar = foo ?? bar) => { };
-
-foo ? bar ?? foo : baz;
-
-foo ?? (bar ?? baz);
-(foo ?? bar) ?? baz;
