@@ -60,7 +60,7 @@ const categoryParsers = new Map([
         "typescript",
         "babel-ts",
         // [prettierx] support __typescript_estree parser option for testing
-        "__typescript_estree",
+        //"__typescript_estree",
       ],
       extensions: [".js"],
     },
@@ -84,7 +84,7 @@ const categoryParsers = new Map([
         "babel-flow",
         "typescript",
         "babel-ts",
-        "__typescript_estree",
+        //"__typescript_estree",
       ],
       extensions: [".js"],
     },
