@@ -1293,6 +1293,35 @@ var l = base
 ================================================================================
 `;
 
+exports[`issue-11298.js - {"arrowParens":"avoid","spaceInParens":true,"arrayBracketSpacing":true,"computedPropertySpacing":true,"spaceUnaryOps":true,"templateCurlySpacing":true,"typeAngleBracketSpacing":true} format 1`] = `
+====================================options=====================================
+arrayBracketSpacing: true
+arrowParens: "avoid"
+computedPropertySpacing: true
+parsers: ["babel", "babel-flow", "flow", "typescript"]
+printWidth: 80
+spaceInParens: true
+spaceUnaryOps: true
+templateCurlySpacing: true
+typeAngleBracketSpacing: true
+                                                                                | printWidth
+=====================================input======================================
+foo1(/𠮟𠮟𠮟/).foo2(bar).foo3(baz);
+
+foo1(/叱叱叱/).foo2(bar).foo3(baz);
+
+=====================================output=====================================
+foo1( /𠮟𠮟𠮟/ )
+  .foo2( bar )
+  .foo3( baz );
+
+foo1( /叱叱叱/ )
+  .foo2( bar )
+  .foo3( baz );
+
+================================================================================
+`;
+
 exports[`logical.js - {"arrowParens":"avoid","spaceInParens":true,"arrayBracketSpacing":true,"computedPropertySpacing":true,"spaceUnaryOps":true,"templateCurlySpacing":true,"typeAngleBracketSpacing":true} format 1`] = `
 ====================================options=====================================
 arrayBracketSpacing: true
