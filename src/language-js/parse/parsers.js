@@ -65,4 +65,9 @@ module.exports = {
   get __babel_estree() {
     return require("./babel.js").parsers.__babel_estree;
   },
+	// XXX X XXX
+  // JS - TypeScript XXX
+  get __typescript_estree() {
+    return require("./typescript.js").parsers.typescript;
+  },
 };

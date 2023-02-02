@@ -17,11 +17,15 @@ const {
   isPreLikeNode,
   hasPrettierIgnore,
   shouldPreserveContent,
+  // [prettierx] support --html-void-tags option:
+  isHtmlVoidTagNeeded,
 } = require("../utils.js");
 
 function printClosingTag(node, options) {
   return [
-    node.isSelfClosing ? "" : printClosingTagStart(node, options),
+	  // XXX - XXX TBD ???
+    node.isSelfClosing //&& !isHtmlVoidTagNeeded(node, options)
+    ? "" : printClosingTagStart(node, options),
     printClosingTagEnd(node, options),
   ];
 }
@@ -96,7 +100,9 @@ function printClosingTagEndMarker(node, options) {
       return "}}";
     case "element":
       if (node.isSelfClosing) {
-        return "/>";
+        // return "/>";
+        // [prettierx] support --html-void-tags option:
+        return isHtmlVoidTagNeeded(node, options) ? ">" : "/>";
       }
     // fall through
     default:
@@ -214,7 +220,10 @@ function printAttributes(path, options, print) {
   const node = path.getValue();
 
   if (!isNonEmptyArray(node.attrs)) {
-    return node.isSelfClosing
+	  // XXX XXX
+    //return node.isSelfClosing
+    // [prettierx merge update from prettier@2.3.2] --html-void-tags option:
+    return node.isSelfClosing && !isHtmlVoidTagNeeded(node, options)
       ? /**
          *     <br />
          *        ^
@@ -278,14 +287,21 @@ function printAttributes(path, options, print) {
       needsToBorrowLastChildClosingTagEndMarker(node.parent)) ||
     forceNotToBreakAttrContent
   ) {
-    parts.push(node.isSelfClosing ? " " : "");
+	  //XXX
+    //parts.push(node.isSelfClosing ? " " : "");
+    // [prettierx merge update from prettier@2.3.2] --html-void-tags option:
+    parts.push(
+      node.isSelfClosing && !isHtmlVoidTagNeeded(node, options) ? " " : ""
+    )
   } else {
     parts.push(
       options.bracketSameLine
-        ? node.isSelfClosing
-          ? " "
-          : ""
-        : node.isSelfClosing
+        ? node.isSelfClosing && !isHtmlVoidTagNeeded(node, options) ? " " : ""
+        //? node.isSelfClosing
+        //  ? " "
+        //  : ""
+        //: node.isSelfClosing
+        : node.isSelfClosing && !isHtmlVoidTagNeeded(node, options)
         ? line
         : softline
     );
@@ -307,6 +323,7 @@ function printOpeningTag(path, options, print) {
   return [
     printOpeningTagStart(node, options),
     printAttributes(path, options, print),
+	  // XXX TBD ???
     node.isSelfClosing ? "" : printOpeningTagEnd(node),
   ];
 }
@@ -347,6 +364,7 @@ function printOpeningTagStartMarker(node) {
 }
 
 function printOpeningTagEndMarker(node) {
+	// XXX TBD ???
   assert(!node.isSelfClosing);
   switch (node.type) {
     case "ieConditionalComment":
