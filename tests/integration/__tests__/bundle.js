@@ -2,11 +2,18 @@
 
 const path = require("path");
 const globby = require("globby");
+<<<<<<< HEAD
 const { projectRoot } = require("../env");
 const coreOptions = require("../../../src/main/core-options");
 // [prettierx] website is now in x-unsupported/subdirectory
 const codeSamples =
   require("../../../x-unsupported/website/playground/codeSamples").default;
+=======
+const { projectRoot } = require("../env.js");
+const coreOptions = require("../../../src/main/core-options.js");
+const codeSamples =
+  require("../../../website/playground/codeSamples.js").default;
+>>>>>>> 963220fb643a6ffb5614ec38edcecd9988442b57
 
 const parserNames = coreOptions.options.parser.choices.map(
   ({ value }) => value

@@ -1,8 +1,8 @@
 "use strict";
 
 const prettier = require("prettier-local");
-const runPrettier = require("../runPrettier");
-const { isProduction } = require("../env");
+const runPrettier = require("../runPrettier.js");
+const { isProduction } = require("../env.js");
 
 // [prettierx] fork name from package.json
 const { name } = require("../../../package.json");

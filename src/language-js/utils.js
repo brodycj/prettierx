@@ -7,8 +7,9 @@ const {
   skipWhitespace,
   isNonEmptyArray,
   isNextLineEmptyAfterIndex,
-} = require("../common/util");
-const { locStart, locEnd, hasSameLocStart } = require("./loc");
+  getStringWidth,
+} = require("../common/util.js");
+const { locStart, locEnd, hasSameLocStart } = require("./loc.js");
 
 /**
  * @typedef {import("./types/estree").Node} Node
@@ -65,7 +66,7 @@ function hasFlowShorthandAnnotationComment(node) {
  */
 function hasFlowAnnotationComment(comments) {
   return (
-    comments &&
+    isNonEmptyArray(comments) &&
     isBlockComment(comments[0]) &&
     FLOW_ANNOTATION.test(comments[0].value)
   );
@@ -268,7 +269,11 @@ function isStringLiteral(node) {
  * @returns {boolean}
  */
 function isObjectType(node) {
-  return node.type === "ObjectTypeAnnotation" || node.type === "TSTypeLiteral";
+  return (
+    node.type === "ObjectTypeAnnotation" ||
+    node.type === "TSTypeLiteral" ||
+    node.type === "TSMappedType"
+  );
 }
 
 /**
@@ -475,7 +480,7 @@ function isSimpleType(node) {
   return false;
 }
 
-const unitTestRe = /^(skip|[fx]?(it|describe|test))$/;
+const unitTestRe = /^(?:skip|[fx]?(?:it|describe|test))$/;
 
 /**
  * @param {{callee: MemberExpression | OptionalMemberExpression}} node
@@ -497,7 +502,7 @@ function isSkipOrOnlyBlock(node) {
  * @returns {boolean}
  */
 function isUnitTestSetUp(node) {
-  const unitTestSetUpRe = /^(before|after)(Each|All)$/;
+  const unitTestSetUpRe = /^(?:before|after)(?:Each|All)$/;
   return (
     node.callee.type === "Identifier" &&
     unitTestSetUpRe.test(node.callee.name) &&
@@ -771,7 +776,7 @@ function isStringPropSafeToUnquote(node, options) {
 
 // Matches “simple” numbers like `123` and `2.5` but not `1_000`, `1e+100` or `0b10`.
 function isSimpleNumber(numberString) {
-  return /^(\d+|\d+\.\d+)$/.test(numberString);
+  return /^(?:\d+|\d+\.\d+)$/.test(numberString);
 }
 
 /**
@@ -790,7 +795,7 @@ function isJestEachTemplateLiteral(node, parentNode) {
    *
    * Ref: https://github.com/facebook/jest/pull/6102
    */
-  const jestEachTriggerRegex = /^[fx]?(describe|it|test)$/;
+  const jestEachTriggerRegex = /^[fx]?(?:describe|it|test)$/;
   return (
     parentNode.type === "TaggedTemplateExpression" &&
     parentNode.quasi === node &&
@@ -907,7 +912,7 @@ function isSimpleCallArgument(node, depth) {
     (node.type === "Literal" && "regex" in node && node.regex.pattern) ||
     (node.type === "RegExpLiteral" && node.pattern);
 
-  if (regexpPattern && regexpPattern.length > 5) {
+  if (regexpPattern && getStringWidth(regexpPattern) > 5) {
     return false;
   }
 

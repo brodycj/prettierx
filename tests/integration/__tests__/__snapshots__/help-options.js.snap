@@ -44,7 +44,24 @@ Default: always
 
 exports[`show detailed usage with --help arrow-parens (write) 1`] = `Array []`;
 
+<<<<<<< HEAD
 exports[`show detailed usage with --help break-before-else (stderr) 1`] = `""`;
+=======
+exports[`show detailed usage with --help bracket-same-line (stderr) 1`] = `""`;
+
+exports[`show detailed usage with --help bracket-same-line (stdout) 1`] = `
+"--bracket-same-line
+
+  Put > of opening tags on the last line instead of on a new line.
+
+Default: false
+"
+`;
+
+exports[`show detailed usage with --help bracket-same-line (write) 1`] = `Array []`;
+
+exports[`show detailed usage with --help bracket-spacing (stderr) 1`] = `""`;
+>>>>>>> 963220fb643a6ffb5614ec38edcecd9988442b57
 
 exports[`show detailed usage with --help break-before-else (stdout) 1`] = `
 "--break-before-else
@@ -405,19 +422,6 @@ Default: false
 `;
 
 exports[`show detailed usage with --help insert-pragma (write) 1`] = `Array []`;
-
-exports[`show detailed usage with --help jsx-bracket-same-line (stderr) 1`] = `""`;
-
-exports[`show detailed usage with --help jsx-bracket-same-line (stdout) 1`] = `
-"--jsx-bracket-same-line
-
-  Put > on the last line instead of at a new line.
-
-Default: false
-"
-`;
-
-exports[`show detailed usage with --help jsx-bracket-same-line (write) 1`] = `Array []`;
 
 exports[`show detailed usage with --help jsx-single-quote (stderr) 1`] = `""`;
 

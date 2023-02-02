@@ -3,13 +3,13 @@
 const {
   // [prettierx] --computed-property-spacing option support
   builders: { softline, line, group, indent, label },
-} = require("../../document");
+} = require("../../document/index.js");
 const {
   isNumericLiteral,
   isMemberExpression,
   isCallExpression,
-} = require("../utils");
-const { printOptionalToken } = require("./misc");
+} = require("../utils.js");
+const { printOptionalToken } = require("./misc.js");
 
 function printMemberExpression(path, options, print) {
   const node = path.getValue();

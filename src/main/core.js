@@ -5,20 +5,20 @@ const diff = require("diff");
 const {
   printer: { printDocToString },
   debug: { printDocToDebug },
-} = require("../document");
-const { getAlignmentSize } = require("../common/util");
+} = require("../document/index.js");
+const { getAlignmentSize } = require("../common/util.js");
 const {
   guessEndOfLine,
   convertEndOfLineToChars,
   countEndOfLineChars,
   normalizeEndOfLine,
-} = require("../common/end-of-line");
-const normalizeOptions = require("./options").normalize;
-const massageAST = require("./massage-ast");
-const comments = require("./comments");
-const parser = require("./parser");
-const printAstToDoc = require("./ast-to-doc");
-const rangeUtil = require("./range-util");
+} = require("../common/end-of-line.js");
+const normalizeOptions = require("./options.js").normalize;
+const massageAST = require("./massage-ast.js");
+const comments = require("./comments.js");
+const parser = require("./parser.js");
+const printAstToDoc = require("./ast-to-doc.js");
+const rangeUtil = require("./range-util.js");
 
 const BOM = "\uFEFF";
 
@@ -109,14 +109,14 @@ function coreFormat(originalText, opts, addAlignmentSize = 0) {
     // diff old and new cursor node texts, with a special cursor
     // symbol inserted to find out where it moves to
 
-    const oldCursorNodeCharArray = oldCursorNodeText.split("");
+    const oldCursorNodeCharArray = [...oldCursorNodeText];
     oldCursorNodeCharArray.splice(
       cursorOffsetRelativeToOldCursorNode,
       0,
       CURSOR
     );
 
-    const newCursorNodeCharArray = newCursorNodeText.split("");
+    const newCursorNodeCharArray = [...newCursorNodeText];
 
     const cursorNodeDiff = diff.diffArrays(
       oldCursorNodeCharArray,

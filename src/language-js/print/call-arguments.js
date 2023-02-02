@@ -1,7 +1,7 @@
 "use strict";
 
-const { printDanglingComments } = require("../../main/comments");
-const { getLast, getPenultimate } = require("../../common/util");
+const { printDanglingComments } = require("../../main/comments.js");
+const { getLast, getPenultimate } = require("../../common/util.js");
 const {
   getFunctionParameters,
   // [prettierx] --space-in-parens option support (...)
@@ -18,7 +18,7 @@ const {
   isCallExpression,
   isStringLiteral,
   isObjectProperty,
-} = require("../utils");
+} = require("../utils.js");
 
 const {
   builders: {
@@ -32,10 +32,10 @@ const {
     breakParent,
   },
   utils: { willBreak },
-} = require("../../document");
+} = require("../../document/index.js");
 
-const { ArgExpansionBailout } = require("../../common/errors");
-const { isConciselyPrintedArray } = require("./array");
+const { ArgExpansionBailout } = require("../../common/errors.js");
+const { isConciselyPrintedArray } = require("./array.js");
 
 function printCallArguments(path, options, print) {
   const node = path.getValue();

@@ -1,7 +1,7 @@
 "use strict";
 
-const getLast = require("../utils/get-last");
-const { getOrderedListItemInfo, mapAst, splitText } = require("./utils");
+const getLast = require("../utils/get-last.js");
+const { getOrderedListItemInfo, mapAst, splitText } = require("./utils.js");
 
 // 0x0 ~ 0x10ffff
 const isSingleCharRegex = /^.$/su;
@@ -134,7 +134,7 @@ function transformIndentedCodeblockAndMarkItsParentList(ast, options) {
   return mapAst(ast, (node, index, parentStack) => {
     if (node.type === "code") {
       // the first char may point to `\n`, e.g. `\n\t\tbar`, just ignore it
-      const isIndented = /^\n?( {4,}|\t)/.test(
+      const isIndented = /^\n?(?: {4,}|\t)/.test(
         options.originalText.slice(
           node.position.start.offset,
           node.position.end.offset

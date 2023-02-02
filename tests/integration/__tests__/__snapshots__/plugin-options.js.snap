@@ -60,7 +60,13 @@ exports[`show external options with \`--help\` 1`] = `
 - First value
 + Second value
 
+<<<<<<< HEAD
 @@ -36,10 +36,12 @@
+=======
+@@ -22,16 +22,18 @@
+                             Control how Prettier formats quoted code embedded in the file.
+                             Defaults to auto.
+>>>>>>> 963220fb643a6ffb5614ec38edcecd9988442b57
     --end-of-line <lf|crlf|cr|auto>
                              Which end of line characters to apply.
                              Defaults to lf.
@@ -68,6 +74,7 @@ exports[`show external options with \`--help\` 1`] = `
                              Disable spaces between export curly braces.
 +   --foo-option <bar|baz>   foo description
 +                            Defaults to bar.
+<<<<<<< HEAD
     --generator-star-spacing Put spaces around the star (\`*\`) in generator functions (before and after - similar to the corresponding eslint option). (Default is after only.)
                              Defaults to false.
     --no-graphql-curly-spacing
@@ -78,6 +85,12 @@ exports[`show external options with \`--help\` 1`] = `
                              Disable spaces between object curly braces.
     --offset-ternary-expressions
                              Indent and align ternary expression branches more consistently with \\"Standard JS\\" (similar to the corresponding eslint option).
+=======
+    --html-whitespace-sensitivity <css|strict|ignore>
+                             How to handle whitespaces in HTML.
+                             Defaults to css.
+    --jsx-single-quote       Use single quotes in JSX.
+>>>>>>> 963220fb643a6ffb5614ec38edcecd9988442b57
                              Defaults to false.
 -   --parser <flow|babel|babel-flow|babel-ts|typescript|espree|meriyah|css|less|scss|json|json5|json-stringify|graphql|markdown|mdx|vue|yaml|glimmer|html|angular|lwc>
 +   --parser <flow|babel|babel-flow|babel-ts|typescript|espree|meriyah|css|less|scss|json|json5|json-stringify|graphql|markdown|mdx|vue|yaml|glimmer|html|angular|lwc|foo-parser>

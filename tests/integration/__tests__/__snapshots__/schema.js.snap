@@ -34,6 +34,7 @@ Object {
             },
           ],
         },
+<<<<<<< HEAD
         "breakBeforeElse": Object {
           "default": false,
           "description": "Always add a line break before else.",
@@ -52,6 +53,16 @@ Object {
         "cssParenSpacing": Object {
           "default": false,
           "description": "Print spaces between parens in CSS, WordPress style. Status: experimental, with limited testing.",
+=======
+        "bracketSameLine": Object {
+          "default": false,
+          "description": "Put > of opening tags on the last line instead of on a new line.",
+          "type": "boolean",
+        },
+        "bracketSpacing": Object {
+          "default": true,
+          "description": "Print spaces between brackets.",
+>>>>>>> 963220fb643a6ffb5614ec38edcecd9988442b57
           "type": "boolean",
         },
         "cursorOffset": Object {
@@ -189,11 +200,6 @@ This option cannot be used with --range-start and --range-end.",
         "insertPragma": Object {
           "default": false,
           "description": "Insert @format pragma into file's first docblock comment.",
-          "type": "boolean",
-        },
-        "jsxBracketSameLine": Object {
-          "default": false,
-          "description": "Put > on the last line instead of at a new line.",
           "type": "boolean",
         },
         "jsxSingleQuote": Object {

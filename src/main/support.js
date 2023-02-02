@@ -5,13 +5,14 @@ const semver = {
   lt: require("semver/functions/lt"),
   gte: require("semver/functions/gte"),
 };
-const arrayify = require("../utils/arrayify");
+const arrayify = require("../utils/arrayify.js");
+const currentVersion = require("../../package.json").version;
 // [prettierx] read info from package.json:
-const pkg = require("../../package.json");
-const coreOptions = require("./core-options").options;
+// const pkg = require("../../package.json");
+const coreOptions = require("./core-options.js").options;
 
 // [prettierx] get info from package.json:
-const currentVersion = pkg["prettier-version"];
+//const currentVersion = pkg["prettier-version"];
 
 /**
  * Strings in `plugins` and `pluginSearchDirs` are handled by a wrapped version

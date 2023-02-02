@@ -2,9 +2,9 @@
 
 const {
   builders: { join, line, group },
-} = require("../../document");
-const { hasNode, hasComment, getComments } = require("../utils");
-const { printBinaryishExpression } = require("./binaryish");
+} = require("../../document/index.js");
+const { hasNode, hasComment, getComments } = require("../utils.js");
+const { printBinaryishExpression } = require("./binaryish.js");
 
 /** @typedef {import("../../common/ast-path")} AstPath */
 
@@ -54,7 +54,7 @@ function printAngular(path, options, print) {
         "body"
       );
     case "NGMicrosyntaxKey":
-      return /^[$_a-z][\w$]*(-[$_a-z][\w$])*$/i.test(node.name)
+      return /^[$_a-z][\w$]*(?:-[$_a-z][\w$])*$/i.test(node.name)
         ? node.name
         : JSON.stringify(node.name);
     case "NGMicrosyntaxExpression":

@@ -1,9 +1,14 @@
 "use strict";
 
 const path = require("path");
+// <<<<<<< HEAD
 
+// XXX TBD ??? ???:
 // [prettierx]
-const installPrettier = require("./scripts/install-prettierx");
+// const installPrettier = require("./scripts/install-prettierx");
+// =======
+const installPrettier = require("./tests/config/install-prettier.js");
+// >>>>>>> 963220fb643a6ffb5614ec38edcecd9988442b57
 
 const PROJECT_ROOT = __dirname;
 const isProduction = process.env.NODE_ENV === "production";
@@ -75,7 +80,11 @@ module.exports = {
     "prettier-local": "<rootDir>/tests/config/require-prettierx.js",
     "prettier-standalone": "<rootDir>/tests/config/require-standalone.js",
   },
-  modulePathIgnorePatterns: ["<rootDir>/dist", "<rootDir>/website"],
+  modulePathIgnorePatterns: [
+    "<rootDir>/dist",
+    "<rootDir>/website",
+    "<rootDir>/scripts/release",
+  ],
   transform,
   watchPlugins: [
     "jest-watch-typeahead/filename",

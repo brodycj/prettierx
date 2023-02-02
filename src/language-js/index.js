@@ -1,9 +1,10 @@
 "use strict";
 
-const createLanguage = require("../utils/create-language");
-const estreePrinter = require("./printer-estree");
-const estreeJsonPrinter = require("./printer-estree-json");
-const options = require("./options");
+const createLanguage = require("../utils/create-language.js");
+const estreePrinter = require("./printer-estree.js");
+const estreeJsonPrinter = require("./printer-estree-json.js");
+const options = require("./options.js");
+const parsers = require("./parse/parsers.js");
 
 const languages = [
   createLanguage(
@@ -20,6 +21,11 @@ const languages = [
         "typescript",
       ],
       vscodeLanguageIds: ["javascript", "mongo"],
+      interpreters: [
+        ...data.interpreters,
+        // https://github.com/google/zx
+        "zx",
+      ],
       extensions: [
         ...data.extensions.filter((extension) => extension !== ".jsx"),
         // WeiXin Script (Weixin Mini Programs)
@@ -110,6 +116,8 @@ const printers = {
   "estree-json": estreeJsonPrinter,
 };
 
+/* **
+<<<<<<< HEAD
 const parsers = {
   // JS - Babel
   get babel() {
@@ -182,6 +190,9 @@ const parsers = {
   },
 };
 
+=======
+>>>>>>> 963220fb643a6ffb5614ec38edcecd9988442b57
+// */
 module.exports = {
   languages,
   options,

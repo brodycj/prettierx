@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`eslint-disable.js - {"jsxBracketSameLine":true} format 1`] = `
+exports[`eslint-disable.js - {"bracketSameLine":true} format 1`] = `
 ====================================options=====================================
-jsxBracketSameLine: true
+bracketSameLine: true
 parsers: ["flow", "babel", "typescript"]
 printWidth: 80
                                                                                 | printWidth
@@ -27,6 +27,7 @@ const render = (items) => (
 ================================================================================
 `;
 
+<<<<<<< ours
 exports[`in-end-tag.js - {"jsxBracketSameLine":true} [__typescript_estree] format 1`] = `
 "Identifier expected. (2:6)
   1 | /* =========== before slash =========== */
@@ -38,6 +39,9 @@ exports[`in-end-tag.js - {"jsxBracketSameLine":true} [__typescript_estree] forma
 `;
 
 exports[`in-end-tag.js - {"jsxBracketSameLine":true} [typescript] format 1`] = `
+=======
+exports[`in-end-tag.js - {"bracketSameLine":true} [typescript] format 1`] = `
+>>>>>>> theirs
 "Identifier expected. (2:6)
   1 | /* =========== before slash =========== */
 > 2 | <a><// line
@@ -47,9 +51,9 @@ exports[`in-end-tag.js - {"jsxBracketSameLine":true} [typescript] format 1`] = `
   5 | /a>;"
 `;
 
-exports[`in-end-tag.js - {"jsxBracketSameLine":true} format 1`] = `
+exports[`in-end-tag.js - {"bracketSameLine":true} format 1`] = `
 ====================================options=====================================
-jsxBracketSameLine: true
+bracketSameLine: true
 parsers: ["flow", "babel", "typescript"]
 printWidth: 80
                                                                                 | printWidth
@@ -165,9 +169,9 @@ a>;
 ================================================================================
 `;
 
-exports[`in-tags.js - {"jsxBracketSameLine":true} format 1`] = `
+exports[`in-tags.js - {"bracketSameLine":true} format 1`] = `
 ====================================options=====================================
-jsxBracketSameLine: true
+bracketSameLine: true
 parsers: ["flow", "babel", "typescript"]
 printWidth: 80
                                                                                 | printWidth
@@ -233,9 +237,9 @@ printWidth: 80
 ================================================================================
 `;
 
-exports[`jsx-tag-comment-after-prop.js - {"jsxBracketSameLine":true} format 1`] = `
+exports[`jsx-tag-comment-after-prop.js - {"bracketSameLine":true} format 1`] = `
 ====================================options=====================================
-jsxBracketSameLine: true
+bracketSameLine: true
 parsers: ["flow", "babel", "typescript"]
 printWidth: 80
                                                                                 | printWidth
@@ -269,9 +273,9 @@ const pure = () => {
 ================================================================================
 `;
 
-exports[`like-a-comment-in-jsx-text.js - {"jsxBracketSameLine":true} format 1`] = `
+exports[`like-a-comment-in-jsx-text.js - {"bracketSameLine":true} format 1`] = `
 ====================================options=====================================
-jsxBracketSameLine: true
+bracketSameLine: true
 parsers: ["flow", "babel", "typescript"]
 printWidth: 80
                                                                                 | printWidth

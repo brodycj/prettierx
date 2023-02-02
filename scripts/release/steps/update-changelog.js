@@ -1,12 +1,19 @@
-"use strict";
+import fs from "node:fs";
+import execa from "execa";
+import chalk from "chalk";
+import outdent from "outdent";
+import semver from "semver";
+import {
+  waitForEnter,
+  runYarn,
+  logPromise,
+  getBlogPostInfo,
+  getChangelogContent,
+} from "../utils.js";
 
-const fs = require("fs");
-const execa = require("execa");
-const chalk = require("chalk");
-const { outdent, string: outdentString } = require("outdent");
-const semver = require("semver");
-const { waitForEnter, runYarn, logPromise } = require("../utils");
+const outdentString = outdent.string;
 
+<<<<<<< HEAD
 function getBlogPostInfo(version) {
   const date = new Date();
   const year = date.getFullYear();
@@ -21,14 +28,11 @@ function getBlogPostInfo(version) {
 }
 
 function writeChangelog({ version, previousVersion, body }) {
+=======
+function writeChangelog(params) {
+>>>>>>> 963220fb643a6ffb5614ec38edcecd9988442b57
   const changelog = fs.readFileSync("CHANGELOG.md", "utf-8");
-  const newEntry = outdent`
-    # ${version}
-
-    [diff](https://github.com/prettier/prettier/compare/${previousVersion}...${version})
-
-    ${body}
-  `;
+  const newEntry = `# ${params.version}\n\n` + getChangelogContent(params);
   fs.writeFileSync("CHANGELOG.md", newEntry + "\n\n" + changelog);
 }
 
@@ -43,7 +47,7 @@ async function getChangelogForPatch({ version, previousVersion }) {
   return changelog;
 }
 
-module.exports = async function ({ version, previousVersion }) {
+export default async function updateChangelog({ version, previousVersion }) {
   const semverDiff = semver.diff(version, previousVersion);
 
   if (semverDiff !== "patch") {
@@ -82,4 +86,4 @@ module.exports = async function ({ version, previousVersion }) {
     "Re-running Prettier on docs",
     runYarn(["lint:prettier", "--write"])
   );
-};
+}

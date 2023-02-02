@@ -1,18 +1,19 @@
 "use strict";
 
-const createError = require("../common/parser-create-error");
-const getLast = require("../utils/get-last");
-const parseFrontMatter = require("../utils/front-matter/parse");
-const { hasPragma } = require("./pragma");
+const createError = require("../common/parser-create-error.js");
+const getLast = require("../utils/get-last.js");
+const parseFrontMatter = require("../utils/front-matter/parse.js");
+const { hasPragma } = require("./pragma.js");
 const {
   hasSCSSInterpolation,
   hasStringOrFunction,
   isSCSSNestedPropertyNode,
   isSCSSVariable,
   stringifyNode,
-} = require("./utils");
-const { locStart, locEnd } = require("./loc");
-const { calculateLoc, replaceQuotesInInlineComments } = require("./loc");
+  isModuleRuleName,
+} = require("./utils.js");
+const { locStart, locEnd } = require("./loc.js");
+const { calculateLoc, replaceQuotesInInlineComments } = require("./loc.js");
 
 const getHighestAncestor = (node) => {
   while (node.parent) {
@@ -573,7 +574,7 @@ function parseNestedCSS(node, options) {
       }
 
       if (name === "at-root") {
-        if (/^\(\s*(without|with)\s*:.+\)$/s.test(params)) {
+        if (/^\(\s*(?:without|with)\s*:.+\)$/s.test(params)) {
           node.params = parseValue(params, options);
         } else {
           node.selector = parseSelector(params);
@@ -583,7 +584,7 @@ function parseNestedCSS(node, options) {
         return node;
       }
 
-      if (lowercasedName === "import") {
+      if (isModuleRuleName(lowercasedName)) {
         node.import = true;
         delete node.filename;
         node.params = parseValue(params, options);

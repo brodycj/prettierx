@@ -1,6 +1,6 @@
 "use strict";
 
-const { isNonEmptyArray } = require("../common/util");
+const { isNonEmptyArray } = require("../common/util.js");
 const colorAdjusterFunctions = new Set([
   "red",
   "green",
@@ -28,6 +28,7 @@ const colorAdjusterFunctions = new Set([
   "hwb",
   "hwba",
 ]);
+const moduleRuleNames = new Set(["import", "use", "forward"]);
 
 function getAncestorCounter(path, typeOrTypes) {
   const types = Array.isArray(typeOrTypes) ? typeOrTypes : [typeOrTypes];
@@ -86,6 +87,19 @@ function hasStringOrFunction(groupList) {
   }
   return false;
 }
+
+// XXX XXX [merge xxx] GONE XXX ref:
+// - https://github.com/prettier/prettier/pull/7922
+// - https://github.com/prettier/prettier/pull/7933
+/* **
+function isSCSS(parser, text) {
+  const hasExplicitParserChoice = parser === "less" || parser === "scss";
+  const IS_POSSIBLY_SCSS = /(?:\w\s*:\s*[^:}]+|#){|@import[^\n]+(?:url|,)/;
+  return hasExplicitParserChoice
+    ? parser === "scss"
+    : IS_POSSIBLY_SCSS.test(text);
+}
+// */
 
 function isSCSSVariable(node, options) {
   // [prettierx merge update from prettier@2.3.2 ...]
@@ -481,6 +495,10 @@ function isAtWordPlaceholderNode(node) {
   );
 }
 
+function isModuleRuleName(name) {
+  return moduleRuleNames.has(name);
+}
+
 module.exports = {
   getAncestorCounter,
   getAncestorNode,
@@ -533,4 +551,5 @@ module.exports = {
   lastLineHasInlineComment,
   stringifyNode,
   isAtWordPlaceholderNode,
+  isModuleRuleName,
 };

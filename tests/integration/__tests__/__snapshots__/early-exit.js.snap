@@ -66,6 +66,7 @@ Format options:
   --arrow-parens <always|avoid>
                            Include parentheses around a sole arrow function parameter.
                            Defaults to always.
+<<<<<<< HEAD
   --break-before-else      Always add a line break before else.
                            Defaults to false.
   --break-long-method-chains
@@ -76,6 +77,11 @@ Format options:
                            Defaults to false.
   --css-paren-spacing      Print spaces between parens in CSS, WordPress style. Status: experimental, with limited testing.
                            Defaults to false.
+=======
+  --bracket-same-line      Put > of opening tags on the last line instead of on a new line.
+                           Defaults to false.
+  --no-bracket-spacing     Do not print spaces between brackets.
+>>>>>>> 963220fb643a6ffb5614ec38edcecd9988442b57
   --embedded-language-formatting <auto|off>
                            Control how Prettier formats quoted code embedded in the file.
                            Defaults to auto.
@@ -93,6 +99,7 @@ Format options:
   --html-whitespace-sensitivity <css|strict|ignore>
                            How to handle whitespaces in HTML.
                            Defaults to css.
+<<<<<<< HEAD
   --no-import-curly-spacing
                            Disable spaces between import curly braces.
   --import-formatting <auto|oneline>
@@ -101,6 +108,8 @@ Format options:
   --no-indent-chains       Disable indents at the start of chained calls.
   --jsx-bracket-same-line  Put > on the last line instead of at a new line.
                            Defaults to false.
+=======
+>>>>>>> 963220fb643a6ffb5614ec38edcecd9988442b57
   --jsx-single-quote       Use single quotes in JSX.
                            Defaults to false.
   --no-object-curly-spacing
@@ -283,6 +292,7 @@ Format options:
   --arrow-parens <always|avoid>
                            Include parentheses around a sole arrow function parameter.
                            Defaults to always.
+<<<<<<< HEAD
   --break-before-else      Always add a line break before else.
                            Defaults to false.
   --break-long-method-chains
@@ -293,6 +303,11 @@ Format options:
                            Defaults to false.
   --css-paren-spacing      Print spaces between parens in CSS, WordPress style. Status: experimental, with limited testing.
                            Defaults to false.
+=======
+  --bracket-same-line      Put > of opening tags on the last line instead of on a new line.
+                           Defaults to false.
+  --no-bracket-spacing     Do not print spaces between brackets.
+>>>>>>> 963220fb643a6ffb5614ec38edcecd9988442b57
   --embedded-language-formatting <auto|off>
                            Control how Prettier formats quoted code embedded in the file.
                            Defaults to auto.
@@ -310,6 +325,7 @@ Format options:
   --html-whitespace-sensitivity <css|strict|ignore>
                            How to handle whitespaces in HTML.
                            Defaults to css.
+<<<<<<< HEAD
   --no-import-curly-spacing
                            Disable spaces between import curly braces.
   --import-formatting <auto|oneline>
@@ -318,6 +334,8 @@ Format options:
   --no-indent-chains       Disable indents at the start of chained calls.
   --jsx-bracket-same-line  Put > on the last line instead of at a new line.
                            Defaults to false.
+=======
+>>>>>>> 963220fb643a6ffb5614ec38edcecd9988442b57
   --jsx-single-quote       Use single quotes in JSX.
                            Defaults to false.
   --no-object-curly-spacing

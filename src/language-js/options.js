@@ -1,6 +1,6 @@
 "use strict";
 
-const commonOptions = require("../common/common-options");
+const commonOptions = require("../common/common-options.js");
 
 const CATEGORY_JAVASCRIPT = "JavaScript";
 
@@ -26,6 +26,7 @@ module.exports = {
       },
     ],
   },
+//<<<<<<< HEAD
   // [prettierx ...]
   arrayBracketSpacing: {
     category: CATEGORY_JAVASCRIPT,
@@ -130,12 +131,16 @@ module.exports = {
     description: "Put spaces between type curly braces.",
     oppositeDescription: "Disable spaces between type curly braces.",
   },
+//=======
+//  bracketSameLine: commonOptions.bracketSameLine,
+//  bracketSpacing: commonOptions.bracketSpacing,
+//>>>>>>> 963220fb643a6ffb5614ec38edcecd9988442b57
   jsxBracketSameLine: {
     since: "0.17.0",
     category: CATEGORY_JAVASCRIPT,
     type: "boolean",
-    default: false,
     description: "Put > on the last line instead of at a new line.",
+    deprecated: "2.4.0",
   },
   semi: {
     since: "1.0.0",
